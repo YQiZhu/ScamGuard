@@ -24,11 +24,3 @@ class ScamCategory(models.Model):
     class Meta:
         db_table = 'scam_category'
 
-class Complainant(models.Model):
-    complainant_age = models.CharField(max_length=100)
-    complainant_gender = models.CharField(max_length=100)
-    address_state = models.CharField(max_length=100)
-    complainant_id = models.AutoField(primary_key=True) 
-    
-    class Meta:
-        db_table = 'complainant'
