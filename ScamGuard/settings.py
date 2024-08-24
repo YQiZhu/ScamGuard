@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-yx-r&i)9j%$!8-o$+j&g#7kt$vhgbvf&1yj*_$=6@n&*aa%2*h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ec2-3-81-206-172.compute-1.amazonaws.com', 'scamguard.live', '3.81.206.172', 'localhost']
 
 
 # Application definition
@@ -38,16 +38,30 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'currentScams',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000", 
+    "http://scamguard.live",  
+    "https://scamguard.live", # Allow HTTPS
+]
+
+CORS_ALLOW_HEADERS = [
+    'content-type',
+    'accept',
+    'Authorization',
 ]
 
 ROOT_URLCONF = 'ScamGuard.urls'
