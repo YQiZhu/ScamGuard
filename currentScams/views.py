@@ -20,8 +20,8 @@ def load_data():
     complainant_df = pd.DataFrame(list(complainants))
 
     # Step 3: Merge the DataFrames
-    merged_df = scam_report_df.merge(complainant_df, on='complainant_ID', how='left')
-    whole_df = merged_df.merge(scam_category_df, on='category_ID', how='left')
+    merged_df = scam_report_df.merge(complainant_df, on='complainant_id', how='left')
+    whole_df = merged_df.merge(scam_category_df, on='category_id', how='left')
 
     return whole_df
 
