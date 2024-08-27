@@ -4,6 +4,7 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'rec
 
 
 function CurrentScam() {
+    const [data, setData] = useState([]);
     
     useEffect(() => {
         // Fetch data from Django API
