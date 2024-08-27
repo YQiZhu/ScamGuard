@@ -4,18 +4,13 @@ import './MostReportedScam.css';
 
 function MostReportedScam() {
     const [data, setData] = useState([]);
-    const [error, setError] = useState('');
 
     useEffect(() => {
-        const controller = new AbortController();
-        const timeoutId = setTimeout(() => controller.abort(), 1000000000); // Set timeout to 10 seconds (10000 milliseconds)
-
-        fetch('https://3.81.206.172:8000/api/most_frequent_scams/', {
+        fetch('http://3.81.206.172:8000/api/most_frequent_scams/', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
             },
-            signal: controller.signal,
         })
             .then(response => {
                 if (!response.ok) {
@@ -23,32 +18,14 @@ function MostReportedScam() {
                 }
                 return response.json();
             })
-            .then(data => {
-                setData(data);
-                clearTimeout(timeoutId); // Clear the timeout if the request is successful
-            })
-            .catch(error => {
-                if (error.name === 'AbortError') {
-                    console.error('Fetch request timed out');
-                    setError('Request timed out. Please try again.');
-                } else {
-                    console.error('Error fetching map data:', error.message);
-                    setError('Failed to fetch data.');
-                }
-            });
-
-        return () => {
-            clearTimeout(timeoutId); // Cleanup timeout on component unmount
-            controller.abort(); // Abort fetch on component unmount
-        };
+            .then(data => setData(data))
+            .catch(error => console.error('Error fetching map data:', error.message));
     }, []);
 
     return (
         <div className="chart-container">
-            <h2>Top 3 Most Frequent Scams</h2>
-            {error ? (
-                <div className="error-message">{error}</div>
-            ) : (
+            <div>
+                <h2>Top 3 Most Frequent Scams</h2>
                 <BarChart
                     width={600}
                     height={300}
@@ -64,7 +41,7 @@ function MostReportedScam() {
                     <Legend />
                     <Bar dataKey="number_of_reports" fill="#8884d8" />
                 </BarChart>
-            )}
+            </div>
         </div>
     );
 }
