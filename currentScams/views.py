@@ -57,7 +57,7 @@ def get_most_frequent_scams(request):
     # Parse the JSON string into a Python dictionary
     acc11_json = json.loads(acc11_json_data)
 
-    return JsonResponse(acc11_json)
+    return JsonResponse(acc11_json, safe=False)
 
 
 @require_GET
@@ -79,7 +79,7 @@ def get_scams_highest_loss(request):
     # Parse the JSON string into a Python dictionary
     acc12_json = json.loads(acc12_json_data)
 
-    return JsonResponse(acc12_json)
+    return JsonResponse(acc12_json, safe=False)
 
 
 @require_GET
@@ -101,4 +101,4 @@ def get_most_scams_contact_methods(request):
     # Parse the JSON string into a Python dictionary
     acc13_json = json.loads(acc13_json_data)
 
-    return JsonResponse(acc13_json)
+    return JsonResponse(acc13_json, safe=False)
