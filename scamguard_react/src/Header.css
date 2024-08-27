@@ -1,0 +1,42 @@
+nav {
+    background-color: #333;
+    /* Dark background color */
+    padding: 1rem;
+    /* Add padding around the header */
+    color: #fff;
+    /* White text color */
+}
+
+nav ul {
+    list-style: none;
+    /* Remove default list styling */
+    padding: 0;
+    /* Remove default padding */
+    margin: 0;
+    /* Remove default margin */
+    display: flex;
+    /* Use flexbox for horizontal layout */
+    justify-content: center;
+    /* Center items horizontally */
+}
+
+nav ul li {
+    margin: 0 1rem;
+    /* Add spacing between items */
+}
+
+nav ul li a {
+    color: #fff;
+    /* White text color for links */
+    text-decoration: none;
+    /* Remove underline from links */
+    font-weight: bold;
+    /* Make text bold */
+    transition: color 0.3s;
+    /* Smooth transition for hover effect */
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+    /* Change color on hover */
+}
