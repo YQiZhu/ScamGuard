@@ -6,24 +6,26 @@ from django.conf import settings
 from rest_framework import viewsets
 from .models import ScamReport, ScamCategory, Complainant
 import pandas as pd
+import json
 
-# Create your views here.
 # Step 1: Query the data from PostgreSQL using Django ORM
-scam_reports = ScamReport.objects.all().values()
-scam_categories = ScamCategory.objects.all().values()
-complainants = Complainant.objects.all().values()
+def load_data():
+    scam_reports = ScamReport.objects.all().values()
+    scam_categories = ScamCategory.objects.all().values()
+    complainants = Complainant.objects.all().values()
 
-# Step 2: Convert Django QuerySets to Pandas DataFrames
-scam_report_df = pd.DataFrame(list(scam_reports))
-scam_category_df = pd.DataFrame(list(scam_categories))
-complainant_df = pd.DataFrame(list(complainants))
+    # Step 2: Convert Django QuerySets to Pandas DataFrames
+    scam_report_df = pd.DataFrame(list(scam_reports))
+    scam_category_df = pd.DataFrame(list(scam_categories))
+    complainant_df = pd.DataFrame(list(complainants))
 
-# Step 3: Merge the DataFrames
-merged_df = scam_report_df.merge(complainant_df, left_on='complainant_id', right_on='complainant_id', how='left')
-whole_df = merged_df.merge(scam_category_df, left_on='category_id', right_on='category_id', how='left')
+    # Step 3: Merge the DataFrames
+    merged_df = scam_report_df.merge(complainant_df, left_on='complainant_id', right_on='id', how='left')
+    whole_df = merged_df.merge(scam_category_df, left_on='category_id', right_on='id', how='left')
+    
+    return whole_df
 
-# Step 4: View the DataFrame info
-whole_df.info()
+whole_df = load_data()
 
 @require_GET
 def get_most_frequent_scams(request):
