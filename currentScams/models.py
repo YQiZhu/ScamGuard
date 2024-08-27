@@ -4,6 +4,7 @@ from django.db import models
 
 class ScamReport(models.Model):
     start_of_month = models.CharField(max_length=100)  # StartOfMonth
+    scam_contact_mode = models.CharField(max_length=100)
     amount_lost = models.DecimalField(max_digits=10, decimal_places=2)  # Amount_lost
     number_of_reports = models.IntegerField()  # Number_of_reports
     average_report = models.DecimalField(max_digits=10, decimal_places=2)  # Average_report

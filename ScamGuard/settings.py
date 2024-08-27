@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-yx-r&i)9j%$!8-o$+j&g#7kt$vhgbvf&1yj*_$=6@n&*aa%2*h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ec2-3-81-206-172.compute-1.amazonaws.com', 'scamguard.live', '3.81.206.172', 'localhost']
+ALLOWED_HOSTS = ['ec2-3-81-206-172.compute-1.amazonaws.com', 'www.scamguard.live', 'scamguard.live', '3.81.206.172', 'localhost']
 
 
 # Application definition
@@ -53,9 +53,11 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000", 
-    "http://scamguard.live",  
+    "http://localhost:3000",
+    "http://scamguard.live",
     "https://scamguard.live", # Allow HTTPS
+    "http://www.scamguard.live",
+    "https://www.scamguard.live",
 ]
 
 CORS_ALLOW_HEADERS = [
@@ -140,3 +142,19 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'django.db.backends': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+        },
+    },
+}
