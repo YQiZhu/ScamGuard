@@ -35,7 +35,7 @@ function PopularContactMethods() {
                     }}
                 >
                     <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="category_level_3" />
+                    <XAxis dataKey="scam_contact_mode" />
                     <YAxis />
                     <Tooltip />
                     <Legend />

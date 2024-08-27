@@ -39,7 +39,7 @@ function TopLossScam() {
                     <YAxis />
                     <Tooltip />
                     <Legend />
-                    <Bar dataKey="number_of_reports" fill="#8884d8" />
+                    <Bar dataKey="amount_lost" fill="#8884d8" />
                 </BarChart>
             </div>
         </div>
