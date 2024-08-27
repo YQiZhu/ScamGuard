@@ -29,20 +29,18 @@ function App() {
 
               {/* Home Page Content */}
               <header className="App-header">
-                <h1>Melbourne CBD Cycling Safety</h1>
+                <h1>Scam Safely for Seniors</h1>
                 {/* <p>Informing you of accidents to help you cycle safely</p> */}
-                <p>Informing you of accidents to help you cycle safely</p>
+                <p>Informing you of ....</p>
                 {/* <button onClick={scrollToBottom}>Go to Bottom of the Page</button> */}
               </header>
               <main>
                 <section ref={mapRef} className="Desc-section">
                   <h2>What is in the website?</h2>
                   <p>
-                    We will provide a map showing where bicycle accidents happen in Melbourne, using colors to highlight areas with more accidents.
-                    A bar chart will show the severity of accidents across the city. When users select a region on the map, the chart will update to show accident severity in that area.
-                    Additionally, we will display bike routes on the map, indicating roads with bike lanes to help users find safer paths.
+                    We w.......
                   </p>
-                  <img src="/images/cycling.png" alt="Cycling" className="cycling-image" />
+                  <img src="/images/senior.png" alt="Senior" className="senior-image" />
                   
                   <p><strong>To start journey on our website, go back to the top and select on the navigation bar</strong></p>
                   <button onClick={scrollToTop}>Go to Top of the Page</button>
