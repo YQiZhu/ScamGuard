@@ -3,10 +3,10 @@ import CurrentScam from './CurrentScam';  // Import the Map component
 
 
 const CurrentScamPage = () => {
-    // Create a reference to the map section
+    // Create a reference to the section
     const mapRef = useRef(null);
 
-    // Function to scroll to the map section
+    // Function to scroll to the section
     const scrollToMap = () => {
         mapRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
@@ -25,7 +25,7 @@ const CurrentScamPage = () => {
             <main>
                 {/* Map Section */}
                 <section ref={mapRef} className="Chart-section">
-                    <h2>Current Scam</h2>
+                    <h2>Current Scams</h2>
                     <p></p>
                     <CurrentScam />
                 </section>
