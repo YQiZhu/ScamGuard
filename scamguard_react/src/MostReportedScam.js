@@ -6,7 +6,7 @@ function MostReportedScam() {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        fetch('http://3.81.206.172:8000/api/most_frequent_scams/', {
+        fetch('https://3.81.206.172:443/api/most_frequent_scams/', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

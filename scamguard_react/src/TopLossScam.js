@@ -6,7 +6,7 @@ function TopLossScam() {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        fetch('http://3.81.206.172:8000/api/scams_highest_loss/', {
+        fetch('https://3.81.206.172:443/api/scams_highest_loss/', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
