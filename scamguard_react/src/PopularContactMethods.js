@@ -6,7 +6,7 @@ function PopularContactMethods() {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        fetch('https://3.81.206.172:443/api/most_scams_contact_methods/', {
+        fetch('https://scamguard.live/api/most_scams_contact_methods/', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
