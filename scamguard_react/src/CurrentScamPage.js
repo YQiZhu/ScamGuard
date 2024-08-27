@@ -39,14 +39,14 @@ const CurrentScamPage = () => {
                     <h2>Current Most Reported Scams</h2>
                     <MostReportedScam />
                 </section>
-                {/* <section ref={topLossRef} id="top-loss" className="Chart-section">
+                <section ref={topLossRef} id="top-loss" className="Chart-section">
                     <h2>Current Top Scams by Loss</h2>
                     <TopLossScam />
                 </section>
                 <section ref={popularContactRef} id="popular-contact" className="Chart-section">
                     <h2>Current Most Popular Contact Methods</h2>
                     <PopularContactMethods />
-                </section> */}
+                </section>
             </main>
         </div>
     );

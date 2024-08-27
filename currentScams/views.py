@@ -27,8 +27,7 @@ def load_data():
 
 whole_df = load_data()
 
-@require_GET
-def get_most_frequent_scams(request):
+def data_filtered():
     ac11_df = whole_df
 
     # Convert 'start_of_month' to datetime
@@ -37,10 +36,28 @@ def get_most_frequent_scams(request):
     # Identify the latest month
     latest_month = ac11_df['start_of_month'].max()
 
-    # Filter the DataFrame for rows with the latest month and 'complainant_age' of '65 and over'
     ac11_filtered = ac11_df[(ac11_df['start_of_month'] == latest_month) & (ac11_df['complainant_age'] == '65 and over')]
 
     ac11_filtered = ac11_filtered[ac11_filtered['category_level_3'] != 'Other scams']
+
+    return ac11_filtered
+
+ac11_filtered = data_filtered()
+
+@require_GET
+def get_most_frequent_scams(request):
+    # ac11_df = whole_df
+
+    # # Convert 'start_of_month' to datetime
+    # ac11_df['start_of_month'] = pd.to_datetime(ac11_df['start_of_month'])
+
+    # # Identify the latest month
+    # latest_month = ac11_df['start_of_month'].max()
+
+    # # Filter the DataFrame for rows with the latest month and 'complainant_age' of '65 and over'
+    # ac11_filtered = ac11_df[(ac11_df['start_of_month'] == latest_month) & (ac11_df['complainant_age'] == '65 and over')]
+
+    # ac11_filtered = ac11_filtered[ac11_filtered['category_level_3'] != 'Other scams']
 
     # Group by 'category_level_3' and summarize the 'number_of_reports' column
     ac11_grouped = ac11_filtered.groupby(['start_of_month', 'complainant_age', 'category_level_3'])['number_of_reports'].sum().reset_index()
