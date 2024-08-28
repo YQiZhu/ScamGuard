@@ -2,14 +2,19 @@ import React from 'react';
 import './PhoneScams.css'; // Optional: Add a CSS file for custom styling
 
 function PhoneScams() {
+
+    // Go to the real story source
+    const goToOtherPage = () => {
+        window.location.href = 'https://www.9news.com.au/national/scam-warning-dial-1-phone-call-do-not-follow-it/ed1d6a55-6641-4732-8ded-8e40396c6af0'; // Replace with the desired URL
+    };
     return (
         <div className="ScamsPage">
             <h2>Phone Scams</h2>
-            <p>Details and examples about how phone scams work and how to identify them.</p>
+            <p>Phone scams aim to deceive individuals into giving away personal information, money, or access to financial accounts. These scams often involve impersonating legitimate organisations, such as banks, government agencies, or tech support, to create a sense of urgency or fear. Common tactics include threatening legal action, claiming a problem with a service (like your internet or taxes), or offering fake prizes or deals. The goal is to trick the victim into making payments, sharing sensitive information, or allowing access to their devices or accounts.</p>
             
             {/* How to Identify a Scam Section */}
             <section className="scam-identification">
-                <h3>How to Identify a Scam</h3>
+                <h3>How to Identify a Phone Scam</h3>
                 <p>
                     It is likely that a phone call is a scam if it:
                     <ul>
@@ -43,6 +48,20 @@ function PhoneScams() {
                       <li>Never share personal information or financial details over the phone</li>
                       <li>Never allow a caller to have remote access to your computer</li>
                     </ul>
+                    <img src="/images/scam_guard_logo.jpg" alt="ScamGuard Logo" className="example-image" />
+
+                    {/* Real-Life Story Section */}
+                    <section className="real-life-story">
+                        <h3>Real-Life Story</h3>
+                        <h4>A new scam alleges you have overpaid your Netflix bill</h4> {/* Story Title */}
+                        <p>
+                            A phone scam circulating in Australia involves automated calls that instruct recipients to "dial 1" to address a purported issue, such as the threat of arrest, NBN disconnection, or unpaid debts. Scamwatch has warned the public to hang up immediately, as these claims are false and designed to scare people into action. Individuals are encouraged to report such scams through the Scamwatch website.
+
+                        </p>
+                    </section>
+
+                    {/* Clickable Box with URL Link */}
+                    <button onClick={goToOtherPage}>Read the Full Story</button>
                 </p>
             </section>
         </div>
