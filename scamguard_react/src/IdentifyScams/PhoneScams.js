@@ -11,11 +11,24 @@ function PhoneScams() {
             <section className="scam-identification">
                 <h3>How to Identify a Scam</h3>
                 <p>
-                    Scammers often use various tactics to trick you into giving away personal information or money. 
-                    Some common signs of a scam include unexpected requests for personal information, offers that seem too good to be true, 
-                    and communication from unknown or suspicious sources.
+                    It is likely that a phone call is a scam if it:
+                    <ul>
+                      <li>Is unexpected</li>
+                      <li>Comes from an unknown number</li>
+                      <li>Encourages you to take immediate action</li>
+                      <li>Asks for personal or financial information</li>
+                      <li>Has poor quality</li>
+                    </ul>
                 </p>
-                {/* Add more content or components specific to identifying scams */}
+                <p>
+                   Examples of scam phone calls include:
+                    <ul>
+                      <li>Claiming your account has been hacked</li>
+                      <li>Threatening you with arrest</li>
+                      <li>Asking to install software or access your computer to resolve an issue</li>
+                      <li>Claiming you must pay for your service to continue</li>
+                    </ul>
+                </p>
             </section>
 
             {/* How to Protect Yourself Section */}
