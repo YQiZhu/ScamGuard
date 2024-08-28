@@ -2,14 +2,18 @@ import React from 'react';
 import './PhoneScams.css';
 
 function InvestmentScams() {
+    // Go to the real story source
+    const goToOtherPage = () => {
+        window.location.href = 'https://www.9news.com.au/national/scams-australia-queensland-man-loses-500k-retirement-savings-to-investment-scam/0ee978a5-6874-4dab-b517-d6ca5da3bc98'; // Replace with the desired URL
+    };
     return (
         <div className="ScamsPage">
             <h2>Investment Scams</h2>
-            <p>Details and examples about how Investment Scams work and how to identify them.</p>
+            <p>Investment scams entice people with promises of high returns and low risk, often using persuasive tactics and fake credentials to appear legitimate. Scammers may reach out through phone calls, emails, or social media, pressuring victims to invest quickly. Common scams include Ponzi schemes, where new investors' money is used to pay earlier investors, creating the illusion of profitability. It's crucial to research thoroughly and be skeptical of any investment opportunity that seems too good to be true.</p>
 
             {/* How to Identify a Scam Section */}
             <section className="scam-identification">
-                <h3>How to Identify a Scam</h3>
+                <h3>How to Identify an Investment Scam</h3>
                 <p>
                     It is likely that you are encountering an investment scam if:
                     <ul>
@@ -52,6 +56,19 @@ function InvestmentScams() {
                         </ul>
                       </li>
                     </ul>
+                    <img src="/images/scam_guard_logo.jpg" alt="ScamGuard Logo" className="example-image" />
+
+                    {/* Real-Life Story Section */}
+                    <section className="real-life-story">
+                        <h3>Real-Life Story</h3>
+                        <h4>Queensland Man Loses $500K in Retirement Savings to Sophisticated Investment Scam</h4> {/* Story Title */}
+                        <p>
+                            A 66-year-old Queensland man, referred to as Ben, lost $500,000 of his retirement savings to a "sophisticated and socially engineered" investment scam. The scam began when Ben, grieving the loss of his wife, engaged with what he believed to be a legitimate investment firm on Facebook. The scammers created a fake investment account, showing false financial growth to lure Ben into transferring his savings over several months. Despite warnings from his bank and a scam prevention agency, Ben continued with the investment until it was too late to recover his funds. The incident highlights the emotional and financial devastation caused by such scams, especially targeting vulnerable individuals. Ben hopes sharing his story will prevent others from making similar mistakes.
+                        </p>
+                    </section>
+
+                    {/* Clickable Box with URL Link */}
+                    <button onClick={goToOtherPage}>Read the Full Story</button>
                 </p>
             </section>
         </div>
