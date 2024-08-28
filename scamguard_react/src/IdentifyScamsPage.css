@@ -45,6 +45,56 @@
     color: rgb(99, 99, 216); /* Change text color on hover */
 }
 
+.clickable-box {
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 20px auto; /* Center the box horizontally */
+    cursor: pointer;
+    width: 80%; /* Reduce the width of the box */
+    max-width: 800px; /* Optional: Limit the max width */
+    border: 1px solid #ddd;
+}
+
+.clickable-box:hover {
+    background-color: #e0e0e0;
+}
+
+.clickable-box img {
+    width: 50px;
+    margin-right: 20px;
+}
+
+.clickable-box .text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the start of the content area */
+    justify-content: center;
+    text-align: left; /* Ensure text is left-aligned */
+    flex: 1;
+    padding-right: 20px; /* Add padding to the right to ensure space before the arrow */
+}
+
+.clickable-box h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.clickable-box p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.clickable-box .arrow {
+    font-size: 24px;
+    font-weight: bold;
+    flex-shrink: 0; /* Prevent arrow from shrinking */
+}
+
 .App-header {
     /* background-color: #282c34; */
     min-height: 100vh;

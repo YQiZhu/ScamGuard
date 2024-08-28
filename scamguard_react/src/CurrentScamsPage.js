@@ -16,10 +16,11 @@ const CurrentScamsPage = () => {
     };
 
     return (
-        <div className="CurrentScamPage">
+        <div className="CurrentScamsPage">
             {/* Side Menu */}
             <nav className="Side-menu">
                 <ul>
+                    <h2>Page Menu</h2>
                     <li><a href="#most-reported" onClick={() => scrollToSection(mostReportedRef)}>Current Most Reported Scams</a></li>
                     <li><a href="#top-loss" onClick={() => scrollToSection(topLossRef)}>Current Top Scams By Loss</a></li>
                     <li><a href="#popular-contact" onClick={() => scrollToSection(popularContactRef)}>Current Most Popular Contact Methods</a></li>

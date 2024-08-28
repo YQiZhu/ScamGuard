@@ -5,6 +5,8 @@ import './App.css';
 import CurrentScamsPage from './CurrentScamsPage';  // Import the Map component
 import IdentifyScamsPage from './IdentifyScamsPage'; // Import the Route component
 import Header from './Header';
+import PhoneScams from './IdentifyScams/PhoneScams';
+
 
 function App() {
   // Create a reference to the map section
@@ -50,6 +52,7 @@ function App() {
           } />
           <Route path="/currentScam" element={<CurrentScamsPage />} />
           <Route path="/identifyScam" element={<IdentifyScamsPage />} />
+          <Route path="/phone-scams" element={<PhoneScams />} />
         </Routes>
       </div>
     </Router>
