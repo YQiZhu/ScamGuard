@@ -16,7 +16,7 @@ function EmailScams() {
                 
                 {/* How to Identify a Scam Section */}
                 <section className="scam-identification">
-                    <h3>How to Identify a Scam</h3>
+                    <h3>How to Identify an Email Scam</h3>
                     <ul>
                         <li>Includes generic greetings</li>
                         <li>Claims to be from an organisation but the email address does not match
@@ -62,15 +62,15 @@ function EmailScams() {
 
                     {/* Real-Life Story Section */}
                     <section className="real-life-story">
-                        <h3>Real-Life Scam Story</h3>
-                        <h4>"A new scam alleges you have overpaid your Netflix bill"</h4> {/* Story Title */}
+                        <h3>Real-Life Story</h3>
+                        <h4>A new scam alleges you have overpaid your Netflix bill</h4> {/* Story Title */}
                         <p>
                             A new phishing scam is targeting Netflix subscribers by claiming they have overpaid their bill and asking for banking details to process a refund. Scammers impersonate Netflix, using realistic-looking emails to deceive recipients. Cybercrime tracker Scamwatch warns users not to click any links and to delete such emails immediately. Netflix advises that they will never ask for personal information, such as bank details or passwords, via email or text and that payment should never be made through third-party vendors. Users are encouraged to verify any suspicious emails directly with the company rather than engaging with the message.
                         </p>
                     </section>
 
                     {/* Clickable Box with URL Link */}
-                    <button onClick={goToOtherPage}>Go to Source URL of the Story</button>
+                    <button onClick={goToOtherPage}>Read the Full Story</button>
                 </section>
             </div>
         </div>
