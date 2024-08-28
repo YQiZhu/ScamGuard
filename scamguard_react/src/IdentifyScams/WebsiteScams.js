@@ -22,6 +22,8 @@ function WebsiteScams() {
                       <li>Is missing a shipping and return policy</li>
                     </ul>
                 </p>
+                <img src="/images/Website_example1.jpg" alt="Website example" className="example-image" />
+                <img src="/images/Website_example2.jpg" alt="Website example" className="example-image" />
             </section>
 
             {/* How to Protect Yourself Section */}

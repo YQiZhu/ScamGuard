@@ -27,6 +27,8 @@ function ImpersonationScams() {
                       <li>A family member or friend contact you from a new number asking for financial help</li>
                     </ul>
                 </p>
+                <img src="/images/Impersonation_example1.jpg" alt="Impersonation example" className="example-image" />
+                <img src="/images/Impersonation_example2.jpg" alt="Impersonation example" className="example-image" />
                 <p>
                     Organisations that scammers will commonly impersonate include:
                     <ul>

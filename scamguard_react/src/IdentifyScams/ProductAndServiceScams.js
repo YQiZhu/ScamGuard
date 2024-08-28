@@ -21,6 +21,7 @@ function ProductAndServiceScams() {
                       <li>The details of an account holder don’t match the person or business you think you’re paying</li>
                     </ul>
                 </p>
+                <img src="/images/Product_example.jpg" alt="Product example" className="example-image" />
             </section>
 
             {/* How to Protect Yourself Section */}

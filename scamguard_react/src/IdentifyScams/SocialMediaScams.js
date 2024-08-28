@@ -29,6 +29,7 @@ function SocialMediaScams() {
                       <li>Offering to share information about a great investment opportunity</li>
                     </ul>
                 </p>
+                <img src="/images/SocialMedia_example.jpg" alt="Social Media example" className="example-image" />
             </section>
 
             {/* How to Protect Yourself Section */}

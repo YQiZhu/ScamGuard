@@ -29,6 +29,8 @@ function TextScams() {
                       <li>Claiming you have an overdue payment</li>
                     </ul>
                 </p>
+                <img src="/images/Text_example1.jpg" alt="Text example" className="example-image" />
+                <img src="/images/Text_example2.jpg" alt="Text example" className="example-image" />
             </section>
 
             {/* How to Protect Yourself Section */}
