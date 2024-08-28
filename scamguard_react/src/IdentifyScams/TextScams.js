@@ -2,14 +2,18 @@ import React from 'react';
 import './PhoneScams.css';
 
 function TextScams() {
+    // Go to the real story source
+    const goToOtherPage = () => {
+        window.location.href = 'https://www.9news.com.au/national/hi-mum-cyber-scam-warning-two-million-dollars-stolen/74cbffaf-9e36-4c69-88e4-26b54e730313'; // Replace with the desired URL
+    };
     return (
         <div className="ScamsPage">
             <h2>Text Scams</h2>
-            <p>Details and examples about how Text Scams work and how to identify them.</p>
+            <p>Text scams involve deceptive text messages that trick individuals into revealing personal information or clicking on harmful links. These messages often appear to come from legitimate sources, like banks or government agencies, and may warn of suspicious activity or urgent problems. Scammers also use fake prize notifications and delivery alerts to lure victims into providing sensitive details or downloading malicious software. These scams exploit the trust people place in text messages to achieve their goals.</p>
 
             {/* How to Identify a Scam Section */}
             <section className="scam-identification">
-                <h3>How to Identify a Scam</h3>
+                <h3>How to Identify a Text Scam</h3>
                 <p>
                     It is likely that a text message is a scam if it:
                     <ul>
@@ -57,6 +61,18 @@ function TextScams() {
                       </li>
                     </ul>
                 </p>
+                    <img src="/images/scam_guard_logo.jpg" alt="ScamGuard Logo" className="example-image" />
+
+                    {/* Real-Life Story Section */}
+                    <section className="real-life-story">
+                        <h3>Real-Life Story</h3>
+                        <h4>‘Hi Mum’ Phone Scam Results in $2 Million Loss</h4> {/* Story Title */}
+                        <p>
+                            The "Hi Mum" phone scam has cost Australian parents over $2 million in recent months. The scam involves scammers sending text messages from unknown numbers, pretending to be a victim's child who has lost their phone. The scammer asks the parent to delete the old number and requests money, usually claiming an urgent need. The scam has primarily targeted victims in New South Wales and Victoria, with a significant increase in reports since May. Police and cybersecurity experts warn that money from these scams is often quickly moved into cryptocurrency, making it difficult for victims to recover their funds. Authorities advise verifying such messages by contacting the relative through an alternative method and reporting any suspicious activity to the police.
+                        </p>
+                    </section>
+
+                    {/* Clickable Box with URL Link */}
             </section>
         </div>
     );
