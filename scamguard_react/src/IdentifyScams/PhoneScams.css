@@ -29,3 +29,10 @@
     line-height: 1.5;
     text-align: left;
 }
+
+.example-image {
+    max-width: 100%; /* Image will scale down to fit the container */
+    height: auto;    /* Maintain the aspect ratio */
+    display: block;  /* Ensure there’s no extra space below the image */
+    margin: 20px 0;  /* Optional: Add some margin around the images */
+}

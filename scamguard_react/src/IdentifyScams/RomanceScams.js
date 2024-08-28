@@ -24,7 +24,7 @@ function RomanceScams() {
                       <li>They want you to keep your relationship secret from friends and family</li>
                     </ul>
                 </p>
-                <img src="/images/Romance_example.jpg" alt="Investment example" className="example-image" />
+                <img src="/images/Romance_example.png" alt="Investment example" className="example-image" />
                 {/* Add more content or components specific to identifying scams */}
             </section>
 

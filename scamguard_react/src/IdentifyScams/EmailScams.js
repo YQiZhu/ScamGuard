@@ -38,10 +38,10 @@ function EmailScams() {
                         <li>An invoice for a product you never bought</li>
                         <li>Claiming your account will close soon unless you reactivate it</li>
                     </ul>
-                    <img src="/images/Email_example1.jpg" alt="Email example" className="example-image" />
-                    <img src="/images/Email_example2.jpg" alt="Email example" className="example-image" />
-                    <img src="/images/Email_example3.jpg" alt="Email example" className="example-image" />
-                    <img src="/images/Email_example4.jpg" alt="Email example" className="example-image" />
+                    <img src="/images/Email_example1.png" alt="Email example" className="example-image" />
+                    <img src="/images/Email_example2.png" alt="Email example" className="example-image" />
+                    <img src="/images/Email_example3.png" alt="Email example" className="example-image" />
+                    <img src="/images/Email_example4.png" alt="Email example" className="example-image" />
                 </section>
 
                 {/* How to Protect Yourself Section */}

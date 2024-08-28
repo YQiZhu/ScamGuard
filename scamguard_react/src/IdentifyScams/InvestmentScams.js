@@ -34,7 +34,7 @@ function InvestmentScams() {
                       <li>Facial expressions and movements don’t match the speaker’s tone</li>
                     </ul>
                 </p>
-                <img src="/images/Investment_example.jpg" alt="Investment example" className="example-image" />
+                <img src="/images/Investment_example.png" alt="Investment example" className="example-image" />
             </section>
 
             {/* How to Protect Yourself Section */}
