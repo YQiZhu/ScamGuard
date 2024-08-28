@@ -11,11 +11,24 @@ function TextScams() {
             <section className="scam-identification">
                 <h3>How to Identify a Scam</h3>
                 <p>
-                    Scammers often use various tactics to trick you into giving away personal information or money.
-                    Some common signs of a scam include unexpected requests for personal information, offers that seem too good to be true,
-                    and communication from unknown or suspicious sources.
+                    It is likely that a text message is a scam if it:
+                    <ul>
+                      <li>Is unsolicited</li>
+                      <li>Asks you to take immediate action</li>
+                      <li>Asks you to click on a link</li>
+                      <li>Requests personal information</li>
+                      <li>Includes poor spelling and grammar</li>
+                    </ul>
                 </p>
-                {/* Add more content or components specific to identifying scams */}
+                <p>
+                   Examples of scam texts include:
+                    <ul>
+                      <li>Claiming that your account has been hacked</li>
+                      <li>Saying you have won a prize</li>
+                      <li>Informing you that a package you didn’t order has arrived</li>
+                      <li>Claiming you have an overdue payment</li>
+                    </ul>
+                </p>
             </section>
 
             {/* How to Protect Yourself Section */}

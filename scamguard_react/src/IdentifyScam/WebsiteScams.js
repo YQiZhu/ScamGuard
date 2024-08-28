@@ -11,11 +11,17 @@ function WebsiteScams() {
             <section className="scam-identification">
                 <h3>How to Identify a Scam</h3>
                 <p>
-                    Scammers often use various tactics to trick you into giving away personal information or money.
-                    Some common signs of a scam include unexpected requests for personal information, offers that seem too good to be true,
-                    and communication from unknown or suspicious sources.
+                    It is likely that you are interacting with a scam website if it:
+                    <ul>
+                      <li>Has an unusual URL such as containing unnecessary words, extra characters, replaces letters with numbers or has words misspelt such as a company name</li>
+                      <li>Prices items significantly lower compare to other sites</li>
+                      <li>Requires unusual payment methods such as gift cards or cryptocurrency</li>
+                      <li>Contains only generic, positive reviews</li>
+                      <li>Has poor quality design and spelling and grammar errors</li>
+                      <li>Is missing a contact information section</li>
+                      <li>Is missing a shipping and return policy</li>
+                    </ul>
                 </p>
-                {/* Add more content or components specific to identifying scams */}
             </section>
 
             {/* How to Protect Yourself Section */}

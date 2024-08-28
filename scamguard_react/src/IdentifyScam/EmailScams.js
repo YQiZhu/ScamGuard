@@ -11,13 +11,32 @@ function EmailScams() {
                 
                 {/* How to Identify a Scam Section */}
                 <section className="scam-identification">
-                    <h3>How to Identify a Scam</h3>
-                    <p>
-                        Scammers often use various tactics to trick you into giving away personal information or money.
-                        Some common signs of a scam include unexpected requests for personal information, offers that seem too good to be true,
-                        and communication from unknown or suspicious sources.
-                    </p>
-                    {/* Add more content or components specific to identifying scams */}
+                <p>
+                    It is likely that an email is a scam if it:
+                    <ul>
+                      <li>Includes generic greetings</li>
+                      <li>Claims to be from an organisation but the email address does not match
+                        <ul>
+                            <li>For example it is a free webmail address (gmail, outlook) or the organisation’s name is misspelt</li>
+                        </ul>
+                      </li>
+                      <li>Includes a link that does not match the URL it goes to
+                        <ul>
+                            <li>Hover over a link, but do NOT click on it to investigate the actual URL</li>
+                        </ul>
+                      </li>
+                      <li>Asks you to provide personal information</li>
+                      <li>Includes spelling and grammatical errors</li>
+                    </ul>
+                </p>
+                <p>
+                    Examples of scam emails include:
+                    <ul>
+                      <li>Claiming you are due to receive a large sum of money</li>
+                      <li>An invoice for a product you never bought</li>
+                      <li>Claiming your account will close soon unless you reactivate it</li>
+                    </ul>
+                </p>
                 </section>
 
                 {/* How to Protect Yourself Section */}
