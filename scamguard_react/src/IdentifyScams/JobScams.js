@@ -13,8 +13,17 @@ function JobScams() {
             <section className="scam-identification">
                 <h3>How to Identify a Scam</h3>
                 <p>
+                    It is likely that you are encountering a job scam if:
+                    <ul>
+                      <li>The job offer is made through an unsolicited message</li>
+                      <li>You are told you can earn a high income with little effort while working from home</li>
+                      <li>The hiring process is very quick with no interview and without asking for references</li>
+                      <li>Personal information such as bank account details are requested before you are hired</li>
+                      <li>You are required to pay a recruitment fee or pay for training materials</li>
+                      <li>The job requires you to enrol new recruits</li>
+                      <li>You are told to top up an account with your own money to complete your job</li>
+                    </ul>
                 </p>
-                {/* Add more content or components specific to identifying scams */}
             </section>
 
             {/* How to Protect Yourself Section */}
