@@ -27,8 +27,23 @@ function ProductAndServiceScams() {
             <section className="protect-yourself">
                 <h3>How to Protect Yourself</h3>
                 <p>
+                    <ul>
+                      <li>Search for the ABN on the website and verify it using <a href="https://abr.business.gov.au/" target="_blank" rel="noopener noreferrer">ABN lookup</a></li>
+                      <li>Search for the official site of the organisation
+                        <ul>
+                            <li>Don’t assume that the first result from the search engine is the real website</li>
+                        </ul>
+                      </li>
+                      <li>Search for the website and the word ‘scam’ or ‘review’ and examine the results carefully</li>
+                      <li>Use secure payment methods that come with protections such as PayID or PayPal (NOT the family and friends option)</li>
+                      <li>Look up the domain age using <a href="https://whois.domaintools.com/" target="_blank" rel="noopener noreferrer">Whois Lookup</a> 
+                        <ul>
+                            <li>If a website has not been active for long it is more likely to be a fake website</li>
+                        </ul>
+                      </li>
+                      <li>If a website ends with .au use the <a href="https://whois.auda.org.au/" target="_blank" rel="noopener noreferrer">Australian Domain Authority’s lookup</a> to check who has registered the website and compare it to the information given on the website</li>
+                    </ul>
                 </p>
-                {/* Add more content or components specific to protecting yourself */}
             </section>
         </div>
     );

@@ -38,8 +38,19 @@ function ImpersonationScams() {
             <section className="protect-yourself">
                 <h3>How to Protect Yourself</h3>
                 <p>
-               </p>
-                {/* Add more content or components specific to protecting yourself */}
+                    It is likely that you are encountering an impersonation scam if:
+                    <ul>
+                      <li>Verify that the messages are real by directly contacting the person or organisation using contact details you have found yourself from their official website or through their secure, authenticated portal or app</li>
+                      <li>Immediately cut contact with anyone who tries to threaten you</li>
+                      <li>Don’t open any links you are sent or download any attachments</li>
+                      <li>If they claim they are someone you know using a new phone number
+                        <ul>
+                            <li>Try to call them using the existing phone number you have</li>
+                            <li>Ask them a question that only they would know the answer to</li>
+                        </ul>
+                      </li>
+                    </ul>
+                </p>                
             </section>
         </div>
     );

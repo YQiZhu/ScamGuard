@@ -28,11 +28,19 @@ function WebsiteScams() {
             <section className="protect-yourself">
                 <h3>How to Protect Yourself</h3>
                 <p>
-                    Protecting yourself from scams involves being vigilant and taking certain precautions.
-                    Always verify the identity of the person or organization contacting you, never share personal information
-                    unless you are sure it is safe, and report any suspicious activity to the authorities.
-                </p>
-                {/* Add more content or components specific to protecting yourself */}
+                    <ul>
+                      <li>Research the organisation or person you’re in contact with before providing any personal information or giving money</li>
+                      <li>Do not rely on reviews written on the website, search for independent reviews on other sites </li>
+                      <li>If a pop-up appears on the screen do not click on it</li>
+                      <li>If there is a secure, authenticated way to reach the organisation such as an app or portal use this</li>
+                      <li>Look up the domain age using <a href="https://whois.domaintools.com/" target="_blank" rel="noopener noreferrer">Whois Lookup</a> 
+                        <ul>
+                            <li>If a website has not been active for long it is more likely to be a fake website</li>
+                        </ul>
+                      </li>
+                      <li>Use a website checker such as the <a href="https://transparencyreport.google.com/safe-browsing/search?hl=en" target="_blank" rel="noopener noreferrer">Google Transparency Report</a> or <a href="https://www.urlvoid.com/" target="_blank" rel="noopener noreferrer">URLVoid</a> to check if a website is safe</li>
+                    </ul>
+               </p>
             </section>
         </div>
     );

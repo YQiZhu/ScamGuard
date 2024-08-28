@@ -43,11 +43,21 @@ function EmailScams() {
                 <section className="protect-yourself">
                     <h3>How to Protect Yourself</h3>
                     <p>
-                        Protecting yourself from scams involves being vigilant and taking certain precautions.
-                        Always verify the identity of the person or organization contacting you, never share personal information
-                        unless you are sure it is safe, and report any suspicious activity to the authorities.
+                        <ul>
+                        <li>Never open links you are sent
+                            <ul>
+                                <li>Independently search for the website or use the organisation’s authenticated portal or app</li>
+                            </ul>
+                        </li>
+                        <li>Independently find contact details for the person or organisation and use to verify if the email was real</li>
+                        <li>To protect your email account
+                            <ul>
+                                <li>Use unique passwords for your different accounts</li>
+                                <li>Use multi-factor authentication if it’s available to add an extra layer of security</li>
+                            </ul>
+                        </li>
+                        </ul>
                     </p>
-                    {/* Add more content or components specific to protecting yourself */}
                 </section>
             </div>
         </div>

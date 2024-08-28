@@ -30,9 +30,15 @@ function JobScams() {
             <section className="protect-yourself">
                 <h3>How to Protect Yourself</h3>
                 <p>
-                    
+                    <ul>
+                      <li>Don’t trust that a job ad is real just because it appears on a trusted platform</li>
+                      <li>Never send money or provide personal information to anyone you have only met online</li>
+                      <li>Never send identity documents unless you are certain the organisation is genuine</li>
+                      <li>Never accept payments or rewards to recruit other people</li>
+                      <li>Independently verify the identities of anyone who has reached out to you, checking for contact details from the organisation’s official website</li>
+                      <li>Search for reviews of the company</li>
+                    </ul>
                 </p>
-                {/* Add more content or components specific to protecting yourself */}
             </section>
         </div>
     );
