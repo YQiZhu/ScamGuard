@@ -2,14 +2,18 @@ import React from 'react';
 import './PhoneScams.css';
 
 function SocialMediaScams() {
+    // Go to the real story source
+    const goToOtherPage = () => {
+        window.location.href = 'https://www.abc.net.au/news/2024-04-15/australians-falling-for-facebook-fake-ads-online-trading-scams/103640678'; // Replace with the desired URL
+    };
     return (
         <div className="ScamsPage">
             <h2>Social Media Scams</h2>
-            <p>Details and examples about how Social Media Scams work and how to identify them.</p>
+            <p>ocial media scams often involve impersonation and phishing tactics, where scammers create fake profiles to mislead users. They may send spam messages or harmful links while pretending to be someone familiar or a reputable organization. These scams can take the form of deceptive romantic relationships, where trust is gradually built before soliciting money. They may also involve fake investment opportunities or fraudulent ads for non-existent products. By leveraging the personal and trusting aspects of social media, scammers manipulate victims into disclosing money or sensitive information.</p>
 
             {/* How to Identify a Scam Section */}
             <section className="scam-identification">
-                <h3>How to Identify a Scam</h3>
+                <h3>How to Identify a Social Media Scam</h3>
                 <p>
                     It is likely that you are encountering a social media scam if:
                     <ul>
@@ -54,6 +58,19 @@ function SocialMediaScams() {
                       </li>
                     </ul>
                 </p>
+                    <img src="/images/scam_guard_logo.jpg" alt="ScamGuard Logo" className="example-image" />
+
+                    {/* Real-Life Story Section */}
+                    <section className="real-life-story">
+                        <h3>Real-Life Story</h3>
+                        <h4>Social Media Scam Devastates Australian Woman, Leading to $100,000 Loss</h4> {/* Story Title */}
+                        <p>
+                            Deb, a 63-year-old Australian, was deceived by a sophisticated fraud syndicate advertising on Facebook. She clicked on an ad featuring a prominent Australian celebrity endorsing an investment opportunity. Interested, she signed up with the online trading platform and was soon contacted by Daniel, who posed as her investment broker. Over the next few months, Daniel maintained daily communication, persuading Deb to invest more money with promises of substantial returns. Ultimately, Deb lost her entire superannuation and savings, totaling over $100,000. Although devastated by the scam, Deb now dedicates her time to warning others by commenting on suspicious ads she encounters on Facebook.
+                        </p>
+                    </section>
+
+                    {/* Clickable Box with URL Link */}
+                    <button onClick={goToOtherPage}>Read the Full Story</button>
                 {/* Add more content or components specific to protecting yourself */}
             </section>
         </div>
