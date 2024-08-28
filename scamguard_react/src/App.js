@@ -6,6 +6,12 @@ import CurrentScamsPage from './CurrentScamsPage';  // Import the Map component
 import IdentifyScamsPage from './IdentifyScamsPage'; // Import the Route component
 import Header from './Header';
 import PhoneScams from './IdentifyScams/PhoneScams';
+import TextScams from './IdentifyScams/TextScams';
+import EmailScams from './IdentifyScams/EmailScams';
+import SocialMediaScams from './IdentifyScams/SocialMediaScams';
+import WebsiteScams from './IdentifyScams/WebsiteScams';
+import RomanceScams from './IdentifyScams/RomanceScams';
+import InvestmentScams from './IdentifyScams/InvestmentScams';
 
 
 function App() {
@@ -53,6 +59,12 @@ function App() {
           <Route path="/currentScam" element={<CurrentScamsPage />} />
           <Route path="/identifyScam" element={<IdentifyScamsPage />} />
           <Route path="/phone-scams" element={<PhoneScams />} />
+          <Route path="/text-scams" element={<TextScams />} />
+          <Route path="/email-scams" element={<EmailScams />} />
+          <Route path="/social-media-scams" element={<SocialMediaScams />} />
+          <Route path="/website-scams" element={<WebsiteScams />} />
+          <Route path="/romance-scams" element={<RomanceScams />} />
+          <Route path="/investment-scams" element={<InvestmentScams />} />
         </Routes>
       </div>
     </Router>

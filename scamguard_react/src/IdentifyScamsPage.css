@@ -1,19 +1,28 @@
 .Chart-section {
-    padding: 50px;;
+    padding: 50px;
+    ;
 }
 
 .Side-menu {
     position: fixed;
-    top: 50%; /* Vertically center the menu */
-    left: 10px; /* Position it on the left side */
-    transform: translateY(-50%); /* Center vertically by shifting up half of its own height */
-    width: 200px; /* Adjust width as needed */
-    background-color: #f0f0f0; /* Light background color */
-    color: black; /* Default text color */
+    top: 50%;
+    /* Vertically center the menu */
+    left: 10px;
+    /* Position it on the left side */
+    transform: translateY(-50%);
+    /* Center vertically by shifting up half of its own height */
+    width: 200px;
+    /* Adjust width as needed */
+    background-color: #f0f0f0;
+    /* Light background color */
+    color: black;
+    /* Default text color */
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    overflow-y: auto; /* Add scroll if content overflows */
-    border-radius: 8px; /* Optional: Rounded corners */
+    overflow-y: auto;
+    /* Add scroll if content overflows */
+    border-radius: 8px;
+    /* Optional: Rounded corners */
 }
 
 .Side-menu ul {
@@ -25,38 +34,54 @@
 }
 
 .Side-menu li {
-    width: 100%; /* Ensures each li takes the full width of the ul */
-    margin-bottom: 10px; /* Space between links */
-    display: block; /* Makes sure li is treated as a block element */
+    width: 100%;
+    /* Ensures each li takes the full width of the ul */
+    margin-bottom: 10px;
+    /* Space between links */
+    display: block;
+    /* Makes sure li is treated as a block element */
 }
 
 .Side-menu a {
-    color: rgb(5, 5, 33); /* Text color for links */
-    text-decoration: underline; /* Underline to indicate clickability */
-    font-size: 16px; /* Adjust font size as needed */
-    display: block; /* Ensure the link takes up the full width of its container */
+    color: rgb(5, 5, 33);
+    /* Text color for links */
+    text-decoration: underline;
+    /* Underline to indicate clickability */
+    font-size: 16px;
+    /* Adjust font size as needed */
+    display: block;
+    /* Ensure the link takes up the full width of its container */
     padding: 10px;
-    border-radius: 5px; /* Optional: Rounded corners for links */
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    border-radius: 5px;
+    /* Optional: Rounded corners for links */
+    transition: background-color 0.3s;
+    /* Smooth transition for hover effect */
 }
 
 .Side-menu a:hover {
-    background-color: #c0c0c0; /* Change background color on hover */
-    color: rgb(99, 99, 216); /* Change text color on hover */
+    background-color: #c0c0c0;
+    /* Change background color on hover */
+    color: rgb(99, 99, 216);
+    /* Change text color on hover */
 }
 
 .clickable-box {
-    background-color: #f9f9f9;
+    background-color: #f0f0f0;
     transition: background-color 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    margin: 20px auto; /* Center the box horizontally */
+    margin: 40px auto;
+    /* Center the box horizontally */
     cursor: pointer;
-    width: 80%; /* Reduce the width of the box */
-    max-width: 800px; /* Optional: Limit the max width */
-    border: 1px solid #ddd;
+    width: 80%;
+    /* Reduce the width of the box */
+    max-width: 800px;
+    /* Optional: Limit the max width */
+    border: 1px solid #7e7e7e;
+    border-radius: 8px;
+    /* Optional: Rounded corners */
 }
 
 .clickable-box:hover {
@@ -64,38 +89,44 @@
 }
 
 .clickable-box img {
-    width: 50px;
+    width: 90px;
     margin-right: 20px;
 }
 
 .clickable-box .text-content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align text to the start of the content area */
+    align-items: flex-start;
+    /* Align text to the start of the content area */
     justify-content: center;
-    text-align: left; /* Ensure text is left-aligned */
+    text-align: left;
+    /* Ensure text is left-aligned */
     flex: 1;
-    padding-right: 20px; /* Add padding to the right to ensure space before the arrow */
+    padding-right: 20px;
+    /* Add padding to the right to ensure space before the arrow */
 }
 
 .clickable-box h3 {
     margin: 0;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: bold;
+    margin-bottom: 5px;
+    /* Space between links */
 }
 
 .clickable-box p {
     margin: 0;
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .clickable-box .arrow {
-    font-size: 24px;
+    font-size: 48px;
     font-weight: bold;
-    flex-shrink: 0; /* Prevent arrow from shrinking */
+    flex-shrink: 0;
+    /* Prevent arrow from shrinking */
 }
 
-.App-header {
+.indentify-scams-header {
     /* background-color: #282c34; */
     min-height: 100vh;
     display: flex;
@@ -104,4 +135,12 @@
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: rgb(0, 0, 0);
-  }
+    margin-bottom: 20px;
+    /* Add some margin to push the box closer to the header */
+}
+
+.indentify-scams-header h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    /* Reduce margin to bring h1 closer to the clickable box */
+}

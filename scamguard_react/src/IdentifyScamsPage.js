@@ -30,12 +30,33 @@ const IdentifyScamsPage = () => {
             </nav> */}
 
             {/* Introduction Section */}
-            <header className="App-header">
+            <header className="indentify-scams-header">
                 <h1>How to Identify Scams</h1>
                 <p></p>
             </header>
 
             {/* Clickable Box Section */}
+            {/* Text Scams */}
+            <div
+                className="clickable-box"
+                onClick={() => navigate('/text-scams')}
+            >
+                <img
+                    src={require('./images/text_scams_icon.png')}
+                    alt="Text Scams"
+                />
+                <div className="text-content">
+                    <h3>Text Scams</h3>
+                    <p>
+                        <strong>Click</strong> on Card to find out more information/example about how <strong>Text Scams</strong> work and how to identify them.
+                    </p>
+                </div>
+                <div className="arrow">
+                    &gt;
+                </div>
+            </div>
+
+            {/* Phone Scams */}
             <div
                 className="clickable-box"
                 onClick={() => navigate('/phone-scams')}
@@ -47,13 +68,114 @@ const IdentifyScamsPage = () => {
                 <div className="text-content">
                     <h3>Phone Scams</h3>
                     <p>
-                        Click on Card to find out more information/example about how Phone Scams work and how to identify them.
+                        <strong>Click</strong> on Card to find out more information/example about how <strong>Phone Scams</strong> work and how to identify them.
                     </p>
                 </div>
                 <div className="arrow">
                     &gt;
                 </div>
             </div>
+
+            {/* Email Scams */}
+            <div
+                className="clickable-box"
+                onClick={() => navigate('/email-scams')}
+            >
+                <img
+                    src={require('./images/email_scams_icon.png')}
+                    alt="Email Scams"
+                />
+                <div className="text-content">
+                    <h3>Email Scams</h3>
+                    <p>
+                        <strong>Click</strong> on Card to find out more information/example about how <strong>Email Scams</strong> work and how to identify them.
+                    </p>
+                </div>
+                <div className="arrow">
+                    &gt;
+                </div>
+            </div>
+
+            {/* Social Media Scams */}
+            <div
+                className="clickable-box"
+                onClick={() => navigate('/social-media-scams')}
+            >
+                <img
+                    src={require('./images/email_scams_icon.png')}
+                    alt="Social Media Scams"
+                />
+                <div className="text-content">
+                    <h3>Social Media Scams</h3>
+                    <p>
+                        <strong>Click</strong> on Card to find out more information/example about how <strong>Social Media Scams</strong> work and how to identify them.
+                    </p>
+                </div>
+                <div className="arrow">
+                    &gt;
+                </div>
+            </div>
+
+            {/* Website Scams */}
+            <div
+                className="clickable-box"
+                onClick={() => navigate('/website-scams')}
+            >
+                <img
+                    src={require('./images/email_scams_icon.png')}
+                    alt="Social Media Scams"
+                />
+                <div className="text-content">
+                    <h3>Website Scams</h3>
+                    <p>
+                        <strong>Click</strong> on Card to find out more information/example about how <strong>Website Scams</strong> work and how to identify them.
+                    </p>
+                </div>
+                <div className="arrow">
+                    &gt;
+                </div>
+            </div>
+
+            {/* Romance Scams */}
+            <div
+                className="clickable-box"
+                onClick={() => navigate('/romance-scams')}
+            >
+                <img
+                    src={require('./images/email_scams_icon.png')}
+                    alt="Romance Scams"
+                />
+                <div className="text-content">
+                    <h3>Romance Scams</h3>
+                    <p>
+                        <strong>Click</strong> on Card to find out more information/example about how <strong>Romance Scams</strong> work and how to identify them.
+                    </p>
+                </div>
+                <div className="arrow">
+                    &gt;
+                </div>
+            </div>
+
+            {/* Investment Scams */}
+            <div
+                className="clickable-box"
+                onClick={() => navigate('/investment-scams')}
+            >
+                <img
+                    src={require('./images/email_scams_icon.png')}
+                    alt="Investment Scams"
+                />
+                <div className="text-content">
+                    <h3>Investment Scams</h3>
+                    <p>
+                        <strong>Click</strong> on Card to find out more information/example about how <strong>Investment Scams</strong> work and how to identify them.
+                    </p>
+                </div>
+                <div className="arrow">
+                    &gt;
+                </div>
+            </div>
+
         </div>
     );
 };
