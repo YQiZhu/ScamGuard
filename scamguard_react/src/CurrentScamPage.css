@@ -1,3 +1,7 @@
+.Chart-section {
+    padding: 50px;;
+}
+
 .Side-menu {
     position: fixed;
     top: 50%; /* Vertically center the menu */
@@ -17,6 +21,7 @@
     padding: 0;
     margin: 0;
     width: 100%;
+    display: block;
 }
 
 .Side-menu li {
@@ -26,7 +31,7 @@
 }
 
 .Side-menu a {
-    color: blue; /* Text color for links */
+    color: rgb(5, 5, 33); /* Text color for links */
     text-decoration: underline; /* Underline to indicate clickability */
     font-size: 16px; /* Adjust font size as needed */
     display: block; /* Ensure the link takes up the full width of its container */
@@ -37,7 +42,7 @@
 
 .Side-menu a:hover {
     background-color: #c0c0c0; /* Change background color on hover */
-    color: darkblue; /* Change text color on hover */
+    color: rgb(99, 99, 216); /* Change text color on hover */
 }
 
 .App-header {

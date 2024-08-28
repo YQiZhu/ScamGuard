@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 import './MostReportedScam.css'; 
 
-function PopularContactMethods() {
+function TopLossScam() {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        fetch('https://scamguard.live/api/most_scams_contact_methods/', {
+        fetch('https://scamguard.live/api/scams_highest_loss/', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -25,7 +25,7 @@ function PopularContactMethods() {
     return (
         <div className="chart-container">
             <div>
-                <h2>Top 3 Most Frequent Scams</h2>
+                <h2>Current Top Scams by Loss</h2>
                 <BarChart
                     width={600}
                     height={300}
@@ -35,15 +35,15 @@ function PopularContactMethods() {
                     }}
                 >
                     <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="scam_contact_mode" />
+                    <XAxis dataKey="category_level_3" />
                     <YAxis />
                     <Tooltip />
                     <Legend />
-                    <Bar dataKey="number_of_reports" fill="#8884d8" />
+                    <Bar dataKey="amount_lost" fill="#8884d8" />
                 </BarChart>
             </div>
         </div>
     );
 }
 
-export default PopularContactMethods;
+export default TopLossScam;

@@ -25,7 +25,7 @@ function MostReportedScam() {
     return (
         <div className="chart-container">
             <div>
-                <h2>Top 3 Most Frequent Scams</h2>
+                <h2>Current Most Reported Scams</h2>
                 <BarChart
                     width={600}
                     height={300}

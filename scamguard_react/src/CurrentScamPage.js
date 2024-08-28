@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
-import MostReportedScam from './MostReportedScam';
-import TopLossScam from './TopLossScam';
-import PopularContactMethods from './PopularContactMethods';
+import MostReportedScam from './CurrentScam/MostReportedScam';
+import TopLossScam from './CurrentScam/TopLossScam';
+import PopularContactMethods from './CurrentScam/PopularContactMethods';
 import './CurrentScamPage.css';
 
 const CurrentScamPage = () => {
@@ -36,15 +36,15 @@ const CurrentScamPage = () => {
             <main>
                 {/* Chart Section */}
                 <section ref={mostReportedRef} id="most-reported" className="Chart-section">
-                    <h2>Current Most Reported Scams</h2>
+                    {/* <h2>Current Most Reported Scams</h2> */}
                     <MostReportedScam />
                 </section>
                 <section ref={topLossRef} id="top-loss" className="Chart-section">
-                    <h2>Current Top Scams by Loss</h2>
+                    {/* <h2>Current Top Scams by Loss</h2> */}
                     <TopLossScam />
                 </section>
                 <section ref={popularContactRef} id="popular-contact" className="Chart-section">
-                    <h2>Current Most Popular Contact Methods</h2>
+                    {/* <h2>Current Most Popular Contact Methods</h2> */}
                     <PopularContactMethods />
                 </section>
             </main>
