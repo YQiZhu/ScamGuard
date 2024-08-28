@@ -53,7 +53,7 @@ function RomanceScams() {
                         <h3>Real-Life Story</h3>
                         <h4>Melbourne Woman Scammed by Online Romance</h4> {/* Story Title */}
                         <p>
-                            Melbourne single mother named Kate was scammed out of $11,000 by a man she met on a dating site, who went by the name Gabriel. After months of building trust, Gabriel convinced Kate to send him money for supposed emergencies involving his children. Despite her initial suspicions, Kate was ultimately tricked, leading to significant financial loss and emotional distress. This story highlights the growing threat of romance scams, where scammers prey on vulnerable individuals seeking companionship.
+                            A Melbourne single mother named Kate was scammed out of $11,000 by a man she met on a dating site, who went by the name Gabriel. After months of building trust, Gabriel convinced Kate to send him money for supposed emergencies involving his children. Despite her initial suspicions, Kate was ultimately tricked, leading to significant financial loss and emotional distress. This story highlights the growing threat of romance scams, where scammers prey on vulnerable individuals seeking companionship.
                         </p>
                     </section>
 
