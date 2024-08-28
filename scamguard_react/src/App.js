@@ -29,9 +29,9 @@ function App() {
 
               {/* Home Page Content */}
               <header className="App-header">
-                <h1>Scam Safely for Seniors</h1>
+                <h1>Scam Safety for Seniors</h1>
                 {/* <p>Informing you of accidents to help you cycle safely</p> */}
-                <p>Informing you of ....</p>
+                <p>We care of what seniors ......</p>
                 {/* <button onClick={scrollToBottom}>Go to Bottom of the Page</button> */}
               </header>
               <main>
@@ -40,7 +40,7 @@ function App() {
                   <p>
                     We w.......
                   </p>
-                  <img src="/images/senior.png" alt="Senior" className="senior-image" />
+                  {/* <img src="/images/senior.png" alt="Senior" className="senior-image" /> */}
                   
                   <p><strong>To start journey on our website, go back to the top and select on the navigation bar</strong></p>
                   <button onClick={scrollToTop}>Go to Top of the Page</button>

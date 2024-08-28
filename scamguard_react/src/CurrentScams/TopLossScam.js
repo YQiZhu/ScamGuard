@@ -25,7 +25,7 @@ function TopLossScam() {
     return (
         <div className="chart-container">
             <div>
-                <h2>Current Top Scams by Loss</h2>
+                <h2>Current Top Scams by Loss (in $AUD)</h2>
                 <BarChart
                     width={600}
                     height={300}
