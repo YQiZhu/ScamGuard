@@ -1,16 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.9677ca20.css",
-    "main.js": "/static/js/main.2dacff49.js",
+    "main.css": "/static/css/main.621f3e0a.css",
+    "main.js": "/static/js/main.ede626e6.js",
     "static/js/453.2fa3f6c9.chunk.js": "/static/js/453.2fa3f6c9.chunk.js",
+    "static/media/website_scams_icon.png": "/static/media/website_scams_icon.5e56907fa0f63656c078.png",
+    "static/media/text_scams_icon.png": "/static/media/text_scams_icon.7e2962e427a03b51c375.png",
+    "static/media/social_media_scams_icon.png": "/static/media/social_media_scams_icon.f14b86427655e8ee3586.png",
+    "static/media/email_scams_icon.png": "/static/media/email_scams_icon.5fc406e224e6f119a7b1.png",
+    "static/media/phone_scams_icon.png": "/static/media/phone_scams_icon.53e38c0397cf4baad0b5.png",
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
-    "main.9677ca20.css.map": "/static/css/main.9677ca20.css.map",
-    "main.2dacff49.js.map": "/static/js/main.2dacff49.js.map",
+    "main.621f3e0a.css.map": "/static/css/main.621f3e0a.css.map",
+    "main.ede626e6.js.map": "/static/js/main.ede626e6.js.map",
     "453.2fa3f6c9.chunk.js.map": "/static/js/453.2fa3f6c9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9677ca20.css",
-    "static/js/main.2dacff49.js"
+    "static/css/main.621f3e0a.css",
+    "static/js/main.ede626e6.js"
   ]
 }
