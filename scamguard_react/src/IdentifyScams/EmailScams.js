@@ -3,6 +3,11 @@ import './PhoneScams.css';
 
 function EmailScams() {
 
+    // Go to the real story sourse
+    const goToOtherPage = () => {
+        window.location.href = 'https://example.com'; // Replace with the desired URL
+    };
+
     return (
         <div className="ScamsPage">
             <div>
@@ -47,6 +52,11 @@ function EmailScams() {
                         Always verify the identity of the person or organization contacting you, never share personal information
                         unless you are sure it is safe, and report any suspicious activity to the authorities.
                     </p>
+                    <img src="/images/scam_guard_logo.jpg" alt="ScamGuard Logo" className="example-image" />
+                    <p>
+
+                    </p>
+                    <button onClick={goToOtherPage}>Go to Sourse url of the story</button>
                     {/* Add more content or components specific to protecting yourself */}
                 </section>
             </div>
