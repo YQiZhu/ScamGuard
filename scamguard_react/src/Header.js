@@ -12,9 +12,9 @@ const Header = () => {
                     <li>
                         <Link to="/currentScam">Current Scams</Link>
                     </li>
-                    {/* <li>
-                        <Link to="/route">Bicycle Lane</Link>
-                    </li> */}
+                    <li>
+                        <Link to="/identifyScam">How to Identify Scams</Link>
+                    </li>
                 </ul>
             </nav>
     );

@@ -2,8 +2,8 @@ import logo from './logo.svg';
 import React, { useRef } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
-import CurrentScamPage from './CurrentScamPage';  // Import the Map component
-// import RoutePage from './RoutePage'; // Import the Route component
+import CurrentScamsPage from './CurrentScamsPage';  // Import the Map component
+import IdentifyScamsPage from './IdentifyScamsPage'; // Import the Route component
 import Header from './Header';
 
 function App() {
@@ -48,8 +48,8 @@ function App() {
               </main>
             </>
           } />
-          <Route path="/currentScam" element={<CurrentScamPage />} />
-          {/* <Route path="/route" element={<RoutePage />} /> */}
+          <Route path="/currentScam" element={<CurrentScamsPage />} />
+          <Route path="/identifyScam" element={<IdentifyScamsPage />} />
         </Routes>
       </div>
     </Router>

@@ -1,14 +1,14 @@
 import React, { useRef } from 'react';
-import MostReportedScam from './CurrentScam/MostReportedScam';
-import TopLossScam from './CurrentScam/TopLossScam';
-import PopularContactMethods from './CurrentScam/PopularContactMethods';
-import './CurrentScamPage.css';
+import PhoneScams from './IdentifyScams/PhoneScams';
+import EmailScams from './IdentifyScams/EmailScams';
+import RomanceScams from './IdentifyScams/RomanceScams';
+import './IdentifyScamsPage.css';
 
-const CurrentScamPage = () => {
+const IdentifyScamsPage = () => {
     // Create a reference to the section
-    const mostReportedRef = useRef(null);
-    const topLossRef = useRef(null);
-    const popularContactRef = useRef(null);
+    const phoneScamsRef = useRef(null);
+    const emailScamsRef = useRef(null);
+    const romanceScamsRef = useRef(null);
 
     // Function to scroll to the section
     const scrollToSection = (ref) => {
@@ -18,13 +18,13 @@ const CurrentScamPage = () => {
     return (
         <div className="CurrentScamPage">
             {/* Side Menu */}
-            <nav className="Side-menu">
+            {/* <nav className="Side-menu">
                 <ul>
                     <li><a href="#most-reported" onClick={() => scrollToSection(mostReportedRef)}>Current Most Reported Scams</a></li>
                     <li><a href="#top-loss" onClick={() => scrollToSection(topLossRef)}>Current Top Scams By Loss</a></li>
                     <li><a href="#popular-contact" onClick={() => scrollToSection(popularContactRef)}>Current Most Popular Contact Methods</a></li>
                 </ul>
-            </nav>
+            </nav> */}
 
             {/* Introduction Section */}
             <header className="App-header">
@@ -35,21 +35,21 @@ const CurrentScamPage = () => {
             {/* Main Content */}
             <main>
                 {/* Chart Section */}
-                <section ref={mostReportedRef} id="most-reported" className="Chart-section">
+                {/* <section ref={mostReportedRef} id="most-reported" className="Chart-section"> */}
                     {/* <h2>Current Most Reported Scams</h2> */}
-                    <MostReportedScam />
-                </section>
-                <section ref={topLossRef} id="top-loss" className="Chart-section">
+                    {/* <MostReportedScam /> */}
+                {/* </section> */}
+                {/* <section ref={topLossRef} id="top-loss" className="Chart-section"> */}
                     {/* <h2>Current Top Scams by Loss</h2> */}
-                    <TopLossScam />
-                </section>
-                <section ref={popularContactRef} id="popular-contact" className="Chart-section">
+                    {/* <TopLossScam /> */}
+                {/* </section> */}
+                {/* <section ref={popularContactRef} id="popular-contact" className="Chart-section"> */}
                     {/* <h2>Current Most Popular Contact Methods</h2> */}
-                    <PopularContactMethods />
-                </section>
+                    {/* <PopularContactMethods /> */}
+                {/* </section> */}
             </main>
         </div>
     );
 };
 
-export default CurrentScamPage;
+export default IdentifyScamsPage;
