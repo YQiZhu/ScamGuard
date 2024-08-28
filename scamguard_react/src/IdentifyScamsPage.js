@@ -102,7 +102,7 @@ const IdentifyScamsPage = () => {
                 onClick={() => navigate('/social-media-scams')}
             >
                 <img
-                    src={require('./images/email_scams_icon.png')}
+                    src={require('./images/social_media_scams_icon.png')}
                     alt="Social Media Scams"
                 />
                 <div className="text-content">
@@ -122,8 +122,8 @@ const IdentifyScamsPage = () => {
                 onClick={() => navigate('/website-scams')}
             >
                 <img
-                    src={require('./images/email_scams_icon.png')}
-                    alt="Social Media Scams"
+                    src={require('./images/website_scams_icon.png')}
+                    alt="Website Scams"
                 />
                 <div className="text-content">
                     <h3>Website Scams</h3>

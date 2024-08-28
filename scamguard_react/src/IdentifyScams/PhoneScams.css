@@ -1,0 +1,30 @@
+.PhoneScamsPage {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.PhoneScamsPage h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.PhoneScamsPage p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.scam-identification, .protect-yourself {
+    margin-bottom: 40px; /* Space between sections */
+}
+
+.scam-identification h3, .protect-yourself h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.scam-identification p, .protect-yourself p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
