@@ -12,7 +12,9 @@ import SocialMediaScams from './IdentifyScams/SocialMediaScams';
 import WebsiteScams from './IdentifyScams/WebsiteScams';
 import RomanceScams from './IdentifyScams/RomanceScams';
 import InvestmentScams from './IdentifyScams/InvestmentScams';
-
+import ProductAndServiceScams from './IdentifyScams/ProductAndServiceScams';
+import JobScams from './IdentifyScams/JobScams';
+import ImpersonationScams from './IdentifyScams/ImpersonationScams';
 
 function App() {
   // Create a reference to the map section
@@ -64,7 +66,10 @@ function App() {
           <Route path="/social-media-scams" element={<SocialMediaScams />} />
           <Route path="/website-scams" element={<WebsiteScams />} />
           <Route path="/romance-scams" element={<RomanceScams />} />
+          <Route path="/product-and-service-scams" element={<ProductAndServiceScams />} />
           <Route path="/investment-scams" element={<InvestmentScams />} />
+          <Route path="/job-scams" element={<JobScams />} />
+          <Route path="/impersonation-scams" element={<ImpersonationScams />} />
         </Routes>
       </div>
     </Router>

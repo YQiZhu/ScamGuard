@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-// import './MostReportedScam.css'; 
+import './PhoneScams.css';
 
 function EmailScams() {
 
     return (
-        <div className="EmailScamsPage">
+        <div className="ScamsPage">
             <div>
                 <h2>Email Scams</h2>
                 <p>some text</p>

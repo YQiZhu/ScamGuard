@@ -3,7 +3,7 @@ import './PhoneScams.css'; // Optional: Add a CSS file for custom styling
 
 function PhoneScams() {
     return (
-        <div className="PhoneScamsPage">
+        <div className="ScamsPage">
             <h2>Phone Scams</h2>
             <p>Details and examples about how phone scams work and how to identify them.</p>
             

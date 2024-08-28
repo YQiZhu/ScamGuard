@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
-// import './MostReportedScam.css'; 
+import './PhoneScams.css';
 
 function RomanceScams() {
 
     return (
-        <div className="RomanceScamsPage">
+        <div className="ScamsPage">
             <h2>Romance Scams</h2>
             <p>Details and examples about how Romance Scams work and how to identify them.</p>
             <p>some text</p>

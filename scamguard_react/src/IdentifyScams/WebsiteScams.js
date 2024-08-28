@@ -1,9 +1,9 @@
 import React from 'react';
-// import './MostReportedScam.css'; 
+import './PhoneScams.css';
 
 function WebsiteScams() {
     return (
-        <div className="WebsiteScamsPage">
+        <div className="ScamsPage">
             <h2>Website Scams</h2>
             <p>Details and examples about how Website Scams work and how to identify them.</p>
 

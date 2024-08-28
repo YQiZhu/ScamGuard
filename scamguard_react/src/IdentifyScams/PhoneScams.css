@@ -1,15 +1,15 @@
-.PhoneScamsPage {
+.ScamsPage {
     padding: 20px;
     max-width: 800px;
     margin: auto;
 }
 
-.PhoneScamsPage h2 {
+.ScamsPage h2 {
     font-size: 2rem;
     margin-bottom: 20px;
 }
 
-.PhoneScamsPage p {
+.ScamsPage p {
     font-size: 1rem;
     line-height: 1.5;
     margin-bottom: 20px;

@@ -1,8 +1,5 @@
 import React, { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import PhoneScams from './IdentifyScams/PhoneScams';
-import EmailScams from './IdentifyScams/EmailScams';
-import RomanceScams from './IdentifyScams/RomanceScams';
 import './IdentifyScamsPage.css';
 
 const IdentifyScamsPage = () => {
@@ -169,6 +166,66 @@ const IdentifyScamsPage = () => {
                     <h3>Investment Scams</h3>
                     <p>
                         <strong>Click</strong> on Card to find out more information/example about how <strong>Investment Scams</strong> work and how to identify them.
+                    </p>
+                </div>
+                <div className="arrow">
+                    &gt;
+                </div>
+            </div>
+
+            {/* Product And Service Scams */}
+            <div
+                className="clickable-box"
+                onClick={() => navigate('/product-and-service-scams-scams')}
+            >
+                <img
+                    src={require('./images/email_scams_icon.png')}
+                    alt="Product And Service Scams"
+                />
+                <div className="text-content">
+                    <h3>Product And Service Scams</h3>
+                    <p>
+                        <strong>Click</strong> on Card to find out more information/example about how <strong>Product And Service Scams</strong> work and how to identify them.
+                    </p>
+                </div>
+                <div className="arrow">
+                    &gt;
+                </div>
+            </div>
+
+            {/* Job Scams */}
+            <div
+                className="clickable-box"
+                onClick={() => navigate('/job-scams')}
+            >
+                <img
+                    src={require('./images/email_scams_icon.png')}
+                    alt="Job Scams"
+                />
+                <div className="text-content">
+                    <h3>Job Scams</h3>
+                    <p>
+                        <strong>Click</strong> on Card to find out more information/example about how <strong>Job Scams</strong> work and how to identify them.
+                    </p>
+                </div>
+                <div className="arrow">
+                    &gt;
+                </div>
+            </div>
+
+            {/* Impersonation Scams */}
+            <div
+                className="clickable-box"
+                onClick={() => navigate('/impersonation-scams')}
+            >
+                <img
+                    src={require('./images/email_scams_icon.png')}
+                    alt="Impersonation Scams"
+                />
+                <div className="text-content">
+                    <h3>Impersonation Scams</h3>
+                    <p>
+                        <strong>Click</strong> on Card to find out more information/example about how <strong>Impersonation Scams</strong> work and how to identify them.
                     </p>
                 </div>
                 <div className="arrow">
