@@ -3,30 +3,34 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'rec
 // import './MostReportedScam.css'; 
 
 function EmailScams() {
-    // const [data, setData] = useState([]);
-
-    // useEffect(() => {
-    //     fetch('https://scamguard.live/api/most_frequent_scams/', {
-    //         method: 'GET',
-    //         headers: {
-    //             'Content-Type': 'application/json',
-    //         },
-    //     })
-    //         .then(response => {
-    //             if (!response.ok) {
-    //                 throw new Error('Network response was not ok');
-    //             }
-    //             return response.json();
-    //         })
-    //         .then(data => setData(data))
-    //         .catch(error => console.error('Error fetching map data:', error.message));
-    // }, []);
 
     return (
         <div className="chart-container">
             <div>
                 <h2>Email Scams</h2>
+                <p>some text</p>
                 
+                {/* How to Identify a Scam Section */}
+                <section className="scam-identification">
+                    <h3>How to Identify a Scam</h3>
+                    <p>
+                        Scammers often use various tactics to trick you into giving away personal information or money.
+                        Some common signs of a scam include unexpected requests for personal information, offers that seem too good to be true,
+                        and communication from unknown or suspicious sources.
+                    </p>
+                    {/* Add more content or components specific to identifying scams */}
+                </section>
+
+                {/* How to Protect Yourself Section */}
+                <section className="protect-yourself">
+                    <h3>How to Protect Yourself</h3>
+                    <p>
+                        Protecting yourself from scams involves being vigilant and taking certain precautions.
+                        Always verify the identity of the person or organization contacting you, never share personal information
+                        unless you are sure it is safe, and report any suspicious activity to the authorities.
+                    </p>
+                    {/* Add more content or components specific to protecting yourself */}
+                </section>
             </div>
         </div>
     );
