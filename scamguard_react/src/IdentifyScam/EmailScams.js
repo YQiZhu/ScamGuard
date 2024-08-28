@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 // import './MostReportedScam.css'; 
 
 function EmailScams() {
 
     return (
-        <div className="chart-container">
+        <div className="EmailScamsPage">
             <div>
                 <h2>Email Scams</h2>
                 <p>some text</p>
