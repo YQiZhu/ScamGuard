@@ -2,6 +2,10 @@ import React, { useEffect, useState } from 'react';
 import './PhoneScams.css';
 
 function RomanceScams() {
+    // Go to the real story source
+    const goToOtherPage = () => {
+        window.location.href = 'https://www.9news.com.au/national/scams-melbourne-woman-met-gabriel-on-a-dating-site-he-drained-her-bank-account-and-broke-her-heart/39b5a350-fc65-4a24-bb4e-e5036d391df4'; // Replace with the desired URL
+    };
 
     return (
         <div className="ScamsPage">
@@ -11,7 +15,7 @@ function RomanceScams() {
 
             {/* How to Identify a Scam Section */}
             <section className="scam-identification">
-                <h3>How to Identify a Scam</h3>
+                <h3>How to Identify a Romance Scam</h3>
                 <p>
                     It is likely that you are encountering a romance scam if:
                     <ul>
@@ -42,6 +46,19 @@ function RomanceScams() {
                       <li>Speak to your family friends about your online relationships to get their perspective on if there are any red flags</li>
                     </ul>
                 </p>
+                    <img src="/images/scam_guard_logo.jpg" alt="ScamGuard Logo" className="example-image" />
+
+                    {/* Real-Life Story Section */}
+                    <section className="real-life-story">
+                        <h3>Real-Life Story</h3>
+                        <h4>Melbourne Woman Scammed by Online Romance</h4> {/* Story Title */}
+                        <p>
+                            Melbourne single mother named Kate was scammed out of $11,000 by a man she met on a dating site, who went by the name Gabriel. After months of building trust, Gabriel convinced Kate to send him money for supposed emergencies involving his children. Despite her initial suspicions, Kate was ultimately tricked, leading to significant financial loss and emotional distress. This story highlights the growing threat of romance scams, where scammers prey on vulnerable individuals seeking companionship.
+                        </p>
+                    </section>
+
+                    {/* Clickable Box with URL Link */}
+                    <button onClick={goToOtherPage}>Read the Full Story</button>
             </section>
         </div>
     );
