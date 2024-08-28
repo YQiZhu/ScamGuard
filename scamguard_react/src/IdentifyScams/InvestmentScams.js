@@ -57,6 +57,7 @@ function InvestmentScams() {
                         </ul>
                       </li>
                     </ul>
+                 </p>
                     <img src="/images/scam_guard_logo.jpg" alt="ScamGuard Logo" className="example-image" />
 
                     {/* Real-Life Story Section */}
@@ -70,7 +71,6 @@ function InvestmentScams() {
 
                     {/* Clickable Box with URL Link */}
                     <button onClick={goToOtherPage}>Read the Full Story</button>
-                </p>
             </section>
         </div>
     );

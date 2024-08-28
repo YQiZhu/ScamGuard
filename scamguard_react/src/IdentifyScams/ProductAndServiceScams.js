@@ -2,14 +2,18 @@ import React from 'react';
 import './PhoneScams.css';
 
 function ProductAndServiceScams() {
+    // Go to the real story source
+    const goToOtherPage = () => {
+        window.location.href = 'https://www.abc.net.au/news/2024-05-21/false-billing-scam-on-rise-australian-banks-powerless/103870850';
+    };
     return (
         <div className="ScamsPage">
             <h2>Product And Service Scams</h2>
-            <p>Details and examples about how Product And Service Scams Scams work and how to identify them.</p>
+            <p>Product and service scams involve scammers posing as legitimate buyers or sellers to trick victims into sending money or personal information. These scams often feature fake websites, online profiles, or ads that closely mimic real businesses, offering products and services at prices that seem too good to be true. Scammers may also alter payment details on legitimate invoices to redirect funds. Common examples include fake e-commerce sites and scams on platforms like Facebook Marketplace. Always verify the legitimacy of the seller and product before making any purchases.</p>
 
             {/* How to Identify a Scam Section */}
             <section className="scam-identification">
-                <h3>How to Identify a Scam</h3>
+                <h3>How to Identify a Product and Service Scam</h3>
                 <p>
                     It is likely that you are encountering a product and service scam if:
                     <ul>
@@ -45,6 +49,19 @@ function ProductAndServiceScams() {
                       <li>If a website ends with .au use the <a href="https://whois.auda.org.au/" target="_blank" rel="noopener noreferrer">Australian Domain Authority’s lookup</a> to check who has registered the website and compare it to the information given on the website</li>
                     </ul>
                 </p>
+                <img src="/images/scam_guard_logo.jpg" alt="ScamGuard Logo" className="example-image" />
+
+                    {/* Real-Life Story Section */}
+                    <section className="real-life-story">
+                        <h3>Real-Life Story</h3>
+                        <h4>Surge in Product and Service Scams in Australia</h4> {/* Story Title */}
+                        <p>
+                            Product and service scams, especially false billing schemes, are increasing in Australia. Scammers impersonate businesses by altering invoices to divert payments to fraudulent accounts. Tour operator Meng Wong lost $80,000 when a client mistakenly paid a scammer. Australia's banks are introducing the Scam-Safe Accord to cross-check account details, a measure proven effective in reducing fraud overseas. The ACCC supports these efforts but urges stricter regulations to further protect consumers. Despite these initiatives, scams targeting high-value transactions are on the rise.
+                        </p>
+                    </section>
+
+                    {/* Clickable Box with URL Link */}
+                    <button onClick={goToOtherPage}>Read the Full Story</button>
             </section>
         </div>
     );
