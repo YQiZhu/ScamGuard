@@ -66,9 +66,9 @@ function TextScams() {
                     {/* Real-Life Story Section */}
                     <section className="real-life-story">
                         <h3>Real-Life Story</h3>
-                        <h4>‘Hi Mum’ Phone Scam Results in $2 Million Loss</h4> {/* Story Title */}
+                        <h4>‘Hi Mum’ Scam Results in $2 Million Loss</h4> {/* Story Title */}
                         <p>
-                            The "Hi Mum" phone scam has cost Australian parents over $2 million in recent months. The scam involves scammers sending text messages from unknown numbers, pretending to be a victim's child who has lost their phone. The scammer asks the parent to delete the old number and requests money, usually claiming an urgent need. The scam has primarily targeted victims in New South Wales and Victoria, with a significant increase in reports since May. Police and cybersecurity experts warn that money from these scams is often quickly moved into cryptocurrency, making it difficult for victims to recover their funds. Authorities advise verifying such messages by contacting the relative through an alternative method and reporting any suspicious activity to the police.
+                            The "Hi Mum" scam has cost Australian parents over $2 million in recent months. The scam involves scammers sending text messages from unknown numbers, pretending to be a victim's child who has lost their phone. The scammer asks the parent to delete the old number and requests money, usually claiming an urgent need. The scam has primarily targeted victims in New South Wales and Victoria, with a significant increase in reports since May. Police and cybersecurity experts warn that money from these scams is often quickly moved into cryptocurrency, making it difficult for victims to recover their funds. Authorities advise verifying such messages by contacting the relative through an alternative method and reporting any suspicious activity to the police.
                         </p>
                     </section>
 
