@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
-import './MostReportedScam.css'; 
+import './MostReportedScam.css';
 
 function PopularContactMethods() {
     const [data, setData] = useState([]);
@@ -41,6 +41,12 @@ function PopularContactMethods() {
                     <Legend />
                     <Bar dataKey="number_of_reports" fill="#8884d8" />
                 </BarChart>
+                <p>
+                    The Email ranked at the first place in the top three most frequent methods scammers used to contact Australians from the age group 65 and over. There were 3198 Email reported for June, which increased by one-third compared to the similar month a year ago. It is expected that this Email will continue to increase.
+                    The Text message ranked at the second place in the top three most frequent methods scammers used to contact Australians from the age group 65 and over. There were 2001 Text message reported for June, which increased by double compared to the similar month a year ago. It is expected that this Text message will continue to increase.
+                    The Phone call ranked at the third place in the top three most frequent methods scammers used to contact Australians from the age group 65 and over. There were 575 Phone call reported for June, which decreased by half compared to the similar month a year ago. It is expected that this Phone call will continue to decrease.
+
+                </p>
             </div>
         </div>
     );
