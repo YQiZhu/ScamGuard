@@ -35,11 +35,26 @@ function TextScams() {
             <section className="protect-yourself">
                 <h3>How to Protect Yourself</h3>
                 <p>
-                    Protecting yourself from scams involves being vigilant and taking certain precautions.
-                    Always verify the identity of the person or organization contacting you, never share personal information
-                    unless you are sure it is safe, and report any suspicious activity to the authorities.
+                    <ul>
+                      <li>Never open links you are sent
+                        <ul>
+                            <li>Independently search for the website or use the organisation’s authenticated portal or app</li>
+                        </ul>
+                      </li>
+                      <li>Do your own check that the person contacting you is who they say they are
+                        <ul>
+                            <li>Don’t respond to the person using the phone number the sender has provided</li>
+                            <li>Call the organisation or person using a phone number you have found yourself, such as from their official website</li>
+                            <li>If they claim they are someone you know using a new phone number
+                                <ul>
+                                    <li>Try to call them using the existing phone number you have</li>
+                                    <li>Ask them a question that only they would know the answer to</li>
+                                </ul>
+                            </li>
+                        </ul>
+                      </li>
+                    </ul>
                 </p>
-                {/* Add more content or components specific to protecting yourself */}
             </section>
         </div>
     );

@@ -35,11 +35,15 @@ function PhoneScams() {
             <section className="protect-yourself">
                 <h3>How to Protect Yourself</h3>
                 <p>
-                    Protecting yourself from scams involves being vigilant and taking certain precautions. 
-                    Always verify the identity of the person or organization contacting you, never share personal information 
-                    unless you are sure it is safe, and report any suspicious activity to the authorities.
+                <ul>
+                      <li>Let calls from unknown numbers go to voicemail</li>
+                      <li>Hang up if you don’t recognise the caller or you’re not sure who they are</li>
+                      <li>Hang up if the caller gets aggressive or threatening</li>
+                      <li>Call the organisation or person back on a number you have found yourself</li>
+                      <li>Never share personal information or financial details over the phone</li>
+                      <li>Never allow a caller to have remote access to your computer</li>
+                    </ul>
                 </p>
-                {/* Add more content or components specific to protecting yourself */}
             </section>
         </div>
     );

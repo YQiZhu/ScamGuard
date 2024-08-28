@@ -35,9 +35,23 @@ function SocialMediaScams() {
             <section className="protect-yourself">
                 <h3>How to Protect Yourself</h3>
                 <p>
-                    Protecting yourself from scams involves being vigilant and taking certain precautions.
-                    Always verify the identity of the person or organization contacting you, never share personal information
-                    unless you are sure it is safe, and report any suspicious activity to the authorities.
+                    <ul>
+                      <li>Investigate the profiles of people who contact you, check how many posts they have made and how many friends or followers they have
+                        <ul>
+                            <li>A lack of activity and friends or followers can indicate that the profile is fake</li>
+                        </ul>
+                      </li>
+                      <li>Never send money to a person you have only met online</li>
+                      <li>Never send personal photos of yourself to someone you have only met online</li>
+                      <li>Never open links you are sent</li>
+                      <li>If they claim they are someone you know try contacting them through an existing method you have such as another social media platform or their phone number</li>
+                      <li>To protect your social media accounts
+                        <ul>
+                            <li>Use strong, unique password</li>
+                            <li>Enable multi-factor authentication if it’s available</li>
+                        </ul>
+                      </li>
+                    </ul>
                 </p>
                 {/* Add more content or components specific to protecting yourself */}
             </section>
