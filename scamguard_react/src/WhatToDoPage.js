@@ -30,42 +30,14 @@ const WhatToDoPage = () => {
             <header className="indentify-scams-header">
                 <h1>What to do if you've been scammed</h1>
             </header>
-            <section>
-                <h2>1. Check if it is a scam</h2>
-                <p>If you are unsure whether you are being scammed click on <a href="/identify-scams" target="_blank">How to identify scams</a> in the navigation bar above.</p>
+             <section>
+                <h2>1. Act fast to prevent further losses</h2>
+                <p>If you suspect that you've been scammed, it's essential to take immediate action to protect yourself and prevent further losses. First, stop all communication with the scammer and do not provide any additional information. Next, contact your financial institution to secure your accounts and monitor for any suspicious activity. It's also important to change the passwords for any accounts that may have been compromised. Acting swiftly can significantly reduce the impact of the scam and protect your financial and personal information.</p>
             </section>
 
             <section>
-                <h2>2. If you still think it’s a scam</h2>
-                <h3>You didn’t give them your personal information or property</h3>
-                <ul>
-                    <li>First, stop all communication with the scammer.</li>
-                    <li>Provide details of the scam (e.g., screenshots, photos, chat logs), including who contacted you and when.</li>
-                    <li>Understand what type of scam this is. If unsure, click <a href="/learn-about-scams" target="_blank">Learn About Scams</a>.</li>
-                    <li>Prepare any information you have about the scammer (e.g., ABN, ACN, name, email, phone number, social account, website or URL).</li>
-                    <li>Report the scam to <a href="https://www.scamwatch.gov.au/report-a-scam" target="_blank">National Anti-Scam Centre - Scamwatch</a>.</li>
-                    <li>If you receive a scam message on a social platform, contact the relevant IT department and inform them.</li>
-                </ul>
-
-                <h3>You think a scammer has stolen your personal information</h3>
-                <ul>
-                    <li>Contact your financial institution to secure your financial accounts.</li>
-                    <li>Change the passwords to any other accounts you think the scammer may have accessed.</li>
-                    <li>Complete a report through <a href="https://www.cyber.gov.au/report-and-recover/report" target="_blank">ReportCyber</a>.</li>
-                    <li>IDCARE can help you reduce the harm caused by identity breaches and misuse. Visit <a href="https://www.idcare.org/" target="_blank">IDCARE</a> or call 1800 595 160 (Monday to Friday 8am–5pm).</li>
-                    <li>Contact the relevant platform if you have disclosed personal information on a social platform.</li>
-                    <li>Look for suspicious emails, phone calls, texts, or messages through social media. Block or don't answer anyone you don't know.</li>
-                </ul>
-
-                <h3>You’ve been scammed and lost personal property</h3>
-                <ul>
-                    <li>Immediately report the situation to your bank or financial institution.</li>
-                    <li>Stop all communication with the scammer.</li>
-                    <li>Complete a report through <a href="https://www.cyber.gov.au/report-and-recover/report" target="_blank">ReportCyber</a>.</li>
-                    <li>Notify the social media or platform where the scam account interacted with you and report the account.</li>
-                    <li>Seek more help from <a href="https://www.idcare.org/" target="_blank">IDCARE</a>.</li>
-                    <li>Contact <a href="https://www.oaic.gov.au/privacy/your-privacy-rights/credit-reporting/access-your-credit-report" target="_blank">OAIC</a> to check if any attempts to open accounts in your name have been made.</li>
-                </ul>
+                <h2>2. Report Scams</h2>
+                <p>Once you have contacted your financial institution, you need to take action to report the scam. This may help you recover the money you have lost and prevent others from being scammed. If you are not sure how to report a scam and what materials you need to provide, please <a href="/report-scam" target="_blank">click here</a> to jump to the "Report Scam" interface. We will guide you on how to report a scam and what materials you need to prepare.</p>
             </section>
 
             <section>
