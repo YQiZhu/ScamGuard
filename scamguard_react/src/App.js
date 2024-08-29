@@ -3,8 +3,8 @@ import React, { useRef } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
 import useScrollToTop from './useScrollToTop';
-import CurrentScamsPage from './CurrentScamsPage';  // Import the Map component
-import IdentifyScamsPage from './IdentifyScamsPage'; // Import the Route component
+import CurrentScamsPage from './CurrentScamsPage'; 
+import IdentifyScamsPage from './IdentifyScamsPage'; 
 import ReportScamsPage from './ReportScamsPage';
 import WhatToDoPage from './WhatToDoPage';
 import Header from './Header';
@@ -24,14 +24,6 @@ import Footer from './Footer';
 
 function App() {
   // useScrollToTop();
-
-  // Create a reference to the map section
-  const mapRef = useRef(null);
-
-  // Function to scroll to the map section
-  const scrollToBottom = () => {
-    mapRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -53,7 +45,7 @@ function App() {
                 {/* <button onClick={scrollToBottom}>Go to Bottom of the Page</button> */}
               </header>
               <main>
-                <section ref={mapRef} className="Desc-section">
+                <section className="Desc-section">
                   <h2>What is in the website?</h2>
                   <p>
                     We w.......
