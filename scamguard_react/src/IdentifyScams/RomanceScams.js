@@ -10,8 +10,7 @@ function RomanceScams() {
     return (
         <div className="ScamsPage">
             <h2>Romance Scams</h2>
-            <p>Details and examples about how Romance Scams work and how to identify them.</p>
-            <p>some text</p>
+            <p>Romance scams occur when fraudsters create fake profiles on dating sites or social media to deceive victims emotionally and financially. These scammers often express love or emotional attachment early on to build trust, but they avoid meeting in person, citing reasons like being in the military or working overseas. Once trust is established, they ask for money, often for supposed emergencies. Victims should be wary of anyone who moves too quickly in a relationship and avoid sending money or personal information.</p>
 
             {/* How to Identify a Scam Section */}
             <section className="scam-identification">
