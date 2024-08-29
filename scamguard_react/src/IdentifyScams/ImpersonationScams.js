@@ -27,8 +27,33 @@ function ImpersonationScams() {
                       <li>A family member or friend contact you from a new number asking for financial help</li>
                     </ul>
                 </p>
+                <h4>Examples</h4>
                 <img src="/images/Impersonation_example1.png" alt="Impersonation example" className="example-image" />
+                <p>
+                    Signs this is an impersonation scam:
+                    <ul>
+                        <li>Unexpected message</li>
+                        <li>Requesting personal information</li>
+                        <li>Encouraging you to open a link</li>
+                        <li>The link does not look correct for MyGov</li>
+                    </ul>
+                </p>
                 <img src="/images/Impersonation_example2.png" alt="Impersonation example" className="example-image" />
+                <img src="/images/Impersonation_example3.png" alt="Impersonation example" className="example-image" />
+                <p>
+                    Signs this is an impersonation scam:
+                    <ul>
+                        <li>Unexpected message</li>
+                        <li>Requests personal information</li>
+                        <li>Encouraging you to open a link</li>
+                        <li>Sender email address looks suspicious
+                            <ul>
+                                <li>Unusual for an email to end with .music</li>
+                                <li>Real spotify email would be from no-reply@spotify.com</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </p>
                 <p>
                     Organisations that scammers will commonly impersonate include:
                     <ul>

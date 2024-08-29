@@ -28,7 +28,15 @@ function JobScams() {
                       <li>You are told to top up an account with your own money to complete your job</li>
                     </ul>
                 </p>
-                
+                <h4>Example</h4>
+                <img src="/images/Employment_example.png" alt="Employment example" className="example-image" />
+                <p>
+                    Signs this is a scam:
+                    <ul>
+                        <li>Unsolicited message</li>
+                        <li>Claims you can earn money quickly and with little effort</li>
+                    </ul>
+                </p>
             </section>
 
             {/* How to Protect Yourself Section */}

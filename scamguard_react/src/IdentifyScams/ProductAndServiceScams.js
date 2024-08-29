@@ -25,7 +25,14 @@ function ProductAndServiceScams() {
                       <li>The details of an account holder don’t match the person or business you think you’re paying</li>
                     </ul>
                 </p>
+                <h4>Example</h4>
                 <img src="/images/Product_example.png" alt="Product example" className="example-image" />
+                <p>
+                    Signs this is a scam website:
+                    <ul>
+                        <li>All items on store are heavily discounted</li>
+                    </ul>
+                </p>
             </section>
 
             {/* How to Protect Yourself Section */}

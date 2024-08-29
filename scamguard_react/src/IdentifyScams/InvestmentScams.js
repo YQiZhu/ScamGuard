@@ -34,7 +34,15 @@ function InvestmentScams() {
                       <li>Facial expressions and movements don’t match the speaker’s tone</li>
                     </ul>
                 </p>
+                <h4>Examples</h4>
                 <img src="/images/Investment_example.png" alt="Investment example" className="example-image" />
+                <p>
+                    Signs this is a scam:
+                    <ul>
+                        <li>Unsolicited message</li>
+                        <li>Promising easy method to make high returns</li>
+                    </ul>
+                </p>
             </section>
 
             {/* How to Protect Yourself Section */}

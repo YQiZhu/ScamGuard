@@ -28,8 +28,15 @@ function RomanceScams() {
                       <li>They want you to keep your relationship secret from friends and family</li>
                     </ul>
                 </p>
+                <h4>Examples</h4>
                 <img src="/images/Romance_example.png" alt="Investment example" className="example-image" />
-                {/* Add more content or components specific to identifying scams */}
+                <p>
+                    Signs this is a romance scam:
+                    <ul>
+                        <li>Asking for money</li>
+                        <li>Creating a sense of urgency by making it seem like an emergency and that they'll only be able to meet if you send the money</li>
+                    </ul>
+                </p>
             </section>
 
             {/* How to Protect Yourself Section */}
