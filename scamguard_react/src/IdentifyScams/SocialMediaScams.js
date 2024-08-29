@@ -9,7 +9,7 @@ function SocialMediaScams() {
     return (
         <div className="ScamsPage">
             <h2>Social Media Scams</h2>
-            <p>ocial media scams often involve impersonation and phishing tactics, where scammers create fake profiles to mislead users. They may send spam messages or harmful links while pretending to be someone familiar or a reputable organization. These scams can take the form of deceptive romantic relationships, where trust is gradually built before soliciting money. They may also involve fake investment opportunities or fraudulent ads for non-existent products. By leveraging the personal and trusting aspects of social media, scammers manipulate victims into disclosing money or sensitive information.</p>
+            <p>Social media scams often involve impersonation and phishing tactics, where scammers create fake profiles to mislead users. They may send spam messages or harmful links while pretending to be someone familiar or a reputable organization. These scams can take the form of deceptive romantic relationships, where trust is gradually built before soliciting money. They may also involve fake investment opportunities or fraudulent ads for non-existent products. By leveraging the personal and trusting aspects of social media, scammers manipulate victims into disclosing money or sensitive information.</p>
 
             {/* How to Identify a Scam Section */}
             <section className="scam-identification">
