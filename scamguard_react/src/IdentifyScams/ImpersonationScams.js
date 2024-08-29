@@ -56,12 +56,12 @@ function ImpersonationScams() {
                         </ul>
                       </li>
                     </ul>
-                    <img src="/images/scam_guard_logo.jpg" alt="ScamGuard Logo" className="example-image" />
 
                     {/* Real-Life Story Section */}
                     <section className="real-life-story">
                         <h3>Real-Life Story</h3>
                         <h4>ATO impersonation scam: mother-in-law lost $4000 over a fake tax debt</h4> {/* Story Title */}
+                         <img src="/images/ImpersonationScamsrealstory.jpg" alt="Impersonation Scams real story" className="example-image" />
                         <p>
                             A woman named Jane received a call from someone pretending to be from the Australian Taxation Office (ATO). The caller claimed she owed $4,000 in taxes and threatened her with arrest if she didn’t pay immediately. The scammer’s aggressive and intimidating behavior made Jane, who speaks English as a second language, extremely anxious. Fearing arrest, she complied with the scammer’s demands and transferred the money. It wasn’t until later that she realized she had been deceived. This incident underscores the importance of being cautious with unexpected calls or messages demanding money or personal details. It’s crucial  to verify the identity of the caller by reaching out to the organization directly using official contact information.
                         </p>
