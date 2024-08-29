@@ -18,6 +18,9 @@ import InvestmentScams from './IdentifyScams/InvestmentScams';
 import ProductAndServiceScams from './IdentifyScams/ProductAndServiceScams';
 import JobScams from './IdentifyScams/JobScams';
 import ImpersonationScams from './IdentifyScams/ImpersonationScams';
+import ReferencePage from './ReferencePage';
+import Footer from './Footer';
+
 
 function App() {
   // useScrollToTop();
@@ -63,6 +66,7 @@ function App() {
               </main>
             </>
           } />
+          <Route path="/references" element={<ReferencePage />} />
           <Route path="/currentScam" element={<CurrentScamsPage />} />
           <Route path="/identifyScam" element={<IdentifyScamsPage />} />
           <Route path="/reportScam" element={<ReportScamsPage />} />
@@ -78,6 +82,7 @@ function App() {
           <Route path="/job-scams" element={<JobScams />} />
           <Route path="/impersonation-scams" element={<ImpersonationScams />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );
