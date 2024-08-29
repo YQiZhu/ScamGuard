@@ -62,6 +62,13 @@
     text-align: left; /* Paragraphs and lists below each heading are left-aligned */
 }
 
+.ScamsPage h3+ul li {
+    line-height: 1.5;
+    /* Sets the line spacing within list items */
+    margin-bottom: 10px;
+    /* Control the spacing between each list item */
+}
+
 .example-image {
     max-width: 100%; /* Image will scale down to fit the container */
     height: auto;    /* Maintain the aspect ratio */
