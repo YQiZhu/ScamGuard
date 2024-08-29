@@ -33,7 +33,16 @@ function SocialMediaScams() {
                       <li>Offering to share information about a great investment opportunity</li>
                     </ul>
                 </p>
+                <h4>Examples</h4>
                 <img src="/images/SocialMedia_example.png" alt="Social Media example" className="example-image" />
+                <p>
+                    Signs this message is a scam:
+                    <ul>
+                        <li>Unsolicited message</li>
+                        <li>Claiming you won a contest without entering</li>
+                        <li>Encouraging you to open a link</li>
+                    </ul>
+                </p>
             </section>
 
             {/* How to Protect Yourself Section */}

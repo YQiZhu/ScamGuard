@@ -39,10 +39,28 @@ function EmailScams() {
                             <li>An invoice for a product you never bought</li>
                             <li>Claiming your account will close soon unless you reactivate it</li>
                         </ul>
-                        <img src="/images/Email_example1.png" alt="Email example" className="example-image" />
-                        <img src="/images/Email_example2.png" alt="Email example" className="example-image" />
-                        <img src="/images/Email_example3.png" alt="Email example" className="example-image" />
-                        <img src="/images/Email_example4.png" alt="Email example" className="example-image" />
+                    </p>
+                    <h4>Examples</h4>
+                    <img src="/images/Email_example2.png" alt="Email example" className="example-image" />
+                    <p>
+                        Signs this email is a scam:
+                        <ul>
+                            <li>Includes a generic greeting</li>
+                            <li>Creates a sense of urgency by making you fearful that there is a mistake with your taxes</li>
+                            <li>Encouraging  you to open a link</li>
+                            <li>Destination URL does not match the text shown</li>
+                        </ul>
+                    </p>
+                    <img src="/images/Email_example3.png" alt="Email example" className="example-image" />
+                    <img src="/images/Email_example4.png" alt="Email example" className="example-image" />
+                    <p>
+                        Signs this email is a scam:
+                        <ul>
+                            <li>Claims to be from Telstra but email address does not match</li>
+                            <li>Includes a generic greeting</li>
+                            <li>Creates a sense of urgency by claiming your account will be terminated if you don’t pay</li>
+                            <li>Destination URL for making the payment does not match what you would expect for an Australian company</li>
+                        </ul>
                     </p>
                 </section>
 

@@ -33,8 +33,16 @@ function TextScams() {
                       <li>Claiming you have an overdue payment</li>
                     </ul>
                 </p>
+                <h4>Examples</h4>
                 <img src="/images/Text_example1.png" alt="Text example" className="example-image" />
                 <img src="/images/Text_example2.png" alt="Text example" className="example-image" />
+                <p>
+                    Signs these texts are scams:
+                    <ul>
+                        <li>Encourages urgent action</li>
+                        <li>Encouraging you to open a link</li>
+                    </ul>
+                </p>
             </section>
 
             {/* How to Protect Yourself Section */}

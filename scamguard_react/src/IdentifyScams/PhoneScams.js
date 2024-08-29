@@ -34,6 +34,16 @@ function PhoneScams() {
                       <li>Claiming you must pay for your service to continue</li>
                     </ul>
                 </p>
+                <h4>Examples</h4>
+                <h5>nbn Disconection Scam</h5>
+                <p>You receive a call from someone claiming to be from nbn and threatening to disconnect your internet service in the next 48 hours. They aim to get you to reveal your personal details and account information, potentially your credit card or bank account details, by presenting this as required to get your service reconnected. </p>
+                <p>Signs this is a scam
+                    <ul>
+                        <li>Unexpected contact</li>
+                        <li>Asking for personal and financial information</li>
+                        <li>Threatening you to take immediate action</li>
+                    </ul>
+                </p>
             </section>
 
             {/* How to Protect Yourself Section */}

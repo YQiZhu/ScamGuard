@@ -26,8 +26,16 @@ function WebsiteScams() {
                       <li>Is missing a shipping and return policy</li>
                     </ul>
                 </p>
+                <h4>Examples</h4>
                 <img src="/images/Website_example1.png" alt="Website example" className="example-image" />
                 <img src="/images/Website_example2.png" alt="Website example" className="example-image" />
+                <p>
+                    Signs the URLs are fake:
+                    <ul>
+                        <li>Organisation name is misspelt</li>
+                        <li>Numbers replacing letters in organisation name</li>
+                    </ul>
+                </p>
             </section>
 
             {/* How to Protect Yourself Section */}
