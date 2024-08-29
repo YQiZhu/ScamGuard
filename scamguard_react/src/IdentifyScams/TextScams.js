@@ -81,6 +81,7 @@ function TextScams() {
                     </section>
 
                     {/* Clickable Box with URL Link */}
+                    <button onClick={goToOtherPage}>Read the Full Story</button>
             </section>
         </div>
     );
