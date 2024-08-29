@@ -58,7 +58,7 @@ function PhoneScams() {
                       <li>Never share personal information or financial details over the phone</li>
                       <li>Never allow a caller to have remote access to your computer</li>
                     </ul>
-
+                </p>
                     {/* Real-Life Story Section */}
                     <section className="real-life-story">
                         <h3>Real-Life Story</h3>
@@ -72,7 +72,6 @@ function PhoneScams() {
 
                     {/* Clickable Box with URL Link */}
                     <button onClick={goToOtherPage}>Read the Full Story</button>
-                </p>
             </section>
         </div>
     );
