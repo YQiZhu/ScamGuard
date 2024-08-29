@@ -58,12 +58,12 @@ function SocialMediaScams() {
                       </li>
                     </ul>
                 </p>
-                    <img src="/images/scam_guard_logo.jpg" alt="ScamGuard Logo" className="example-image" />
 
                     {/* Real-Life Story Section */}
                     <section className="real-life-story">
                         <h3>Real-Life Story</h3>
                         <h4>Social Media Scam Devastates Australian Woman, Leading to $100,000 Loss</h4> {/* Story Title */}
+                        <img src="/images/SocialMediascamrealstory.jpeg" alt="Social Media Scam Real Story" className="example-image" />
                         <p>
                             Deb, a 63-year-old Australian, was deceived by a sophisticated fraud syndicate advertising on Facebook. She clicked on an ad featuring a prominent Australian celebrity endorsing an investment opportunity. Interested, she signed up with the online trading platform and was soon contacted by Daniel, who posed as her investment broker. Over the next few months, Daniel maintained daily communication, persuading Deb to invest more money with promises of substantial returns. Ultimately, Deb lost her entire superannuation and savings, totaling over $100,000. Although devastated by the scam, Deb now dedicates her time to warning others by commenting on suspicious ads she encounters on Facebook.
                         </p>
