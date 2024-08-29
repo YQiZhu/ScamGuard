@@ -159,7 +159,7 @@ const IdentifyScamsPage = () => {
                 onClick={() => navigate('/investment-scams')}
             >
                 <img
-                    src={require('./images/email_scams_icon.png')}
+                    src={require('./images/investment_scam.png')}
                     alt="Investment Scams"
                 />
                 <div className="text-content">
@@ -179,7 +179,7 @@ const IdentifyScamsPage = () => {
                 onClick={() => navigate('/product-and-service-scams')}
             >
                 <img
-                    src={require('./images/email_scams_icon.png')}
+                    src={require('./images/product.png')}
                     alt="Product And Service Scams"
                 />
                 <div className="text-content">
@@ -199,7 +199,7 @@ const IdentifyScamsPage = () => {
                 onClick={() => navigate('/job-scams')}
             >
                 <img
-                    src={require('./images/email_scams_icon.png')}
+                    src={require('./images/job_scam.jpg')}
                     alt="Job Scams"
                 />
                 <div className="text-content">
@@ -219,7 +219,7 @@ const IdentifyScamsPage = () => {
                 onClick={() => navigate('/impersonation-scams')}
             >
                 <img
-                    src={require('./images/email_scams_icon.png')}
+                    src={require('./images/impersonation_scams_icon.png')}
                     alt="Impersonation Scams"
                 />
                 <div className="text-content">
