@@ -70,6 +70,11 @@
     /* Control the spacing between each list item */
 }
 
+.ScamsPage h2 {
+    margin-top: 70px;
+    /* Set the spacing below each h2 tag */
+}
+
 .example-image {
     max-width: 100%; /* Image will scale down to fit the container */
     height: auto;    /* Maintain the aspect ratio */
