@@ -49,12 +49,12 @@ function ProductAndServiceScams() {
                       <li>If a website ends with .au use the <a href="https://whois.auda.org.au/" target="_blank" rel="noopener noreferrer">Australian Domain Authority’s lookup</a> to check who has registered the website and compare it to the information given on the website</li>
                     </ul>
                 </p>
-                <img src="/images/scam_guard_logo.jpg" alt="ScamGuard Logo" className="example-image" />
 
                     {/* Real-Life Story Section */}
                     <section className="real-life-story">
                         <h3>Real-Life Story</h3>
                         <h4>Surge in Product and Service Scams in Australia</h4> {/* Story Title */}
+                        <img src="/images/Productandservicescamrealstory.jpeg" alt="Product and service scam real story" className="example-image" />
                         <p>
                             Product and service scams, especially false billing schemes, are increasing in Australia. Scammers impersonate businesses by altering invoices to divert payments to fraudulent accounts. Tour operator Meng Wong lost $80,000 when a client mistakenly paid a scammer. Australia's banks are introducing the Scam-Safe Accord to cross-check account details, a measure proven effective in reducing fraud overseas. The ACCC supports these efforts but urges stricter regulations to further protect consumers. Despite these initiatives, scams targeting high-value transactions are on the rise.
                         </p>
