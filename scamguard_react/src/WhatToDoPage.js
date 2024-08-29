@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './IdentifyScamsPage.css';
+import './ReportScamsPage.css';
 
 const WhatToDoPage = () => {
     const navigate = useNavigate();
@@ -16,7 +16,7 @@ const WhatToDoPage = () => {
     // };
 
     return (
-        <div className="IdentifyScamsPage">
+        <div className="ScamsPage">
             {/* Side Menu */}
             {/* <nav className="Side-menu">
                 <ul>

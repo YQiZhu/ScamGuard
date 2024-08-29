@@ -57,7 +57,7 @@ function JobScams() {
                 <section className="real-life-story">
                     <h3>Real-Life Story</h3>
                     <h4>Cybersecurity Expert Loses $150,000 to Sophisticated Job Scam</h4> {/* Story Title */}
-                    <img src="/Jobscamrealstory.jpeg" alt="Job scam real story" className="example-image" />
+                    <img src="images/Jobscamrealstory.jpeg" alt="Job scam real story" className="example-image" />
                     <p>
                         A Sydney cybersecurity expert, "Josh" (name changed), lost $150,000 of his and his parents' savings to a job scam. Despite having a degree in cybersecurity, Josh was tricked by a fake job ad on Instagram that led him to a WhatsApp chat, where scammers convinced him to transfer money to receive commissions for online tasks. Over three days, Josh was manipulated into draining his savings and even his parents' accounts. He realized it was a scam only after losing everything. The experience left him diagnosed with depression, and he now calls for greater accountability from social media platforms in verifying job ads to prevent such scams.
                     </p>
