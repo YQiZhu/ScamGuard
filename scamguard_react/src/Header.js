@@ -16,7 +16,7 @@ const Header = () => {
                         <Link to="/identifyScam">How to Identify Scams</Link>
                     </li>
                     <li>
-                        <Link to="/reportScam">How to Report Scams</Link>
+                        <Link to="/reportScam">Report Scams</Link>
                     </li>
                 </ul>
             </nav>
