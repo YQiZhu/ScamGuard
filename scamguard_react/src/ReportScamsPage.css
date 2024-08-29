@@ -9,6 +9,7 @@
 
 .ScamsPage h2 {
     font-size: 2rem;
+    margin-top: 60px;
     margin-bottom: 20px;
     color: #005ea5; 
     border-bottom: 2px solid #005ea5;
@@ -68,11 +69,6 @@
     /* Sets the line spacing within list items */
     margin-bottom: 10px;
     /* Control the spacing between each list item */
-}
-
-.ScamsPage h2 {
-    margin-top: 70px;
-    /* Set the spacing below each h2 tag */
 }
 
 .example-image {
