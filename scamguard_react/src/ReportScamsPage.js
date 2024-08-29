@@ -54,7 +54,7 @@ const ReportScamsPage = () => {
                             onClick={() => navigate('/identifyScam')}
                             style={{ color: 'blue', textDecoration: 'underline', cursor: 'pointer' }}
                         >
-                            Learn About Scams
+                            How to Identify Scams
                         </span>.
                     </li>
                     <li>Prepare any information you have about the scammer (e.g., ABN, ACN, name, email, phone number, social account, website, or URL).</li>
