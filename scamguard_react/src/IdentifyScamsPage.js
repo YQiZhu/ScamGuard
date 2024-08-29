@@ -176,7 +176,7 @@ const IdentifyScamsPage = () => {
             {/* Product And Service Scams */}
             <div
                 className="clickable-box"
-                onClick={() => navigate('/product-and-service-scams-scams')}
+                onClick={() => navigate('/product-and-service-scams')}
             >
                 <img
                     src={require('./images/email_scams_icon.png')}

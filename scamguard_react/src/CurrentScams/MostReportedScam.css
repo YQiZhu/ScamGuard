@@ -1,14 +1,18 @@
 .chart-container {
     display: flex;
+    flex-direction: column; /* Ensure content is stacked vertically */
     justify-content: center;
-    align-items: center;
+    align-items: center; /* Center the chart horizontally */
     height: 100vh;
     padding: 20px;
     max-width: 800px;
     margin: auto;
+    text-align: center; /* Center the text within the container */
 }
 
 .chart-container p {
     font-size: 1rem;
     line-height: 1.5;
+    margin-top: 20px; /* Add some space above the paragraph */
+    text-align: justify; /* Optional: justify the paragraph text for a cleaner look */
 }

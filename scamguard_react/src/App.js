@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
 import CurrentScamsPage from './CurrentScamsPage';  // Import the Map component
 import IdentifyScamsPage from './IdentifyScamsPage'; // Import the Route component
+import ReportScamsPage from './ReportScamsPage';
 import Header from './Header';
 import PhoneScams from './IdentifyScams/PhoneScams';
 import TextScams from './IdentifyScams/TextScams';
@@ -60,6 +61,7 @@ function App() {
           } />
           <Route path="/currentScam" element={<CurrentScamsPage />} />
           <Route path="/identifyScam" element={<IdentifyScamsPage />} />
+          <Route path="/reportScam" element={<ReportScamsPage />} />
           <Route path="/phone-scams" element={<PhoneScams />} />
           <Route path="/text-scams" element={<TextScams />} />
           <Route path="/email-scams" element={<EmailScams />} />

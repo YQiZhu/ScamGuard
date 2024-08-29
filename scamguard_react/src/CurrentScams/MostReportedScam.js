@@ -24,7 +24,6 @@ function MostReportedScam() {
 
     return (
         <div className="chart-container">
-            <div>
                 <h2>Current Most Reported Scams</h2>
                 <BarChart
                     width={600}
@@ -47,7 +46,7 @@ function MostReportedScam() {
                     The Identity theft ranked at the third place in the top three most frequent scams received by Australians from the age group 65 and over. There were 449 Identity theft scams reported for June, which increased by half compared to the similar month a year ago. It is expected that this Identity theft will continue to increase.
 
                 </p>
-            </div>
+            
         </div>
     );
 }

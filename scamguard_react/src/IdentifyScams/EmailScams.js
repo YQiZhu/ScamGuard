@@ -17,6 +17,7 @@ function EmailScams() {
                 {/* How to Identify a Scam Section */}
                 <section className="scam-identification">
                     <h3>How to Identify an Email Scam</h3>
+                    <p>
                     <ul>
                         <li>Includes generic greetings</li>
                         <li>Claims to be from an organisation but the email address does not match
@@ -42,6 +43,7 @@ function EmailScams() {
                     <img src="/images/Email_example2.png" alt="Email example" className="example-image" />
                     <img src="/images/Email_example3.png" alt="Email example" className="example-image" />
                     <img src="/images/Email_example4.png" alt="Email example" className="example-image" />
+                    </p>
                 </section>
 
                 {/* How to Protect Yourself Section */}
