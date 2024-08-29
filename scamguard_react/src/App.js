@@ -2,9 +2,11 @@ import logo from './logo.svg';
 import React, { useRef } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
+import useScrollToTop from './useScrollToTop';
 import CurrentScamsPage from './CurrentScamsPage';  // Import the Map component
 import IdentifyScamsPage from './IdentifyScamsPage'; // Import the Route component
 import ReportScamsPage from './ReportScamsPage';
+import WhatToDoPage from './WhatToDoPage';
 import Header from './Header';
 import PhoneScams from './IdentifyScams/PhoneScams';
 import TextScams from './IdentifyScams/TextScams';
@@ -18,6 +20,8 @@ import JobScams from './IdentifyScams/JobScams';
 import ImpersonationScams from './IdentifyScams/ImpersonationScams';
 
 function App() {
+  useScrollToTop();
+  
   // Create a reference to the map section
   const mapRef = useRef(null);
 
@@ -62,6 +66,7 @@ function App() {
           <Route path="/currentScam" element={<CurrentScamsPage />} />
           <Route path="/identifyScam" element={<IdentifyScamsPage />} />
           <Route path="/reportScam" element={<ReportScamsPage />} />
+          <Route path="/whatToDo" element={<WhatToDoPage />} />
           <Route path="/phone-scams" element={<PhoneScams />} />
           <Route path="/text-scams" element={<TextScams />} />
           <Route path="/email-scams" element={<EmailScams />} />

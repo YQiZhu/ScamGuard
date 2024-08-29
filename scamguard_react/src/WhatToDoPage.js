@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './IdentifyScamsPage.css';
 
-const ReportScamsPage = () => {
+const WhatToDoPage = () => {
     const navigate = useNavigate();
 
     // // Create a reference to the section
@@ -16,7 +16,7 @@ const ReportScamsPage = () => {
     // };
 
     return (
-        <div className="ScamsPage">
+        <div className="IdentifyScamsPage">
             {/* Side Menu */}
             {/* <nav className="Side-menu">
                 <ul>
@@ -27,7 +27,7 @@ const ReportScamsPage = () => {
             </nav> */}
 
             {/* Introduction Section */}
-            <header className="scam-identification">
+            <header className="indentify-scams-header">
                 <h1>What to do if you've been scammed</h1>
             </header>
             <section>
@@ -35,7 +35,7 @@ const ReportScamsPage = () => {
                 <p>If you are unsure whether you are being scammed click on <a href="/identify-scams" target="_blank">How to identify scams</a> in the navigation bar above.</p>
             </section>
 
-            <section className="scam-identification">
+            <section>
                 <h2>2. If you still think it’s a scam</h2>
                 <h3>You didn’t give them your personal information or property</h3>
                 <ul>
@@ -68,12 +68,12 @@ const ReportScamsPage = () => {
                 </ul>
             </section>
 
-            <section className="scam-identification">
+            <section>
                 <h2>3. Watch out for follow up scams</h2>
                 <p>After an initial scam, scammers often try to exploit the victim's anxiety and confusion with follow-up scams. Stay vigilant and report any suspicious contacts to a trusted organization.</p>
             </section>
 
-            <section className="scam-identification">
+            <section>
                 <h2>4. Get Support</h2>
                 <h3>Your financial institution</h3>
                 <p>Contact your bank or credit union immediately if you’ve sent money to a scammer. They may be able to close your account or stop a transaction. Make sure you call them using their official phone number, not the one in the scam message.</p>
@@ -104,4 +104,4 @@ const ReportScamsPage = () => {
     );
 };
 
-export default ReportScamsPage;
+export default WhatToDoPage;

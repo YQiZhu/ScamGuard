@@ -1,0 +1,39 @@
+.ScamsPage {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.ScamsPage h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.ScamsPage p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.scam-identification h2, .protect-yourself h2, .real-life-story h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.scam-identification h3, .protect-yourself h3, .real-life-story h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.scam-identification p, .protect-yourself p, .real-life-story p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.example-image {
+    max-width: 100%; /* Image will scale down to fit the container */
+    height: auto;    /* Maintain the aspect ratio */
+    display: block;  /* Ensure there’s no extra space below the image */
+    margin: 20px 0;  /* Optional: Add some margin around the images */
+}
