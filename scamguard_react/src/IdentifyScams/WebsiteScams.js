@@ -47,8 +47,7 @@ function WebsiteScams() {
                       <li>Use a website checker such as the <a href="https://transparencyreport.google.com/safe-browsing/search?hl=en" target="_blank" rel="noopener noreferrer">Google Transparency Report</a> or <a href="https://www.urlvoid.com/" target="_blank" rel="noopener noreferrer">URLVoid</a> to check if a website is safe</li>
                     </ul>
                </p>
-                    <img src="/images/scam_guard_logo.jpg" alt="ScamGuard Logo" className="example-image" />
-
+    
                     {/* Real-Life Story Section */}
                     <section className="real-life-story">
                         <h3>Real-Life Story</h3>
