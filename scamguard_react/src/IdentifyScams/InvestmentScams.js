@@ -58,12 +58,12 @@ function InvestmentScams() {
                       </li>
                     </ul>
                  </p>
-                    <img src="/images/scam_guard_logo.jpg" alt="ScamGuard Logo" className="example-image" />
 
                     {/* Real-Life Story Section */}
                     <section className="real-life-story">
                         <h3>Real-Life Story</h3>
                         <h4>Queensland Man Loses $500K in Retirement Savings to Sophisticated Investment Scam</h4> {/* Story Title */}
+                        <img src="/images/Investmentrealstory.jpeg" alt="Investment real story" className="example-image" />
                         <p>
                             A 66-year-old Queensland man, referred to as Ben, lost $500,000 of his retirement savings to a "sophisticated and socially engineered" investment scam. The scam began when Ben, grieving the loss of his wife, engaged with what he believed to be a legitimate investment firm on Facebook. The scammers created a fake investment account, showing false financial growth to lure Ben into transferring his savings over several months. Despite warnings from his bank and a scam prevention agency, Ben continued with the investment until it was too late to recover his funds. The incident highlights the emotional and financial devastation caused by such scams, especially targeting vulnerable individuals. Ben hopes sharing his story will prevent others from making similar mistakes.
                         </p>
