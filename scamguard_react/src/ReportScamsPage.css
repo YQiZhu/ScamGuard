@@ -59,7 +59,7 @@
 .ScamsPage h2 + ul,
 .ScamsPage h3 + p,
 .ScamsPage h3 + ul {
-    text-align: left; /* 每个标题下方的段落和列表内容左对齐 */
+    text-align: left; /* Paragraphs and lists below each heading are left-aligned */
 }
 
 .example-image {
