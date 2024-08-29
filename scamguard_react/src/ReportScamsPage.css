@@ -55,6 +55,13 @@
     text-align: left;
 }
 
+.ScamsPage h2 + p,
+.ScamsPage h2 + ul,
+.ScamsPage h3 + p,
+.ScamsPage h3 + ul {
+    text-align: left; /* 每个标题下方的段落和列表内容左对齐 */
+}
+
 .example-image {
     max-width: 100%; /* Image will scale down to fit the container */
     height: auto;    /* Maintain the aspect ratio */
