@@ -39,19 +39,13 @@ function App() {
 
               {/* Home Page Content */}
               <header className="App-header">
-                <h1>Scam Safety for Seniors</h1>
-                {/* <p>Informing you of accidents to help you cycle safely</p> */}
-                <p>We care of what seniors ......</p>
-                {/* <button onClick={scrollToBottom}>Go to Bottom of the Page</button> */}
+                <h1>ScamGuard</h1>
+                <p>Protecting seniors from scams and helping them stay safe online</p>
               </header>
               <main>
                 <section className="Desc-section">
                   <h2>What is in the website?</h2>
-                  <p>
-                    We w.......
-                  </p>
-                  {/* <img src="/images/senior.png" alt="Senior" className="senior-image" /> */}
-                  
+                  <p>Stay informed on current scams, learn about different scams and find out how to protect yourself from scammers</p>
                   <p><strong>To start journey on our website, go back to the top and select on the navigation bar</strong></p>
                   <button onClick={scrollToTop}>Go to Top of the Page</button>
                 </section>
