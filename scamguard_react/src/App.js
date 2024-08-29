@@ -20,8 +20,8 @@ import JobScams from './IdentifyScams/JobScams';
 import ImpersonationScams from './IdentifyScams/ImpersonationScams';
 
 function App() {
-  useScrollToTop();
-  
+  // useScrollToTop();
+
   // Create a reference to the map section
   const mapRef = useRef(null);
 

@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './IdentifyScamsPage.css';
+import './ReportScamsPage.css';
 
 const ReportScamsPage = () => {
     const navigate = useNavigate();
@@ -28,7 +28,7 @@ const ReportScamsPage = () => {
 
             {/* Introduction Section */}
             <header className="scam-identification">
-                <h1>Report Scam/h1>
+                <h1>Report Scam</h1>
             </header>
             <section>
                 <h2>Steps to Reporting Scams</h2>
@@ -49,7 +49,14 @@ const ReportScamsPage = () => {
                 <ul>
                     <li>First, stop all communication with the scammer.</li>
                     <li>Provide details of the scam (e.g., screenshots, photos, chat logs), including who contacted you and when.</li>
-                    <li>You need to understand what type of scam this is. If you are not sure, click <Link to="/learn-about-scams" target="_blank">Learn About Scams</Link>.</li>
+                    <li>You need to understand what type of scam this is. If you are not sure, click {' '}
+                        <span
+                            onClick={() => navigate('/identifyScam')}
+                            style={{ color: 'blue', textDecoration: 'underline', cursor: 'pointer' }}
+                        >
+                            Learn About Scams
+                        </span>.
+                    </li>
                     <li>Prepare any information you have about the scammer (e.g., ABN, ACN, name, email, phone number, social account, website, or URL).</li>
                     <li>Report the scam to <a href="https://www.scamwatch.gov.au/report-a-scam" target="_blank">National Anti-Scam Centre - Scamwatch</a>.</li>
                     <li>If you receive a scam message on a social platform, contact the relevant IT department and inform them.</li>
