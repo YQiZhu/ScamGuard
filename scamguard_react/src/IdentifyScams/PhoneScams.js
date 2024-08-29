@@ -62,7 +62,7 @@ function PhoneScams() {
                     {/* Real-Life Story Section */}
                     <section className="real-life-story">
                         <h3>Real-Life Story</h3>
-                        <h4>A new scam alleges you have overpaid your Netflix bill</h4> {/* Story Title */}
+                        <h4>Warning over 'dial 1' phone scam in Australia</h4> {/* Story Title */}
                         <img src="/images/Phonescamrealstory.jpg" alt="Phone scam real story" className="example-image" />
                         <p>
                             A phone scam circulating in Australia involves automated calls that instruct recipients to "dial 1" to address a purported issue, such as the threat of arrest, NBN disconnection, or unpaid debts. Scamwatch has warned the public to hang up immediately, as these claims are false and designed to scare people into action. Individuals are encouraged to report such scams through the Scamwatch website.
