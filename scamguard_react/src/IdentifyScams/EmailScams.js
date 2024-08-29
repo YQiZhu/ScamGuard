@@ -62,12 +62,12 @@ function EmailScams() {
                         </li>
                     </ul>
 
-                    <img src="/images/scam_guard_logo.jpg" alt="ScamGuard Logo" className="example-image" />
 
                     {/* Real-Life Story Section */}
                     <section className="real-life-story">
                         <h3>Real-Life Story</h3>
                         <h4>A new scam alleges you have overpaid your Netflix bill</h4> {/* Story Title */}
+                        <img src="/images/Emailscamrealstory.jpeg" alt="Email scam real story" className="example-image" />
                         <p>
                             A new phishing scam is targeting Netflix subscribers by claiming they have overpaid their bill and asking for banking details to process a refund. Scammers impersonate Netflix, using realistic-looking emails to deceive recipients. Cybercrime tracker Scamwatch warns users not to click any links and to delete such emails immediately. Netflix advises that they will never ask for personal information, such as bank details or passwords, via email or text and that payment should never be made through third-party vendors. Users are encouraged to verify any suspicious emails directly with the company rather than engaging with the message.
                         </p>
