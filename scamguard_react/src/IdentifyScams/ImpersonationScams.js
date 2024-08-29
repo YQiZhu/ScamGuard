@@ -81,7 +81,7 @@ function ImpersonationScams() {
                         </ul>
                       </li>
                     </ul>
-
+                </p>  
                     {/* Real-Life Story Section */}
                     <section className="real-life-story">
                         <h3>Real-Life Story</h3>
@@ -94,7 +94,6 @@ function ImpersonationScams() {
 
                     {/* Clickable Box with URL Link */}
                     <button onClick={goToOtherPage}>Read the Full Story</button>
-                </p>                
             </section>
         </div>
     );
