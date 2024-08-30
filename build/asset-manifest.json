@@ -1,21 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.c0ad3590.css",
-    "main.js": "/static/js/main.7e2e8a29.js",
+    "main.css": "/static/css/main.1e601c5f.css",
+    "main.js": "/static/js/main.d9318d62.js",
     "static/js/453.2fa3f6c9.chunk.js": "/static/js/453.2fa3f6c9.chunk.js",
     "static/media/website_scams_icon.png": "/static/media/website_scams_icon.5e56907fa0f63656c078.png",
+    "static/media/investment_scam.png": "/static/media/investment_scam.94f4a69570568cd718c7.png",
     "static/media/text_scams_icon.png": "/static/media/text_scams_icon.7e2962e427a03b51c375.png",
+    "static/media/product.png": "/static/media/product.d8f90e906899cd639f9d.png",
     "static/media/social_media_scams_icon.png": "/static/media/social_media_scams_icon.f14b86427655e8ee3586.png",
     "static/media/email_scams_icon.png": "/static/media/email_scams_icon.5fc406e224e6f119a7b1.png",
+    "static/media/job_scam.jpg": "/static/media/job_scam.2510d38009cf9cbe2a6e.jpg",
+    "static/media/romance_scams_icon.png": "/static/media/romance_scams_icon.f26dfc16df14edc0622a.png",
     "static/media/phone_scams_icon.png": "/static/media/phone_scams_icon.53e38c0397cf4baad0b5.png",
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
-    "main.c0ad3590.css.map": "/static/css/main.c0ad3590.css.map",
-    "main.7e2e8a29.js.map": "/static/js/main.7e2e8a29.js.map",
+    "main.1e601c5f.css.map": "/static/css/main.1e601c5f.css.map",
+    "main.d9318d62.js.map": "/static/js/main.d9318d62.js.map",
     "453.2fa3f6c9.chunk.js.map": "/static/js/453.2fa3f6c9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c0ad3590.css",
-    "static/js/main.7e2e8a29.js"
+    "static/css/main.1e601c5f.css",
+    "static/js/main.d9318d62.js"
   ]
 }
