@@ -7,6 +7,9 @@ import CurrentScamsPage from './CurrentScamsPage';
 import IdentifyScamsPage from './IdentifyScamsPage'; 
 import ReportScamsPage from './ReportScamsPage';
 import WhatToDoPage from './WhatToDoPage';
+import CheckScamsPage from './CheckScamsPage';
+import ScamRiskPage from './ScamRiskPage';
+import QuizPage from './QuizPage';
 import Header from './Header';
 import PhoneScams from './IdentifyScams/PhoneScams';
 import TextScams from './IdentifyScams/TextScams';
@@ -57,6 +60,9 @@ function App() {
           <Route path="/identifyScam" element={<IdentifyScamsPage />} />
           <Route path="/reportScam" element={<ReportScamsPage />} />
           <Route path="/whatToDo" element={<WhatToDoPage />} />
+          <Route path="/checkScam" element={<CheckScamsPage />} />
+          <Route path="/scamRisk" element={<ScamRiskPage />} />
+          <Route path="/quiz" element={<QuizPage />} />
           <Route path="/phone-scams" element={<PhoneScams />} />
           <Route path="/text-scams" element={<TextScams />} />
           <Route path="/email-scams" element={<EmailScams />} />
@@ -67,6 +73,7 @@ function App() {
           <Route path="/investment-scams" element={<InvestmentScams />} />
           <Route path="/job-scams" element={<JobScams />} />
           <Route path="/impersonation-scams" element={<ImpersonationScams />} />
+          
         </Routes>
         <Footer />
       </div>

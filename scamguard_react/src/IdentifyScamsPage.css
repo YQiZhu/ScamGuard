@@ -127,20 +127,20 @@
 }
 
 .indentify-scams-header {
-    /* background-color: #282c34; */
-    min-height: 100vh;
+    background-color: #0579DE;
+    padding-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     margin-bottom: 20px;
     /* Add some margin to push the box closer to the header */
 }
 
 .indentify-scams-header h1 {
-    font-size: 4rem;
-    margin-bottom: 10px;
+    padding-top: 20px;
+    /* margin-bottom: 10px; */
     /* Reduce margin to bring h1 closer to the clickable box */
 }

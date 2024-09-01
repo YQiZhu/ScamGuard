@@ -45,13 +45,18 @@
     color: rgb(99, 99, 216); /* Change text color on hover */
 }
 
-.App-header {
-    /* background-color: #282c34; */
-    min-height: 100vh;
+.current-scam-header {
+    background-color: #0579DE;
+    padding-top: 50px;
+    padding-bottom: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+  }
+
+.current-scam-header h1 {
+    padding-top: 20px;
   }
