@@ -1,48 +1,66 @@
-.Chart-section {
-    padding: 20px;;
-}
-
 .Side-menu {
     position: fixed;
-    top: 50%; /* Vertically center the menu */
-    left: 10px; /* Position it on the left side */
-    transform: translateY(-50%); /* Center vertically by shifting up half of its own height */
-    width: 200px; /* Adjust width as needed */
-    background-color: #f0f0f0; /* Light background color */
-    color: black; /* Default text color */
+    top: 50%;
+    /* Vertically center the menu */
+    /* left: 10px; */
+    /* Position it on the left side */
+    transform: translateY(-50%);
+    /* Center vertically by shifting up half of its own height */
+    width: 160px;
+    /* Adjust width as needed */
+    background-color: #f0f0f0;
+    /* Light background color */
+    color: black;
+    /* Default text color */
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    overflow-y: auto; /* Add scroll if content overflows */
-    border-radius: 8px; /* Optional: Rounded corners */
+    overflow-y: auto;
+    /* Add scroll if content overflows */
+    border-radius: 8px;
+    /* Optional: Rounded corners */
+    text-align: center;
+}
+
+.Side-menu h2 {
+    font-size: 21px;
+}
+
+@media screen and (max-width: 1200px) {
+    .Side-menu {
+        display: none;
+    }
 }
 
 .Side-menu ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
     width: 100%;
     display: block;
+    /* text-align: center; */
+    /* Center the content inside the ul */
 }
 
 .Side-menu li {
-    width: 100%; /* Ensures each li takes the full width of the ul */
-    margin-bottom: 10px; /* Space between links */
-    display: block; /* Makes sure li is treated as a block element */
+    /* width: 100%; */
+    margin-bottom: 7px;
+    display: block;
+    text-align: center;
 }
 
 .Side-menu a {
-    color: rgb(5, 5, 33); /* Text color for links */
-    text-decoration: underline; /* Underline to indicate clickability */
-    font-size: 16px; /* Adjust font size as needed */
-    display: block; /* Ensure the link takes up the full width of its container */
-    padding: 10px;
-    border-radius: 5px; /* Optional: Rounded corners for links */
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    color: rgb(5, 5, 33);
+    text-decoration: underline;
+    font-size: 15px;
+    display: block;
+    padding-bottom: 10px;
+    /* border-radius: 5px; */
+    transition: background-color 0.3s;
+    /* text-align: center; */
+    /* Center the text inside the link */
 }
 
 .Side-menu a:hover {
-    background-color: #c0c0c0; /* Change background color on hover */
-    color: rgb(99, 99, 216); /* Change text color on hover */
+    background-color: #c0c0c0;
+    color: rgb(65, 123, 218);
 }
 
 .current-scam-header {
@@ -55,8 +73,25 @@
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: rgb(255, 255, 255);
-  }
+}
 
 .current-scam-header h1 {
     padding-top: 20px;
-  }
+}
+
+
+.most-reported-section {
+    /* padding: 20px; */
+    background-color: #ffffff;;
+}
+
+.top-loss-section {
+    /* padding-top: 20px; */
+    background-color: #0579DE;;
+    color: rgb(255, 255, 255);
+}
+
+.popular-contact-section {
+    /* padding: 20px; */
+    background-color: #ffffff;;
+}

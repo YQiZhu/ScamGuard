@@ -36,15 +36,15 @@ const CurrentScamsPage = () => {
             {/* Main Content */}
             <main>
                 {/* Chart Section */}
-                <section ref={mostReportedRef} id="most-reported" className="Chart-section">
+                <section className="most-reported-section" ref={mostReportedRef} id="most-reported">
                     {/* <h2>Current Most Reported Scams</h2> */}
                     <MostReportedScam />
                 </section>
-                <section ref={topLossRef} id="top-loss" className="Chart-section">
+                <section className="top-loss-section" ref={topLossRef} id="top-loss">
                     {/* <h2>Current Top Scams by Loss</h2> */}
                     <TopLossScam />
                 </section>
-                <section ref={popularContactRef} id="popular-contact" className="Chart-section">
+                <section className="popular-contact-section" ref={popularContactRef} id="popular-contact">
                     {/* <h2>Current Most Popular Contact Methods</h2> */}
                     <PopularContactMethods />
                 </section>

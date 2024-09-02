@@ -3,68 +3,6 @@
     ;
 }
 
-.Side-menu {
-    position: fixed;
-    top: 50%;
-    /* Vertically center the menu */
-    left: 10px;
-    /* Position it on the left side */
-    transform: translateY(-50%);
-    /* Center vertically by shifting up half of its own height */
-    width: 200px;
-    /* Adjust width as needed */
-    background-color: #f0f0f0;
-    /* Light background color */
-    color: black;
-    /* Default text color */
-    padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    overflow-y: auto;
-    /* Add scroll if content overflows */
-    border-radius: 8px;
-    /* Optional: Rounded corners */
-}
-
-.Side-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    display: block;
-}
-
-.Side-menu li {
-    width: 100%;
-    /* Ensures each li takes the full width of the ul */
-    margin-bottom: 10px;
-    /* Space between links */
-    display: block;
-    /* Makes sure li is treated as a block element */
-}
-
-.Side-menu a {
-    color: rgb(5, 5, 33);
-    /* Text color for links */
-    text-decoration: underline;
-    /* Underline to indicate clickability */
-    font-size: 16px;
-    /* Adjust font size as needed */
-    display: block;
-    /* Ensure the link takes up the full width of its container */
-    padding: 10px;
-    border-radius: 5px;
-    /* Optional: Rounded corners for links */
-    transition: background-color 0.3s;
-    /* Smooth transition for hover effect */
-}
-
-.Side-menu a:hover {
-    background-color: #c0c0c0;
-    /* Change background color on hover */
-    color: rgb(99, 99, 216);
-    /* Change text color on hover */
-}
-
 .clickable-box {
     background-color: #f0f0f0;
     transition: background-color 0.3s ease;
@@ -90,6 +28,7 @@
 
 .clickable-box img {
     width: 90px;
+    height: 90px;
     margin-right: 20px;
 }
 

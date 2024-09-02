@@ -37,7 +37,7 @@ function TopLossScam() {
                 <XAxis dataKey="category_level_3" />
                 <YAxis />
                 <Tooltip />
-                <Legend />
+                <Legend formatter={(value) => "Amount of Lost ($AUD)"} />
                 <Bar dataKey="amount_lost" fill="#8884d8" />
             </BarChart>
             <p>

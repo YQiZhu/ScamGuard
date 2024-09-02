@@ -37,7 +37,7 @@ function PopularContactMethods() {
                 <XAxis dataKey="scam_contact_mode" />
                 <YAxis />
                 <Tooltip />
-                <Legend />
+                <Legend formatter={(value) => "Number of Reports"} />
                 <Bar dataKey="number_of_reports" fill="#8884d8" />
             </BarChart>
             <p>

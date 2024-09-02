@@ -9,6 +9,8 @@ nav {
     /* Aligns items (icon and links) vertically centered */
     width: 100%;
     /* Ensures the header spans the full width of the page */
+    z-index: 1000;
+    /* Ensures the header stays above other layers */
 }
 
 .nav-icon {
@@ -35,7 +37,8 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff; /* Default text color */
+    color: #fff;
+    /* Default text color */
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
@@ -44,16 +47,18 @@ nav ul li a {
 nav ul li a:hover,
 nav ul li a:focus,
 nav ul li .active-link {
-    color: #000000; /* This will apply the hover color when hovered or active */
+    color: #000000;
+    /* This will apply the hover color when hovered or active */
 }
 
 /* Ensures the active link stays highlighted even if not hovered */
 nav ul li .active-link {
-    color: #000000; /* The color to be applied when the link is active */
+    color: #000000;
+    /* The color to be applied when the link is active */
 }
 
 /* Optional: If you want the active link to have a slightly different hover effect */
 nav ul li .active-link:hover {
-    color: #000000; /* Keeps the same color when hovering over the active link */
+    color: #000000;
+    /* Keeps the same color when hovering over the active link */
 }
-
