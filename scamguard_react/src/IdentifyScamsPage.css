@@ -17,7 +17,7 @@
     /* Reduce the width of the box */
     max-width: 800px;
     /* Optional: Limit the max width */
-    border: 1px solid #7e7e7e;
+    /* border: 1px solid #7e7e7e; */
     border-radius: 8px;
     /* Optional: Rounded corners */
 }

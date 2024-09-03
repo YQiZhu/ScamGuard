@@ -1,5 +1,5 @@
 import React from 'react';
-import './PhoneScams.css';
+import './TextScams.css';
 
 function TextScams() {
     // Go to the real story source
@@ -7,12 +7,12 @@ function TextScams() {
         window.location.href = 'https://www.9news.com.au/national/hi-mum-cyber-scam-warning-two-million-dollars-stolen/74cbffaf-9e36-4c69-88e4-26b54e730313'; // Replace with the desired URL
     };
     return (
-        <div className="ScamsPage">
+        <div className="Text-Page">
             <h2>Text Scams</h2>
             <p>Text scams involve deceptive text messages that trick individuals into revealing personal information or clicking on harmful links. These messages often appear to come from legitimate sources, like banks or government agencies, and may warn of suspicious activity or urgent problems. Scammers also use fake prize notifications and delivery alerts to lure victims into providing sensitive details or downloading malicious software. These scams exploit the trust people place in text messages to achieve their goals.</p>
 
             {/* How to Identify a Scam Section */}
-            <section className="scam-identification">
+            <section className="text-scam-identification">
                 <h3>How to Identify a Text Scam</h3>
                 <p>
                     It is likely that a text message is a scam if it:
@@ -34,8 +34,8 @@ function TextScams() {
                     </ul>
                 </p>
                 <h4>Examples</h4>
-                <img src="/images/Text_example1.png" alt="Text example" className="example-image" />
-                <img src="/images/Text_example2.png" alt="Text example" className="example-image" />
+                <img src="/images/Text_example1.png" alt="Text example" className="text-example-image" />
+                <img src="/images/Text_example2.png" alt="Text example" className="text-example-image" />
                 <p>
                     Signs these texts are scams:
                     <ul>
@@ -46,7 +46,7 @@ function TextScams() {
             </section>
 
             {/* How to Protect Yourself Section */}
-            <section className="protect-yourself">
+            <section className="text-protect-yourself">
                 <h3>How to Protect Yourself</h3>
                 <p>
                     <ul>
@@ -71,7 +71,7 @@ function TextScams() {
                 </p>
 
                     {/* Real-Life Story Section */}
-                    <section className="real-life-story">
+                    <section className="text-real-life-story">
                         <h3>Real-Life Story</h3>
                         <h4>‘Hi Mum’ Scam Results in $2 Million Loss</h4> {/* Story Title */}
                         <img src="/images/Textscamrealstory.jpeg" alt="Text scam real story" className="example-image" />

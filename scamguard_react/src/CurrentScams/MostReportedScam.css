@@ -1,18 +1,53 @@
 .chart-container {
     display: flex;
-    flex-direction: column; /* Ensure content is stacked vertically */
+    flex-direction: column;
+    /* Ensure content is stacked vertically */
     justify-content: center;
-    align-items: center; /* Center the chart horizontally */
-    height: 100vh;
-    padding: 20px;
+    align-items: center;
+    /* Center the chart horizontally */
+    padding: 50px;
     max-width: 800px;
     margin: auto;
-    text-align: center; /* Center the text within the container */
+    text-align: center;
+    /* Center the text within the container */
 }
 
 .chart-container p {
     font-size: 1rem;
     line-height: 1.5;
-    margin-top: 20px; /* Add some space above the paragraph */
-    text-align: justify; /* Optional: justify the paragraph text for a cleaner look */
+    margin-top: 20px;
+    /* Add some space above the paragraph */
+    text-align: justify;
+    /* Optional: justify the paragraph text for a cleaner look */
+}
+
+.bule-background-button {
+    font-size: 1rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #0579DE;
+}
+
+.bule-background-button:hover {
+    font-size: 1rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #4CCBFE;
+}
+
+.read-more-button {
+    font-size: 1rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #EDF5FF;
+    color: #000;
+    transition: background-color 0.3s ease;
+}
+
+.read-more-button:hover {
+    font-size: 1rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #BADDF1;
+    /* Slightly darker on hover */
 }

@@ -22,6 +22,12 @@ function MostReportedScam() {
             .catch(error => console.error('Error fetching map data:', error.message));
     }, []);
 
+    const [isExpanded, setIsExpanded] = useState(false);
+
+    const toggleReadMore = () => {
+        setIsExpanded(!isExpanded);
+    };
+
     return (
         <div className="chart-container">
             <h2>Current Most Reported Scams</h2>
@@ -36,16 +42,26 @@ function MostReportedScam() {
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="category_level_3" />
                 <YAxis />
-                <Tooltip />
+                <Tooltip
+                    formatter={(value) => [`$${value.toLocaleString()}`, "Number of Reports"]}
+                    labelFormatter={(label) => `Scam Type: ${label}`}
+                />
                 <Legend formatter={(value) => "Number of Reports"} />
                 <Bar dataKey="number_of_reports" fill="#8884d8" />
             </BarChart>
-            <p>
-                The Phishing ranked at the first place in the top three most frequent scams received by Australians from the age group 65 and over. There were 3025 Phishing scams reported for June, which increased by half compared to the similar month a year ago. It is expected that this Phishing will continue to increase.
-                The False billing ranked at the second place in the top three most frequent scams received by Australians from the age group 65 and over. There were 735 False billing scams reported for June, which decreased by a quarter compared to the similar month a year ago. It is expected that this False billing will continue to decrease.
-                The Identity theft ranked at the third place in the top three most frequent scams received by Australians from the age group 65 and over. There were 449 Identity theft scams reported for June, which increased by half compared to the similar month a year ago. It is expected that this Identity theft will continue to increase.
+            <p>The <strong>Phishing</strong> ranked at the first place in the top three most frequent scams received by Australians from the age group 65 and over.</p>
 
-            </p>
+            {isExpanded && (
+                <div className="expanded-text">
+                    <p>There were 3025 Phishing scams reported for June, which increased by half compared to the similar month a year ago. It is expected that this Phishing will continue to increase.</p>
+                    <p>The False billing ranked at the second place in the top three most frequent scams received by Australians from the age group 65 and over. There were 735 False billing scams reported for June, which decreased by a quarter compared to the similar month a year ago. It is expected that this False billing will continue to decrease.</p>
+                    <p>The Identity theft ranked at the third place in the top three most frequent scams received by Australians from the age group 65 and over. There were 449 Identity theft scams reported for June, which increased by half compared to the similar month a year ago. It is expected that this Identity theft will continue to increase.</p>
+                </div>
+            )}
+
+            <button className="bule-background-button" onClick={toggleReadMore}>
+                {isExpanded ? 'Read Less' : 'Read More'}
+            </button>
 
         </div>
     );

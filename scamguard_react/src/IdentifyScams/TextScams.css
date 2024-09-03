@@ -1,0 +1,53 @@
+.Text-Page {
+    padding-top: 100px;
+    /* padding: 20px; */
+    max-width: 800px;
+    margin: auto;
+}
+
+.Text-Page h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.Text-Page p {
+    font-size: 1rem;
+    /* line-height: 1.5; */
+    margin-bottom: 20px;
+}
+
+.text-scam-identification {
+    margin-bottom: 40px;
+}
+
+.text-protect-yourself,
+.text-real-life-story {
+    margin-bottom: 40px;
+    /* Space between sections */
+}
+
+.text-scam-identification h3,
+.text-protect-yourself h3,
+.text-real-life-story h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.text-scam-identification p,
+.text-protect-yourself p,
+.text-real-life-story p {
+    font-size: 1rem;
+    /* line-height: 1.5; */
+    text-align: left;
+}
+
+.text-example-image {
+    max-width: 100%;
+    /* Image will scale down to fit the container */
+    height: auto;
+    /* Maintain the aspect ratio */
+    display: block;
+    /* Ensure there’s no extra space below the image */
+    margin: 20px 0;
+    /* Optional: Add some margin around the images */
+}
