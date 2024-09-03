@@ -49,13 +49,13 @@ function PopularContactMethods() {
                 <Legend formatter={(value) => "Number of Reports"} />
                 <Bar dataKey="number_of_reports" fill="#8884d8" />
             </BarChart>
-            <p>The Email ranked at the first place in the top three most frequent methods scammers used to contact Australians from the age group 65 and over.</p>
+            <p>The <strong>Email</strong> ranked at the <strong>first place</strong> in the top three most frequent methods scammers used to contact Australians from the age group 65 and over.</p>
 
             {isExpanded && (
                 <div className="expanded-text">
-                    <p>There were 3198 Email reports for June, which increased by one-third compared to the similar month a year ago. It is expected that this Email method will continue to increase.</p>
-                    <p>The Text message ranked at the second place in the top three most frequent methods scammers used to contact Australians from the age group 65 and over. There were 2001 Text message reports for June, which increased by double compared to the similar month a year ago. It is expected that this Text message method will continue to increase.</p>
-                    <p>The Phone call ranked at the third place in the top three most frequent methods scammers used to contact Australians from the age group 65 and over. There were 575 Phone call reports for June, which decreased by half compared to the similar month a year ago. It is expected that this Phone call method will continue to decrease.</p>
+                    <p>There were <strong>3198 Email reports</strong> for June, which increased by one-third compared to the similar month a year ago. It is expected that this Email method will continue to increase.</p>
+                    <p>The <strong>Text message</strong> ranked at the second place in the top three most frequent methods scammers used to contact Australians from the age group 65 and over. There were <strong>2001 Text message</strong> reports for June, which increased by double compared to the similar month a year ago. It is expected that this Text message method will continue to increase.</p>
+                    <p>The <strong>Phone call</strong> ranked at the third place in the top three most frequent methods scammers used to contact Australians from the age group 65 and over. There were <strong>575 Phone call</strong> reports for June, which decreased by half compared to the similar month a year ago. It is expected that this Phone call method will continue to decrease.</p>
                 </div>
             )}
 

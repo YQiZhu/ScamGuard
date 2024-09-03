@@ -1,56 +1,10 @@
 .Chart-section {
     padding: 50px;
-    ;
-}
-
-.clickable-box {
-    background-color: #f0f0f0;
-    transition: background-color 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    margin: 40px auto;
-    /* Center the box horizontally */
-    cursor: pointer;
-    width: 80%;
-    /* Reduce the width of the box */
-    max-width: 800px;
-    /* Optional: Limit the max width */
-    /* border: 1px solid #7e7e7e; */
-    border-radius: 8px;
-    /* Optional: Rounded corners */
-}
-
-.clickable-box:hover {
-    background-color: #e0e0e0;
 }
 
 .clickable-box img {
     width: 90px;
-    height: 90px;
-    margin-right: 20px;
-}
-
-.clickable-box .text-content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    /* Align text to the start of the content area */
-    justify-content: center;
-    text-align: left;
-    /* Ensure text is left-aligned */
-    flex: 1;
-    padding-right: 20px;
-    /* Add padding to the right to ensure space before the arrow */
-}
-
-.clickable-box h3 {
-    margin: 0;
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 5px;
-    /* Space between links */
+    height: 100px;
 }
 
 .clickable-box p {
@@ -58,16 +12,10 @@
     font-size: 18px;
 }
 
-.clickable-box .arrow {
-    font-size: 48px;
-    font-weight: bold;
-    flex-shrink: 0;
-    /* Prevent arrow from shrinking */
-}
-
 .indentify-scams-header {
     background-color: #0579DE;
     padding-top: 50px;
+    padding-bottom: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,11 +23,74 @@
     font-size: calc(10px + 2vmin);
     color: rgb(255, 255, 255);
     margin-bottom: 20px;
-    /* Add some margin to push the box closer to the header */
+}
+
+.scams-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows items to wrap to the next line */
+    justify-content: space-between;
+    /* Adjust space between items */
+    padding-left: calc(33.333% - 200px);
+    padding-right: calc(33.333% - 200px);
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.clickable-box {
+    flex: 1 1 calc(33.333% - 20px);
+    /* 3 items per row with space around */
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Center content vertically within the box */
+    padding: 20px;
+    margin: 20px;
+    /* Adjust spacing between boxes */
+    cursor: pointer;
+    max-width: 200px;
+    /* Ensure boxes take up 1/3 of the container */
+    border-radius: 8px;
+}
+
+.clickable-box:hover {
+    background-color: #e0e0e0;
+}
+
+.text-content {
+    text-align: center;
+    /* Center-align the text */
+}
+
+.clickable-box h3 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    /* Add more space between the text and the icon */
 }
 
 .indentify-scams-header h1 {
     padding-top: 20px;
-    /* margin-bottom: 10px; */
-    /* Reduce margin to bring h1 closer to the clickable box */
+}
+
+@media (max-width: 768px) {
+    .clickable-box {
+        flex: 1 1 calc(50% - 20px);
+        /* 2 items per row on smaller screens */
+        max-width: calc(50% - 20px);
+        /* Adjust max-width accordingly */
+    }
+}
+
+@media (max-width: 480px) {
+    .clickable-box {
+        flex: 1 1 100%;
+        /* 1 item per row on very small screens */
+        max-width: 100%;
+        /* Ensure boxes take up full width */
+    }
 }

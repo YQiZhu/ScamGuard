@@ -3,6 +3,9 @@
     /* padding: 20px; */
     max-width: 800px;
     margin: auto;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .Text-Page h2 {
@@ -18,11 +21,17 @@
 
 .text-scam-identification {
     margin-bottom: 40px;
+    background-color: #ffffff;;
 }
 
-.text-protect-yourself,
+.text-protect-yourself {
+    margin-bottom: 40px;
+    background-color: #0579DE;
+}
+
 .text-real-life-story {
     margin-bottom: 40px;
+    background-color: #ffffff;;
     /* Space between sections */
 }
 
