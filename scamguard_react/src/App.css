@@ -14,14 +14,15 @@
 }
 
 .App-header {
-  /* background-color: #282c34; */
-  min-height: 100vh;
+  background-color: #0579DE;
+  padding-top: 50px;
+  padding-bottom: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: rgb(0, 0, 0);
+  color: #ffffff;
 }
 
 .App-header h1 {
@@ -36,8 +37,8 @@
 button {
   font-size: 1.2rem;
   padding: 10px 20px;
-  color: #282c34;
-  background-color: rgb(99, 187, 209);
+  color: #ffffff;
+  background-color: #0579DE;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -49,7 +50,7 @@ button:hover {
 
 .Route-section {
   padding: 50px;
-  background-color: #f0f0f0;
+  background-color: #ffffff;
 }
 
 .Route-section h2 {
@@ -58,7 +59,7 @@ button:hover {
 
 .Desc-section {
   padding: 100px 160px;
-  background-color: #f0f0f0;
+  background-color: #ffffff;
 }
 
 .Desc-section h2 {

@@ -5,6 +5,12 @@ import './MostReportedScam.css';
 function TopLossScam() {
     const [data, setData] = useState([]);
 
+    const [isExpanded, setIsExpanded] = useState(false);
+
+    const toggleReadMore = () => {
+        setIsExpanded(!isExpanded);
+    };
+
     useEffect(() => {
         fetch('https://scamguard.live/api/scams_highest_loss/', {
             method: 'GET',
@@ -34,18 +40,28 @@ function TopLossScam() {
                 }}
             >
                 <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="category_level_3" />
-                <YAxis />
-                <Tooltip />
-                <Legend />
+                <XAxis dataKey="category_level_3" stroke="#EDF5FF" />
+                <YAxis stroke="#EDF5FF" />
+                <Tooltip
+                    formatter={(value) => [`$${value.toLocaleString()}`, "Amount Lost"]}
+                    labelFormatter={(label) => `Scam Type: ${label}`}
+                />
+                <Legend formatter={(value) => "Amount of Lost ($AUD)"} />
                 <Bar dataKey="amount_lost" fill="#8884d8" />
             </BarChart>
-            <p>
-                The Investment scams ranked at the first place in the top three scams that caused the highest financial losses in June from Australians in the age group $65 and over. There were 96 reports with total and average financial losses to be $5,304,465.49 and $55,255.00 respectively.
-                The Phishing ranked at the second place in the top three scams that caused the highest financial losses in June from Australians in the age group $65 and over. There were 3025 reports with total and average financial losses to be $3,502,799.60 and $1,158.00 respectively.
-                The Remote access scams ranked at the third place in the top three scams that caused the highest financial losses in June from Australians in the age group $65 and over. There were 200 reports with total and average financial losses to be $626,888.79 and $3,134.00 respectively.
+            <p>The Investment scams ranked at the first place in the top three scams that caused the highest financial losses in June from Australians in the age group 65 and over.</p>
 
-            </p>
+            {isExpanded && (
+                <div className="expanded-text">
+                    <p>There were 96 reports with total and average financial losses to be $5,304,465.49 and $55,255.00 respectively.</p>
+                    <p>The Phishing ranked at the second place in the top three scams that caused the highest financial losses in June from Australians in the age group 65 and over. There were 3025 reports with total and average financial losses to be $3,502,799.60 and $1,158.00 respectively.</p>
+                    <p>The Remote access scams ranked at the third place in the top three scams that caused the highest financial losses in June from Australians in the age group 65 and over. There were 200 reports with total and average financial losses to be $626,888.79 and $3,134.00 respectively.</p>
+                </div>
+            )}
+
+            <button className='read-more-button' onClick={toggleReadMore}>
+                {isExpanded ? 'Read Less' : 'Read More'}
+            </button>
         </div>
     );
 }
