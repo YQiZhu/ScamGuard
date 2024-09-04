@@ -1,5 +1,5 @@
 import React from 'react';
-import './PhoneScams.css'; // Optional: Add a CSS file for custom styling
+import './TypeOfScams.css'; // Optional: Add a CSS file for custom styling
 
 function PhoneScams() {
 
@@ -9,29 +9,30 @@ function PhoneScams() {
     };
     return (
         <div className="ScamsPage">
-            <h2>Phone Scams</h2>
-            <p>Phone scams aim to deceive individuals into giving away personal information, money, or access to financial accounts. These scams often involve impersonating legitimate organisations, such as banks, government agencies, or tech support, to create a sense of urgency or fear. Common tactics include threatening legal action, claiming a problem with a service (like your internet or taxes), or offering fake prizes or deals. The goal is to trick the victim into making payments, sharing sensitive information, or allowing access to their devices or accounts.</p>
-            
+            <header className="scams-header">
+                <h2>Phone Scams</h2>
+                <p>Phone scams aim to deceive individuals into giving away personal information, money, or access to financial accounts. These scams often involve impersonating legitimate organisations, such as banks, government agencies, or tech support, to create a sense of urgency or fear. Common tactics include threatening legal action, claiming a problem with a service (like your internet or taxes), or offering fake prizes or deals. The goal is to trick the victim into making payments, sharing sensitive information, or allowing access to their devices or accounts.</p>
+            </header>
             {/* How to Identify a Scam Section */}
             <section className="scam-identification">
                 <h3>How to Identify a Phone Scam</h3>
                 <p>
                     It is likely that a phone call is a scam if it:
                     <ul>
-                      <li>Is unexpected</li>
-                      <li>Comes from an unknown number</li>
-                      <li>Encourages you to take immediate action</li>
-                      <li>Asks for personal or financial information</li>
-                      <li>Has poor quality</li>
+                        <li>Is unexpected</li>
+                        <li>Comes from an unknown number</li>
+                        <li>Encourages you to take immediate action</li>
+                        <li>Asks for personal or financial information</li>
+                        <li>Has poor quality</li>
                     </ul>
                 </p>
                 <p>
-                   Examples of scam phone calls include:
+                    Examples of scam phone calls include:
                     <ul>
-                      <li>Claiming your account has been hacked</li>
-                      <li>Threatening you with arrest</li>
-                      <li>Asking to install software or access your computer to resolve an issue</li>
-                      <li>Claiming you must pay for your service to continue</li>
+                        <li>Claiming your account has been hacked</li>
+                        <li>Threatening you with arrest</li>
+                        <li>Asking to install software or access your computer to resolve an issue</li>
+                        <li>Claiming you must pay for your service to continue</li>
                     </ul>
                 </p>
                 <h4>Examples</h4>
@@ -50,28 +51,30 @@ function PhoneScams() {
             <section className="protect-yourself">
                 <h3>How to Protect Yourself</h3>
                 <p>
-                <ul>
-                      <li>Let calls from unknown numbers go to voicemail</li>
-                      <li>Hang up if you don’t recognise the caller or you’re not sure who they are</li>
-                      <li>Hang up if the caller gets aggressive or threatening</li>
-                      <li>Call the organisation or person back on a number you have found yourself</li>
-                      <li>Never share personal information or financial details over the phone</li>
-                      <li>Never allow a caller to have remote access to your computer</li>
+                    <ul>
+                        <li>Let calls from unknown numbers go to voicemail</li>
+                        <li>Hang up if you don’t recognise the caller or you’re not sure who they are</li>
+                        <li>Hang up if the caller gets aggressive or threatening</li>
+                        <li>Call the organisation or person back on a number you have found yourself</li>
+                        <li>Never share personal information or financial details over the phone</li>
+                        <li>Never allow a caller to have remote access to your computer</li>
                     </ul>
                 </p>
-                    {/* Real-Life Story Section */}
-                    <section className="real-life-story">
-                        <h3>Real-Life Story</h3>
-                        <h4>Warning over 'dial 1' phone scam in Australia</h4> {/* Story Title */}
-                        <img src="/images/Phonescamrealstory.jpg" alt="Phone scam real story" className="example-image" />
-                        <p>
-                            A phone scam circulating in Australia involves automated calls that instruct recipients to "dial 1" to address a purported issue, such as the threat of arrest, NBN disconnection, or unpaid debts. Scamwatch has warned the public to hang up immediately, as these claims are false and designed to scare people into action. Individuals are encouraged to report such scams through the Scamwatch website.
+            </section>
 
-                        </p>
-                    </section>
+            {/* Real-Life Story Section */}
+            <section className="real-life-story">
+                <h3>Real-Life Story</h3>
+                <h4>Warning over 'dial 1' phone scam in Australia</h4> {/* Story Title */}
+                <img src="/images/Phonescamrealstory.jpg" alt="Phone scam real story" className="example-image" />
+                <p>
+                    A phone scam circulating in Australia involves automated calls that instruct recipients to "dial 1" to address a purported issue, such as the threat of arrest, NBN disconnection, or unpaid debts. Scamwatch has warned the public to hang up immediately, as these claims are false and designed to scare people into action. Individuals are encouraged to report such scams through the Scamwatch website.
 
-                    {/* Clickable Box with URL Link */}
-                    <button onClick={goToOtherPage}>Read the Full Story</button>
+                </p>
+
+
+                {/* Clickable Box with URL Link */}
+                <button onClick={goToOtherPage}>Read the Full Story</button>
             </section>
         </div>
     );

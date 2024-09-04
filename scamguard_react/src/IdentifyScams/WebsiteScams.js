@@ -1,5 +1,5 @@
 import React from 'react';
-import './PhoneScams.css';
+import './TypeOfScams.css';
 
 function WebsiteScams() {
     // Go to the real story source

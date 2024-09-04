@@ -1,4 +1,4 @@
-.Text-Page {
+.Scams-Page {
     /* padding-top: 100px; */
     /* padding: 20px; */
     /* max-width: 800px; */
@@ -8,7 +8,7 @@
 
 }
 
-.text-scams-header p {
+.scams-header p {
     font-size: 18px;
     line-height: 1.5;
     /* padding: 20px; */
@@ -16,7 +16,7 @@
     margin-bottom: 20px;
 }
 
-.text-scams-header {
+.scams-header {
     background-color: #0579DE;
     padding-top: 80px;
     padding-bottom: 30px;
@@ -28,13 +28,13 @@
     color: rgb(255, 255, 255);
 }
 
-.text-scams-header h2 {
+.scams-header h2 {
     /* padding-top: 20px; */
     font-size: 2rem;
     /* margin-bottom: 20px; */
 }
 
-.text-scam-identification {
+.scam-identification {
     padding-top: 20px;
     /* margin-bottom: 40px; */
     padding-bottom: 20px;
@@ -48,31 +48,31 @@
     max-width: 800px;
 }
 
-.text-scam-identification h3 {
+.scam-identification h3 {
     font-size: 1.5rem;
     margin-bottom: 15px;
     text-align: center;
 }
 
-.text-scam-identification p {
+.scam-identification p {
     /* margin-bottom: 10px; */
     font-size: 18px;
     /* line-height: 1.5; */
     text-align: left;
 }
 
-.text-scam-identification li {
+.scam-identification li {
     /* width: 100%; */
     margin-bottom: 7px;
     /* display: block; */
     /* text-align: center; */ 
 }
 
-.text-scam-identification h4 {
+.scam-identification h4 {
     font-size: 18px;
 }
 
-.text-protect-yourself {
+.protect-yourself {
     /* margin-bottom: 40px; */
     background-color: #0579DE;
     padding-top: 20px;
@@ -84,12 +84,12 @@
     color: #ffffff;
 }
 
-.text-protect-yourself h3 {
+.protect-yourself h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
-.text-protect-yourself p {
+.protect-yourself p {
     /* font-size: 1rem; */
     font-size: 18px;
     /* margin-bottom: 2px; */
@@ -99,14 +99,14 @@
     /* margin-bottom: 10px; */
 }
 
-.text-protect-yourself li {
+.protect-yourself li {
     /* width: 100%; */
     margin-bottom: 7px;
     /* display: block; */
     /* text-align: center; */
 }
 
-.text-real-life-story {
+.real-life-story {
     padding-top: 20px;
     /* margin-bottom: 40px; */
     padding-bottom: 20px;
@@ -120,24 +120,24 @@
     max-width: 800px;
 }
 
-.text-real-life-story h3 {
+.real-life-story h3 {
     font-size: 1.5rem;
     margin-bottom: 15px;
 }
 
-.text-real-life-story p {
+.real-life-story p {
     font-size: 18px;
     line-height: 1.5;
     text-align: left;
 }
 
-.text-real-life-story button {
+.real-life-story button {
     font-size: 18px;
     max-width: 200px;
     margin: 15px;
 }
 
-.text-example-image {
+.example-image {
     max-width: 100%;
     /* Image will scale down to fit the container */
     height: auto;
