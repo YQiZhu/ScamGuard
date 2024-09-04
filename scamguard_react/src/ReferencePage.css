@@ -1,0 +1,50 @@
+.ReferencePage{
+    /* padding-top: 100px; */
+    /* max-width: 800px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+.reference-header{
+    padding-bottom: 20px;
+    background-color: #0579DE;
+    width: 100%;
+    color: #ffffff;
+}
+
+.reference-header h1{
+    padding-top: 100px;
+    /* max-width: 800px; */
+}
+
+.reference-header p{
+    font-size: 18px;
+}
+
+.reference-link{
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.reference-link summary{
+    font-size: 20px;
+    line-height: 3;
+    box-shadow: 2px 0 10px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 800px;
+    background-color: #E3F6FF;
+}
+
+.reference-link li{
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.reference-link ul{
+    margin-bottom: 20px;
+}
+
+

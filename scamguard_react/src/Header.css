@@ -2,6 +2,7 @@ nav {
     background-color: #0579DE;
     padding: 1rem;
     color: #fff;
+    top: 0;
     display: flex;
     position: fixed;
     /* Makes the header fixed at the top */
