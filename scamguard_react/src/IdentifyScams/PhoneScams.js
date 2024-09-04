@@ -8,7 +8,7 @@ function PhoneScams() {
         window.location.href = 'https://www.9news.com.au/national/scam-warning-dial-1-phone-call-do-not-follow-it/ed1d6a55-6641-4732-8ded-8e40396c6af0'; // Replace with the desired URL
     };
     return (
-        <div className="ScamsPage">
+        <div className="Scams-Page">
             <header className="scams-header">
                 <h2>Phone Scams</h2>
                 <p>Phone scams aim to deceive individuals into giving away personal information, money, or access to financial accounts. These scams often involve impersonating legitimate organisations, such as banks, government agencies, or tech support, to create a sense of urgency or fear. Common tactics include threatening legal action, claiming a problem with a service (like your internet or taxes), or offering fake prizes or deals. The goal is to trick the victim into making payments, sharing sensitive information, or allowing access to their devices or accounts.</p>
