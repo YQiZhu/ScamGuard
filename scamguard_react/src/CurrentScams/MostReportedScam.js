@@ -43,7 +43,7 @@ function MostReportedScam() {
                 <XAxis dataKey="category_level_3" />
                 <YAxis />
                 <Tooltip
-                    formatter={(value) => [`$${value.toLocaleString()}`, "Number of Reports"]}
+                    formatter={(value) => [`${value.toLocaleString()}`, "Number of Reports"]}
                     labelFormatter={(label) => `Scam Type: ${label}`}
                 />
                 <Legend formatter={(value) => "Number of Reports"} />

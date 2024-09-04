@@ -43,7 +43,7 @@ function PopularContactMethods() {
                 <XAxis dataKey="scam_contact_mode" />
                 <YAxis />
                 <Tooltip
-                    formatter={(value) => [`$${value.toLocaleString()}`, "Number of Reports"]}
+                    formatter={(value) => [`${value.toLocaleString()}`, "Number of Reports"]}
                     labelFormatter={(label) => `Scam Type: ${label}`}
                 />
                 <Legend formatter={(value) => "Number of Reports"} />
