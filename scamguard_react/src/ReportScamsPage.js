@@ -6,7 +6,7 @@ const ReportScamsPage = () => {
     const navigate = useNavigate();
 
     return (
-        <div className="ScamsPage">
+        <div className="Report-Page">
 
             {/* Introduction Section */}
             <header className="report-scams-header">
@@ -36,7 +36,7 @@ const ReportScamsPage = () => {
                         <li>You need to understand what type of scam this is. If you are not sure, click {' '}
                             <span
                                 onClick={() => navigate('/identifyScam')}
-                                style={{ color: 'blue', textDecoration: 'underline', cursor: 'pointer' }}
+                                style={{ color: '#FAFF00', textDecoration: 'underline', cursor: 'pointer' }}
                             >
                                 How to Identify Scams
                             </span>.

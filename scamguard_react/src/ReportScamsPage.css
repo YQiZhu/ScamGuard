@@ -8,6 +8,13 @@
 
 }
 
+.Report-Page a {
+    /* padding-top: 100px; */
+    /* padding: 20px; */
+    /* max-width: 800px; */
+    color: #FAFF00;
+}
+
 .report-scams-header p {
     font-size: 18px;
     line-height: 1.5;

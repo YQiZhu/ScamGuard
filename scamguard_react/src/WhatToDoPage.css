@@ -5,7 +5,13 @@
     margin: auto;
     align-items: center;
     justify-content: center;
+}
 
+.what-to-do-Page a {
+    /* padding-top: 100px; */
+    /* padding: 20px; */
+    /* max-width: 800px; */
+    color: #FAFF00;
 }
 
 .what-to-do-header p {

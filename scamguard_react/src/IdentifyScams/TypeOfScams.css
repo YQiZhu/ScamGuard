@@ -110,6 +110,14 @@
     color: #ffffff;
 }
 
+.protect-yourself a {
+    /* padding-top: 100px; */
+    /* padding: 20px; */
+    /* max-width: 800px; */
+    color: #FAFF00;
+}
+
+
 .protect-yourself h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;

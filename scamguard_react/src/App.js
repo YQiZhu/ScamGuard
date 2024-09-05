@@ -2,9 +2,8 @@ import logo from './logo.svg';
 import React, { useRef } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
-import useScrollToTop from './useScrollToTop';
-import CurrentScamsPage from './CurrentScamsPage'; 
-import IdentifyScamsPage from './IdentifyScamsPage'; 
+import CurrentScamsPage from './CurrentScamsPage';
+import IdentifyScamsPage from './IdentifyScamsPage';
 import ReportScamsPage from './ReportScamsPage';
 import WhatToDoPage from './WhatToDoPage';
 import CheckScamsPage from './CheckScamsPage';
@@ -23,10 +22,11 @@ import JobScams from './IdentifyScams/JobScams';
 import ImpersonationScams from './IdentifyScams/ImpersonationScams';
 import ReferencePage from './ReferencePage';
 import Footer from './Footer';
+import ScrollToTop from './ScrollToTop'; // Import the ScrollToTop component
 
 
 function App() {
-  // useScrollToTop();
+  // useScrollToTop(); // Call the hook here, inside the Router
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -34,6 +34,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <div className="App">
         <Header />
         <Routes>
@@ -73,9 +74,15 @@ function App() {
           <Route path="/investment-scams" element={<InvestmentScams />} />
           <Route path="/job-scams" element={<JobScams />} />
           <Route path="/impersonation-scams" element={<ImpersonationScams />} />
-          
+
         </Routes>
         <Footer />
+
+        {/* Scroll to Top Icon */}
+        <div className="scroll-to-top" onClick={scrollToTop}>
+          {/* ⬆️ */}
+          ↑
+        </div>
       </div>
     </Router>
   );
