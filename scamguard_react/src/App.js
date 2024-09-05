@@ -49,6 +49,12 @@ function App() {
               <main>
                 <section className="Desc-section">
                   <h2>What is in the website?</h2>
+                  <img
+                    src={require('./images/think.png')}
+                    alt="think"
+                  />
+                  <p>There are XXX many of people been scammed in last year, where age between xx to xx
+                    senior become the most vulnerable group when facing the scams.</p>
                   <p>Stay informed on current scams, learn about different scams and find out how to protect yourself from scammers</p>
                   <p><strong>To start journey on our website, go back to the top and select on the navigation bar</strong></p>
                   <button onClick={scrollToTop}>Go to Top of the Page</button>
