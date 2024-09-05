@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './TypeOfScams.css';
 
 function InvestmentScams() {
@@ -6,9 +7,18 @@ function InvestmentScams() {
     const goToOtherPage = () => {
         window.location.href = 'https://www.9news.com.au/national/scams-australia-queensland-man-loses-500k-retirement-savings-to-investment-scam/0ee978a5-6874-4dab-b517-d6ca5da3bc98'; // Replace with the desired URL
     };
+
+    const navigate = useNavigate();
+
+    // Function to go back to the previous page
+    const goBack = () => {
+        navigate(-1); // This will navigate back to the previous page
+    };
+
     return (
         <div className="Scams-Page">
             <header className="scams-header">
+                <button onClick={goBack}>Back to Pervious Page</button>
                 <h2>Investment Scams</h2>
                 <p>Investment scams entice people with promises of high returns and low risk, often using persuasive tactics and fake credentials to appear legitimate. Scammers may reach out through phone calls, emails, or social media, pressuring victims to invest quickly. Common scams include Ponzi schemes, where new investors' money is used to pay earlier investors, creating the illusion of profitability. It's crucial to research thoroughly and be skeptical of any investment opportunity that seems too good to be true.</p>
             </header>

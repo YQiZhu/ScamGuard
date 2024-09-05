@@ -1,4 +1,4 @@
-.Report-Page {
+.what-to-do-Page {
     /* padding-top: 100px; */
     /* padding: 20px; */
     /* max-width: 800px; */
@@ -8,7 +8,7 @@
 
 }
 
-.report-scams-header p {
+.what-to-do-header p {
     font-size: 18px;
     line-height: 1.5;
     /* padding: 20px; */
@@ -16,7 +16,7 @@
     margin-bottom: 20px;
 }
 
-.report-scams-header {
+.what-to-do-header {
     background-color: #0579DE;
     padding-top: 80px;
     padding-bottom: 30px;
@@ -28,7 +28,7 @@
     color: rgb(255, 255, 255);
 }
 
-.report-scams-header button {
+.what-to-do-header button {
     background-color: #ffffff;
     color: rgb(0, 0, 0);
     position: absolute; /* Position it relative to the page */
@@ -41,7 +41,7 @@
     z-index: 1; /* Ensure it's above other elements */
 }
 
-.report-scams-header button:hover {
+.what-to-do-header button:hover {
     background-color: #BADDF1;
     color: rgb(0, 0, 0);
     position: absolute; /* Position it relative to the page */
@@ -54,13 +54,13 @@
     z-index: 1; /* Ensure it's above other elements */
 }
 
-.report-scams-header h2 {
+.what-to-do-header h2 {
     /* padding-top: 20px; */
     font-size: 2rem;
     /* margin-bottom: 20px; */
 }
 
-.report-scam-step {
+.what-to-do-step1 {
     padding-top: 20px;
     /* margin-bottom: 40px; */
     padding-bottom: 20px;
@@ -74,20 +74,20 @@
     max-width: 800px;
 }
 
-.report-scam-step h2 {
+.what-to-do-step1 h2 {
     /* font-size: 1.5rem; */
     margin-bottom: 15px;
     text-align: center;
 }
 
-.report-scam-step p {
+.what-to-do-step1 p {
     /* margin-bottom: 10px; */
     font-size: 18px;
     /* line-height: 1.5; */
     text-align: left;
 }
 
-.how-to-report-scam {
+.what-to-do-step2 {
     /* margin-bottom: 40px; */
     background-color: #0579DE;
     padding-top: 20px;
@@ -99,12 +99,12 @@
     color: #ffffff;
 }
 
-.how-to-report-scam  h3 {
+.what-to-do-step2  h3 {
     /* font-size: 1.5rem; */
     margin-bottom: 10px;
 }
 
-.how-to-report-scam  p {
+.what-to-do-step2  p {
     /* font-size: 1rem; */
     font-size: 18px;
     /* margin-bottom: 2px; */
@@ -114,14 +114,14 @@
     /* margin-bottom: 10px; */
 }
 
-.how-to-report-scam li {
+.what-to-do-step2 li {
     /* width: 100%; */
     margin-bottom: 7px;
     /* display: block; */
     /* text-align: center; */
 }
 
-.why-report-scam {
+.what-to-do-step3 {
     padding-top: 20px;
     /* margin-bottom: 40px; */
     padding-bottom: 20px;
@@ -135,27 +135,21 @@
     max-width: 800px;
 }
 
-.why-report-scam h3 {
-    font-size: 1.5rem;
+.what-to-do-step3 h3 {
+    /* font-size: 1.5rem; */
     margin-bottom: 15px;
 }
 
-.why-report-scam p {
+.what-to-do-step3 p {
     font-size: 18px;
     line-height: 1.5;
     text-align: left;
 }
 
-.why-report-scam button {
-    font-size: 18px;
-    max-width: 200px;
-    margin: 15px;
-}
-
-.after-report-scam {
+.what-to-do-step4 {
     padding-top: 20px;
     /* margin-bottom: 40px; */
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     background-color: #0579DE;
     color: #ffffff;
     display: flex;
@@ -167,20 +161,17 @@
     /* max-width: 800px; */
 }
 
-.after-report-scam h3 {
+.what-to-do-step4 h3 {
     /* font-size: 1.5rem; */
     margin-bottom: 15px;
+    /* padding-top: 20px; */
 }
 
-.after-report-scam p {
+.what-to-do-step4 p {
     font-size: 18px;
     line-height: 1.5;
+    padding-bottom: 20px;
+    margin-bottom: 0;
     text-align: left;
     max-width: 800px;
-}
-
-.after-report-scam button {
-    font-size: 18px;
-    max-width: 200px;
-    margin: 15px;
 }

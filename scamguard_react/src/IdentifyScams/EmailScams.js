@@ -1,5 +1,6 @@
 import React from 'react';
 import './TypeOfScams.css';
+import { useNavigate } from 'react-router-dom';
 
 function EmailScams() {
 
@@ -7,10 +8,16 @@ function EmailScams() {
     const goToOtherPage = () => {
         window.location.href = 'https://www.9news.com.au/national/netflix-scam-email-claims-you-overpaid-your-bill-and-are-entitled-to-a-refund/b4597579-73ba-4d77-8501-f64ddc516a40'; // Replace with the desired URL
     };
+    const navigate = useNavigate();
 
+    // Function to go back to the previous page
+    const goBack = () => {
+        navigate(-1); // This will navigate back to the previous page
+    };
     return (
         <div className="Scams-Page">
             <header className="scams-header">
+                <button onClick={goBack}>Back to Pervious Page</button>
                 <h2>Email Scams</h2>
                 <p>Email scams, often disguised as legitimate communications, use urgent or alarming messages to trick recipients into clicking on links or opening attachments. These emails may mimic messages from reputable companies or government agencies and aim to steal personal information, such as login credentials or bank account details. Some scams also install malware on the victim's device, compromising their security. It's essential to be cautious with emails from unknown senders and use spam filters to minimize risk.</p>
             </header>

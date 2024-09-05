@@ -1,17 +1,29 @@
 import React from 'react';
 import './TextScams.css';
+import { useNavigate } from 'react-router-dom';
 
 function TextScams() {
     // Go to the real story source
     const goToOtherPage = () => {
         window.location.href = 'https://www.9news.com.au/national/hi-mum-cyber-scam-warning-two-million-dollars-stolen/74cbffaf-9e36-4c69-88e4-26b54e730313'; // Replace with the desired URL
     };
+
+    const navigate = useNavigate();
+
+    // Function to go back to the previous page
+    const goBack = () => {
+        navigate(-1); // This will navigate back to the previous page
+    };
+
     return (
         <div className="Text-Page">
-            <div className="text-scams-header">
+            <header className="text-scams-header">
+                <button onClick={goBack}>Back to Pervious Page</button>
                 <h2>Text Scams</h2>
                 <p>Text scams involve deceptive text messages that trick individuals into revealing personal information or clicking on harmful links. These messages often appear to come from legitimate sources, like banks or government agencies, and may warn of suspicious activity or urgent problems. Scammers also use fake prize notifications and delivery alerts to lure victims into providing sensitive details or downloading malicious software. These scams exploit the trust people place in text messages to achieve their goals.</p>
-            </div>
+                {/* Back Button */}
+            </header>
+
             {/* How to Identify a Scam Section */}
             <section className="text-scam-identification">
                 <h3>How to Identify a Text Scam</h3>

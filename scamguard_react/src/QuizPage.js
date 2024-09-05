@@ -7,8 +7,8 @@ const QuizPage = () => {
         <div className="QuizPage">
             {/* Introduction Section */}
             <header className="App-header">
-                <h1>Top 3 Current Scams</h1>
-                <p>Informing you of the most current scams in recent months to help you stay safe</p>
+                <h1>Quiz Page</h1>
+                <p>Test your knowledge against scam</p>
             </header>
 
             {/* Main Content */}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './TypeOfScams.css';
 
 function ProductAndServiceScams() {
@@ -6,9 +7,18 @@ function ProductAndServiceScams() {
     const goToOtherPage = () => {
         window.location.href = 'https://www.abc.net.au/news/2024-05-21/false-billing-scam-on-rise-australian-banks-powerless/103870850';
     };
+
+    const navigate = useNavigate();
+
+    // Function to go back to the previous page
+    const goBack = () => {
+        navigate(-1); // This will navigate back to the previous page
+    };
+
     return (
         <div className="Scams-Page">
             <header className="scams-header">
+                <button onClick={goBack}>Back to Pervious Page</button>
                 <h2>Product And Service Scams</h2>
                 <p>Product and service scams involve scammers posing as legitimate buyers or sellers to trick victims into sending money or personal information. These scams often feature fake websites, online profiles, or ads that closely mimic real businesses, offering products and services at prices that seem too good to be true. Scammers may also alter payment details on legitimate invoices to redirect funds. Common examples include fake e-commerce sites and scams on platforms like Facebook Marketplace. Always verify the legitimacy of the seller and product before making any purchases.</p>
             </header>

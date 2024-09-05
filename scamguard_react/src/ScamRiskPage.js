@@ -7,8 +7,8 @@ const ScamRiskPage = () => {
         <div className="ScamRiskPage">
             {/* Introduction Section */}
             <header className="App-header">
-                <h1>Top 3 Current Scams</h1>
-                <p>Informing you of the most current scams in recent months to help you stay safe</p>
+                <h1>Scams Risk Assessment</h1>
+                <p>Informing you of the most possible scams you will meet</p>
             </header>
 
             {/* Main Content */}

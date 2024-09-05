@@ -48,7 +48,7 @@ function TopLossScam() {
                     contentStyle={{ backgroundColor: "#FFF", color: "#000" }}
                 />
                 <Legend formatter={(value) => "Amount of Lost ($AUD)"} />
-                <Bar dataKey="amount_lost" fill="#8884d8" />
+                <Bar dataKey="amount_lost" fill="#DBAEFF" />
             </BarChart>
             <p>The <strong>Investment scams</strong> ranked at the <strong>first place</strong> in the top three scams that caused the highest financial losses in June from Australians in the age group 65 and over.</p>
 

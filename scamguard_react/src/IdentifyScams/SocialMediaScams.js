@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './TypeOfScams.css';
 
 function SocialMediaScams() {
@@ -6,9 +7,18 @@ function SocialMediaScams() {
     const goToOtherPage = () => {
         window.location.href = 'https://www.abc.net.au/news/2024-04-15/australians-falling-for-facebook-fake-ads-online-trading-scams/103640678'; // Replace with the desired URL
     };
+
+    const navigate = useNavigate();
+
+    // Function to go back to the previous page
+    const goBack = () => {
+        navigate(-1); // This will navigate back to the previous page
+    };
+
     return (
         <div className="Scams-Page">
             <header className="scams-header">
+                <button onClick={goBack}>Back to Pervious Page</button>
                 <h2>Social Media Scams</h2>
                 <p>Social media scams often involve impersonation and phishing tactics, where scammers create fake profiles to mislead users. They may send spam messages or harmful links while pretending to be someone familiar or a reputable organization. These scams can take the form of deceptive romantic relationships, where trust is gradually built before soliciting money. They may also involve fake investment opportunities or fraudulent ads for non-existent products. By leveraging the personal and trusting aspects of social media, scammers manipulate victims into disclosing money or sensitive information.</p>
             </header>

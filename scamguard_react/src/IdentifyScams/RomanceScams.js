@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './TypeOfScams.css';
 
 function RomanceScams() {
@@ -7,9 +8,17 @@ function RomanceScams() {
         window.location.href = 'https://www.9news.com.au/national/scams-melbourne-woman-met-gabriel-on-a-dating-site-he-drained-her-bank-account-and-broke-her-heart/39b5a350-fc65-4a24-bb4e-e5036d391df4'; // Replace with the desired URL
     };
 
+    const navigate = useNavigate();
+
+    // Function to go back to the previous page
+    const goBack = () => {
+        navigate(-1); // This will navigate back to the previous page
+    };
+
     return (
-        <div className="ScamsPage">
+        <div className="Scams-Page">
             <header className="scams-header">
+                <button onClick={goBack}>Back to Pervious Page</button>
                 <h2>Romance Scams</h2>
                 <p>Romance scams occur when fraudsters create fake profiles on dating sites or social media to deceive victims emotionally and financially. These scammers often express love or emotional attachment early on to build trust, but they avoid meeting in person, citing reasons like being in the military or working overseas. Once trust is established, they ask for money, often for supposed emergencies. Victims should be wary of anyone who moves too quickly in a relationship and avoid sending money or personal information.</p>
             </header>

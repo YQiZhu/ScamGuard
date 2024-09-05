@@ -1,51 +1,33 @@
 import React, { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './ReportScamsPage.css';
+import './WhatToDoPage.css';
 
 const WhatToDoPage = () => {
     const navigate = useNavigate();
 
-    // // Create a reference to the section
-    // const phoneScamsRef = useRef(null);
-    // const emailScamsRef = useRef(null);
-    // const romanceScamsRef = useRef(null);
-
-    // // Function to scroll to the section
-    // const scrollToSection = (ref) => {
-    //     ref.current?.scrollIntoView({ behavior: 'smooth' });
-    // };
-
     return (
-        <div className="ScamsPage">
-            {/* Side Menu */}
-            {/* <nav className="Side-menu">
-                <ul>
-                    <li><a href="#most-reported" onClick={() => scrollToSection(mostReportedRef)}>Current Most Reported Scams</a></li>
-                    <li><a href="#top-loss" onClick={() => scrollToSection(topLossRef)}>Current Top Scams By Loss</a></li>
-                    <li><a href="#popular-contact" onClick={() => scrollToSection(popularContactRef)}>Current Most Popular Contact Methods</a></li>
-                </ul>
-            </nav> */}
+        <div className="what-to-do-Page">
 
             {/* Introduction Section */}
-            <header className="indentify-scams-header">
+            <header className="what-to-do-header">
                 <h1>What to do if you've been scammed</h1>
             </header>
-             <section>
+             <section className='what-to-do-step1'>
                 <h2>1. Act fast to prevent further losses</h2>
                 <p>If you suspect that you've been scammed, it's essential to take immediate action to protect yourself and prevent further losses. First, stop all communication with the scammer and do not provide any additional information. Next, contact your financial institution to secure your accounts and monitor for any suspicious activity. It's also important to change the passwords for any accounts that may have been compromised. Acting swiftly can significantly reduce the impact of the scam and protect your financial and personal information.</p>
             </section>
 
-            <section>
+            <section className='what-to-do-step2'>
                 <h2>2. Report Scams</h2>
                 <p>Once you have contacted your financial institution, you need to take action to report the scam. This may help you recover the money you have lost and prevent others from being scammed. If you are not sure how to report a scam and what materials you need to provide, please <a href="/report-scam" target="_blank">click here</a> to jump to the "Report Scam" interface. We will guide you on how to report a scam and what materials you need to prepare.</p>
             </section>
 
-            <section>
+            <section className='what-to-do-step3'>
                 <h2>3. Watch out for follow up scams</h2>
                 <p>After an initial scam, scammers often try to exploit the victim's anxiety and confusion with follow-up scams. Stay vigilant and report any suspicious contacts to a trusted organization.</p>
             </section>
 
-            <section>
+            <section className='what-to-do-step4'>
                 <h2>4. Get Support</h2>
                 <h3>Your financial institution</h3>
                 <p>Contact your bank or credit union immediately if you’ve sent money to a scammer. They may be able to close your account or stop a transaction. Make sure you call them using their official phone number, not the one in the scam message.</p>

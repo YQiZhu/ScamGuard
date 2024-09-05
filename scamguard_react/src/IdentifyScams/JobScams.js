@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './TypeOfScams.css';
+import { useNavigate } from 'react-router-dom';
 
 function JobScams() {
 
@@ -8,9 +9,17 @@ function JobScams() {
         window.location.href = 'https://www.9news.com.au/national/job-ad-scam-it-worker-loses-150k/9486e365-d56c-4855-bdd0-9fe640ae3aae'; // Replace with the desired URL
     };
 
+    const navigate = useNavigate();
+
+    // Function to go back to the previous page
+    const goBack = () => {
+        navigate(-1); // This will navigate back to the previous page
+    };
+
     return (
         <div className="Scams-Page">
             <header className="scams-header">
+                <button onClick={goBack}>Back to Pervious Page</button>
                 <h2>Job Scams</h2>
                 <p>Job or employment scams target job seekers with fake job listings or interviews, aiming to steal personal information or money. Scammers may post seemingly legitimate job ads and then ask applicants to pay fees for background checks, training, or equipment. They may also conduct fake interviews to make the scam seem more authentic. Red flags include requests for upfront payments, sharing of personal financial information before hiring, and job offers that seem too good to be true. It's important to verify the legitimacy of job offers and be cautious throughout the hiring process.</p>
             </header>
