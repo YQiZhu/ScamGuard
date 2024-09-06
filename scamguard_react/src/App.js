@@ -49,10 +49,10 @@ function App() {
               <main>
                 <section className="Desc-section">
                   <h2>What is on this website?</h2>
-                  <img
+                  {/* <img
                     src={require('./images/think.png')}
                     alt="think"
-                  />
+                  /> */}
                   <p>Stay informed on current scams, learn about different scams and find out how to protect yourself from scammers.</p>
                   <p><strong>To start your journey on our website, go back to the top and click on the navigation bars.</strong></p>
                   <button onClick={scrollToTop}>Go to Top of the Page</button>
