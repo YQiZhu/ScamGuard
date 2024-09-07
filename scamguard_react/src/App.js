@@ -45,6 +45,8 @@ function App() {
               <header className="App-header">
                 <h1>ScamGuard</h1>
                 <p>Protecting seniors from scams and helping them stay safe online.</p>
+                <p>Testing ...</p>
+                <p>Testing ...</p>
               </header>
               <main>
                 <section className="Desc-section">
