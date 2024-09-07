@@ -6,7 +6,7 @@ const QuizPage = () => {
     return (
         <div className="QuizPage">
             {/* Introduction Section */}
-            <header className="App-header">
+            <header className="quiz-header">
                 <h1>Quiz Page</h1>
                 <p>Test your knowledge against scam</p>
             </header>

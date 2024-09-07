@@ -6,9 +6,9 @@ const CheckScamsPage = () => {
     return (
         <div className="CheckScamsPage">
             {/* Introduction Section */}
-            <header className="App-header">
-                <h1>Top 3 Current Scams</h1>
-                <p>Informing you of the most current scams in recent months to help you stay safe</p>
+            <header className="check-scam-header">
+                <h1>Check if the message are Scams</h1>
+                <p>Use well trained model to detect if those messages you received are scams or not</p>
             </header>
 
             {/* Main Content */}
