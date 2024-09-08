@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import axios from 'axios';
 import './RiskAssessmentPage.css';
 import ScamResultsChart from './RiskAssessment/ScamResultsChart';  // Import chart component
+import DemographicResultsChart from './RiskAssessment/DemographicResultsChart';
 
 const RiskAssessmentPage = () => {
 
@@ -9,7 +10,7 @@ const RiskAssessmentPage = () => {
     const [contactMethod, setContactMethod] = useState('');
     const [contactMethodData, setContactMethodData] = useState([]);
     const [isSubmittedContactMethod, setIsSubmittedContactMethod] = useState(false);
-    const [isLoadingContactMethod, setIsLoadingContactMethod] = useState(true);  // To track loading
+    const [isLoadingContactMethod, setIsLoadingContactMethod] = useState(false); // To track loading
 
     // State for Demographic Risk form
     const [gender, setGender] = useState('');
@@ -17,7 +18,7 @@ const RiskAssessmentPage = () => {
     const [ageGroup, setAgeGroup] = useState('');
     const [demographicData, setDemographicData] = useState([]);
     const [isSubmittedDemographic, setIsSubmittedDemographic] = useState(false);
-    const [isLoadingDemographic, setIsLoadingDemographic] = useState(true);  // To track loading
+    const [isLoadingDemographic, setIsLoadingDemographic] = useState(false);   // To track loading
 
     const contactMethods = ['Email', 'Fax', 'Internet', 'Mail', 'Mobile apps', 'Phone call', 'Social media/Online forums', 'Text message'];
     const genders = ['Female', 'Male'];
@@ -28,6 +29,7 @@ const RiskAssessmentPage = () => {
     const handleSubmitContactMethod = (e) => {
         e.preventDefault();
         setIsSubmittedContactMethod(true);
+        setIsLoadingContactMethod(true);  // Start loading
 
         // Prepare form data for contact method API
         const formData = { contact_method: contactMethod };
@@ -48,6 +50,7 @@ const RiskAssessmentPage = () => {
     const handleSubmitDemographic = (e) => {
         e.preventDefault();
         setIsSubmittedDemographic(true);
+        setIsLoadingDemographic(true);  // Start loading
 
         // Prepare form data for demographic risk API
         const formData = {
@@ -59,13 +62,15 @@ const RiskAssessmentPage = () => {
         // Call the demographic risk API
         axios.post('https://scamguard.live/api/demographic_risk/', formData)
             .then((response) => {
+                // console.log('Demographic Data:', response.data);  // Check if it's an array
                 setDemographicData(response.data);
                 setIsLoadingDemographic(false);
             })
             .catch((error) => {
                 console.error('Error fetching Demographic Risk:', error);
-                setIsLoadingContactMethod(false);
+                setIsLoadingDemographic(false);
             });
+
     };
 
     return (
@@ -92,12 +97,11 @@ const RiskAssessmentPage = () => {
                         <button type="submit" className="submit-btn">Submit Contact Method Risk</button>
                     </form>
 
-                    {isLoadingContactMethod && (
-                        <div className="loading">Loading...</div>  // Display loading sign while data is being fetched
-                    )}
+                    {isLoadingContactMethod && <div className="loading">Loading contact method data...</div>}
+
 
                     {/* Display Contact Method Risk Chart */}
-                    {isSubmittedContactMethod && !isLoadingContactMethod && contactMethodData.length > 0 && (
+                    {isSubmittedContactMethod && !isLoadingContactMethod && Array.isArray(contactMethodData) && contactMethodData.length > 0 && (
                         <section className="scam-chart">
                             <h3>Contact Method Risk Analysis Results</h3>
                             <ScamResultsChart data={contactMethodData} />
@@ -109,6 +113,7 @@ const RiskAssessmentPage = () => {
                             ))}
                         </section>
                     )}
+
                 </section>
 
                 <section className="analysis-form">
@@ -148,14 +153,14 @@ const RiskAssessmentPage = () => {
                         <button type="submit" className="submit-btn">Submit Demographic Risk</button>
                     </form>
 
-                    {isLoadingDemographic && (
-                        <div className="loading">Loading...</div>  // Display loading sign while data is being fetched
-                    )}
+                    {/* Show loading indicator */}
+                    {isLoadingDemographic && <div className="loading">Loading demographic data...</div>}
+
                     {/* Display Demographic Risk Chart */}
-                    {isSubmittedDemographic && !isLoadingDemographic && demographicData.length > 0 && (
+                    {isSubmittedDemographic && !isLoadingDemographic && Array.isArray(demographicData) && demographicData.length > 0 && (
                         <section className="scam-chart">
                             <h3>Demographic Risk Analysis Results</h3>
-                            <ScamResultsChart data={demographicData} />
+                            <DemographicResultsChart data={demographicData} />
                             {demographicData.map((scam, index) => (
                                 <div key={index} className="scam-description">
                                     <p>{scam.text}</p>
@@ -164,6 +169,7 @@ const RiskAssessmentPage = () => {
                             ))}
                         </section>
                     )}
+
                 </section>
             </main>
 
