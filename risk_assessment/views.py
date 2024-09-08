@@ -170,6 +170,7 @@ def get_ac52_view(request):
             (filtered_df['address_state'] == selected_location) &
             (filtered_df['complainant_age'] == 'All Ages')
         ]
+        print(filtered_data_national)
 
         # Group and aggregate for seniors
         ac52_grouped_seniors = filtered_data_seniors.groupby(
@@ -196,8 +197,8 @@ def get_ac52_view(request):
         # Calculate average reports and average loss for national (All Ages)
         ac52_grouped_national['average_reports'] = (ac52_grouped_national['number_of_reports'] / ac52_grouped_national['group_count']).round(0).astype(int)
         ac52_grouped_national['average_loss'] = (ac52_grouped_national['amount_lost'] / ac52_grouped_national['number_of_reports']).round(0).astype(int)
-        print(ac52_grouped_national['average_reports'])
-        print(ac52_grouped_national['average_loss'])
+        # print(ac52_grouped_national['average_reports'])
+        # print(ac52_grouped_national['average_loss'])
 
         # Merge senior and national dataframes together
         ac52_merged_df = ac52_grouped_seniors.merge(
