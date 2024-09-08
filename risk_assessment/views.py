@@ -151,9 +151,13 @@ def get_ac51_view(request):
 @csrf_exempt
 def get_ac52_view(request):
 
+    filtered_data_seniors = filtered_df[
+            (filtered_df['complainant_gender'] == 'Female') &
+            (filtered_df['address_state'] == 'New South Wales') 
+        ]
     # The rest of the code remains the same, using the filtered data
     ac52_grouped = (
-        filtered_df.groupby(
+        filtered_data_seniors.groupby(
             [
                 "scam_contact_mode",
                 "complainant_age",
