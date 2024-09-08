@@ -190,12 +190,12 @@ def get_ac52_view(request):
         }).reset_index()
 
         # Calculate average reports and average loss for seniors
-        ac52_grouped_seniors['average_reports_seniors'] = (ac52_grouped_seniors['number_of_reports'] / ac52_grouped_seniors['group_count']).round(0).astype(int)
-        ac52_grouped_seniors['average_loss_seniors'] = (ac52_grouped_seniors['amount_lost'] / ac52_grouped_seniors['number_of_reports']).round(0).astype(int)
+        ac52_grouped_seniors['average_reports'] = (ac52_grouped_seniors['number_of_reports'] / ac52_grouped_seniors['group_count']).round(0).astype(int)
+        ac52_grouped_seniors['average_loss'] = (ac52_grouped_seniors['amount_lost'] / ac52_grouped_seniors['number_of_reports']).round(0).astype(int)
 
         # Calculate average reports and average loss for national (All Ages)
-        ac52_grouped_national['average_reports_national'] = (ac52_grouped_national['number_of_reports'] / ac52_grouped_national['group_count']).round(0).astype(int)
-        ac52_grouped_national['average_loss_national'] = (ac52_grouped_national['amount_lost'] / ac52_grouped_national['number_of_reports']).round(0).astype(int)
+        ac52_grouped_national['average_reports'] = (ac52_grouped_national['number_of_reports'] / ac52_grouped_national['group_count']).round(0).astype(int)
+        ac52_grouped_national['average_loss'] = (ac52_grouped_national['amount_lost'] / ac52_grouped_national['number_of_reports']).round(0).astype(int)
 
         # Merge senior and national dataframes together
         ac52_merged_df = ac52_grouped_seniors.merge(
@@ -204,10 +204,10 @@ def get_ac52_view(request):
             how='left', 
             suffixes=('_seniors', '_national')
         )
+        print(ac52_merged_df['average_reports_seniors'])
 
         # Calculate the 'Exposure Risk'
         ac52_merged_df['exposure_risk'] = (ac52_merged_df['average_reports_seniors'] / ac52_merged_df['average_reports_national']).round(1)
-        print(ac52_merged_df['exposure_risk'])
 
         # Sort the dataframe by necessary columns
         ac52_merged_df = ac52_merged_df.sort_values(
