@@ -175,9 +175,7 @@ def get_ac52_view(request):
 
         # Create the Average_Reports and Average_Loss columns
         ac52_grouped['average_reports'] = (ac52_grouped['number_of_reports'] / ac52_grouped['group_count']).round(0).astype(int)
-        print(ac52_grouped['average_reports'])
         ac52_grouped['average_loss'] = (ac52_grouped['amount_lost'] / ac52_grouped['number_of_reports']).round(0).astype(int)
-        print(ac52_grouped['average_loss'])
         # Drop non-needed columns
         ac52_grouped = ac52_grouped.drop(columns=['amount_lost', 'number_of_reports', 'group_count'])
 
@@ -189,10 +187,11 @@ def get_ac52_view(request):
 
         # Merge senior and national dataframes together
         ac52_merged_df = ac52_seniors.merge(ac52_national, on=['scam_contact_mode', 'category_level_2'], how='left', suffixes=('_seniors', '_national'))
-
+        print(ac52_merged_df['average_reports_seniors'] )
+        print(ac52_merged_df['average_reports_national'])
         # Create the 'Exposure Risk' column
         ac52_merged_df['exposure_risk'] = (ac52_merged_df['average_reports_seniors'] / ac52_merged_df['average_reports_national']).round(1)
-
+        print(ac52_merged_df['exposure_risk'])
         # Sort the dataframe by necessary columns
         ac52_merged_df = ac52_merged_df.sort_values(by=['complainant_age_seniors', 'complainant_gender_seniors', 'address_state_seniors', 'exposure_risk'], ascending=[True, True, True, False])
 
