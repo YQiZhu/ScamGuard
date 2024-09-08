@@ -156,6 +156,9 @@ def get_ac52_view(request):
         selected_gender = data.get('gender')
         selected_location = data.get('location')
         selected_age_group = data.get('age_group')
+        print(selected_gender)
+        print(selected_location)
+        print(selected_age_group)
 
         # Apply filtering based on the selected demographic inputs
         filtered_data = filtered_df[
