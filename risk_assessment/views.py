@@ -1,7 +1,7 @@
 from django.shortcuts import render
-
 from django.http import JsonResponse
-from .models import ScamReport, ScamCategory, Complainant
+# Import models from currentScams app
+from currentScams.models import ScamReport, ScamCategory, Complainant
 import pandas as pd
 
 def load_data():
