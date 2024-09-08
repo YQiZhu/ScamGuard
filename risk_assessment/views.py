@@ -191,6 +191,7 @@ def get_ac52_view(request):
 
     # Create the dataframe for national data
     ac52_national = ac52_grouped[ac52_grouped["complainant_age"] == "All Ages"]
+    print(ac52_national)
 
     # Merge senior and national dataframes together
     ac52_merged_df = ac52_seniors.merge(
@@ -199,14 +200,14 @@ def get_ac52_view(request):
         how="left",
         suffixes=("_seniors", "_national"),
     )
-    print(ac52_merged_df["average_reports_seniors"])
-    print(ac52_merged_df["average_reports_national"])
+    # print(ac52_merged_df["average_reports_seniors"])
+    # print(ac52_merged_df["average_reports_national"])
     # Create the 'Exposure Risk' column
     ac52_merged_df["exposure_risk"] = (
         ac52_merged_df["average_reports_seniors"]
         / ac52_merged_df["average_reports_national"]
     ).round(1)
-    print(ac52_merged_df["exposure_risk"])
+    # print(ac52_merged_df["exposure_risk"])
     # Sort the dataframe by necessary columns
     ac52_merged_df = ac52_merged_df.sort_values(
         by=[
@@ -292,7 +293,7 @@ def get_ac52_view(request):
     # Convert the dataframe to JSON format
     ac52_json_data = ac52_selected.to_json(orient="records", indent=4)
 
-    print(ac52_json_data)
+    # print(ac52_json_data)
 
     # Return the JSON response
     return JsonResponse(json.loads(ac52_json_data), safe=False)
