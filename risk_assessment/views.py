@@ -196,6 +196,8 @@ def get_ac52_view(request):
         # Calculate average reports and average loss for national (All Ages)
         ac52_grouped_national['average_reports'] = (ac52_grouped_national['number_of_reports'] / ac52_grouped_national['group_count']).round(0).astype(int)
         ac52_grouped_national['average_loss'] = (ac52_grouped_national['amount_lost'] / ac52_grouped_national['number_of_reports']).round(0).astype(int)
+        print(ac52_grouped_national['average_reports'])
+        print(ac52_grouped_national['average_loss'])
 
         # Merge senior and national dataframes together
         ac52_merged_df = ac52_grouped_seniors.merge(
@@ -207,9 +209,9 @@ def get_ac52_view(request):
 
         # Calculate the 'Exposure Risk'
         ac52_merged_df['exposure_risk'] = (ac52_merged_df['average_reports_seniors'] / ac52_merged_df['average_reports_national']).round(1)
-        print(ac52_merged_df['average_reports_seniors'] )
-        print(ac52_merged_df['average_reports_national'])
-        print(ac52_merged_df['exposure_risk'])
+        # print(ac52_merged_df['average_reports_seniors'] )
+        # print(ac52_merged_df['average_reports_national'])
+        # print(ac52_merged_df['exposure_risk'])
 
         # Sort the dataframe by necessary columns
         ac52_merged_df = ac52_merged_df.sort_values(
