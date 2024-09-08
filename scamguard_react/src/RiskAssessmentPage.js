@@ -5,47 +5,66 @@ import ScamResultsChart from './RiskAssessment/ScamResultsChart';  // Import cha
 
 const RiskAssessmentPage = () => {
 
+    // State for Contact Method form
     const [contactMethod, setContactMethod] = useState('');
+    const [contactMethodData, setContactMethodData] = useState([]);
+    const [isSubmittedContactMethod, setIsSubmittedContactMethod] = useState(false);
+    const [isLoadingContactMethod, setIsLoadingContactMethod] = useState(true);  // To track loading
+
+    // State for Demographic Risk form
     const [gender, setGender] = useState('');
     const [location, setLocation] = useState('');
     const [ageGroup, setAgeGroup] = useState('');
-    const [scamData, setScamData] = useState([]);
-    const [isSubmitted, setIsSubmitted] = useState(false);  // To track form submission
-
+    const [demographicData, setDemographicData] = useState([]);
+    const [isSubmittedDemographic, setIsSubmittedDemographic] = useState(false);
+    const [isLoadingDemographic, setIsLoadingDemographic] = useState(true);  // To track loading
 
     const contactMethods = ['Email', 'Fax', 'Internet', 'Mail', 'Mobile apps', 'Phone call', 'Social media/Online forums', 'Text message'];
     const genders = ['Female', 'Male'];
     const locations = ['Australian Capital Territory', 'New South Wales', 'Northern Territory', 'Queensland', 'South Australia', 'Tasmania', 'Victoria', 'Western Australia'];
     const ageGroups = ['65 and over', 'All Ages'];
 
-    const handleSubmit = (e) => {
+    // Handle Contact Method form submission
+    const handleSubmitContactMethod = (e) => {
         e.preventDefault();
-        setIsSubmitted(true);  // Trigger form submission state
+        setIsSubmittedContactMethod(true);
 
+        // Prepare form data for contact method API
+        const formData = { contact_method: contactMethod };
+
+        // Call the contact method risk API
+        axios.post('https://scamguard.live/api/contact_method_risk/', formData)
+            .then((response) => {
+                setContactMethodData(response.data);
+                setIsLoadingContactMethod(false);
+            })
+            .catch((error) => {
+                console.error('Error fetching Contact Method Risk:', error);
+                setIsLoadingContactMethod(false);
+            });
+    };
+
+    // Handle Demographic Risk form submission
+    const handleSubmitDemographic = (e) => {
+        e.preventDefault();
+        setIsSubmittedDemographic(true);
+
+        // Prepare form data for demographic risk API
         const formData = {
-            contact_method: contactMethod,
             gender: gender,
             location: location,
             age_group: ageGroup,
         };
 
-        // Determine which API to call based on the available inputs
-        let apiUrl = '';
-        if (contactMethod) {
-            apiUrl = 'https://scamguard.live/api/contact_method_risk/';  // For contact method risk
-        } else {
-            apiUrl = 'https://scamguard.live/api/demographic_risk/';  // For demographic risk
-        }
-
-        // Send POST request to Django backend
-        axios.post(apiUrl, formData)
+        // Call the demographic risk API
+        axios.post('https://scamguard.live/api/demographic_risk/', formData)
             .then((response) => {
-                console.log('Analysis Data: ', response.data);
-                // Handle the response and display the chart here
-                setScamData(response.data);
+                setDemographicData(response.data);
+                setIsLoadingDemographic(false);
             })
             .catch((error) => {
-                console.error('There was an error!', error);
+                console.error('Error fetching Demographic Risk:', error);
+                setIsLoadingContactMethod(false);
             });
     };
 
@@ -58,7 +77,9 @@ const RiskAssessmentPage = () => {
 
             <main className="ScamRiskPage">
                 <section className="analysis-form">
-                    <form onSubmit={handleSubmit} className="risk-form">
+                    {/* Contact Method Risk Form */}
+                    <h2>Contact Method Risk</h2>
+                    <form onSubmit={handleSubmitContactMethod} className="risk-form">
                         <div className="form-group">
                             <label>Contact Methods</label>
                             <select onChange={(e) => setContactMethod(e.target.value)} value={contactMethod}>
@@ -68,7 +89,32 @@ const RiskAssessmentPage = () => {
                                 ))}
                             </select>
                         </div>
+                        <button type="submit" className="submit-btn">Submit Contact Method Risk</button>
+                    </form>
 
+                    {isLoadingContactMethod && (
+                        <div className="loading">Loading...</div>  // Display loading sign while data is being fetched
+                    )}
+
+                    {/* Display Contact Method Risk Chart */}
+                    {isSubmittedContactMethod && !isLoadingContactMethod && contactMethodData.length > 0 && (
+                        <section className="scam-chart">
+                            <h3>Contact Method Risk Analysis Results</h3>
+                            <ScamResultsChart data={contactMethodData} />
+                            {contactMethodData.map((scam, index) => (
+                                <div key={index} className="scam-description">
+                                    <p>{scam.text}</p>
+                                    <a href={scam.link} target="_blank" rel="noopener noreferrer">Learn more about this scam</a>
+                                </div>
+                            ))}
+                        </section>
+                    )}
+                </section>
+
+                <section className="analysis-form">
+                    {/* Demographic Risk Form */}
+                    <h2>Demographic Risk</h2>
+                    <form onSubmit={handleSubmitDemographic} className="risk-form">
                         <div className="form-group">
                             <label>Age Group</label>
                             <select onChange={(e) => setAgeGroup(e.target.value)} value={ageGroup}>
@@ -99,23 +145,28 @@ const RiskAssessmentPage = () => {
                             </select>
                         </div>
 
-                        <button type="submit" className="submit-btn">Submit to Analyse</button>
+                        <button type="submit" className="submit-btn">Submit Demographic Risk</button>
                     </form>
-                </section>
 
-                {isSubmitted && scamData.length > 0 && (
-                    <section className="scam-chart">
-                        <h2>Scam Analysis Results</h2>
-                        <ScamResultsChart data={scamData} />
-                        {scamData.map((scam, index) => (
-                            <div key={index} className="scam-description">
-                                <p>{scam.text}</p>
-                                <a href={scam.link} target="_blank" rel="noopener noreferrer">Learn more about this scam</a>
-                            </div>
-                        ))}
-                    </section>
-                )}
+                    {isLoadingDemographic && (
+                        <div className="loading">Loading...</div>  // Display loading sign while data is being fetched
+                    )}
+                    {/* Display Demographic Risk Chart */}
+                    {isSubmittedDemographic && !isLoadingDemographic && demographicData.length > 0 && (
+                        <section className="scam-chart">
+                            <h3>Demographic Risk Analysis Results</h3>
+                            <ScamResultsChart data={demographicData} />
+                            {demographicData.map((scam, index) => (
+                                <div key={index} className="scam-description">
+                                    <p>{scam.text}</p>
+                                    <a href={scam.link} target="_blank" rel="noopener noreferrer">Learn more about this scam</a>
+                                </div>
+                            ))}
+                        </section>
+                    )}
+                </section>
             </main>
+
         </div>
     );
 };

@@ -8,6 +8,27 @@ import requests
 from django.views.decorators.csrf import csrf_exempt
 import json
 
+
+# Create the dictionary for links based on 'Category_Level_2'
+    links_dict = {
+        'Buying or selling': 'https://scamguard.live/product-and-service-scams',
+        'Dating and romance': 'https://scamguard.live/romance-scams',
+        'Investment scams': 'https://scamguard.live/investment-scams',
+        'Jobs and employment': 'https://scamguard.live/job-scams'
+    }
+
+    # Crate the dictionary for links based on 'Scam_Contact_Mode'
+    contact_mode_links = {
+        'Email': 'https://scamguard.live/email-scams',
+        'Fax': 'https://scamguard.live/text-scams',
+        'Internet': 'https://scamguard.live/website-scams',
+        'Mail': 'https://scamguard.live/text-scams',
+        'Mobile apps': 'https://scamguard.live/website-scams',
+        'Phone call': 'https://scamguard.live/phone-scams',
+        'Social media/Online forums': 'https://scamguard.live/social-media-scams',
+        'Text message': 'https://scamguard.live/text-scams'
+    }
+    
 def load_data():
     # Fetch data from the database using Django ORM
     complainant_qs = Complainant.objects.all().values()
@@ -48,40 +69,6 @@ def load_data():
 
 filtered_df = load_data()
 
-@csrf_exempt
-def analyse_scam(request):
-    if request.method == 'POST':
-        # Get the data from the request
-        data = json.loads(request.body.decode('utf-8'))
-        contact_method = data.get('contact_method')
-        gender = data.get('gender')
-        location = data.get('location')
-        age_group = data.get('age_group')
-
-        # Fetch and filter data based on user input
-        complainant_qs = Complainant.objects.filter(complainant_gender=gender, address_state=location).values()
-        scam_report_qs = ScamReport.objects.filter(scam_contact_mode=contact_method).values()
-
-        # Convert QuerySets to DataFrames
-        complainant_df = pd.DataFrame(list(complainant_qs))
-        scam_report_df = pd.DataFrame(list(scam_report_qs))
-
-        # Merge DataFrames and filter by age group
-        merged_df = scam_report_df.merge(complainant_df, left_on='complainant_id', right_on='complainant_id', how='left')
-        filtered_df = merged_df[merged_df['complainant_age'] == age_group]
-
-        # Group and aggregate data for the chart
-        grouped_data = filtered_df.groupby(['scam_contact_mode', 'category_level_2']).agg({
-            'amount_lost': 'sum',
-            'number_of_reports': 'sum'
-        }).reset_index()
-
-        # Create a response with the filtered data
-        response_data = grouped_data.to_dict(orient='records')
-        return JsonResponse(response_data, safe=False)
-
-    return JsonResponse({'error': 'Invalid request'}, status=400)
-
 # View function for AC5.1
 @csrf_exempt
 def get_ac51_view(request):
@@ -121,26 +108,6 @@ def get_ac51_view(request):
     ac51_selected = top_3_exposure_risk[['scam_contact_mode', 'category_level_2', 'Average_Loss_seniors', 'Exposure Risk']]
 
     ac51_selected = ac51_selected.copy()
-
-    # Create the dictionary for links based on 'Category_Level_2'
-    links_dict = {
-        'Buying or selling': 'https://scamguard.live/product-and-service-scams',
-        'Dating and romance': 'https://scamguard.live/romance-scams',
-        'Investment scams': 'https://scamguard.live/investment-scams',
-        'Jobs and employment': 'https://scamguard.live/job-scams'
-    }
-
-    # Crate the dictionary for links based on 'Scam_Contact_Mode'
-    contact_mode_links = {
-        'Email': 'https://scamguard.live/email-scams',
-        'Fax': 'https://scamguard.live/text-scams',
-        'Internet': 'https://scamguard.live/website-scams',
-        'Mail': 'https://scamguard.live/text-scams',
-        'Mobile apps': 'https://scamguard.live/website-scams',
-        'Phone call': 'https://scamguard.live/phone-scams',
-        'Social media/Online forums': 'https://scamguard.live/social-media-scams',
-        'Text message': 'https://scamguard.live/text-scams'
-    }
 
     # Create the 'link' column
     ac51_selected['link'] = ac51_selected['category_level_2'].map(links_dict)
