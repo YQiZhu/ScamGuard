@@ -3,6 +3,8 @@ from django.http import JsonResponse
 # Import models from currentScams app
 from currentScams.models import ScamReport, ScamCategory, Complainant
 import pandas as pd
+from django.views.decorators.http import require_GET
+import requests
 
 def load_data():
     # Fetch data from the database using Django ORM
