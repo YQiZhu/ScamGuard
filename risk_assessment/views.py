@@ -197,7 +197,7 @@ def get_ac52_view(request):
 
         # Keep the top 3 rows for each unique combination of age, gender, and state
         ac52_top_3_exposure_risk = ac52_merged_df.groupby(['complainant_age_seniors', 'complainant_gender_seniors', 'address_state_seniors']).head(3).reset_index(drop=True)
-        print(ac52_top_3_exposure_risk)
+        print(ac52_top_3_exposure_risk['exposure_risk'])
         # Keep only rows with 'Exposure Risk' greater than 1.0
         ac52_top_3_exposure_risk = ac52_top_3_exposure_risk[ac52_top_3_exposure_risk['exposure_risk'] > 1.0]
 
