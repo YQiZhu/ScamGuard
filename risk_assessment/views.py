@@ -241,6 +241,8 @@ def get_ac52_view(request):
 
         # Convert the dataframe to JSON format
         ac52_json_data = ac52_selected.to_json(orient='records', indent=4)
+        
+        print(ac52_json_data)
 
         # Return the JSON response
         return JsonResponse(json.loads(ac52_json_data), safe=False)
