@@ -26,7 +26,7 @@ const Header = () => {
           <NavLink to="/checkScam" activeClassName="active-link">Check If Is A Scam</NavLink>
         </li>
         <li>
-          <NavLink to="/scamRisk" activeClassName="active-link">Scam Risk Assessment</NavLink>
+          <NavLink to="/riskAssessment" activeClassName="active-link">Scam Risk Assessment</NavLink>
         </li>
         <li>
           <NavLink to="/quiz" activeClassName="active-link">Take Quiz</NavLink>

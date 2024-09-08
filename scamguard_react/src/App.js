@@ -7,7 +7,7 @@ import IdentifyScamsPage from './IdentifyScamsPage';
 import ReportScamsPage from './ReportScamsPage';
 import WhatToDoPage from './WhatToDoPage';
 import CheckScamsPage from './CheckScamsPage';
-import ScamRiskPage from './ScamRiskPage';
+import RiskAssessmentPage from './RiskAssessmentPage';
 import QuizPage from './QuizPage';
 import Header from './Header';
 import PhoneScams from './IdentifyScams/PhoneScams';
@@ -66,7 +66,7 @@ function App() {
           <Route path="/reportScam" element={<ReportScamsPage />} />
           <Route path="/whatToDo" element={<WhatToDoPage />} />
           <Route path="/checkScam" element={<CheckScamsPage />} />
-          <Route path="/scamRisk" element={<ScamRiskPage />} />
+          <Route path="/riskAssessment" element={<RiskAssessmentPage />} />
           <Route path="/quiz" element={<QuizPage />} />
           <Route path="/phone-scams" element={<PhoneScams />} />
           <Route path="/text-scams" element={<TextScams />} />

@@ -21,3 +21,7 @@
 .scam-risk-header h1 {
     padding-top: 20px;
 }
+
+.analysis-form{
+    display: flex;
+}

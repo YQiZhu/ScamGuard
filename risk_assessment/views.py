@@ -5,6 +5,7 @@ from currentScams.models import ScamReport, ScamCategory, Complainant
 import pandas as pd
 from django.views.decorators.http import require_GET
 import requests
+from django.views.decorators.csrf import csrf_exempt
 
 def load_data():
     # Fetch data from the database using Django ORM
@@ -45,6 +46,40 @@ def load_data():
     return filtered_df
 
 filtered_df = load_data()
+
+@csrf_exempt
+def analyse_scam(request):
+    if request.method == 'POST':
+        # Get the data from the request
+        data = json.loads(request.body.decode('utf-8'))
+        contact_method = data.get('contact_method')
+        gender = data.get('gender')
+        location = data.get('location')
+        age_group = data.get('age_group')
+
+        # Fetch and filter data based on user input
+        complainant_qs = Complainant.objects.filter(complainant_gender=gender, address_state=location).values()
+        scam_report_qs = ScamReport.objects.filter(scam_contact_mode=contact_method).values()
+
+        # Convert QuerySets to DataFrames
+        complainant_df = pd.DataFrame(list(complainant_qs))
+        scam_report_df = pd.DataFrame(list(scam_report_qs))
+
+        # Merge DataFrames and filter by age group
+        merged_df = scam_report_df.merge(complainant_df, left_on='complainant_id', right_on='complainant_id', how='left')
+        filtered_df = merged_df[merged_df['complainant_age'] == age_group]
+
+        # Group and aggregate data for the chart
+        grouped_data = filtered_df.groupby(['scam_contact_mode', 'category_level_2']).agg({
+            'amount_lost': 'sum',
+            'number_of_reports': 'sum'
+        }).reset_index()
+
+        # Create a response with the filtered data
+        response_data = grouped_data.to_dict(orient='records')
+        return JsonResponse(response_data, safe=False)
+
+    return JsonResponse({'error': 'Invalid request'}, status=400)
 
 # View function for AC5.1
 @require_GET
@@ -136,7 +171,6 @@ def get_ac51_view(request):
     ac51_json_data = ac51_selected.to_json(orient='records', indent=4)
 
     return JsonResponse(json.loads(ac51_json_data), safe=False)
-
 
 # Create the view for AC5.2
 @require_GET
