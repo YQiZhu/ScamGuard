@@ -1,27 +1,78 @@
-.ScamRiskPage{
-    /* padding-top: 100px; */
-    /* max-width: 800px; */
+.ScamRiskPage {
+    max-width: 800px;
     margin: auto;
-    align-items: center;
-    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .scam-risk-header {
     background-color: #0579DE;
-    padding-top: 50px;
+    text-align: center;
+    color: white;
+    margin: auto;
+    padding-top: 80px;
     padding-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: rgb(255, 255, 255);
 }
 
 .scam-risk-header h1 {
-    padding-top: 20px;
+    font-size: 2rem;
 }
 
-.analysis-form{
+.analysis-form {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding-bottom: 30px;
+}
+
+.risk-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns */
+    grid-gap: 20px;
+    /* Space between the input fields */
+    padding: 20px;
+    background-color: #f0f7ff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.submit-btn {
+    grid-column: span 2;
+    padding: 12px;
+    font-size: 1rem;
+    background-color: #3399ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #0579DE;
+}
+
+.scam-chart {
+    margin-top: 30px;
+    text-align: center;
 }

@@ -1,4 +1,5 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
+import axios from 'axios';
 import './RiskAssessmentPage.css';
 import ScamResultsChart from './RiskAssessment/ScamResultsChart';  // Import chart component
 
@@ -9,6 +10,8 @@ const RiskAssessmentPage = () => {
     const [location, setLocation] = useState('');
     const [ageGroup, setAgeGroup] = useState('');
     const [scamData, setScamData] = useState([]);
+    const [isSubmitted, setIsSubmitted] = useState(false);  // To track form submission
+
 
     const contactMethods = ['Email', 'Fax', 'Internet', 'Mail', 'Mobile apps', 'Phone call', 'Social media/Online forums', 'Text message'];
     const genders = ['Female', 'Male'];
@@ -17,6 +20,7 @@ const RiskAssessmentPage = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        setIsSubmitted(true);  // Trigger form submission state
 
         const formData = {
             contact_method: contactMethod,
@@ -26,7 +30,7 @@ const RiskAssessmentPage = () => {
         };
 
         // Send POST request to Django backend
-        axios.post('/api/analyse', formData)
+        axios.post('https://scamguard.live/api/analyse_scam', formData)
             .then((response) => {
                 console.log('Analysis Data: ', response.data);
                 // Handle the response and display the chart here
@@ -38,18 +42,16 @@ const RiskAssessmentPage = () => {
     };
 
     return (
-        <div className="ScamRiskPage">
-            {/* Introduction Section */}
+        <div>
             <header className="scam-risk-header">
                 <h1>Scams Risk Assessment</h1>
                 <p>Informing you of the most possible scams you will meet</p>
             </header>
 
-            {/* Main Content */}
-            <main>
-                <session className="analysis-form">
-                    <form onSubmit={handleSubmit}>
-                        <div>
+            <main className="ScamRiskPage">
+                <section className="analysis-form">
+                    <form onSubmit={handleSubmit} className="risk-form">
+                        <div className="form-group">
                             <label>Contact Methods</label>
                             <select onChange={(e) => setContactMethod(e.target.value)} value={contactMethod}>
                                 <option value="" disabled>Select ...</option>
@@ -59,27 +61,7 @@ const RiskAssessmentPage = () => {
                             </select>
                         </div>
 
-                        <div>
-                            <label>Gender</label>
-                            <select onChange={(e) => setGender(e.target.value)} value={gender}>
-                                <option value="" disabled>Select ...</option>
-                                {genders.map((gen, index) => (
-                                    <option key={index} value={gen}>{gen}</option>
-                                ))}
-                            </select>
-                        </div>
-
-                        <div>
-                            <label>Location</label>
-                            <select onChange={(e) => setLocation(e.target.value)} value={location}>
-                                <option value="" disabled>Select ...</option>
-                                {locations.map((loc, index) => (
-                                    <option key={index} value={loc}>{loc}</option>
-                                ))}
-                            </select>
-                        </div>
-
-                        <div>
+                        <div className="form-group">
                             <label>Age Group</label>
                             <select onChange={(e) => setAgeGroup(e.target.value)} value={ageGroup}>
                                 <option value="" disabled>Select ...</option>
@@ -89,15 +71,33 @@ const RiskAssessmentPage = () => {
                             </select>
                         </div>
 
-                        <button type="submit">Submit to Analyse</button>
-                    </form>
-                </session>
+                        <div className="form-group">
+                            <label>Location</label>
+                            <select onChange={(e) => setLocation(e.target.value)} value={location}>
+                                <option value="" disabled>Select ...</option>
+                                {locations.map((loc, index) => (
+                                    <option key={index} value={loc}>{loc}</option>
+                                ))}
+                            </select>
+                        </div>
 
-                {/* Conditionally render the chart only after form submission */}
+                        <div className="form-group">
+                            <label>Gender</label>
+                            <select onChange={(e) => setGender(e.target.value)} value={gender}>
+                                <option value="" disabled>Select ...</option>
+                                {genders.map((gen, index) => (
+                                    <option key={index} value={gen}>{gen}</option>
+                                ))}
+                            </select>
+                        </div>
+
+                        <button type="submit" className="submit-btn">Submit to Analyse</button>
+                    </form>
+                </section>
+
                 {isSubmitted && (
                     <section className="scam-chart">
                         <h2>Scam Analysis Results</h2>
-                        {/* Pass the scam data to the ScamResultsChart component */}
                         {scamData.length > 0 ? <ScamResultsChart data={scamData} /> : <p>No data available.</p>}
                     </section>
                 )}

@@ -16,3 +16,5 @@ const ScamResultsChart = ({ data }) => {
     </ResponsiveContainer>
   );
 };
+
+export default ScamResultsChart;
