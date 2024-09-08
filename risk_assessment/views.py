@@ -175,8 +175,9 @@ def get_ac52_view(request):
 
         # Create the Average_Reports and Average_Loss columns
         ac52_grouped['average_reports'] = (ac52_grouped['number_of_reports'] / ac52_grouped['group_count']).round(0).astype(int)
+        print(ac52_grouped['average_reports'])
         ac52_grouped['average_loss'] = (ac52_grouped['amount_lost'] / ac52_grouped['number_of_reports']).round(0).astype(int)
-
+        print(ac52_grouped['average_loss'])
         # Drop non-needed columns
         ac52_grouped = ac52_grouped.drop(columns=['amount_lost', 'number_of_reports', 'group_count'])
 
@@ -197,7 +198,7 @@ def get_ac52_view(request):
 
         # Keep the top 3 rows for each unique combination of age, gender, and state
         ac52_top_3_exposure_risk = ac52_merged_df.groupby(['complainant_age_seniors', 'complainant_gender_seniors', 'address_state_seniors']).head(3).reset_index(drop=True)
-        print(ac52_top_3_exposure_risk['exposure_risk'])
+    
         # Keep only rows with 'Exposure Risk' greater than 1.0
         ac52_top_3_exposure_risk = ac52_top_3_exposure_risk[ac52_top_3_exposure_risk['exposure_risk'] > 1.0]
 
