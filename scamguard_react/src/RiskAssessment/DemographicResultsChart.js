@@ -24,10 +24,10 @@ const preprocessData = (data) => {
 };
 
 const DemographicResultsChart = ({ data }) => {
-    console.log("DemographicResultsChart is rendering");
+    // console.log("DemographicResultsChart is rendering");
     // Preprocess data
     const processedData = preprocessData(data);
-    console.log('Processed Data for Chart:', processedData);
+    // console.log('Processed Data for Chart:', processedData);
 
 
     return (

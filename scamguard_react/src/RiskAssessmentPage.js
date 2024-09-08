@@ -59,11 +59,12 @@ const RiskAssessmentPage = () => {
             location: location,
             age_group: ageGroup,
         };
+        console.log('Data:', formData); 
 
         // Call the demographic risk API
         axios.post('https://scamguard.live/api/demographic_risk/', formData)
             .then((response) => {
-                // console.log('Demographic Data:', response.data);  // Check if it's an array
+                console.log('Demographic Data:', response.data);  // Check if it's an array
                 setDemographicData(response.data);
                 setIsLoadingDemographic(false);
             })
