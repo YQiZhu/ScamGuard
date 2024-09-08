@@ -157,7 +157,6 @@ const RiskAssessmentPage = () => {
                     {/* Show loading indicator */}
                     {isLoadingDemographic && <div className="loading">Loading demographic data...</div>}
 
-                    <p>load demographic</p>
                     {/* Display Demographic Risk Chart */}
                     {isSubmittedDemographic && !isLoadingDemographic && Array.isArray(demographicData) && demographicData.length > 0 && (
                         <section className="scam-chart">
