@@ -10,25 +10,24 @@ import json
 
 
 # Create the dictionary for links based on 'Category_Level_2'
-    links_dict = {
-        'Buying or selling': 'https://scamguard.live/product-and-service-scams',
-        'Dating and romance': 'https://scamguard.live/romance-scams',
-        'Investment scams': 'https://scamguard.live/investment-scams',
-        'Jobs and employment': 'https://scamguard.live/job-scams'
-    }
+links_dict = {
+    'Buying or selling': 'https://scamguard.live/product-and-service-scams',
+    'Dating and romance': 'https://scamguard.live/romance-scams',
+    'Investment scams': 'https://scamguard.live/investment-scams',
+    'Jobs and employment': 'https://scamguard.live/job-scams'
+}
 
-    # Crate the dictionary for links based on 'Scam_Contact_Mode'
-    contact_mode_links = {
-        'Email': 'https://scamguard.live/email-scams',
-        'Fax': 'https://scamguard.live/text-scams',
-        'Internet': 'https://scamguard.live/website-scams',
-        'Mail': 'https://scamguard.live/text-scams',
-        'Mobile apps': 'https://scamguard.live/website-scams',
-        'Phone call': 'https://scamguard.live/phone-scams',
-        'Social media/Online forums': 'https://scamguard.live/social-media-scams',
-        'Text message': 'https://scamguard.live/text-scams'
-    }
-    
+contact_mode_links = {
+    'Email': 'https://scamguard.live/email-scams',
+    'Fax': 'https://scamguard.live/text-scams',
+    'Internet': 'https://scamguard.live/website-scams',
+    'Mail': 'https://scamguard.live/text-scams',
+    'Mobile apps': 'https://scamguard.live/website-scams',
+    'Phone call': 'https://scamguard.live/phone-scams',
+    'Social media/Online forums': 'https://scamguard.live/social-media-scams',
+    'Text message': 'https://scamguard.live/text-scams'
+}
+
 def load_data():
     # Fetch data from the database using Django ORM
     complainant_qs = Complainant.objects.all().values()
