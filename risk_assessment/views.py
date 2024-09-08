@@ -154,7 +154,7 @@ def get_ac52_view(request):
     
     # The rest of the code remains the same, using the filtered data
     ac52_grouped = (
-        filtered_data_seniors.groupby(
+        filtered_df.groupby(
             [
                 "scam_contact_mode",
                 "complainant_age",
