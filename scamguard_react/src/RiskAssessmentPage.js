@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import axios from 'axios';
 import './RiskAssessmentPage.css';
-import ScamResultsChart from './RiskAssessment/ScamResultsChart';  // Import chart component
+import ContactMethodResultsChart from './RiskAssessment/ContactMethodResultsChart';  // Import chart component
 import DemographicResultsChart from './RiskAssessment/DemographicResultsChart';
 
 const RiskAssessmentPage = () => {
@@ -38,7 +38,7 @@ const RiskAssessmentPage = () => {
         axios.post('https://scamguard.live/api/contact_method_risk/', formData)
             .then((response) => {
                 setContactMethodData(response.data);
-                console.log('Contact Method Data:', response.data);
+                // console.log('Contact Method Data:', response.data);
                 setIsLoadingContactMethod(false);
             })
             .catch((error) => {
@@ -63,7 +63,7 @@ const RiskAssessmentPage = () => {
         // Call the demographic risk API
         axios.post('https://scamguard.live/api/demographic_risk/', formData)
             .then((response) => {
-                console.log('Demographic Data:', response.data);  // Check if it's an array
+                // console.log('Demographic Data:', response.data);  // Check if it's an array
                 setDemographicData(response.data);
                 setIsLoadingDemographic(false);
             })
@@ -105,7 +105,7 @@ const RiskAssessmentPage = () => {
                     {isSubmittedContactMethod && !isLoadingContactMethod && Array.isArray(contactMethodData) && contactMethodData.length > 0 && (
                         <section className="scam-chart">
                             <h3>Contact Method Risk Analysis Results</h3>
-                            <ScamResultsChart data={contactMethodData} />
+                            <ContactMethodResultsChart data={contactMethodData} />
                             {contactMethodData.map((scam, index) => (
                                 <div key={index} className="scam-description">
                                     <p>{scam.text}</p>
