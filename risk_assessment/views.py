@@ -156,9 +156,6 @@ def get_ac52_view(request):
         selected_gender = data.get('gender')
         selected_location = data.get('location')
         selected_age_group = data.get('age_group')
-        print(selected_gender)
-        print(selected_location)
-        print(selected_age_group)
 
         # Apply filtering based on the selected demographic inputs
         filtered_data = filtered_df[
@@ -175,6 +172,8 @@ def get_ac52_view(request):
             'number_of_reports': 'sum',
             'group_count': 'sum'
         }).reset_index()
+
+        print(ac52_grouped)
 
         # Create the Average_Reports and Average_Loss columns
         ac52_grouped['average_reports'] = (ac52_grouped['number_of_reports'] / ac52_grouped['group_count']).round(0).astype(int)
