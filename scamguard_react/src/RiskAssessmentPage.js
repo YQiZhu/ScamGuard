@@ -29,8 +29,16 @@ const RiskAssessmentPage = () => {
             age_group: ageGroup,
         };
 
+        // Determine which API to call based on the available inputs
+        let apiUrl = '';
+        if (contactMethod) {
+            apiUrl = 'https://scamguard.live/api/contact_method_risk/';  // For contact method risk
+        } else {
+            apiUrl = 'https://scamguard.live/api/demographic_risk/';  // For demographic risk
+        }
+
         // Send POST request to Django backend
-        axios.post('https://scamguard.live/api/analyse_scam', formData)
+        axios.post(apiUrl, formData)
             .then((response) => {
                 console.log('Analysis Data: ', response.data);
                 // Handle the response and display the chart here
@@ -95,10 +103,16 @@ const RiskAssessmentPage = () => {
                     </form>
                 </section>
 
-                {isSubmitted && (
+                {isSubmitted && scamData.length > 0 && (
                     <section className="scam-chart">
                         <h2>Scam Analysis Results</h2>
-                        {scamData.length > 0 ? <ScamResultsChart data={scamData} /> : <p>No data available.</p>}
+                        <ScamResultsChart data={scamData} />
+                        {scamData.map((scam, index) => (
+                            <div key={index} className="scam-description">
+                                <p>{scam.text}</p>
+                                <a href={scam.link} target="_blank" rel="noopener noreferrer">Learn more about this scam</a>
+                            </div>
+                        ))}
                     </section>
                 )}
             </main>

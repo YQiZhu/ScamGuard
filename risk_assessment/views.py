@@ -82,7 +82,6 @@ def analyse_scam(request):
     return JsonResponse({'error': 'Invalid request'}, status=400)
 
 # View function for AC5.1
-@require_GET
 def get_ac51_view(request):
     # Group the data by the specified columns and calculate the summary for the other columns
     ac51_grouped = filtered_df.groupby(['scam_contact_mode', 'complainant_age', 'category_level_2']).agg({
@@ -173,7 +172,6 @@ def get_ac51_view(request):
     return JsonResponse(json.loads(ac51_json_data), safe=False)
 
 # Create the view for AC5.2
-@require_GET
 def get_ac52_view(request):
 # Group the data by the specified columns and calculate the summary for the other columns
     ac52_grouped = filtered_df.groupby(['scam_contact_mode', 'complainant_age', 'complainant_gender', 'address_state', 'category_level_2']).agg({
