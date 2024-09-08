@@ -170,7 +170,8 @@ def get_ac52_view(request):
         filtered_data_national = filtered_df[
             (filtered_df['complainant_age'] == 'All Ages')
         ]
-        print(filtered_data_national['address_state'])
+        print(filtered_data_national['complainant_gender'])
+        print(filtered_data_national['address_state'].unique())
 
         # Group and aggregate for seniors
         ac52_grouped_seniors = filtered_data_seniors.groupby(
