@@ -163,6 +163,8 @@ def get_ac52_view(request):
             (filtered_df['address_state'] == selected_location) &
             (filtered_df['complainant_age'] == selected_age_group)
         ]
+        print(filtered_data_seniors)
+        print(filtered_df)
 
         # Filter the data for 'All Ages' (to compare against national average)
         filtered_data_national = filtered_df[
