@@ -163,14 +163,14 @@ def get_ac52_view(request):
             (filtered_df['address_state'] == selected_location) &
             (filtered_df['complainant_age'] == selected_age_group)
         ]
-        print(filtered_data_seniors)
-        print(filtered_df)
+        # print(filtered_data_seniors)
+        # print(filtered_df)
 
         # Filter the data for 'All Ages' (to compare against national average)
         filtered_data_national = filtered_df[
             (filtered_df['complainant_age'] == 'All Ages')
         ]
-        print(filtered_data_national)
+        print(filtered_data_national['address_state'])
 
         # Group and aggregate for seniors
         ac52_grouped_seniors = filtered_data_seniors.groupby(
@@ -268,7 +268,7 @@ def get_ac52_view(request):
 
         # Convert the dataframe to JSON format
         ac52_json_data = ac52_selected.to_json(orient='records', indent=4)
-        print(ac52_json_data)
+        # print(ac52_json_data)
 
         # Return the JSON response
         return JsonResponse(json.loads(ac52_json_data), safe=False)
