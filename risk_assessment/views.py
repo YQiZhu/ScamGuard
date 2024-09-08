@@ -195,6 +195,8 @@ def get_ac52_view(request):
         # Sort the dataframe by necessary columns
         ac52_merged_df = ac52_merged_df.sort_values(by=['complainant_age_seniors', 'complainant_gender_seniors', 'address_state_seniors', 'exposure_risk'], ascending=[True, True, True, False])
 
+        print(ac52_merged_df)
+
         # Keep the top 3 rows for each unique combination of age, gender, and state
         ac52_top_3_exposure_risk = ac52_merged_df.groupby(['complainant_age_seniors', 'complainant_gender_seniors', 'address_state_seniors']).head(3).reset_index(drop=True)
 
@@ -206,7 +208,7 @@ def get_ac52_view(request):
                                                 'address_state_seniors', 'category_level_2', 'average_loss_seniors', 'exposure_risk']]
 
         ac52_selected = ac52_selected.copy()
-        print(ac52_selected)
+        
         # Create the 'link' column (assuming links_dict and contact_mode_links are defined elsewhere)
         ac52_selected['link'] = ac52_selected['category_level_2'].map(links_dict)
         ac52_selected['link'] = ac52_selected['link'].fillna(ac52_selected['scam_contact_mode'].map(contact_mode_links))
