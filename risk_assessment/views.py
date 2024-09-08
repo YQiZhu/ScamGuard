@@ -151,81 +151,96 @@ def get_ac51_view(request):
 @csrf_exempt
 def get_ac52_view(request):
     
-# Group the data by the specified columns and calculate the summary for the other columns
-    ac52_grouped = filtered_df.groupby(['scam_contact_mode', 'complainant_age', 'complainant_gender', 'address_state', 'category_level_2']).agg({
-        'amount_lost': 'sum',
-        'number_of_reports': 'sum',
-        'group_count': 'sum'
-    }).reset_index()
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        selected_gender = data.get('gender')
+        selected_location = data.get('location')
+        selected_age_group = data.get('age_group')
 
-    # Create the Average_Reports and Average_Loss columns
-    ac52_grouped['average_reports'] = (ac52_grouped['number_of_reports'] / ac52_grouped['group_count']).round(0).astype(int)
-    ac52_grouped['average_loss'] = (ac52_grouped['amount_lost'] / ac52_grouped['number_of_reports']).round(0).astype(int)
+        # Apply filtering based on the selected demographic inputs
+        filtered_data = filtered_df[
+            (filtered_df['complainant_gender'] == selected_gender) &
+            (filtered_df['address_state'] == selected_location) &
+            (filtered_df['complainant_age'] == selected_age_group)
+        ]
 
-    # Drop non-needed columns
-    ac52_grouped = ac52_grouped.drop(columns=['amount_lost', 'number_of_reports', 'group_count'])
+        # The rest of the code remains the same, using the filtered data
+        ac52_grouped = filtered_data.groupby(
+            ['scam_contact_mode', 'complainant_age', 'complainant_gender', 'address_state', 'category_level_2']
+        ).agg({
+            'amount_lost': 'sum',
+            'number_of_reports': 'sum',
+            'group_count': 'sum'
+        }).reset_index()
 
-    # Create the dataframe for Seniors
-    ac52_seniors = ac52_grouped[ac52_grouped['complainant_age'] == '65 and over']
+        # Create the Average_Reports and Average_Loss columns
+        ac52_grouped['average_reports'] = (ac52_grouped['number_of_reports'] / ac52_grouped['group_count']).round(0).astype(int)
+        ac52_grouped['average_loss'] = (ac52_grouped['amount_lost'] / ac52_grouped['number_of_reports']).round(0).astype(int)
 
-    # Create the dataframe for national data
-    ac52_national = ac52_grouped[ac52_grouped['complainant_age'] == 'All Ages']
+        # Drop non-needed columns
+        ac52_grouped = ac52_grouped.drop(columns=['amount_lost', 'number_of_reports', 'group_count'])
 
-    # Merge senior and national dataframes together
-    ac52_merged_df = ac52_seniors.merge(ac52_national, on=['scam_contact_mode', 'category_level_2'], how='left', suffixes=('_seniors', '_national'))
+        # Create the dataframe for Seniors
+        ac52_seniors = ac52_grouped[ac52_grouped['complainant_age'] == '65 and over']
 
-    # Create the 'Exposure Risk' column
-    ac52_merged_df['exposure_risk'] = (ac52_merged_df['average_reports_seniors'] / ac52_merged_df['average_reports_national']).round(1)
+        # Create the dataframe for national data
+        ac52_national = ac52_grouped[ac52_grouped['complainant_age'] == 'All Ages']
 
-    # Sort the dataframe by necessary columns
-    ac52_merged_df = ac52_merged_df.sort_values(by=['complainant_age_seniors', 'complainant_gender_seniors', 'address_state_seniors', 'exposure_risk'], ascending=[True, True, True, False])
+        # Merge senior and national dataframes together
+        ac52_merged_df = ac52_seniors.merge(ac52_national, on=['scam_contact_mode', 'category_level_2'], how='left', suffixes=('_seniors', '_national'))
 
-    # Keep the top 3 rows for each unique combination of age, gender, and state
-    ac52_top_3_exposure_risk = ac52_merged_df.groupby(['complainant_age_seniors', 'complainant_gender_seniors', 'address_state_seniors']).head(3).reset_index(drop=True)
+        # Create the 'Exposure Risk' column
+        ac52_merged_df['exposure_risk'] = (ac52_merged_df['average_reports_seniors'] / ac52_merged_df['average_reports_national']).round(1)
 
-    # Keep only rows with 'Exposure Risk' greater than 1.0
-    ac52_top_3_exposure_risk = ac52_top_3_exposure_risk[ac52_top_3_exposure_risk['exposure_risk'] > 1.0]
+        # Sort the dataframe by necessary columns
+        ac52_merged_df = ac52_merged_df.sort_values(by=['complainant_age_seniors', 'complainant_gender_seniors', 'address_state_seniors', 'exposure_risk'], ascending=[True, True, True, False])
 
-    # Select Required Columns
-    ac52_selected = ac52_top_3_exposure_risk[['scam_contact_mode', 'complainant_age_seniors', 'complainant_gender_seniors',
-                                              'address_state_seniors', 'category_level_2', 'average_loss_seniors', 'exposure_risk']]
+        # Keep the top 3 rows for each unique combination of age, gender, and state
+        ac52_top_3_exposure_risk = ac52_merged_df.groupby(['complainant_age_seniors', 'complainant_gender_seniors', 'address_state_seniors']).head(3).reset_index(drop=True)
 
-    ac52_selected = ac52_selected.copy()
+        # Keep only rows with 'Exposure Risk' greater than 1.0
+        ac52_top_3_exposure_risk = ac52_top_3_exposure_risk[ac52_top_3_exposure_risk['exposure_risk'] > 1.0]
 
-    # Create the 'link' column (assuming links_dict and contact_mode_links are defined elsewhere)
-    ac52_selected['link'] = ac52_selected['category_level_2'].map(links_dict)
-    ac52_selected['link'] = ac52_selected['link'].fillna(ac52_selected['scam_contact_mode'].map(contact_mode_links))
+        # Select Required Columns
+        ac52_selected = ac52_top_3_exposure_risk[['scam_contact_mode', 'complainant_age_seniors', 'complainant_gender_seniors',
+                                                'address_state_seniors', 'category_level_2', 'average_loss_seniors', 'exposure_risk']]
 
-    # Format 'Average_Loss_seniors' as currency
-    ac52_selected['average_loss_seniors'] = ac52_selected['average_loss_seniors'].apply(lambda x: f"${x:,.2f}")
+        ac52_selected = ac52_selected.copy()
 
-    # Reformat 'Category_Level_2' values
-    ac52_selected['category_level_2'] = ac52_selected.apply(
-        lambda row: f"{row['category_level_2']} scams via {row['scam_contact_mode']}",
-        axis=1
-    )
+        # Create the 'link' column (assuming links_dict and contact_mode_links are defined elsewhere)
+        ac52_selected['link'] = ac52_selected['category_level_2'].map(links_dict)
+        ac52_selected['link'] = ac52_selected['link'].fillna(ac52_selected['scam_contact_mode'].map(contact_mode_links))
 
-    # Create the 'text' column
-    ac52_selected['text'] = ac52_selected.apply(
-        lambda row: (
-            f"According to your demographic profile, your risk of encountering {row['category_level_2']} is {row['exposure_risk']} times higher than the national average. "
-            f"For individuals in your demographic group, the average financial loss for seniors is estimated to be {row['average_loss_seniors']}. "
-            f"To learn more about this scam and discover ways to protect yourself, please click the link below:"
-        ),
-        axis=1
-    )
+        # Format 'Average_Loss_seniors' as currency
+        ac52_selected['average_loss_seniors'] = ac52_selected['average_loss_seniors'].apply(lambda x: f"${x:,.2f}")
 
-    # Rename some columns
-    ac52_selected = ac52_selected.rename(columns={
-        'scam_contact_mode': 'Online Activity',
-        'category_level_2': 'Scam Type',
-        'average_loss_seniors': 'Average Loss for Seniors',
-        'complainant_age_seniors': 'Age Group',
-        'address_state_seniors': 'State',
-    })
+        # Reformat 'Category_Level_2' values
+        ac52_selected['category_level_2'] = ac52_selected.apply(
+            lambda row: f"{row['category_level_2']} scams via {row['scam_contact_mode']}",
+            axis=1
+        )
 
-    # Convert the dataframe to JSON format
-    ac52_json_data = ac52_selected.to_json(orient='records', indent=4)
+        # Create the 'text' column
+        ac52_selected['text'] = ac52_selected.apply(
+            lambda row: (
+                f"According to your demographic profile, your risk of encountering {row['category_level_2']} is {row['exposure_risk']} times higher than the national average. "
+                f"For individuals in your demographic group, the average financial loss for seniors is estimated to be {row['average_loss_seniors']}. "
+                f"To learn more about this scam and discover ways to protect yourself, please click the link below:"
+            ),
+            axis=1
+        )
 
-    # Return the JSON response
-    return JsonResponse(json.loads(ac52_json_data), safe=False)
+        # Rename some columns
+        ac52_selected = ac52_selected.rename(columns={
+            'scam_contact_mode': 'Online Activity',
+            'category_level_2': 'Scam Type',
+            'average_loss_seniors': 'Average Loss for Seniors',
+            'complainant_age_seniors': 'Age Group',
+            'address_state_seniors': 'State',
+        })
+
+        # Convert the dataframe to JSON format
+        ac52_json_data = ac52_selected.to_json(orient='records', indent=4)
+
+        # Return the JSON response
+        return JsonResponse(json.loads(ac52_json_data), safe=False)
