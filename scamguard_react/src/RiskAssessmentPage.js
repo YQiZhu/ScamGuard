@@ -23,7 +23,7 @@ const RiskAssessmentPage = () => {
     const contactMethods = ['Email', 'Fax', 'Internet', 'Mail', 'Mobile apps', 'Phone call', 'Social media/Online forums', 'Text message'];
     const genders = ['Female', 'Male'];
     const locations = ['Australian Capital Territory', 'New South Wales', 'Northern Territory', 'Queensland', 'South Australia', 'Tasmania', 'Victoria', 'Western Australia'];
-    const ageGroups = ['65 and over', 'All Ages'];
+    const ageGroups = ['65 and over'];
 
     // Handle Contact Method form submission
     const handleSubmitContactMethod = (e) => {
