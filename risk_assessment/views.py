@@ -219,4 +219,4 @@ def get_ac52_view(request):
     ac52_json_data = ac52_selected.to_json(orient='records', indent=4)
 
     # Return the JSON response
-    return JsonResponse(ac52_json_data, safe=False)
+    return JsonResponse(json.loads(ac52_json_data), safe=False)

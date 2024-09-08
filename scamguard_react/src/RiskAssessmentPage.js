@@ -38,6 +38,7 @@ const RiskAssessmentPage = () => {
         axios.post('https://scamguard.live/api/contact_method_risk/', formData)
             .then((response) => {
                 setContactMethodData(response.data);
+                console.log('Contact Method Data:', response.data);
                 setIsLoadingContactMethod(false);
             })
             .catch((error) => {
@@ -62,7 +63,7 @@ const RiskAssessmentPage = () => {
         // Call the demographic risk API
         axios.post('https://scamguard.live/api/demographic_risk/', formData)
             .then((response) => {
-                // console.log('Demographic Data:', response.data);  // Check if it's an array
+                console.log('Demographic Data:', response.data);  // Check if it's an array
                 setDemographicData(response.data);
                 setIsLoadingDemographic(false);
             })
@@ -156,6 +157,7 @@ const RiskAssessmentPage = () => {
                     {/* Show loading indicator */}
                     {isLoadingDemographic && <div className="loading">Loading demographic data...</div>}
 
+                    <p>load demographic</p>
                     {/* Display Demographic Risk Chart */}
                     {isSubmittedDemographic && !isLoadingDemographic && Array.isArray(demographicData) && demographicData.length > 0 && (
                         <section className="scam-chart">
