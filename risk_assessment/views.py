@@ -207,6 +207,7 @@ def get_ac52_view(request):
 
         # Calculate the 'Exposure Risk'
         ac52_merged_df['exposure_risk'] = (ac52_merged_df['average_reports_seniors'] / ac52_merged_df['average_reports_national']).round(1)
+        print(ac52_merged_df['exposure_risk'])
 
         # Sort the dataframe by necessary columns
         ac52_merged_df = ac52_merged_df.sort_values(
