@@ -173,8 +173,6 @@ def get_ac52_view(request):
             'group_count': 'sum'
         }).reset_index()
 
-        print(ac52_grouped)
-
         # Create the Average_Reports and Average_Loss columns
         ac52_grouped['average_reports'] = (ac52_grouped['number_of_reports'] / ac52_grouped['group_count']).round(0).astype(int)
         ac52_grouped['average_loss'] = (ac52_grouped['amount_lost'] / ac52_grouped['number_of_reports']).round(0).astype(int)
@@ -208,7 +206,7 @@ def get_ac52_view(request):
                                                 'address_state_seniors', 'category_level_2', 'average_loss_seniors', 'exposure_risk']]
 
         ac52_selected = ac52_selected.copy()
-
+        print(ac52_selected)
         # Create the 'link' column (assuming links_dict and contact_mode_links are defined elsewhere)
         ac52_selected['link'] = ac52_selected['category_level_2'].map(links_dict)
         ac52_selected['link'] = ac52_selected['link'].fillna(ac52_selected['scam_contact_mode'].map(contact_mode_links))
