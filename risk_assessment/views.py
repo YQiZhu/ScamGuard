@@ -6,6 +6,7 @@ import pandas as pd
 from django.views.decorators.http import require_GET
 import requests
 from django.views.decorators.csrf import csrf_exempt
+import json
 
 def load_data():
     # Fetch data from the database using Django ORM
