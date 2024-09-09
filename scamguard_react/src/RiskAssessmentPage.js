@@ -20,6 +20,10 @@ const RiskAssessmentPage = () => {
     const [isSubmittedDemographic, setIsSubmittedDemographic] = useState(false);
     const [isLoadingDemographic, setIsLoadingDemographic] = useState(false);   // To track loading
 
+    // State for error messages
+    const [contactMethodError, setContactMethodError] = useState('');
+    const [demographicError, setDemographicError] = useState('');
+
     const contactMethods = ['Email', 'Fax', 'Internet', 'Mail', 'Mobile apps', 'Phone call', 'Social media/Online forums', 'Text message'];
     const genders = ['Female', 'Male'];
     const locations = ['Australian Capital Territory', 'New South Wales', 'Northern Territory', 'Queensland', 'South Australia', 'Tasmania', 'Victoria', 'Western Australia'];
@@ -28,6 +32,11 @@ const RiskAssessmentPage = () => {
     // Handle Contact Method form submission
     const handleSubmitContactMethod = (e) => {
         e.preventDefault();
+        if (!contactMethod) {
+            setContactMethodError('Please select a contact method.');
+            return;
+        }
+        setContactMethodError('');  // Clear error message if valid
         setIsSubmittedContactMethod(true);
         setIsLoadingContactMethod(true);  // Start loading
 
@@ -38,7 +47,7 @@ const RiskAssessmentPage = () => {
         axios.post('https://scamguard.live/api/contact_method_risk/', formData)
             .then((response) => {
                 setContactMethodData(response.data);
-                // console.log('Contact Method Data:', response.data);
+                console.log('Contact Method Data:', response.data);
                 setIsLoadingContactMethod(false);
             })
             .catch((error) => {
@@ -50,6 +59,11 @@ const RiskAssessmentPage = () => {
     // Handle Demographic Risk form submission
     const handleSubmitDemographic = (e) => {
         e.preventDefault();
+        if (!gender || !location || !ageGroup) {
+            setDemographicError('Please fill in all demographic fields.');
+            return;
+        }
+        setDemographicError('');  // Clear error message if valid
         setIsSubmittedDemographic(true);
         setIsLoadingDemographic(true);  // Start loading
 
@@ -59,7 +73,7 @@ const RiskAssessmentPage = () => {
             location: location,
             age_group: ageGroup,
         };
-        console.log('Data:', formData); 
+        console.log('Data:', formData);
 
         // Call the demographic risk API
         axios.post('https://scamguard.live/api/demographic_risk/', formData)
@@ -76,17 +90,17 @@ const RiskAssessmentPage = () => {
     };
 
     return (
-        <div>
+        <div className="ScamRiskPage">
             <header className="scam-risk-header">
                 <h1>Scams Risk Assessment</h1>
                 <p>Informing you of the most possible scams you will meet</p>
             </header>
 
-            <main className="ScamRiskPage">
+            <main className="main-session-assessment">
                 <section className="analysis-form">
                     {/* Contact Method Risk Form */}
                     <h2>Contact Method Risk</h2>
-                    <form onSubmit={handleSubmitContactMethod} className="risk-form">
+                    <form onSubmit={handleSubmitContactMethod} className="contact-risk-form">
                         <div className="form-group">
                             <label>Contact Methods</label>
                             <select onChange={(e) => setContactMethod(e.target.value)} value={contactMethod}>
@@ -96,6 +110,7 @@ const RiskAssessmentPage = () => {
                                 ))}
                             </select>
                         </div>
+                        <div className="error-message">{contactMethodError}</div>
                         <button type="submit" className="submit-btn">Submit Contact Method Risk</button>
                     </form>
 
@@ -103,17 +118,23 @@ const RiskAssessmentPage = () => {
 
 
                     {/* Display Contact Method Risk Chart */}
-                    {isSubmittedContactMethod && !isLoadingContactMethod && Array.isArray(contactMethodData) && contactMethodData.length > 0 && (
-                        <section className="scam-chart">
-                            <h3>Contact Method Risk Analysis Results</h3>
-                            <ContactMethodResultsChart data={contactMethodData} />
-                            {contactMethodData.map((scam, index) => (
-                                <div key={index} className="scam-description">
-                                    <p>{scam.text}</p>
-                                    <a href={scam.link} target="_blank" rel="noopener noreferrer">Learn more about this scam</a>
-                                </div>
-                            ))}
-                        </section>
+                    {isSubmittedContactMethod && !isLoadingContactMethod && Array.isArray(contactMethodData) && (
+                        contactMethodData.length > 0 ? (
+                            <section className="scam-chart">
+                                <h3>Contact Method Risk Analysis Results</h3>
+                                <ContactMethodResultsChart data={contactMethodData} />
+                                {contactMethodData.map((scam, index) => (
+                                    <div key={index} className="scam-description">
+                                        <p>{scam.text}</p>
+                                        <a href={scam.link} target="_blank" rel="noopener noreferrer">Learn more about this scam</a>
+                                    </div>
+                                ))}
+                            </section>
+                        ) : (
+                            <div className="no-data-message">
+                                <p>No data found for the selected contact method.</p>
+                            </div>
+                        )
                     )}
 
                 </section>
@@ -151,7 +172,7 @@ const RiskAssessmentPage = () => {
                                 ))}
                             </select>
                         </div>
-
+                        <div className="error-message">{demographicError}</div>
                         <button type="submit" className="submit-btn">Submit Demographic Risk</button>
                     </form>
 
@@ -159,17 +180,23 @@ const RiskAssessmentPage = () => {
                     {isLoadingDemographic && <div className="loading">Loading demographic data...</div>}
 
                     {/* Display Demographic Risk Chart */}
-                    {isSubmittedDemographic && !isLoadingDemographic && Array.isArray(demographicData) && demographicData.length > 0 && (
-                        <section className="scam-chart">
-                            <h3>Demographic Risk Analysis Results</h3>
-                            <DemographicResultsChart data={demographicData} />
-                            {demographicData.map((scam, index) => (
-                                <div key={index} className="scam-description">
-                                    <p>{scam.text}</p>
-                                    <a href={scam.link} target="_blank" rel="noopener noreferrer">Learn more about this scam</a>
-                                </div>
-                            ))}
-                        </section>
+                    {isSubmittedDemographic && !isLoadingDemographic && Array.isArray(demographicData) && (
+                        demographicData.length > 0 ? (
+                            <section className="scam-chart">
+                                <h3>Demographic Risk Analysis Results</h3>
+                                <DemographicResultsChart data={demographicData} />
+                                {demographicData.map((scam, index) => (
+                                    <div key={index} className="scam-description">
+                                        <p>{scam.text}</p>
+                                        <a href={scam.link} target="_blank" rel="noopener noreferrer">Learn more about this scam</a>
+                                    </div>
+                                ))}
+                            </section>
+                        ) : (
+                            <div className="no-data-message">
+                                <p>No data found for the selected demographic criteria.</p>
+                            </div>
+                        )
                     )}
 
                 </section>
