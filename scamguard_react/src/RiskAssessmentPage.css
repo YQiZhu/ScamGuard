@@ -12,16 +12,24 @@
 }
 
 .scam-risk-header {
-    background-color: #0579DE;
-    text-align: center;
-    color: white;
-    margin: auto;
+    background-color: #203F9D;
     padding-top: 80px;
     padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: rgb(255, 255, 255);
 }
 
 .scam-risk-header h1 {
-    font-size: 2rem;
+    /* font-size: 2rem; */
+    margin-bottom: 0%;
+}
+
+.scam-risk-header p {
+    font-size: 1.5rem;
 }
 
 .analysis-form {
@@ -30,6 +38,7 @@
     align-items: center;
     margin-top: 20px;
     padding-bottom: 30px;
+    color: #4F67A6;
 }
 
 .loading {
@@ -87,6 +96,7 @@
     border: 1px solid #ccc;
     background-color: #fff;
     width: 100%;
+    color: #4F67A6;
     /* margin: 5px; */
 }
 
@@ -94,16 +104,12 @@
     grid-column: span 2;
     padding: 12px;
     font-size: 1rem;
-    background-color: #3399ff;
+    /* background-color: #4F67A6; */
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
-}
-
-.submit-btn:hover {
-    background-color: #0579DE;
 }
 
 .error-message {

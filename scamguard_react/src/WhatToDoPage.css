@@ -23,7 +23,7 @@
 }
 
 .what-to-do-header {
-    background-color: #0579DE;
+    background-color: #203F9D;
     padding-top: 80px;
     padding-bottom: 30px;
     display: flex;
@@ -34,36 +34,8 @@
     color: rgb(255, 255, 255);
 }
 
-.what-to-do-header button {
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    position: absolute; /* Position it relative to the page */
-    top: 110px; /* Distance from the top of the page */
-    left: 80px; /* Distance from the left side of the page */
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-    z-index: 1; /* Ensure it's above other elements */
-}
-
-.what-to-do-header button:hover {
-    background-color: #BADDF1;
-    color: rgb(0, 0, 0);
-    position: absolute; /* Position it relative to the page */
-    top: 110px; /* Distance from the top of the page */
-    left: 80px; /* Distance from the left side of the page */
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-    z-index: 1; /* Ensure it's above other elements */
-}
-
-.what-to-do-header h2 {
-    /* padding-top: 20px; */
-    font-size: 2rem;
-    /* margin-bottom: 20px; */
+.what-to-do-header h1 {
+    margin-bottom: 0%;
 }
 
 .what-to-do-step1 {
@@ -78,6 +50,7 @@
     /* align-items: center; */
     justify-content: center;
     max-width: 800px;
+    color: #4F67A6;
 }
 
 .what-to-do-step1 h2 {
@@ -95,7 +68,7 @@
 
 .what-to-do-step2 {
     /* margin-bottom: 40px; */
-    background-color: #0579DE;
+    background-color: #203F9D;
     padding-top: 20px;
     padding-bottom: 20px;
     display: flex;
@@ -139,6 +112,7 @@
     align-items: center;
     justify-content: center;
     max-width: 800px;
+    color: #4F67A6;
 }
 
 .what-to-do-step3 h3 {
@@ -156,7 +130,7 @@
     padding-top: 20px;
     /* margin-bottom: 40px; */
     padding-bottom: 30px;
-    background-color: #0579DE;
+    background-color: #203F9D;
     color: #ffffff;
     display: flex;
     flex-direction: column;

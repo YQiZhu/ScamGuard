@@ -24,7 +24,7 @@
 }
 
 .report-scams-header {
-    background-color: #0579DE;
+    background-color: #203F9D;
     padding-top: 80px;
     padding-bottom: 30px;
     display: flex;
@@ -35,36 +35,8 @@
     color: rgb(255, 255, 255);
 }
 
-.report-scams-header button {
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    position: absolute; /* Position it relative to the page */
-    top: 110px; /* Distance from the top of the page */
-    left: 80px; /* Distance from the left side of the page */
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-    z-index: 1; /* Ensure it's above other elements */
-}
-
-.report-scams-header button:hover {
-    background-color: #BADDF1;
-    color: rgb(0, 0, 0);
-    position: absolute; /* Position it relative to the page */
-    top: 110px; /* Distance from the top of the page */
-    left: 80px; /* Distance from the left side of the page */
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-    z-index: 1; /* Ensure it's above other elements */
-}
-
-.report-scams-header h2 {
-    /* padding-top: 20px; */
-    font-size: 2rem;
-    /* margin-bottom: 20px; */
+.report-scams-header h1 {
+    margin-bottom: 0%;
 }
 
 .report-scam-step {
@@ -79,6 +51,7 @@
     /* align-items: center; */
     justify-content: center;
     max-width: 800px;
+    color: #4F67A6;
 }
 
 .report-scam-step h2 {
@@ -96,7 +69,7 @@
 
 .how-to-report-scam {
     /* margin-bottom: 40px; */
-    background-color: #0579DE;
+    background-color: #203F9D;
     padding-top: 20px;
     padding-bottom: 20px;
     display: flex;
@@ -140,6 +113,7 @@
     align-items: center;
     justify-content: center;
     max-width: 800px;
+    color: #4F67A6;
 }
 
 .why-report-scam h3 {
@@ -163,7 +137,7 @@
     padding-top: 20px;
     /* margin-bottom: 40px; */
     padding-bottom: 20px;
-    background-color: #0579DE;
+    background-color: #203F9D;
     color: #ffffff;
     display: flex;
     flex-direction: column;

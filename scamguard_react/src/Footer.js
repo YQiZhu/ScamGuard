@@ -6,7 +6,7 @@ function Footer() {
     <footer style={{
       marginTop: 'auto',
       padding: '1rem',
-      backgroundColor: '#0579DE',
+      backgroundColor: '#203F9D',
       textAlign: 'center',
       color: '#f0f0f0',
       height: '80px', /* Fixed height for the footer */

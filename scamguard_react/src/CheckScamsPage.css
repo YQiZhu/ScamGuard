@@ -7,7 +7,7 @@
 }
 
 .check-scam-header {
-    background-color: #0579DE;
+    background-color: #203F9D;
     padding-top: 80px;
     padding-bottom: 30px;
     display: flex;
@@ -19,6 +19,7 @@
 }
 
 .check-scam-header h1 {
-    padding-top: 20px;
+    /* padding-top: 20px; */
+    margin-bottom: 0%;
 }
 

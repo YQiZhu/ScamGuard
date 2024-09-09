@@ -18,8 +18,9 @@
 }
 
 .App-header {
-  background-color: #1041A1;
-  padding-top: 50px;
+  /* background-color: #1041A1; */
+  background-color: #203F9D;
+  padding-top: 80px;
   padding-bottom: 30px;
   display: flex;
   flex-direction: column;
@@ -29,27 +30,28 @@
   color: #ffffff;
 }
 
-/* .App-header h1 {
-  font-size: 4rem;
-} */
+.App-header h1 {
+  /* padding: 0; */
+  margin-bottom: 0%;
+}
 
 .App-header p {
   font-size: 1.5rem;
-  padding: 0 160px;
+  /* padding: 0; */
 }
 
 button {
   font-size: 1.2rem;
   padding: 10px 20px;
   color: #ffffff;
-  background-color: #0579DE;
+  background-color: #4F67A6;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #61dafb;
+  background-color: #203F9D;
 }
 
 .Route-section {
@@ -64,6 +66,7 @@ button:hover {
 .Desc-section {
   padding: 100px 160px;
   background-color: #ffffff;
+  color: #4F67A6;
 }
 
 .Desc-section h2 {

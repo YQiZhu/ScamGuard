@@ -9,14 +9,16 @@
 }
 .reference-header{
     padding-bottom: 20px;
-    background-color: #0579DE;
+    background-color: #203F9D;
     width: 100%;
     color: #ffffff;
+    padding-top: 80px;
 }
 
 .reference-header h1{
-    padding-top: 100px;
+    /* padding-top: 80px; */
     /* max-width: 800px; */
+    margin-bottom: 0%;
 }
 
 .reference-header p{
@@ -26,6 +28,7 @@
 .reference-link{
     padding-top: 30px;
     padding-bottom: 20px;
+    color: #4F67A6;
 }
 
 .reference-link summary{

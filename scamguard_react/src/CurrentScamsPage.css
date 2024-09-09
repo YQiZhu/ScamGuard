@@ -64,8 +64,8 @@
 }
 
 .current-scam-header {
-    background-color: #0579DE;
-    padding-top: 50px;
+    background-color: #203F9D;
+    padding-top: 80px;
     padding-bottom: 30px;
     display: flex;
     flex-direction: column;
@@ -76,22 +76,30 @@
 }
 
 .current-scam-header h1 {
-    padding-top: 20px;
+    /* padding-top: 20px; */
+    margin-bottom: 0%;
+}
+
+.current-scam-header p {
+    /* padding-top: 20px; */
+    font-size: 1.5rem;
 }
 
 
 .most-reported-section {
     /* padding: 20px; */
-    background-color: #ffffff;;
+    background-color: #ffffff;
+    color: #4F67A6;
 }
 
 .top-loss-section {
     /* padding-top: 20px; */
-    background-color: #0579DE;
+    background-color: #203F9D;
     color: rgb(255, 255, 255);
 }
 
 .popular-contact-section {
     /* padding: 20px; */
-    background-color: #ffffff;;
+    background-color: #ffffff;
+    color: #4F67A6;
 }
