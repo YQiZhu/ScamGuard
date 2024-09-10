@@ -29,7 +29,7 @@
 }
 
 .scam-risk-header p {
-    font-size: 1.5rem;
+    font-size: 18px;
 }
 
 .analysis-form {
@@ -45,7 +45,7 @@
     font-size: 1.5rem;
     color: #555;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .risk-form {
@@ -117,7 +117,7 @@
     align-self: center;
     /* Align error message vertically */
     color: red;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .scam-chart {
