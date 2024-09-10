@@ -54,16 +54,24 @@ function App() {
                     src={require('./images/think.png')}
                     alt="think"
                   /> */}
-                  <p>Get up-to-date information on the most recent scams targeting seniors.</p>
+                  <h3>Learn About Scams</h3>
+                  <p>Our website will have easy explanations and pictures showing different types of scams. This will help you understand what scams look like and how to spot them.</p>
+ 
+                  <h3>Report Scams and Get Help</h3>
+                  <p>If you come across a scam or become a victim, you can use our tools to report it. We'll guide you on how to protect yourself and help fight against scams.</p>
   
-                  <p>Stay informed on current scams, learn about different scams and find out how to protect yourself from scammers.</p>
-  
-                  <p>Access easy-to-follow guides and advice to safeguard your personal and financial information from scammers.</p>
+                  <h3>Practice Spotting Scams</h3>
+                  <p>We'll offer simple exercises to help you practice recognizing scams. You can try these exercises to become more confident in avoiding scams.</p>
                     
-                  <p>We offer step-by-step instructions to help you strengthen your online security and avoid common pitfalls.</p>
+                  <h3>Check Your Scam Risk</h3>
+                  <p>We have a tool where you can enter some details about yourself and your online activities. It will show how likely you are to be targeted by scams and what steps you can take to stay safe.</p>
+
+                  <h3>Verify Messages</h3>
+                  <p>We will help you check if messages you receive online are real or scams. This will help you feel sure that the messages you get are trustworthy.</p>
+
+                  <h3>Create Scam Awareness Posters</h3>
+                  <p>You can use our tool to make your own scam awareness posters. You can print these out to keep reminders at home or share them with friends and family to help everyone stay informed.</p>
                     
-                  <p>Take advantage of our printable checklists, and tips for staying safe online.</p>
-  
                   <p><strong>Ready to explore? To start your journey, scroll up and click on the navigation bar to access all the resources and tools you need to stay safe.</strong></p>
 
                   <button onClick={scrollToTop}>Go to Top of the Page</button>
