@@ -4,7 +4,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from django.conf import settings
 import os, re
-import pickle
+import pickle，joblib
 import numpy as np
 
 
@@ -12,11 +12,8 @@ import numpy as np
 model_1_path = 'path_to_model_1.pkl'
 model_2_path = 'path_to_model_2.pkl'
 
-with open(model_1_path, 'rb') as file:
-    model_1 = pickle.load(file)
-
-with open(model_2_path, 'rb') as file:
-    model_2 = pickle.load(file)
+model_1 = joblib.load(model_1_path)
+model_2 = joblib.load(model_2_path)
 
 # Email verification regular expression
 EMAIL_REGEX = r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$'
