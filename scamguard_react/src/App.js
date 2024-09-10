@@ -65,16 +65,11 @@ function App() {
                 </ShaderGradientCanvas>
 
                 <h1>ScamGuard</h1>
-<<<<<<< HEAD
                 <p>Welcome to ScamGuard, your go-to resource for staying safe from online scams.</p>
                 <p>We're here to offer valuable insights into the latest scams and practical tips to protect yourself.</p>
                 <div className="scroll-hint">
                   <span>Scroll Down ↓</span>
                 </div>
-=======
-                <p>Welcome to ScamGuard, your go-to resource for staying safe from different type of scams.</p>
-                <p>We're here to offer valuable insights into the latest scams and practical tips to protect yourself.</p>
->>>>>>> a4be871d129f2c2cbec09b7a8bca64442c88f19e
               </header>
 
               <main>
