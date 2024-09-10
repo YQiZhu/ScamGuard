@@ -44,8 +44,8 @@ function App() {
               {/* Home Page Content */}
               <header className="App-header">
                 <h1>ScamGuard</h1>
-                <p>Welcome to ScamGuard, your go-to resource for staying safe from online scams.</p>
-                <p>We're here to help seniors navigate the digital world securely, offering valuable insights into the latest scams and practical tips to protect yourself.</p>
+                <p>Welcome to ScamGuard, your go-to resource for staying safe from different type of scams.</p>
+                <p>We're here to offer valuable insights into the latest scams and practical tips to protect yourself.</p>
               </header>
               <main>
                 <section className="Desc-section">
