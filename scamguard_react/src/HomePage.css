@@ -1,0 +1,131 @@
+.App-header {
+    /* background-color: #203F9D; */
+    /* padding-top: 80px; */
+    /* padding-bottom: 30px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: #ffffff;
+}
+
+.App-header h1 {
+    /* padding: 0; */
+    margin-bottom: 10px;
+    font-size: 6rem;
+}
+
+.App-header p {
+    /* font-size: 1.5rem; */
+    font-size: 22px;
+    margin-bottom: 0%;
+    max-width: 800px;
+}
+
+.full-screen-header {
+    position: relative;
+    height: 100vh;
+    /* Full screen height */
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; */
+    /* color: white; */
+}
+
+.scroll-hint {
+    position: absolute;
+    bottom: 20px;
+    font-size: 20px;
+    color: white;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.home-main-body-blue {
+    padding-bottom: 50px;
+    background-color: #203F9D;
+    width: 100%;
+    color: #fff;
+    text-align: center; /* Ensures text within this div is centered */
+    
+}
+
+.home-main-body-blue h3 {
+    font-size: 3rem;
+    line-height: 1.2;
+}
+
+.home-main-body-text {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers the content horizontally */
+    margin: 0 auto; /* Centers the .home-main-body-text itself within the parent container */
+    max-width: 800px;
+}
+
+.home-main-body-text img {
+    margin-right: 90px;
+    max-width: 30%;
+}
+
+.home-main-body-text p {
+    font-size: 26px;
+    line-height: 1.2;
+}
+
+.home-main-body h3 {
+    font-size: 3rem;
+    line-height: 1.2;
+}
+
+.home-main-body {
+    margin-bottom: 50px;
+}
+
+.Desc-section {
+    padding: 0;
+    background-color: #ffffff;
+    color: #4F67A6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centers horizontally */
+    justify-content: center;
+    /* Centers vertically */
+    text-align: center;
+    /* Ensures text is centered */
+    /* max-width: 800px; */
+    margin: 0 auto;
+    /* Ensures the section itself is centered */
+}
+
+.Desc-section h3 {
+    margin-bottom: 30px;
+}
+
+.Desc-section p {
+    /* font-size: 18px; */
+    margin-bottom: 10px;
+    margin-top: 0%;
+}
