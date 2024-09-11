@@ -70,6 +70,7 @@ def predict_value(request, model_type):
 
             # Use model_1 to make predictions
             prediction = model_1.predict(processed_input)
+            prob = model_1.predict_proba(processed_input)[0][prediction]
 
         # For model_2: process only message_body
         elif model_type == 'model_2':
@@ -88,6 +89,7 @@ def predict_value(request, model_type):
 
             # Use model_2 to make predictions
             prediction = model_2.predict(processed_input)
+            prob = model_2.predict_proba(processed_input)[0][prediction]
 
         else:
             return Response({"error": "Invalid model_type. Must be 'model_1' or 'model_2'."}, status=status.HTTP_400_BAD_REQUEST)
