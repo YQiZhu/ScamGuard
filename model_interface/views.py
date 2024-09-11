@@ -10,18 +10,17 @@ import numpy as np
 from gensim.parsing.preprocessing import remove_stopwords
 
 
-# Assuming the model is serialized into a .pkl file via joblib
-model_1_path = 'email_classifier.pkl'
-model_2_path = 'text_classification.pkl'
+# Use BASE_DIR to dynamically generate absolute paths
+model_1_path = os.path.join(settings.BASE_DIR, 'model_interface', 'email_classifier.pkl')
+model_2_path = os.path.join(settings.BASE_DIR, 'model_interface', 'text_classification.pkl')
+email_vectorizer_path = os.path.join(settings.BASE_DIR, 'model_interface', 'email_vectorizer.pkl')
+text_vectorizer_path = os.path.join(settings.BASE_DIR, 'model_interface', 'text_vectorizer.pkl')
 
 model_1 = joblib.load(model_1_path)
 model_2 = joblib.load(model_2_path)
 
 # Load vectorizers
-email_vectorizer_path = 'email_vectorizer.pkl'
 email_vectorizer = joblib.load(email_vectorizer_path)
-
-text_vectorizer_path = 'text_vectorizer.pkl'
 text_vectorizer = joblib.load(email_vectorizer_path)
 
 # Email verification regular expression
