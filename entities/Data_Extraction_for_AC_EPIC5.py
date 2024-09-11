@@ -171,16 +171,6 @@ ac51_selected['link'] = ac51_selected['link'].fillna(ac51_selected['Scam___Conta
 # Format 'Average_Loss_seniors' as currency
 ac51_selected['Average_Loss_seniors'] = ac51_selected['Average_Loss_seniors'].apply(lambda x: f"${x:,.2f}")
 
-# Create the 'text' describing the data
-ac51_selected['text'] = ac51_selected.apply(
-    lambda row: (
-        f"Your risk of being exposed to {row['Category_Level_2']} scams is {row['Exposure Risk']} times higher than the national average when using {row['Scam___Contact_Mode']}. "
-        f"The average loss for seniors is expected to be ${row['Average_Loss_seniors']}. "
-        f"To learn more about this scam and how to protect yourself, please click on the link below:"
-    ),
-    axis=1
-)
-
 
 # Rename Some columns
 ac51_selected = ac51_selected.rename(columns={
@@ -190,17 +180,31 @@ ac51_selected = ac51_selected.rename(columns={
 })
 
 
+
+# Define the mapping dictionary for partial replacements
+scam_type_mapping = {
+    'Attempts to gain your personal information': 'Personal Info Theft',
+    'Buying or selling': 'Buy/Sell',
+    'Dating and romance': 'Romance',
+    'Investment scams': 'Investment',
+    'Jobs and employment': 'Job'
+}
+
+# Replace the partial strings in 'Scam Type' column
+for key, value in scam_type_mapping.items():
+    ac51_selected['Scam Type'] = ac51_selected['Scam Type'].str.replace(key, value, regex=False)
+
 # Convert the dataframe to JSON format
 ac51_json_data = ac51_selected.to_json(orient='records', indent=4)
 
 
 # # AC5.2
 
-# In[5]:
+# In[6]:
 
 
 # Group the data by the specified columns and calculate the summary for the other columns
-ac52_grouped = filtered_df.groupby(['Scam___Contact_Mode', 'Complainant_Age', 'Complainant_Gender', 'Address_State', 'Category_Level_2']).agg({
+ac52_grouped = filtered_df.groupby(['Complainant_Age', 'Complainant_Gender', 'Address_State', 'Category_Level_2']).agg({
     'Amount_lost': 'sum',
     'Number_of_reports': 'sum',
     'Group_Count': 'sum'
@@ -220,7 +224,7 @@ ac52_seniors = ac52_grouped[ac52_grouped['Complainant_Age'] == '65 and over']
 ac52_national = ac52_grouped[ac52_grouped['Complainant_Age'] == 'All Ages']
 
 # merge senior and national dataframes together
-ac52_merged_df = ac52_seniors.merge(ac52_national, on=['Scam___Contact_Mode', 'Category_Level_2'], how='left', suffixes=('_seniors', '_national'))
+ac52_merged_df = ac52_seniors.merge(ac52_national, on=['Category_Level_2'], how='left', suffixes=('_seniors', '_national'))
 
 # Create the 'Exposure Risk' column
 ac52_merged_df['Exposure Risk'] = ((ac52_merged_df['Average_Reports_seniors'] / ac52_merged_df['Average_Reports_national'])).round(1)
@@ -235,50 +239,55 @@ ac52_top_3_exposure_risk = ac52_merged_df.groupby(['Complainant_Age_seniors', 'C
 ac52_top_3_exposure_risk = ac52_top_3_exposure_risk[ac52_top_3_exposure_risk['Exposure Risk'] > 1.0]
 
 # Select Required Columns
-ac52_selected = ac52_top_3_exposure_risk[['Scam___Contact_Mode', 'Complainant_Age_seniors', 'Complainant_Gender_seniors',
+ac52_selected = ac52_top_3_exposure_risk[['Complainant_Age_seniors', 'Complainant_Gender_seniors',
                                           'Address_State_seniors',
                                           'Category_Level_2', 'Average_Loss_seniors', 'Exposure Risk']]
 
 
 ac52_selected = ac52_selected.copy()
 
+
+# Create the dictionary for links based on 'Category_Level_2'
+links_dict = {
+    'Attempts to gain your personal information' : 'https://scamguard.live/email-scams',
+    'Buying or selling': 'https://scamguard.live/product-and-service-scams',
+    'Dating and romance': 'https://scamguard.live/romance-scams',
+    'Investment scams': 'https://scamguard.live/investment-scams',
+    'Jobs and employment': 'https://scamguard.live/job-scams'
+}
+
+
 # Create the 'link' column
 ac52_selected['link'] = ac52_selected['Category_Level_2'].map(links_dict)
 
-# Fill empty values in the 'link' column based on 'Scam___Contact_Mode'
-ac52_selected['link'] = ac52_selected['link'].fillna(ac52_selected['Scam___Contact_Mode'].map(contact_mode_links))
 
 # Format 'Average_Loss_seniors' as currency
 ac52_selected['Average_Loss_seniors'] = ac52_selected['Average_Loss_seniors'].apply(lambda x: f"${x:,.2f}")
 
 
-# Reformat 'Category_Level_2' values
-ac52_selected['Category_Level_2'] = ac52_selected.apply(
-    lambda row: f"{row['Category_Level_2']} scams via {row['Scam___Contact_Mode']}",
-    axis=1
-)
-
-
-# Create the 'text' column
-ac52_selected['text'] = ac52_selected.apply(
-    lambda row: (
-        f"According to your demographic profile, your risk of encountering {row['Category_Level_2']} is {row['Exposure Risk']} times higher than the national average. "
-        f"For individuals in your demographic group, the average financial loss for seniors is estimated to be {row['Average_Loss_seniors']}. "
-        f"To learn more about this scam and discover ways to protect yourself, please click the link below:"
-    ),
-    axis=1
-)
-
-
 # Rename the some columns
 ac52_selected = ac52_selected.rename(columns={
-    'Scam___Contact_Mode': 'Online Activity',
     'Category_Level_2': 'Scam Type',
     'Average_Loss_seniors': 'Average Loss for Seniors',
     'Complainant_Age_seniors': 'Age Group',
     'Address_State_seniors': 'State',
     
 })
+
+
+# Define the mapping dictionary for partial replacements
+scam_type_mapping = {
+    'Attempts to gain your personal information': 'Personal Info Theft',
+    'Buying or selling': 'Buy/Sell',
+    'Dating and romance': 'Romance',
+    'Investment scams': 'Investment',
+    'Jobs and employment': 'Job'
+}
+
+# Replace the partial strings in 'Scam Type' column
+for key, value in scam_type_mapping.items():
+    ac52_selected['Scam Type'] = ac52_selected['Scam Type'].str.replace(key, value, regex=False)
+
 
 # Convert the dataframe to JSON format
 ac52_json_data = ac52_selected.to_json(orient='records', indent=4)
