@@ -12,14 +12,17 @@ from gensim.parsing.preprocessing import remove_stopwords
 
 # Assuming the model is serialized into a .pkl file via joblib
 model_1_path = 'email_classifier.pkl'
-model_2_path = 'path_to_model_2.pkl'
+model_2_path = 'text_classification.pkl'
 
 model_1 = joblib.load(model_1_path)
 model_2 = joblib.load(model_2_path)
 
-# Load vectorizer
-email_vectorizer_path = 'tfidf_vectorizer.pkl'
+# Load vectorizers
+email_vectorizer_path = 'email_vectorizer.pkl'
 email_vectorizer = joblib.load(email_vectorizer_path)
+
+text_vectorizer_path = 'text_vectorizer.pkl'
+text_vectorizer = joblib.load(email_vectorizer_path)
 
 # Email verification regular expression
 EMAIL_REGEX = r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$'
@@ -59,8 +62,9 @@ def predict_value(request, model_type):
             user_input = required_fields['name_of_the_sender'] + ' ' + required_fields['sender_email_address'] + ' ' + required_fields['message_subject'] + ' ' + required_fields['body']
 
             # Preprocess text
+            user_input_low = user_input.lower()
             regex = re.compile('[%s]' % re.escape(string.punctuation))
-            clean_input = regex.sub('', user_input)
+            clean_input = regex.sub('', user_input_low)
             clean_input = remove_stopwords(clean_input)
             processed_input = email_vectorizer.transform([clean_input])
 
@@ -76,7 +80,11 @@ def predict_value(request, model_type):
                 return Response({"error": "Message body is required for model_2"}, status=status.HTTP_400_BAD_REQUEST)
 
             # Data preprocessing: Convert the input data into the format required by the model
-            processed_input = np.array([message_body]).reshape(1, -1)
+            message_body_low = message_body.lower()
+            regex = re.compile('[%s]' % re.escape(string.punctuation))
+            clean_input = regex.sub('', message_body_low)
+            clean_input = remove_stopwords(clean_input)
+            processed_input = email_vectorizer.transform([clean_input])
 
             # Use model_2 to make predictions
             prediction = model_2.predict(processed_input)
