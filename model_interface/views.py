@@ -4,6 +4,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from django.conf import settings
 import os, re
+import string
 import joblib
 import numpy as np
 from gensim.parsing.preprocessing import remove_stopwords
@@ -55,8 +56,12 @@ def predict_value(request, model_type):
                 return Response({"error": "Invalid email format"}, status=status.HTTP_400_BAD_REQUEST)
 
             # Data preprocessing: Convert the input data into the format required by the model
-            user_input = required_fields['name_of_the_sender'] + required_fields['sender_email_address'] + required_fields['message_subject'] + required_fields['body']
-            clean_input = remove_stopwords(user_input)
+            user_input = required_fields['name_of_the_sender'] + ' ' + required_fields['sender_email_address'] + ' ' + required_fields['message_subject'] + ' ' + required_fields['body']
+
+            # Preprocess text
+            regex = re.compile('[%s]' % re.escape(string.punctuation))
+            clean_input = regex.sub('', user_input)
+            clean_input = remove_stopwords(clean_input)
             processed_input = email_vectorizer.transform([clean_input])
 
             # Use model_1 to make predictions
