@@ -24,7 +24,7 @@ const RiskAssessmentPage = () => {
     const [contactMethodError, setContactMethodError] = useState('');
     const [demographicError, setDemographicError] = useState('');
 
-    const contactMethods = ['Email', 'Fax', 'Internet', 'Mail', 'Mobile apps', 'Phone call', 'Social media/Online forums', 'Text message'];
+    const contactMethods = ['Email', 'Internet', 'Phone call', 'Social media/Online forums', 'Text message'];
     const genders = ['Female', 'Male'];
     const locations = ['Australian Capital Territory', 'New South Wales', 'Northern Territory', 'Queensland', 'South Australia', 'Tasmania', 'Victoria', 'Western Australia'];
     const ageGroups = ['65 and over'];

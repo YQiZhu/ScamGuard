@@ -15,7 +15,7 @@ function Footer() {
       justifyContent: 'center',
       boxSizing: 'border-box' /* Ensures padding is included within the height */
     }}>
-      <p style={{ margin: 0 }}>&copy; 2024 ScamGuard for Seniors. All rights reserved.</p>
+      <p style={{ margin: 0 }}>&copy; 2024 ScamGuard. All rights reserved.</p>
       <Link to="/references" style={{ color: '#FAFF00', marginLeft: '10px' }}>References</Link>
     </footer>
   );
