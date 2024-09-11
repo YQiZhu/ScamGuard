@@ -27,9 +27,8 @@ const HomePage = ({ scrollToTop }) => {
                     />
                 </ShaderGradientCanvas>
 
-                <h1>ScamGuard</h1>
-                <p>Welcome to ScamGuard, your go-to resource for staying safe from online scams.</p>
-                <p>We're here to offer valuable insights into the latest scams and practical tips to protect yourself.</p>
+                <h1>Staying safe from online scams</h1>
+                <p>Welcome to your go-to resource for staying safe from online scams.</p>
                 <div className="scroll-hint">
                     <span>Scroll Down ↓</span>
                 </div>
@@ -38,56 +37,114 @@ const HomePage = ({ scrollToTop }) => {
             <main>
                 <section className="Desc-section">
                     {/* <h2>What is on this website?</h2> */}
-
-                    <div className='home-main-body'>
-                        <h3>Learn About Scams</h3>
-                        <div className='home-main-body-text'>
-                            <img
-                                src={require('./images/text_scams_icon.png')}
-                                alt="Text Scams"
-                            />
-                            <p>Our website will have easy explanations and pictures showing different types of scams. This will help you understand what scams look like and how to spot them.</p>
+                    <div className="hover-card-container">
+                        <div className="hover-card">
+                            <div className="hover-card-content">
+                                <div className="hover-card-main">
+                                    <h3>Spot Scams Easily</h3>
+                                    <img
+                                        src={require('./images/text_scams_icon.png')}
+                                        alt="Text Scams"
+                                    />
+                                </div>
+                                <div className="hover-card-description">
+                                    <p>
+                                        👀 Learn to identify scams with simple explanations and visual guides, so you know exactly what to watch out for.
+                                    </p>
+                                    <button>Get Started</button>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                        <div className="hover-card">
+                            <div className="hover-card-content">
+                                <div className="hover-card-main">
+                                    <h3>Report and Get Help</h3>
+                                    <img
+                                        src={require('./images/text_scams_icon.png')}
+                                        alt="Text Scams"
+                                    />
+                                </div>
+                                <div className="hover-card-description">
+                                    <p>
+                                        🚨 Fallen victim to a scam or suspect one? Use our tools to report it and get immediate guidance on what to do next.
+                                    </p>
+                                    <button>Get Started</button>
+                                </div>
+                            </div>
+                        </div>
 
-                    <div className='home-main-body-blue'>
-                        <h3>Report Scams and Get Help</h3>
-                        <div className='home-main-body-text'>
-                            <img
-                                src={require('./images/text_scams_icon.png')}
-                                alt="Text Scams"
-                            />
-                            <div>
-                                <p>If you come across a scam or become a victim, you can use our tools to report it. We'll guide you on how to protect yourself and help fight against scams.</p>
-                                <button onClick={scrollToTop}>Go to Top of the Page</button>
+                        <div className="hover-card">
+                            <div className="hover-card-content">
+                                <div className="hover-card-main">
+                                    <h3>Practice Scam Detection</h3>
+                                    <img
+                                        src={require('./images/text_scams_icon.png')}
+                                        alt="Text Scams"
+                                    />
+                                </div>
+                                <div className="hover-card-description">
+                                    <p>
+                                        🧠 Test your scam-spotting skills with interactive exercises designed to boost your confidence in staying scam-free.
+                                    </p>
+                                    <button>Get Started</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="hover-card">
+                            <div className="hover-card-content">
+                                <div className="hover-card-main">
+                                    <h3>Check Your Scam Risk</h3>
+                                    <img
+                                        src={require('./images/text_scams_icon.png')}
+                                        alt="Text Scams"
+                                    />
+                                </div>
+                                <div className="hover-card-description">
+                                    <p>
+                                        🔒 Enter your details into our risk assessment tool to find out how vulnerable you are to scams and get tailored advice to protect yourself.
+                                    </p>
+                                    <button>Get Started</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="hover-card">
+                            <div className="hover-card-content">
+                                <div className="hover-card-main">
+                                    <h3>Verify Suspicious Messages</h3>
+                                    <img
+                                        src={require('./images/text_scams_icon.png')}
+                                        alt="Text Scams"
+                                    />
+                                </div>
+                                <div className="hover-card-description">
+                                    <p>
+                                        📧 Not sure if an email, text, or message is a scam? Use our verification tool to put your doubts to rest.
+                                    </p>
+                                    <button>Get Started</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="hover-card">
+                            <div className="hover-card-content">
+                                <div className="hover-card-main">
+                                    <h3>Create Scam Awareness Posters</h3>
+                                    <img
+                                        src={require('./images/text_scams_icon.png')}
+                                        alt="Text Scams"
+                                    />
+                                </div>
+                                <div className="hover-card-description">
+                                    <p>
+                                        📌 Design and print personalized scam-awareness posters to remind yourself—and your community—how to stay safe.
+                                    </p>
+                                    <button>Get Started</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <div>
-                        <h3>Practice Spotting Scams</h3>
-                        <p>We'll offer simple exercises to help you practice recognizing scams. You can try these exercises to become more confident in avoiding scams.</p>
-                    </div>
-
-                    <div>
-                        <h3>Check Your Scam Risk</h3>
-                        <p>We have a tool where you can enter some details about yourself and your online activities. It will show how likely you are to be targeted by scams and what steps you can take to stay safe.</p>
-                    </div>
-
-                    <div>
-                        <h3>Verify Messages</h3>
-                        <p>We will help you check if messages you receive online are real or scams. This will help you feel sure that the messages you get are trustworthy.</p>
-                    </div>
-
-                    <div>
-                        <h3>Create Scam Awareness Posters</h3>
-                        <p>You can use our tool to make your own scam awareness posters. You can print these out to keep reminders at home or share them with friends and family to help everyone stay informed.</p>
-                    </div>
-
-                    <div>
-                        <p><strong>Ready to explore? To start your journey, scroll up and click on the navigation bar to access all the resources and tools you need to stay safe.</strong></p>
-                    </div>
-                    <button onClick={scrollToTop}>Go to Top of the Page</button>
                 </section>
             </main>
         </>

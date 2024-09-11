@@ -6,6 +6,7 @@ const Header = () => {
   return (
     <nav>
       <img src="/favicon.ico" alt="Logo" className="nav-icon" />
+      <p>ScamGuard</p>
       <ul>
         <li>
           <NavLink exact to="/" activeClassName="active-link">Home</NavLink>
