@@ -217,7 +217,7 @@ def get_ac52_view(request):
         # Merge senior and national dataframes together
         ac52_merged_df = ac52_grouped_seniors.merge(
             ac52_grouped_national, 
-            on=['scam_contact_mode', 'category_level_2'], 
+            on=['category_level_2'], 
             how='left', 
             suffixes=('_seniors', '_national')
         )
