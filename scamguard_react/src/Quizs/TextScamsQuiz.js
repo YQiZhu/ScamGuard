@@ -4,7 +4,11 @@ import './TextScamsQuiz.css'; // Assuming you want to use external CSS for styli
 const TextScamsQuiz = () => {
 
   const images = [
-    '/images/reallife_scenario/Seniors_Using_Social_Media.png'
+     {title: 'Scenario 1', img:'/images/reallife_scenario/text_scams/Text Scenario 1.png'},
+    {title: 'Scenario 2', img:'/images/reallife_scenario/text_scams/Text Scenario 2.png'},
+    {title: 'Scenario 3', img:'/images/reallife_scenario/text_scams/Text Scenario 3.png'},
+    {title: 'Scenario 4', img:'/images/reallife_scenario/text_scams/Text Scenario 4.png'},
+    {title: 'Scenario 5', img:'/images/reallife_scenario/text_scams/Text Scenario 5.png'}
   ];
 
   // State to store the current image
@@ -40,8 +44,8 @@ const TextScamsQuiz = () => {
 
       {/* Scenario Section */}
       <div className="text-scams-quiz-scenario">
-        <h2>Scenario 1</h2>
-        <img src="/images/reallife_scenario/Seniors Using Social Media.png" alt="real life scenario" className="scenario-image" />
+        <h2>{currentImage.title}</h2>
+        <img src={currentImage.img} alt="Real life text scam scenario" className="scenario-image" />
 
         <button onClick={changeImage} className="change-image-button">
           Change Image
