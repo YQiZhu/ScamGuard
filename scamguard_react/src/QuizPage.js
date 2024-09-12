@@ -1,7 +1,9 @@
 import React, { useRef } from 'react';
 import './QuizPage.css';
+import { useNavigate } from 'react-router-dom';
 
 const QuizPage = () => {
+    const navigate = useNavigate();
 
     return (
         <div className="QuizPage">
@@ -13,7 +15,7 @@ const QuizPage = () => {
 
             {/* Main Content */}
             <main>
-                
+                <button onClick={() => navigate('/text-scams-quiz')}>Get Started</button>
             </main>
         </div>
     );

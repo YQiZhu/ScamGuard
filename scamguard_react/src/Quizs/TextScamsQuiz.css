@@ -1,0 +1,177 @@
+.text-scams-quiz {
+    /* padding-top: 100px; */
+    /* padding: 20px; */
+    /* max-width: 800px; */
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.text-scams-quiz-header p {
+    font-size: 18px;
+    line-height: 1.5;
+    /* padding: 20px; */
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+.text-scams-quiz-header {
+    background-color: #203F9D;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: rgb(255, 255, 255);
+}
+
+.text-scams-quiz-header button {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    position: absolute; /* Position it relative to the page */
+    top: 110px; /* Distance from the top of the page */
+    left: 80px; /* Distance from the left side of the page */
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 1; /* Ensure it's above other elements */
+}
+
+.text-scams-quiz-header button:hover {
+    background-color: #BADDF1;
+    color: rgb(0, 0, 0);
+    position: absolute; /* Position it relative to the page */
+    top: 110px; /* Distance from the top of the page */
+    left: 80px; /* Distance from the left side of the page */
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 1; /* Ensure it's above other elements */
+}
+
+.text-scams-quiz-header h2 {
+    /* padding-top: 20px; */
+    font-size: 2rem;
+    /* margin-bottom: 20px; */
+}
+
+.text-scams-quiz-instructions {
+    padding-top: 20px;
+    /* margin-bottom: 40px; */
+    padding-bottom: 20px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: left;
+    /* align-items: center; */
+    justify-content: center;
+    max-width: 800px;
+    color: #4F67A6;
+}
+
+.text-scams-quiz-instructions h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.text-scams-quiz-instructions p {
+    /* margin-bottom: 10px; */
+    font-size: 18px;
+    /* line-height: 1.5; */
+    text-align: left;
+}
+
+.text-scams-quiz-instructions li {
+    /* width: 100%; */
+    margin-bottom: 7px;
+    /* display: block; */
+    /* text-align: center; */ 
+}
+
+.text-scams-quiz-instructions h4 {
+    font-size: 18px;
+}
+
+.text-protect-yourself {
+    /* margin-bottom: 40px; */
+    background-color: #203F9D;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.text-protect-yourself h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.text-protect-yourself p {
+    /* font-size: 1rem; */
+    font-size: 18px;
+    /* margin-bottom: 2px; */
+    /* line-height: 1.5; */
+    text-align: left;
+    max-width: 800px;
+    /* margin-bottom: 10px; */
+}
+
+.text-protect-yourself li {
+    /* width: 100%; */
+    margin-bottom: 7px;
+    /* display: block; */
+    /* text-align: center; */
+}
+
+.text-scams-quiz-scenario {
+    padding-top: 20px;
+    /* margin-bottom: 40px; */
+    padding-bottom: 20px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    color: #4F67A6;
+}
+
+.text-scams-quiz-scenario h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.text-scams-quiz-scenario p {
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.text-scams-quiz-scenario button {
+    font-size: 18px;
+    max-width: 200px;
+    margin: 15px;
+}
+
+.scenario-image {
+    max-width: 100%;
+    /* Image will scale down to fit the container */
+    height: auto;
+    /* Maintain the aspect ratio */
+    display: block;
+    /* Ensure there’s no extra space below the image */
+    margin: 20px 0;
+    /* Optional: Add some margin around the images */
+}

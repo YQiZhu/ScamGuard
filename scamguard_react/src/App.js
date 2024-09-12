@@ -25,6 +25,7 @@ import InvestmentScams from './IdentifyScams/InvestmentScams';
 import ProductAndServiceScams from './IdentifyScams/ProductAndServiceScams';
 import JobScams from './IdentifyScams/JobScams';
 import ImpersonationScams from './IdentifyScams/ImpersonationScams';
+import TextScamsQuiz from './Quizs/TextScamsQuiz';
 import ReferencePage from './ReferencePage';
 import Footer from './Footer';
 import ScrollToTop from './ScrollToTop'; // Import the ScrollToTop component
@@ -62,6 +63,7 @@ function App() {
           <Route path="/investment-scams" element={<InvestmentScams />} />
           <Route path="/job-scams" element={<JobScams />} />
           <Route path="/impersonation-scams" element={<ImpersonationScams />} />
+          <Route path="/text-scams-quiz" element={<TextScamsQuiz />} />
 
         </Routes>
         <Footer />
