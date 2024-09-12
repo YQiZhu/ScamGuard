@@ -55,6 +55,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
+    "https://localhost:3000",
     "http://scamguard.live",
     "https://scamguard.live", # Allow HTTPS
     "http://www.scamguard.live",
@@ -65,6 +66,8 @@ CORS_ALLOW_HEADERS = [
     'content-type',
     'accept',
     'Authorization',
+    'x-csrftoken',
+    'x-requested-with',
 ]
 
 ROOT_URLCONF = 'ScamGuard.urls'
