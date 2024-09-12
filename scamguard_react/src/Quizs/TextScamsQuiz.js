@@ -8,7 +8,8 @@ const TextScamsQuiz = () => {
     {title: 'Scenario 2', img:'/images/reallife_scenario/text_scams/Text Scenario 2.png'},
     {title: 'Scenario 3', img:'/images/reallife_scenario/text_scams/Text Scenario 3.png'},
     {title: 'Scenario 4', img:'/images/reallife_scenario/text_scams/Text Scenario 4.png'},
-    {title: 'Scenario 5', img:'/images/reallife_scenario/text_scams/Text Scenario 5.png'}
+    {title: 'Scenario 5', img:'/images/reallife_scenario/text_scams/Text Scenario 5.png'},
+    {title: 'Scenario 5', img:'/images/reallife_scenario/text_scams/Text Scenario 6.png'}
   ];
 
   // State to store the current image
