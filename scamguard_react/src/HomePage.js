@@ -154,7 +154,7 @@ const HomePage = ({ scrollToTop }) => {
                             </div>
                         </div>
 
-                        <div className="hover-card">
+                        {/* <div className="hover-card">
                             <div className="hover-card-content">
                                 <div className="hover-card-main">
                                     <h3>Create Scam Awareness Posters</h3>
@@ -175,7 +175,7 @@ const HomePage = ({ scrollToTop }) => {
                                     <button>Get Started</button>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </section>
             </main>

@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'currentScams',
     'risk_assessment',
-    'model_interface'
+    'model_interface',
     'corsheaders',
 ]
 
