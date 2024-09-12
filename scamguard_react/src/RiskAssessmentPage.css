@@ -105,7 +105,7 @@
     padding: 12px;
     font-size: 1rem;
     /* background-color: #4F67A6; */
-    color: white;
+    /* color: white; */
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -121,45 +121,52 @@
 }
 
 .scam-risk-description {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  .scam-risk-card {
-    background-color: #f9f9f9;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.scam-risk-card {
+    background-color: #f0f7ff;
     border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 16px;
-    margin: 8px;
-    flex: 1 1 calc(33.333% - 16px); /* Ensures 3 cards in a row with space between */
+    border-radius: 30px;
+    width: 260px;
+    margin: 15px 0;
+    padding: 20px;
+    width: 260px;
+    min-height: 280px;
+    /* Ensures 3 cards in a row with space between */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .scam-risk-card p {
+}
+
+.scam-risk-card p {
     margin: 0 0 12px;
-  }
-  
-  .scam-risk-card button {
+}
+
+.scam-risk-card button {
     /* background-color: #007bff; */
     /* color: white; */
     border: none;
     padding: 8px 12px;
     cursor: pointer;
     border-radius: 4px;
-  }
-  
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     .scam-risk-card {
-      flex: 1 1 calc(50% - 16px); /* Adjust to 2 cards per row on smaller screens */
+        flex: 1 1 calc(50% - 16px);
+        /* Adjust to 2 cards per row on smaller screens */
     }
-  }
-  
-  @media (max-width: 480px) {
+}
+
+@media (max-width: 480px) {
     .scam-risk-card {
-      flex: 1 1 100%; /* Adjust to 1 card per row on very small screens */
+        flex: 1 1 100%;
+        /* Adjust to 1 card per row on very small screens */
     }
-  }  
+}
 
 .scam-chart {
     margin-top: 30px;

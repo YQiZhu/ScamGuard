@@ -123,19 +123,21 @@ const RiskAssessmentPage = () => {
                             <section className="scam-chart">
                                 <h3>Contact Method Risk Analysis Results</h3>
                                 <ContactMethodResultsChart data={contactMethodData} />
-                                {contactMethodData.map((scam, index) => (
-                                    <div key={index} className="scam-description">
-                                        <p>
-                                            Your risk of being exposed to <strong>{scam['Scam Type']}</strong> scams is <strong>{scam['Exposure Risk']} times higher</strong> than the national average when using <strong>{scam['Online Activity']}</strong>.
-                                        </p>
-                                        <p>
-                                            The average loss for seniors is expected to be <strong>{scam['Average Loss for Seniors']}</strong>.
-                                        </p>
-                                        <button onClick={() => window.open(scam.link, "_blank", "noopener noreferrer")}>
-                                            Learn more about <strong>{scam['Scam Type']} scam</strong>
-                                        </button>
-                                    </div>
-                                ))}
+                                <div className="scam-risk-description">
+                                    {contactMethodData.map((scam, index) => (
+                                        <div key={index} className="scam-risk-card">
+                                            <p>
+                                                Your risk of being exposed to <strong>{scam['Scam Type']}</strong> scams is <strong>{scam['Exposure Risk']} times higher</strong> than the national average when using <strong>{scam['Online Activity']}</strong>.
+                                            </p>
+                                            <p>
+                                                The average loss for seniors is expected to be <strong>{scam['Average Loss for Seniors']}</strong>.
+                                            </p>
+                                            <button onClick={() => window.open(scam.link, "_blank", "noopener noreferrer")}>
+                                                Learn more about <strong>{scam['Scam Type']} scam</strong>
+                                            </button>
+                                        </div>
+                                    ))}
+                                </div>
                             </section>
                         ) : (
                             <div className="no-data-message">
@@ -202,7 +204,7 @@ const RiskAssessmentPage = () => {
                                                 For individuals in your demographic group, the average financial loss for seniors is estimated to be <strong>{scam['Average Loss for Seniors']}</strong>.
                                             </p>
                                             <button onClick={() => window.open(scam.link, "_blank", "noopener noreferrer")}>
-                                                Learn more about <strong>{scam['Online Activity']} scam</strong>
+                                                Learn more about <strong>{scam['Scam Type']} scam</strong>
                                             </button>
                                         </div>
                                     ))}
