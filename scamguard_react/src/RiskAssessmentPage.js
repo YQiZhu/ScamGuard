@@ -126,14 +126,13 @@ const RiskAssessmentPage = () => {
                                 {contactMethodData.map((scam, index) => (
                                     <div key={index} className="scam-description">
                                         <p>
-                                            Your risk of being exposed to <strong>{scam['Scam Type']}</strong> scams is <strong>{scam['Exposure Risk']} times higher</strong> than the national average when using
-                                            <strong>{scam['Online Activity']}</strong>.
+                                            Your risk of being exposed to <strong>{scam['Scam Type']}</strong> scams is <strong>{scam['Exposure Risk']} times higher</strong> than the national average when using <strong>{scam['Online Activity']}</strong>.
                                         </p>
                                         <p>
                                             The average loss for seniors is expected to be <strong>{scam['Average Loss for Seniors']}</strong>.
                                         </p>
                                         <button onClick={() => window.open(scam.link, "_blank", "noopener noreferrer")}>
-                                            Learn more about <strong>{scam['Online Activity']} scam</strong>
+                                            Learn more about <strong>{scam['Scam Type']} scam</strong>
                                         </button>
                                     </div>
                                 ))}

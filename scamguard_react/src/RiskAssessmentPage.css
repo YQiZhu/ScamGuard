@@ -149,10 +149,6 @@
     border-radius: 4px;
   }
   
-  .scam-risk-card button:hover {
-    background-color: #0056b3;
-  }
-  
   @media (max-width: 768px) {
     .scam-risk-card {
       flex: 1 1 calc(50% - 16px); /* Adjust to 2 cards per row on smaller screens */
