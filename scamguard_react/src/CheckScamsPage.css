@@ -41,7 +41,8 @@
 
 .scam-checker-selection {
     /* position: absolute; */
-    left: 90px;
+    left: 100px;
+    /* top: 400px; */
 }
 
 .scam-checker-segmented-control {
@@ -51,26 +52,34 @@
     overflow: hidden;
     justify-content: center;
     margin: 10px 0;
-    width: 600px;
+    width: 300px;
 }
 
 .segment-btn {
     flex: 1;
+    width: 100%;
+    height: 100%;
     padding: 10px 20px;
     border: none;
     background-color: #ffffff;
     cursor: pointer;
     color: #4F67A6;
     transition: background-color 0.3s ease;
+    margin: 0%;
+    border-radius: 30px;
 }
 
 .segment-btn.selected {
+    width: 100%;
+    height: 100%;
     background-color: #4F67A6;
     color: white;
+    border-radius: 30px;
 }
 
 .segment-btn:not(.selected):hover {
     background-color: #e0e0e0;
+    border-radius: 30px;
 }
 
 .scam-checker-component {

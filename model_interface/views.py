@@ -3,6 +3,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
 from django.conf import settings
+from django.views.decorators.csrf import csrf_exempt
 import os, re
 import string
 import joblib
@@ -26,7 +27,7 @@ text_vectorizer = joblib.load(email_vectorizer_path)
 # Email verification regular expression
 EMAIL_REGEX = r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$'
 
-
+@csrf_exempt
 @api_view(['POST'])
 def predict_value(request, model_type):
     """

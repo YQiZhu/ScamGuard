@@ -20,20 +20,18 @@ const CheckEmails = ({ onSubmit }) => {
       body: emailBody,
     };
 
-    try {
-      // Make the POST request to the Django API (model_1 endpoint)
-      const response = await axios.post('https://scamguard.live/api/predict/model1/', emailData);
-
-      // Handle the response
-      setResult(response.data); // Store the response in state
-      console.log('Predict Data:', response.data);
-      alert("Prediction received! Check the result below.");
-
-    } catch (error) {
-      // Handle error (e.g., missing fields or invalid email)
-      console.error("Error during the prediction:", error);
-      alert("An error occurred while checking the email. Please try again.");
-    }
+    axios.post('https://scamguard.live/api/predict/model1/', emailData)
+      .then((response) => {
+        // Handle the response
+        setResult(response.data); // Store the response in state
+        console.log('Predict Data:', response.data);
+        alert("Prediction received! Check the result below.");
+      })
+      .catch((error) => {
+        // Handle error (e.g., missing fields or invalid email)
+        console.error("Error during the prediction:", error);
+        alert("An error occurred while checking the email. Please try again.");
+      });
   };
 
   return (

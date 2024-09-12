@@ -7,25 +7,7 @@ import CheckEmails from './CheckScams/CheckEmails';
 const CheckScamsPage = () => {
 
     const [selectedType, setSelectedType] = useState('email');
-    const [result, setResult] = useState(null);
-
-    const handleSubmit = async (data) => {
-        try {
-            // Replace this with the actual API endpoint hosted on your Django EC2
-            const response = await fetch('http://your-ec2-url.com/api/checkscam', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ ...data, type: selectedType }),
-            });
-            const resultData = await response.json();
-            setResult(resultData.message); // Assuming your API returns a message
-        } catch (error) {
-            console.error("Error submitting the form: ", error);
-        }
-    };
-
+    
     return (
         <div className="CheckScamsPage">
             {/* Introduction Section */}
@@ -61,18 +43,11 @@ const CheckScamsPage = () => {
                         </div>
                     </div>
                     <div className="scam-checker-component">
-                        {selectedType === 'email' && <CheckEmails onSubmit={handleSubmit} />}
+                        {selectedType === 'email' && <CheckEmails />}
                         {/* {selectedType === 'message' && <CheckMessages onSubmit={handleSubmit} />} */}
                         {/* {selectedType === 'url' && <CheckURLs onSubmit={handleSubmit} />} */}
                     </div>
-
-                    {result && (
-                        <div>
-                            <h3>Result: {result}</h3>
-                        </div>
-                    )}
                 </div>
-
             </main>
         </div>
     );
