@@ -4,16 +4,24 @@ from rest_framework.response import Response
 from rest_framework import status
 from django.conf import settings
 import os, re
+import string
 import joblib
 import numpy as np
+from gensim.parsing.preprocessing import remove_stopwords
 
 
-# Assuming the model is serialized into a .pkl file via joblib
-model_1_path = 'path_to_model_1.pkl'
-model_2_path = 'path_to_model_2.pkl'
+# Use BASE_DIR to dynamically generate absolute paths
+model_1_path = os.path.join(settings.BASE_DIR, 'model_interface', 'email_classifier.pkl')
+model_2_path = os.path.join(settings.BASE_DIR, 'model_interface', 'text_classification.pkl')
+email_vectorizer_path = os.path.join(settings.BASE_DIR, 'model_interface', 'email_vectorizer.pkl')
+text_vectorizer_path = os.path.join(settings.BASE_DIR, 'model_interface', 'text_vectorizer.pkl')
 
 model_1 = joblib.load(model_1_path)
 model_2 = joblib.load(model_2_path)
+
+# Load vectorizers
+email_vectorizer = joblib.load(email_vectorizer_path)
+text_vectorizer = joblib.load(email_vectorizer_path)
 
 # Email verification regular expression
 EMAIL_REGEX = r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$'
@@ -50,16 +58,18 @@ def predict_value(request, model_type):
                 return Response({"error": "Invalid email format"}, status=status.HTTP_400_BAD_REQUEST)
 
             # Data preprocessing: Convert the input data into the format required by the model
-            user_input = [
-                required_fields['name_of_the_sender'],
-                required_fields['sender_email_address'],
-                required_fields['message_subject'],
-                required_fields['body']
-            ]
-            processed_input = np.array(user_input).reshape(1, -1)
+            user_input = required_fields['name_of_the_sender'] + ' ' + required_fields['sender_email_address'] + ' ' + required_fields['message_subject'] + ' ' + required_fields['body']
+
+            # Preprocess text
+            user_input_low = user_input.lower()
+            regex = re.compile('[%s]' % re.escape(string.punctuation))
+            clean_input = regex.sub('', user_input_low)
+            clean_input = remove_stopwords(clean_input)
+            processed_input = email_vectorizer.transform([clean_input])
 
             # Use model_1 to make predictions
             prediction = model_1.predict(processed_input)
+            prob = model_1.predict_proba(processed_input)[0][prediction]
 
         # For model_2: process only message_body
         elif model_type == 'model_2':
@@ -70,10 +80,15 @@ def predict_value(request, model_type):
                 return Response({"error": "Message body is required for model_2"}, status=status.HTTP_400_BAD_REQUEST)
 
             # Data preprocessing: Convert the input data into the format required by the model
-            processed_input = np.array([message_body]).reshape(1, -1)
+            message_body_low = message_body.lower()
+            regex = re.compile('[%s]' % re.escape(string.punctuation))
+            clean_input = regex.sub('', message_body_low)
+            clean_input = remove_stopwords(clean_input)
+            processed_input = email_vectorizer.transform([clean_input])
 
             # Use model_2 to make predictions
             prediction = model_2.predict(processed_input)
+            prob = model_2.predict_proba(processed_input)[0][prediction]
 
         else:
             return Response({"error": "Invalid model_type. Must be 'model_1' or 'model_2'."}, status=status.HTTP_400_BAD_REQUEST)

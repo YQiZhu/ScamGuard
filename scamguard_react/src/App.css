@@ -17,61 +17,35 @@
   }
 }
 
-.App-header {
-  background-color: #0579DE;
-  padding-top: 50px;
-  padding-bottom: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: #ffffff;
-}
-
-/* .App-header h1 {
-  font-size: 4rem;
-} */
-
-.App-header p {
-  font-size: 1.5rem;
-  padding: 0 160px;
-}
-
 button {
+  margin: 10px;
   font-size: 1.2rem;
   padding: 10px 20px;
   color: #ffffff;
-  background-color: #0579DE;
+  background-color: #4F67A6;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #61dafb;
+  background-color: #203F9D;
 }
 
-.Route-section {
-  padding: 50px;
-  background-color: #ffffff;
+p {
+  font-size: 18px;
 }
 
-.Route-section h2 {
+/* h1 {
+  font-size: calc(10px + 2vmin);
+} */
+
+h2 {
   font-size: 2rem;
 }
 
-.Desc-section {
-  padding: 100px 160px;
-  background-color: #ffffff;
-}
-
-.Desc-section h2 {
-  font-size: 2.3rem;
-}
-
-.Desc-section p {
-  font-size: 1.3rem;
+h3 {
+  font-size: 1.5rem;
 }
 
 .scroll-to-top {

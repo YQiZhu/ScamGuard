@@ -1,7 +1,12 @@
 import logo from './logo.svg';
 import React, { useRef } from 'react';
+import { ShaderGradientCanvas, ShaderGradient } from 'shadergradient'
+import * as reactSpring from '@react-spring/three'
+import * as drei from '@react-three/drei'
+import * as fiber from '@react-three/fiber'
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
+import HomePage from './HomePage';
 import CurrentScamsPage from './CurrentScamsPage';
 import IdentifyScamsPage from './IdentifyScamsPage';
 import ReportScamsPage from './ReportScamsPage';
@@ -20,6 +25,7 @@ import InvestmentScams from './IdentifyScams/InvestmentScams';
 import ProductAndServiceScams from './IdentifyScams/ProductAndServiceScams';
 import JobScams from './IdentifyScams/JobScams';
 import ImpersonationScams from './IdentifyScams/ImpersonationScams';
+import TextScamsQuiz from './Quizs/TextScamsQuiz';
 import ReferencePage from './ReferencePage';
 import Footer from './Footer';
 import ScrollToTop from './ScrollToTop'; // Import the ScrollToTop component
@@ -38,28 +44,7 @@ function App() {
       <div className="App">
         <Header />
         <Routes>
-          <Route path="/" element={
-            <>
-
-              {/* Home Page Content */}
-              <header className="App-header">
-                <h1>ScamGuard</h1>
-                <p>Protecting seniors from scams and helping them stay safe online.</p>
-              </header>
-              <main>
-                <section className="Desc-section">
-                  <h2>What is on this website?</h2>
-                  {/* <img
-                    src={require('./images/think.png')}
-                    alt="think"
-                  /> */}
-                  <p>Stay informed on current scams, learn about different scams and find out how to protect yourself from scammers.</p>
-                  <p><strong>To start your journey on our website, go back to the top and click on the navigation bars.</strong></p>
-                  <button onClick={scrollToTop}>Go to Top of the Page</button>
-                </section>
-              </main>
-            </>
-          } />
+          <Route path="/" element={<HomePage scrollToTop={scrollToTop} />} />
           <Route path="/references" element={<ReferencePage />} />
           <Route path="/currentScam" element={<CurrentScamsPage />} />
           <Route path="/identifyScam" element={<IdentifyScamsPage />} />
@@ -78,6 +63,7 @@ function App() {
           <Route path="/investment-scams" element={<InvestmentScams />} />
           <Route path="/job-scams" element={<JobScams />} />
           <Route path="/impersonation-scams" element={<ImpersonationScams />} />
+          <Route path="/text-scams-quiz" element={<TextScamsQuiz />} />
 
         </Routes>
         <Footer />

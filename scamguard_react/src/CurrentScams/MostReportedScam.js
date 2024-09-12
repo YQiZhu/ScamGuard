@@ -47,7 +47,7 @@ function MostReportedScam() {
                     labelFormatter={(label) => `Scam Type: ${label}`}
                 />
                 <Legend formatter={(value) => "Number of Reports"} />
-                <Bar dataKey="number_of_reports" fill="#8884d8" />
+                <Bar dataKey="number_of_reports" fill="#8884d8" radius={[30, 30, 30, 30]}/>
             </BarChart>
             <p>The <strong>Phishing</strong> ranked at the <strong>first place</strong> in the top three most frequent scams received by Australians from the age group 65 and over.</p>
 

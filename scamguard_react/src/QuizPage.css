@@ -7,8 +7,8 @@
 }
 
 .quiz-header {
-    background-color: #0579DE;
-    padding-top: 50px;
+    background-color: #203F9D;
+    padding-top: 80px;
     padding-bottom: 30px;
     display: flex;
     flex-direction: column;
@@ -19,22 +19,6 @@
 }
 
 .quiz-header h1 {
-    padding-top: 20px;
-}
-
-
-.most-reported-section {
-    /* padding: 20px; */
-    background-color: #ffffff;;
-}
-
-.top-loss-section {
     /* padding-top: 20px; */
-    background-color: #0579DE;
-    color: rgb(255, 255, 255);
-}
-
-.popular-contact-section {
-    /* padding: 20px; */
-    background-color: #ffffff;;
+    margin-bottom: 0%;
 }

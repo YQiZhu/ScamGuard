@@ -6,6 +6,7 @@ const Header = () => {
   return (
     <nav>
       <img src="/favicon.ico" alt="Logo" className="nav-icon" />
+      <p className="nav-text">ScamGuard</p>
       <ul>
         <li>
           <NavLink exact to="/" activeClassName="active-link">Home</NavLink>
@@ -23,7 +24,7 @@ const Header = () => {
           <NavLink to="/whatToDo" activeClassName="active-link">What To Do If Scammed</NavLink>
         </li>
         <li>
-          <NavLink to="/checkScam" activeClassName="active-link">Check If Is A Scam</NavLink>
+          <NavLink to="/checkScam" activeClassName="active-link">Scam Detector</NavLink>
         </li>
         <li>
           <NavLink to="/riskAssessment" activeClassName="active-link">Scam Risk Assessment</NavLink>

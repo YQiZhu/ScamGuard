@@ -17,7 +17,7 @@
 }
 
 .text-scams-header {
-    background-color: #0579DE;
+    background-color: #203F9D;
     padding-top: 80px;
     padding-bottom: 30px;
     display: flex;
@@ -72,6 +72,7 @@
     /* align-items: center; */
     justify-content: center;
     max-width: 800px;
+    color: #4F67A6;
 }
 
 .text-scam-identification h3 {
@@ -100,7 +101,7 @@
 
 .text-protect-yourself {
     /* margin-bottom: 40px; */
-    background-color: #0579DE;
+    background-color: #203F9D;
     padding-top: 20px;
     padding-bottom: 20px;
     display: flex;
@@ -144,6 +145,7 @@
     align-items: center;
     justify-content: center;
     max-width: 800px;
+    color: #4F67A6;
 }
 
 .text-real-life-story h3 {

@@ -1,13 +1,14 @@
-.CheckScamsPage{
+.CheckScamsPage {
     /* padding-top: 100px; */
     /* max-width: 800px; */
     margin: auto;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .check-scam-header {
-    background-color: #0579DE;
+    background-color: #203F9D;
     padding-top: 80px;
     padding-bottom: 30px;
     display: flex;
@@ -19,6 +20,60 @@
 }
 
 .check-scam-header h1 {
-    padding-top: 20px;
+    /* padding-top: 20px; */
+    margin-bottom: 0%;
 }
 
+.scam-checker {
+    padding-top: 20px;
+    /* margin-bottom: 40px; */
+    padding-bottom: 20px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    max-width: 80%;
+    color: #4F67A6;
+}
+
+.scam-checker-selection {
+    /* position: absolute; */
+    left: 90px;
+}
+
+.scam-checker-segmented-control {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    overflow: hidden;
+    justify-content: center;
+    margin: 10px 0;
+    width: 600px;
+}
+
+.segment-btn {
+    flex: 1;
+    padding: 10px 20px;
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+    color: #4F67A6;
+    transition: background-color 0.3s ease;
+}
+
+.segment-btn.selected {
+    background-color: #4F67A6;
+    color: white;
+}
+
+.segment-btn:not(.selected):hover {
+    background-color: #e0e0e0;
+}
+
+.scam-checker-component {
+    margin-top: 30px;
+    max-width: 50%;
+}

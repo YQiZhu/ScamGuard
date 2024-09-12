@@ -1,0 +1,16 @@
+.risk-assessment-chart-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    /* Space between charts */
+    width: 100%;
+    /* Ensure it takes up the full width */
+
+}
+
+.risk-assessment-chart-wrapper {
+    flex-grow: 1;
+    /* Ensure both charts take equal space */
+    max-width: 48%;
+    /* Adjust the width to fit both charts in one row */
+}
