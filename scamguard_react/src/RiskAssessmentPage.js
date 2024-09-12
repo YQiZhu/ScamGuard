@@ -97,11 +97,11 @@ const RiskAssessmentPage = () => {
             </header>
 
             <main className="main-session-assessment">
-                <section className="analysis-form">
+                <section className="scam-risk-analysis-form">
                     {/* Contact Method Risk Form */}
                     <h2>Contact Method Risk</h2>
                     <form onSubmit={handleSubmitContactMethod} className="contact-risk-form">
-                        <div className="form-group">
+                        <div className="scam-risk-form-group">
                             <label>Contact Methods</label>
                             <select onChange={(e) => setContactMethod(e.target.value)} value={contactMethod}>
                                 <option value="" disabled>Select ...</option>
@@ -110,11 +110,11 @@ const RiskAssessmentPage = () => {
                                 ))}
                             </select>
                         </div>
-                        <div className="error-message">{contactMethodError}</div>
-                        <button type="submit" className="submit-btn">Submit Contact Method Risk</button>
+                        <div className="scam-risk-error-message">{contactMethodError}</div>
+                        <button type="submit" className="scam-risk-submit-btn">Submit Contact Method Risk</button>
                     </form>
 
-                    {isLoadingContactMethod && <div className="loading">Loading contact method data...</div>}
+                    {isLoadingContactMethod && <div className="scam-risk-loading">Loading contact method data...</div>}
 
 
                     {/* Display Contact Method Risk Chart */}
@@ -125,8 +125,16 @@ const RiskAssessmentPage = () => {
                                 <ContactMethodResultsChart data={contactMethodData} />
                                 {contactMethodData.map((scam, index) => (
                                     <div key={index} className="scam-description">
-                                        <p>{scam.text}</p>
-                                        <a href={scam.link} target="_blank" rel="noopener noreferrer">Learn more about this scam</a>
+                                        <p>
+                                            Your risk of being exposed to <strong>{scam['Scam Type']}</strong> scams is <strong>{scam['Exposure Risk']} times higher</strong> than the national average when using
+                                            <strong>{scam['Online Activity']}</strong>.
+                                        </p>
+                                        <p>
+                                            The average loss for seniors is expected to be <strong>{scam['Average Loss for Seniors']}</strong>.
+                                        </p>
+                                        <button onClick={() => window.open(scam.link, "_blank", "noopener noreferrer")}>
+                                            Learn more about <strong>{scam['Online Activity']} scam</strong>
+                                        </button>
                                     </div>
                                 ))}
                             </section>
@@ -139,11 +147,11 @@ const RiskAssessmentPage = () => {
 
                 </section>
 
-                <section className="analysis-form">
+                <section className="scam-risk-analysis-form">
                     {/* Demographic Risk Form */}
                     <h2>Demographic Risk</h2>
-                    <form onSubmit={handleSubmitDemographic} className="risk-form">
-                        <div className="form-group">
+                    <form onSubmit={handleSubmitDemographic} className="demographic-risk-form">
+                        <div className="scam-risk-form-group">
                             <label>Age Group</label>
                             <select onChange={(e) => setAgeGroup(e.target.value)} value={ageGroup}>
                                 <option value="" disabled>Select ...</option>
@@ -153,7 +161,7 @@ const RiskAssessmentPage = () => {
                             </select>
                         </div>
 
-                        <div className="form-group">
+                        <div className="scam-risk-form-group">
                             <label>Location</label>
                             <select onChange={(e) => setLocation(e.target.value)} value={location}>
                                 <option value="" disabled>Select ...</option>
@@ -163,7 +171,7 @@ const RiskAssessmentPage = () => {
                             </select>
                         </div>
 
-                        <div className="form-group">
+                        <div className="scam-risk-form-group">
                             <label>Gender</label>
                             <select onChange={(e) => setGender(e.target.value)} value={gender}>
                                 <option value="" disabled>Select ...</option>
@@ -172,12 +180,12 @@ const RiskAssessmentPage = () => {
                                 ))}
                             </select>
                         </div>
-                        <div className="error-message">{demographicError}</div>
-                        <button type="submit" className="submit-btn">Submit Demographic Risk</button>
+                        <div className="scam-risk-error-message">{demographicError}</div>
+                        <button type="submit" className="scam-risk-submit-btn">Submit Demographic Risk</button>
                     </form>
 
                     {/* Show loading indicator */}
-                    {isLoadingDemographic && <div className="loading">Loading demographic data...</div>}
+                    {isLoadingDemographic && <div className="scam-risk-loading">Loading demographic data...</div>}
 
                     {/* Display Demographic Risk Chart */}
                     {isSubmittedDemographic && !isLoadingDemographic && Array.isArray(demographicData) && (
@@ -185,12 +193,21 @@ const RiskAssessmentPage = () => {
                             <section className="scam-chart">
                                 <h3>Demographic Risk Analysis Results</h3>
                                 <DemographicResultsChart data={demographicData} />
-                                {demographicData.map((scam, index) => (
-                                    <div key={index} className="scam-description">
-                                        <p>{scam.text}</p>
-                                        <a href={scam.link} target="_blank" rel="noopener noreferrer">Learn more about this scam</a>
-                                    </div>
-                                ))}
+                                <div className="scam-risk-description">
+                                    {demographicData.map((scam, index) => (
+                                        <div key={index} className="scam-risk-card">
+                                            <p>
+                                                According to your demographic profile, your risk of encountering <strong>{scam['Scam Type']}</strong> is <strong>{scam['Exposure Risk']} times higher</strong> than the national average.
+                                            </p>
+                                            <p>
+                                                For individuals in your demographic group, the average financial loss for seniors is estimated to be <strong>{scam['Average Loss for Seniors']}</strong>.
+                                            </p>
+                                            <button onClick={() => window.open(scam.link, "_blank", "noopener noreferrer")}>
+                                                Learn more about <strong>{scam['Online Activity']} scam</strong>
+                                            </button>
+                                        </div>
+                                    ))}
+                                </div>
                             </section>
                         ) : (
                             <div className="no-data-message">
