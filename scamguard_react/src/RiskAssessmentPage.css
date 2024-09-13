@@ -121,11 +121,10 @@
 }
 
 .scam-risk-description {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    justify-content: center;
+    display: flex;
+    align-self: center;
     margin-top: 20px;
+    justify-content: center;
 }
 
 .scam-risk-card {
@@ -133,7 +132,7 @@
     border: 1px solid #ddd;
     border-radius: 30px;
     width: 260px;
-    margin: 15px 0;
+    margin: 15px 20px;
     padding: 20px;
     width: 260px;
     min-height: 280px;
@@ -171,4 +170,5 @@
 .scam-chart {
     margin-top: 30px;
     text-align: center;
+    width: 100%;
 }

@@ -14,3 +14,9 @@
     max-width: 48%;
     /* Adjust the width to fit both charts in one row */
 }
+
+.custom-tooltip{
+    background-color: #f0f7ff;
+    color: #4F67A6;
+    padding: 1px 15px;
+}

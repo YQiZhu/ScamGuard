@@ -15,7 +15,6 @@ const RiskAssessmentPage = () => {
     // State for Demographic Risk form
     const [gender, setGender] = useState('');
     const [location, setLocation] = useState('');
-    const [ageGroup, setAgeGroup] = useState('');
     const [demographicData, setDemographicData] = useState([]);
     const [isSubmittedDemographic, setIsSubmittedDemographic] = useState(false);
     const [isLoadingDemographic, setIsLoadingDemographic] = useState(false);   // To track loading
@@ -24,10 +23,9 @@ const RiskAssessmentPage = () => {
     const [contactMethodError, setContactMethodError] = useState('');
     const [demographicError, setDemographicError] = useState('');
 
-    const contactMethods = ['Email', 'Internet', 'Phone call', 'Social media/Online forums', 'Text message'];
+    const contactMethods = ['Email', 'Phone call', 'Text message'];
     const genders = ['Female', 'Male'];
     const locations = ['Australian Capital Territory', 'New South Wales', 'Northern Territory', 'Queensland', 'South Australia', 'Tasmania', 'Victoria', 'Western Australia'];
-    const ageGroups = ['65 and over'];
 
     // Handle Contact Method form submission
     const handleSubmitContactMethod = (e) => {
@@ -59,7 +57,7 @@ const RiskAssessmentPage = () => {
     // Handle Demographic Risk form submission
     const handleSubmitDemographic = (e) => {
         e.preventDefault();
-        if (!gender || !location || !ageGroup) {
+        if (!gender || !location ) {
             setDemographicError('Please fill in all demographic fields.');
             return;
         }
@@ -71,7 +69,7 @@ const RiskAssessmentPage = () => {
         const formData = {
             gender: gender,
             location: location,
-            age_group: ageGroup,
+            age_group: '65 and over',
         };
         console.log('Data:', formData);
 
@@ -150,9 +148,9 @@ const RiskAssessmentPage = () => {
 
                 <section className="scam-risk-analysis-form">
                     {/* Demographic Risk Form */}
-                    <h2>Demographic Risk</h2>
+                    <h2>Demographic Risk for Age 65 and over</h2>
                     <form onSubmit={handleSubmitDemographic} className="demographic-risk-form">
-                        <div className="scam-risk-form-group">
+                        {/* <div className="scam-risk-form-group">
                             <label>Age Group</label>
                             <select onChange={(e) => setAgeGroup(e.target.value)} value={ageGroup}>
                                 <option value="" disabled>Select ...</option>
@@ -160,7 +158,7 @@ const RiskAssessmentPage = () => {
                                     <option key={index} value={age}>{age}</option>
                                 ))}
                             </select>
-                        </div>
+                        </div> */}
 
                         <div className="scam-risk-form-group">
                             <label>Location</label>
