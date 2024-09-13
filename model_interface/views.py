@@ -22,7 +22,7 @@ model_2 = joblib.load(model_2_path)
 
 # Load vectorizers
 email_vectorizer = joblib.load(email_vectorizer_path)
-text_vectorizer = joblib.load(email_vectorizer_path)
+text_vectorizer = joblib.load(text_vectorizer_path)
 
 # Email verification regular expression
 EMAIL_REGEX = r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$'
