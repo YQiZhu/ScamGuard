@@ -46,10 +46,31 @@ const ContactMethodResultsChart = ({ data }) => {
                 <ResponsiveContainer width="100%" height={400}>
                     <BarChart data={processedData}>
                         <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis dataKey="Scam Type" />
-                        <YAxis />
+                        <XAxis
+                            dataKey="Scam Type"
+                            label={{
+                                value: 'Scam Type',
+                                position: 'insideBottom',
+                                offset: -10,
+                                style: {
+                                    textAnchor: 'middle',
+                                    fontSize: 18, // Increase font size of the label
+                                    fontWeight: 'bold',
+                                }
+                            }} />
+                        <YAxis label={{
+                            value: 'Exposure Risk',
+                            angle: -90,
+                            position: 'insideLeft',
+                            offset: 1,
+                            style: {
+                                textAnchor: 'middle',
+                                fontSize: 18,
+                                fontWeight: 'bold',
+                            }
+                        }} />
                         <Tooltip content={<CustomTooltipExposure />} />
-                        <Legend />
+                        <Legend wrapperStyle={{ display: 'flex', justifyContent: 'center', paddingTop: '25px' }} />
                         <Bar dataKey="Exposure Risk" fill="#8884d8" radius={[30, 30, 30, 30]} />
                     </BarChart>
                 </ResponsiveContainer>
@@ -58,12 +79,32 @@ const ContactMethodResultsChart = ({ data }) => {
             <div className="risk-assessment-chart-wrapper">
                 {/* Average Loss for Seniors Chart */}
                 <ResponsiveContainer width="100%" height={400}>
-                    <BarChart data={processedData}>
+                    <BarChart data={processedData} >
                         <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis dataKey="Scam Type" />
-                        <YAxis />
+                        <XAxis dataKey="Scam Type"
+                            label={{
+                                value: 'Scam Type',
+                                position: 'insideBottom',
+                                offset: -10,
+                                style: {
+                                    textAnchor: 'middle',
+                                    fontSize: 18, // Increase font size of the label
+                                    fontWeight: 'bold',
+                                }
+                            }} />
+                        <YAxis label={{
+                            value: 'Average Loss ($AUD)',
+                            angle: -90,
+                            position: 'insideLeft',
+                            offset: 1,
+                            style: {
+                                textAnchor: 'middle',
+                                fontSize: 18,
+                                fontWeight: 'bold',
+                            }
+                        }} />
                         <Tooltip content={<CustomTooltipLoss />} />
-                        <Legend />
+                        <Legend wrapperStyle={{ display: 'flex', justifyContent: 'center', paddingTop: '25px' }} />
                         <Bar dataKey="Average Loss for Seniors" fill="#82ca9d" radius={[30, 30, 30, 30]} />
                     </BarChart>
                 </ResponsiveContainer>

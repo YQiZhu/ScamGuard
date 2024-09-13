@@ -196,7 +196,7 @@ const RiskAssessmentPage = () => {
                                     {demographicData.map((scam, index) => (
                                         <div key={index} className="scam-risk-card">
                                             <p>
-                                                According to your demographic profile, your risk of encountering <strong>{scam['Scam Type']}</strong> is <strong>{scam['Exposure Risk']} times higher</strong> than the national average.
+                                                According to your demographic profile, your risk of encountering <strong>{scam['Scam Type']}</strong> is <strong>{scam['exposure_risk']} times higher</strong> than the national average.
                                             </p>
                                             <p>
                                                 For individuals in your demographic group, the average financial loss for seniors is estimated to be <strong>{scam['Average Loss for Seniors']}</strong>.

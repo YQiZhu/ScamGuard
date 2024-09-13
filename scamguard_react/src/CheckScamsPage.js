@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './CheckScamsPage.css';
 import CheckEmails from './CheckScams/CheckEmails';
-// import CheckMessages from './CheckScams/CheckMessages'; 
+import CheckMessages from './CheckScams/CheckMessages'; 
 // import CheckURLs from './CheckScams/CheckURLs';
 
 const CheckScamsPage = () => {
@@ -44,7 +44,7 @@ const CheckScamsPage = () => {
                     </div>
                     <div className="scam-checker-component">
                         {selectedType === 'email' && <CheckEmails />}
-                        {/* {selectedType === 'message' && <CheckMessages onSubmit={handleSubmit} />} */}
+                        {selectedType === 'message' && <CheckMessages />}
                         {/* {selectedType === 'url' && <CheckURLs onSubmit={handleSubmit} />} */}
                     </div>
                 </div>
