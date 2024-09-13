@@ -12,7 +12,7 @@ class ScamReport(models.Model):
     group_count = models.IntegerField(db_column='Group_Count')  # Group_Count
     category_id = models.IntegerField(db_column='Category_ID')  # Category_ID
     complainant_id = models.IntegerField(db_column='Complainant_ID')  # Complainant_ID
-    report_id = models.AutoField(primary_key=True, db_column='Report_ID')  # Report_ID
+    report_id = models.IntegerField(primary_key=True, db_column='Report_ID')  # Report_ID
 
     class Meta:
         db_table = 'scam_report'
@@ -20,7 +20,7 @@ class ScamReport(models.Model):
 class ScamCategory(models.Model):
     category_level_2 = models.CharField(max_length=100)
     category_level_3 = models.CharField(max_length=100)
-    category_id = models.AutoField(primary_key=True) 
+    category_id = models.IntegerField(primary_key=True) 
 
     class Meta:
         db_table = 'scam_category'
@@ -29,7 +29,7 @@ class Complainant(models.Model):
     complainant_age = models.CharField(max_length=100)
     complainant_gender = models.CharField(max_length=100)
     address_state = models.CharField(max_length=100)
-    complainant_id = models.AutoField(primary_key=True) 
+    complainant_id = models.IntegerField(primary_key=True) 
     
     class Meta:
         db_table = 'complainant'
