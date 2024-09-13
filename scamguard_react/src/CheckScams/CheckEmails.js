@@ -66,7 +66,7 @@ const CheckEmails = ({ onSubmit }) => {
       const notScamProbability = (100 - result.probability * 100).toFixed(2); // Calculate the inverse probability
       return (
         <div className="result-section">
-          <h1 style={{ color: 'green' }}>Not SCAM</h1>
+          <h1 style={{ color: 'green' }}>NOT SCAM</h1>
           <p>This email has a {probability}% chance of being legitimate.</p>
         </div>
       );

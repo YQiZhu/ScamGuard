@@ -59,7 +59,7 @@ const CheckMessages = ({ onSubmit }) => {
       const notScamProbability = (100 - result.probability * 100).toFixed(2); // Calculate the inverse probability
       return (
         <div className="result-section">
-          <h1 style={{ color: 'green' }}>Not SCAM</h1>
+          <h1 style={{ color: 'green' }}>NOT SCAM</h1>
           <p>This message has a {probability}% chance of being legitimate.</p>
         </div>
       );
@@ -85,7 +85,7 @@ const CheckMessages = ({ onSubmit }) => {
 
         <button className="submit-button" type="submit">Check If Scam</button>
       </form>
-      
+
       {loading && <div className="check-scam-loading">Loading ...</div>}
       {/* Display the result from the API */}
       {renderResultMessage()}
