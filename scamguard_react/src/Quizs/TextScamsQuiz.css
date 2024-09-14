@@ -227,6 +227,10 @@
     font-size: 18px;
 }
 
+.popup-content h1 {
+    text-align: center;
+}
+
 .close-popup-button {
     margin-top: 10px;
     padding: 8px 16px;

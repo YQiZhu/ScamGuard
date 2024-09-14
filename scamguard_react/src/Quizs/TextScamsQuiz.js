@@ -79,6 +79,7 @@ const TextScamsQuiz = () => {
   const [currentImage, setCurrentImage] = useState(images[0]);
   const [popupContent, setPopupContent] = useState();
   const [showPopup, setShowPopup] = useState(false);
+  const [extraMessage, setExtraMessage] = useState('');
 
   // Function to change the image randomly
   const changeImage = () => {
@@ -93,10 +94,18 @@ const TextScamsQuiz = () => {
   };
 
   // Function to handle area click
-  const handleAreaClick = () => {
+  const handleAreaClick = (area) => {
     // Split the feedback into an array of bullet points (based on full stops or custom delimiter)
     const feedbackPoints = currentImage.feedback; // Split by period and remove empty elements
     setPopupContent(feedbackPoints);
+
+    // Set message based on whether the title is 'Link' or not
+    if (area.title === 'Link') {
+      setExtraMessage(<span style={{ color: 'red'}}>SCAM!!!</span>);
+    } else {
+      setExtraMessage(<span style={{ color: 'green' }}>Nice Work!</span>);
+    }
+
     setShowPopup(true);
   };
 
@@ -144,8 +153,8 @@ const TextScamsQuiz = () => {
                 width: area.width,
                 height: area.height,
               }}
-              // onClick={() => handleAreaClick(`${area.title} clicked!`)}
-              onClick={handleAreaClick}
+              onClick={() => handleAreaClick(area)}
+              // onClick={handleAreaClick}
             ></div>
           ))}
           {/* Clickable area over 'Messages' */}
@@ -184,9 +193,10 @@ const TextScamsQuiz = () => {
           <div className="popup-modal">
             <div className="popup-content">
               <ul>
+                <h1>{extraMessage}</h1>
                 <h2>Explanation:</h2>
                 {popupContent.map((point, index) => (
-                  <li key={index}>{point.trim()}.</li> // Trim to remove extra spaces
+                  <li key={index}>{point.trim()}</li> // Trim to remove extra spaces
                 ))}
               </ul>
               <button onClick={() => setShowPopup(false)} className="close-popup-button">
