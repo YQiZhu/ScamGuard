@@ -4,26 +4,34 @@ from rest_framework.response import Response
 from rest_framework import status
 from django.conf import settings
 from django.views.decorators.csrf import csrf_exempt
+from django.core.validators import URLValidator
+from django.core.exceptions import ValidationError
 from gensim.parsing.preprocessing import remove_stopwords
 import os, re
 import string
 import joblib
-import numpy as np
 
 
 
 # Use BASE_DIR to dynamically generate absolute paths
-model_1_path = os.path.join(settings.BASE_DIR, 'model_interface', 'email_classifier.pkl')
-model_2_path = os.path.join(settings.BASE_DIR, 'model_interface', 'text_classification.pkl')
+model_email_path = os.path.join(settings.BASE_DIR, 'model_interface', 'email_classifier.pkl')
+model_message_path = os.path.join(settings.BASE_DIR, 'model_interface', 'text_classification.pkl')
+model_url_path = os.path.join(settings.BASE_DIR, 'model_interface', 'url_classifier.pkl')
+
+# Read vectorizer files
 email_vectorizer_path = os.path.join(settings.BASE_DIR, 'model_interface', 'email_vectorizer.pkl')
 text_vectorizer_path = os.path.join(settings.BASE_DIR, 'model_interface', 'text_vectorizer.pkl')
+url_vectorizer_path = os.path.join(settings.BASE_DIR, 'model_interface', 'url_vectorizer.pkl')
 
-model_1 = joblib.load(model_1_path)
-model_2 = joblib.load(model_2_path)
+# Load models
+model_email = joblib.load(model_email_path)
+model_message = joblib.load(model_message_path)
+model_url = joblib.load(model_url_path)
 
 # Load vectorizers
 email_vectorizer = joblib.load(email_vectorizer_path)
 text_vectorizer = joblib.load(text_vectorizer_path)
+url_vectorizer = joblib.load(url_vectorizer_path)
 
 # Email verification regular expression
 EMAIL_REGEX = r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$'
@@ -39,9 +47,10 @@ def predict_value(request, model_type):
         data = request.data
 
         # For model_1: process sender_name, email_address, message_subject, message_body
-        if model_type == 'model_1':
+        # Only 'message_body' is required
+        if model_type == 'model_email':
             required_fields = {
-                'body': data.get('body')  # Only 'body' is required now
+                'body': data.get('body')
             }
 
             optional_fields = {
@@ -76,11 +85,11 @@ def predict_value(request, model_type):
             processed_input = email_vectorizer.transform([clean_input])
 
             # Use model_1 to make predictions
-            prediction = model_1.predict(processed_input)[0]
-            prob = model_1.predict_proba(processed_input)[0][prediction]
+            prediction = model_email.predict(processed_input)[0]
+            prob = model_email.predict_proba(processed_input)[0][prediction]
 
         # For model_2: process only message_body
-        elif model_type == 'model_2':
+        elif model_type == 'model_message':
             message_body = data.get('body')
 
             # Data validation: Check if there are empty fields
@@ -95,11 +104,33 @@ def predict_value(request, model_type):
             processed_input = text_vectorizer.transform([clean_input])
 
             # Use model_2 to make predictions
-            prediction = model_2.predict(processed_input)[0]
-            prob = model_2.predict_proba(processed_input)[0][prediction]
+            prediction = model_message.predict(processed_input)[0]
+            prob = model_message.predict_proba(processed_input)[0][prediction]
+
+            # For the third model (URL model)
+        elif model_type == 'model_url':
+            url_input = data.get('url')
+
+            if not url_input:
+                return Response({"error": "This is not a URL! Please try again."}, status=status.HTTP_400_BAD_REQUEST)
+
+            # URL Validation
+            url_validator = URLValidator()
+            try:
+                url_validator(url_input)
+            except ValidationError:
+                return Response({"error": "Invalid URL format!"}, status=status.HTTP_400_BAD_REQUEST)
+
+            # If URL is valid, proceed with pre-processing
+            # Please write your url preprocessing here !!! Hey Angus! Here! Do u see me ??
+
+            # Use model_url to make predictions
+            # prediction = model_url.predict(processed_input)[0]
+            # prob = model_url.predict_proba(processed_input)[0][prediction]
+
 
         else:
-            return Response({"error": "You have to choose one model for risk assessment"}, status=status.HTTP_400_BAD_REQUEST)
+            return Response({"error": "You have to choose one model for Scam Detector"}, status=status.HTTP_400_BAD_REQUEST)
 
         # Return prediction results
         return Response({"prediction": int(prediction), "probability": float(prob)}, status=status.HTTP_200_OK)
