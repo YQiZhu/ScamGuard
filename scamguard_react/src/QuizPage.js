@@ -15,7 +15,8 @@ const QuizPage = () => {
 
             {/* Main Content */}
             <main>
-                <button onClick={() => navigate('/text-scams-quiz')}>Get Started</button>
+                <button onClick={() => navigate('/text-scams-quiz')}>Get Started for text scams</button>
+                <button onClick={() => navigate('/email-scams-quiz')}>Get Started for email scams</button>
             </main>
         </div>
     );
