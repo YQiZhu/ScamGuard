@@ -122,11 +122,12 @@ def predict_value(request, model_type):
                 return Response({"error": "Invalid URL format!"}, status=status.HTTP_400_BAD_REQUEST)
 
             # If URL is valid, proceed with pre-processing
-            # Please write your url preprocessing here !!! Hey Angus! Here! Do u see me ??
+            clean_input = re.sub(r'^https?://', '', url_input)
+            processed_input = url_validator.transform([clean_input])
 
             # Use model_url to make predictions
-            # prediction = model_url.predict(processed_input)[0]
-            # prob = model_url.predict_proba(processed_input)[0][prediction]
+            prediction = model_url.predict(processed_input)[0]
+            prob = model_url.predict_proba(processed_input)[0][prediction]
 
 
         else:
