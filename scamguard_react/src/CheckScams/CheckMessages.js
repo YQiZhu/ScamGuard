@@ -88,7 +88,7 @@ const CheckMessages = ({ onSubmit }) => {
 
       {loading && <div className="check-scam-loading">Loading ...</div>}
       {/* Display the result from the API */}
-      {renderResultMessage()}
+      {!loading && renderResultMessage()}
     </div>
 
   );
