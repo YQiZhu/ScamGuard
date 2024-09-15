@@ -23,11 +23,6 @@ def load_data():
     merged_df = scam_report_df.merge(complainant_df, on='complainant_id', how='left')
     whole_df = merged_df.merge(scam_category_df, on='category_id', how='left')
 
-    return whole_df
-
-whole_df = load_data()
-
-def data_filtered():
     ac11_df = whole_df
 
     # Convert 'start_of_month' to datetime
@@ -42,10 +37,12 @@ def data_filtered():
 
     return ac11_filtered
 
-ac11_filtered = data_filtered()
+# ac11_filtered = data_filtered()
 
 @require_GET
 def get_most_frequent_scams(request):
+    ac11_filtered = load_data()
+    
     # ac11_df = whole_df
 
     # # Convert 'start_of_month' to datetime
@@ -79,7 +76,8 @@ def get_most_frequent_scams(request):
 
 @require_GET
 def get_scams_highest_loss(request):
-    ac12_filtered = ac11_filtered
+
+    ac12_filtered = load_data()
 
     # Group by the data and display the sum for 'amount_lost'
     ac12_grouped = ac12_filtered.groupby(['start_of_month', 'complainant_age', 'category_level_3'])[['amount_lost']].sum().reset_index()
@@ -101,8 +99,9 @@ def get_scams_highest_loss(request):
 
 @require_GET
 def get_most_scams_contact_methods(request):
-    ac13_filtered = ac11_filtered
 
+    ac13_filtered = load_data()
+    
     # Group the data by 'scam_contact_mode'
     ac13_grouped = ac13_filtered.groupby(['start_of_month', 'complainant_age', 'scam_contact_mode'])['number_of_reports'].sum().reset_index()
 

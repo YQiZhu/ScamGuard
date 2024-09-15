@@ -66,13 +66,14 @@ def load_data():
 
     return filtered_df
 
-filtered_df = load_data()
+# filtered_df = load_data()
 
 # View function for AC5.1
 @csrf_exempt
 def get_ac51_view(request):
 
     if request.method == 'POST':
+        filtered_df = load_data()
         data = json.loads(request.body)
         selected_contact_method = data.get('contact_method')
 
@@ -165,6 +166,7 @@ def get_ac51_view(request):
 def get_ac52_view(request):
     
     if request.method == 'POST':
+        filtered_df = load_data()
         data = json.loads(request.body)
         selected_gender = data.get('gender')
         selected_location = data.get('location')
