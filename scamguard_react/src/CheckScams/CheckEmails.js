@@ -34,7 +34,7 @@ const CheckEmails = ({ onSubmit }) => {
       body: emailBody,
     };
 
-    axios.post('https://scamguard.live/api/predict/model1/', emailData)
+    axios.post('https://scamguard.live/api/predict/email/', emailData)
       .then((response) => {
         // Handle the response
         setResult(response.data); // Store the response in state

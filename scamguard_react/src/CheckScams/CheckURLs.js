@@ -2,18 +2,18 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './CheckEmails.css'; // Import the CSS file
 
-const CheckMessages = ({ onSubmit }) => {
-  const [messageBody, setMessageBody] = useState('');
+const CheckURLs = ({ onSubmit }) => {
+  const [urlBody, setURLBody] = useState('');
   const [result, setResult] = useState(null); // State to store the result from the API
-  const [error, setError] = useState(''); // State for error message
+  const [error, setError] = useState(''); // State for error URL
   const [loading, setLoading] = useState(false); // State for loading indicator
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Check if messageBody is empty
-    if (!messageBody) {
-      setError("Email body is required.");
+    // Check if URLBody is empty
+    if (!urlBody) {
+      setError("URL is required.");
       return;
     }
 
@@ -24,11 +24,11 @@ const CheckMessages = ({ onSubmit }) => {
     setLoading(true);
 
     // Prepare the data for the request
-    const messageData = {
-      body: messageBody,
+    const urlData = {
+      url: urlBody,
     };
 
-    axios.post('https://scamguard.live/api/predict/message/', messageData)
+    axios.post('https://scamguard.live/api/predict/url/', urlData)
       .then((response) => {
         // Handle the response
         setResult(response.data); // Store the response in state
@@ -37,14 +37,14 @@ const CheckMessages = ({ onSubmit }) => {
         // alert("Prediction received! Check the result below.");
       })
       .catch((error) => {
-        // Handle error (e.g., missing fields or invalid Message)
+        // Handle error (e.g., missing fields or invalid url)
         setLoading(false);
         console.error("Error during the prediction:", error);
-        alert("An error occurred while checking the Message. Please try again.");
+        alert("An error occurred while checking the URL. Please try again.");
       });
   };
 
-  const renderResultMessage = () => {
+  const renderResultURL = () => {
     if (!result) return null;
 
     const probability = (result.probability * 100).toFixed(2); // Convert to percentage and round to 2 decimal places
@@ -52,7 +52,7 @@ const CheckMessages = ({ onSubmit }) => {
       return (
         <div className="result-section">
           <h1 style={{ color: 'red' }}>SCAM</h1>
-          <p>This message has a {probability}% chance of being a SCAM.</p>
+          <p>This url has a {probability}% chance of being a SCAM.</p>
         </div>
       );
     } else {
@@ -60,7 +60,7 @@ const CheckMessages = ({ onSubmit }) => {
       return (
         <div className="result-section">
           <h1 style={{ color: 'green' }}>NOT SCAM</h1>
-          <p>This message has a {probability}% chance of being legitimate.</p>
+          <p>This url has a {probability}% chance of being legitimate.</p>
         </div>
       );
     }
@@ -71,16 +71,16 @@ const CheckMessages = ({ onSubmit }) => {
       <form className="check-emails-form" onSubmit={handleSubmit}>
 
         <div className="check-emails-form-group">
-          <label>Enter Message Body (required)</label>
+          <label>Enter URL in below field (required)</label>
           <textarea
-            value={messageBody}
-            onChange={(e) => setMessageBody(e.target.value)}
-            placeholder="Click and type the message's body here..."
+            value={urlBody}
+            onChange={(e) => setURLBody(e.target.value)}
+            placeholder="Click and type the url body here..."
             className="textarea-field"
           ></textarea>
         </div>
 
-        {/* Error message for missing email body */}
+        {/* Error url for missing email body */}
         {error && <p className="check-scam-error-message">{error}</p>}
 
         <button className="submit-button" type="submit">Check If Scam</button>
@@ -88,10 +88,10 @@ const CheckMessages = ({ onSubmit }) => {
 
       {loading && <div className="check-scam-loading">Loading ...</div>}
       {/* Display the result from the API */}
-      {renderResultMessage()}
+      {renderResultURL()}
     </div>
 
   );
 };
 
-export default CheckMessages;
+export default CheckURLs;
