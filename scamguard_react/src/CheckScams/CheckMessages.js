@@ -13,7 +13,7 @@ const CheckMessages = () => {
 
     // Check if messageBody is empty
     if (!messageBody) {
-      setError("Email body is required.");
+      setError("Message body is required.");
       return;
     }
 

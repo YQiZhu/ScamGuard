@@ -7,9 +7,11 @@ const EmailScamsQuiz = () => {
         {
             title: 'Scenario 1', img: '/images/reallife_scenario/email_scams/Scam-email1.png',
             feedback: [
-                "Unfamiliar Link: The URL (post.deliverypackage.info) is unfamiliar and not from a legitimate delivery service.",
-                "Urgent Language: Scammers use pressure tactics like “immediate action.” ",
-                "Unexpected Message: If you weren’t expecting a package, it’s likely fake. If you're concerned about a real delivery, contact the company directly via their official website or customer service."
+                "Suspicious Sender: The email comes from 'icloudsecure.co', not a legitimate Apple domain.",
+                "Grammar Issues: There are noticeable errors, like 'you photos and videos,' which is uncommon for official emails.",
+                "Urgency Tactic: The message pressures you to act quickly, a common scam strategy.",
+                "Fake Links: The 'upgrade' link may lead to a phishing site. Always verify URLs before clicking.",
+                "Always check directly through official websites when in doubt."
             ],
             areas: [
                 { title: 'Delete', top: '70px', left: '32px', width: '30px', height: '40px' },
@@ -20,7 +22,11 @@ const EmailScamsQuiz = () => {
         },
         {
             title: 'Scenario 2', img: '/images/reallife_scenario/email_scams/Scam-email2.png',
-            feedback: ["The .buzz domain is not typically used for legitimate business websites, especially for toll companies, which usually use .com, .com.au, or .gov.au. The domain (collections-service-au.buzz) doesn’t match LINKT’s official domain, which would be something like linkt.com.au. You can log in to the official website to check for any overdue payments or tolls without the risk of being directed to a fraudulent site."
+            feedback: [
+                "Suspicious Sender: It’s from a Gmail account, not a legitimate '@paypal.com' domain.",
+                "Unexpected Payment: If you didn’t make a $35 payment, it's likely fake.",
+                "Urgency to Click: The 'Activate PayPal Now' button creates urgency, potentially leading to a phishing site.",
+                "Always verify by logging directly into your PayPal account, rather than clicking email links."             
             ],
             areas: [
                 { title: 'Delete', top: '70px', left: '32px', width: '30px', height: '40px' },
@@ -32,7 +38,9 @@ const EmailScamsQuiz = () => {
         {
             title: 'Scenario 3', img: '/images/reallife_scenario/email_scams/Scam-email3.png',
             feedback: [
-                "The URL uses 'Medicaid' instead of 'Medicare,' which is a common tactic scammers use to confuse recipients. Government-related websites in Australia typically end in '.gov.au' instead of '.com.' Legitimate Medicare communication would use a secure, official domain."
+                "Unexpected Order: If you didn’t place a $209.12 order, it's suspicious.",
+                "Generic Details: It only says 'Ship to: John,' withoud any address or other information which is vague and typical of phishing emails.",
+                "If you suspect a fake order, always go directly to the Amazon website by typing the URL into your browser instead of clicking links in an email."        
             ],
             areas: [
                 { title: 'Delete', top: '70px', left: '32px', width: '30px', height: '40px' },
@@ -43,7 +51,10 @@ const EmailScamsQuiz = () => {
         {
             title: 'Scenario 4', img: '/images/reallife_scenario/email_scams/Scam-email4.png',
             feedback: [
-                "The fake link appears legitimate, but the domain is slightly altered (e.g., 'verify-link.co' instead of a real Auspost domain). It creates a sense of urgency by telling her that her package won't be delivered without immediate action. Scammers often use  this tactic to trick people into revealing personal information."
+                "Suspicious Sender: It uses 'sharep0int@sharep0int.com' with a zero, mimicking the real SharePoint domain.",
+                "File Access: 'Employee Bonuses' should be personalized, yet the email states, 'This link will work for anyone,' which is suspicious.",
+                "Fake Branding: The 'Minisoft' logo instead of Microsoft is suspicious.",
+                "To stay safe, avoid clicking the link, and if you're unsure about the file, contact the sender directly or verify through official channels like your company's SharePoint system."
             ],
             areas: [
                 { title: 'Delete', top: '70px', left: '32px', width: '30px', height: '40px' },
