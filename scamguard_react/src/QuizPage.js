@@ -31,6 +31,10 @@ const QuizPage = () => {
                         </div>
                     </div>
                 </div>
+
+                <div className='quiz-page-img'>
+                    <img src='/images/reallife_scenario/Seniors Using Social Media.png' alt="quiz page img" />
+                </div>
             </main>
         </div>
     );

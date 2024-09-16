@@ -64,7 +64,7 @@ const CheckEmails = () => {
     } else {
       return (
         <div className="result-section">
-          <p>This email has a <strong>{probability}%</strong> chance of being <strong style={{color: 'green'}}>legitimate</strong>.</p>
+          <p>This email has a <strong>{probability}%</strong> chance of being <strong style={{color: 'green'}}>LEGITIMATE</strong>.</p>
         </div>
       );
     }

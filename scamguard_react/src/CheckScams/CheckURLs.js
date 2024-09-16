@@ -63,7 +63,7 @@ const CheckURLs = () => {
         } else {
             return (
                 <div className="result-section">
-                    <p>This url has a <strong>{probability}%</strong> chance of being <strong style={{color: 'green'}}>legitimate</strong>.</p>
+                    <p>This url has a <strong>{probability}%</strong> chance of being <strong style={{color: 'green'}}>LEGITIMATE</strong>.</p>
                 </div>
             );
         }

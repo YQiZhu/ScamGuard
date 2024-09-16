@@ -16,8 +16,8 @@ const EmailScamsQuiz = () => {
             areas: [
                 { title: 'Delete', top: '70px', left: '32px', width: '30px', height: '40px' },
                 { title: 'Close', top: '20px', right: '0px', width: '30px', height: '22px' },
-                { title: 'Link', top: '370px', right: '245px', width: '115px', height: '25px', link: 'http://post.deliverypackage.info' },
-                { title: 'Link', top: '410px', left: '240px', width: '310px', height: '25px', link: 'http://post.deliverypackage.info' },
+                { title: 'Link', top: '370px', right: '245px', width: '115px', height: '25px', link: 'http://icloud-storage-upgrade.com' },
+                { title: 'Link', top: '410px', left: '240px', width: '310px', height: '25px', link: 'http://icloud.secure.me' },
             ] //done
         },
         {
@@ -26,13 +26,13 @@ const EmailScamsQuiz = () => {
                 "Suspicious Sender: It’s from a Gmail account, not a legitimate '@paypal.com' domain.",
                 "Unexpected Payment: If you didn’t make a $35 payment, it's likely fake.",
                 "Urgency to Click: The 'Activate PayPal Now' button creates urgency, potentially leading to a phishing site.",
-                "Always verify by logging directly into your PayPal account, rather than clicking email links."             
+                "Always verify by logging directly into your PayPal account, rather than clicking email links."
             ],
             areas: [
                 { title: 'Delete', top: '70px', left: '32px', width: '30px', height: '40px' },
                 { title: 'Close', top: '20px', right: '0px', width: '30px', height: '22px' },
-                { title: 'Link', top: '538px', left: '340px', width: '115px', height: '30px' },
-                { title: 'Link', top: '590px', right: '315px', width: '135px', height: '25px' },
+                { title: 'Link', top: '538px', left: '340px', width: '115px', height: '30px', link: 'http://paypal-account-secure-confirm.com' },
+                { title: 'Link', top: '590px', right: '315px', width: '135px', height: '25px', link: 'http://paypal-purchase-details-review.com' },
             ] // done
         },
         {
@@ -40,12 +40,12 @@ const EmailScamsQuiz = () => {
             feedback: [
                 "Unexpected Order: If you didn’t place a $209.12 order, it's suspicious.",
                 "Generic Details: It only says 'Ship to: John,' withoud any address or other information which is vague and typical of phishing emails.",
-                "If you suspect a fake order, always go directly to the Amazon website by typing the URL into your browser instead of clicking links in an email."        
+                "If you suspect a fake order, always go directly to the Amazon website by typing the URL into your browser instead of clicking links in an email."
             ],
             areas: [
                 { title: 'Delete', top: '70px', left: '32px', width: '30px', height: '40px' },
                 { title: 'Close', top: '20px', right: '0px', width: '30px', height: '22px' },
-                { title: 'Link', top: '375px', left: '280px', width: '115px', height: '30px' },
+                { title: 'Link', top: '375px', left: '280px', width: '115px', height: '30px', link: 'https://www.amazon.com/' },
             ] //done
         },
         {
@@ -59,7 +59,7 @@ const EmailScamsQuiz = () => {
             areas: [
                 { title: 'Delete', top: '70px', left: '32px', width: '30px', height: '40px' },
                 { title: 'Close', top: '20px', right: '0px', width: '30px', height: '22px' },
-                { title: 'Link', top: '565px', left: '340px', width: '115px', height: '30px' },
+                { title: 'Link', top: '565px', left: '340px', width: '115px', height: '30px', link: 'http://sharep0int-files-portal.com/open-docs' },
             ]
         }
     ];
@@ -115,7 +115,7 @@ const EmailScamsQuiz = () => {
         <div className="text-scams-quiz">
             {/* Header Section */}
             <header className="text-scams-quiz-header">
-                <h1>Text Scam Awareness</h1>
+                <h1>Email Scam Awareness</h1>
                 <p>Challenge yourself and see how much you know about identifying text scams!</p>
             </header>
 
