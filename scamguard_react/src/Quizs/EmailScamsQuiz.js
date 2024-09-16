@@ -122,11 +122,11 @@ const EmailScamsQuiz = () => {
             {/* Instruction Section */}
             <div className="text-scams-quiz-instructions">
                 <p>
-                    Imagine you receive an email with a link or clickable buttom. What would you do next?
+                    Imagine you receive an email with a link or clickable button. What would you do next?
                 </p>
                 <ul>
                     <li>Would you delete or ignore the email right away?</li>
-                    <li>Or would you click the link or the buttom without checking if it's legitimate?</li>
+                    <li>Or would you click the link or the button without checking if it's legitimate?</li>
                 </ul>
                 <p>
                     Click on the image below as if you're making the choice in real life. Choose wisely—what's the safest action. Make your choice in this quiz!

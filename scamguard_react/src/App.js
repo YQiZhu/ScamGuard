@@ -1,9 +1,4 @@
-import logo from './logo.svg';
 import React, { useRef } from 'react';
-import { ShaderGradientCanvas, ShaderGradient } from 'shadergradient'
-import * as reactSpring from '@react-spring/three'
-import * as drei from '@react-three/drei'
-import * as fiber from '@react-three/fiber'
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
 import HomePage from './HomePage';

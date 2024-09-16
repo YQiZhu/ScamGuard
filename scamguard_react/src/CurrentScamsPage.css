@@ -10,7 +10,7 @@
     /* Adjust width as needed */
     background-color: #f0f0f0;
     /* Light background color */
-    color: black;
+    color: #4F67A6;
     /* Default text color */
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
@@ -47,7 +47,7 @@
 }
 
 .Side-menu a {
-    color: rgb(5, 5, 33);
+    color: #4F67A6;
     text-decoration: underline;
     font-size: 15px;
     display: block;
@@ -101,5 +101,9 @@
 .popular-contact-section {
     /* padding: 20px; */
     background-color: #ffffff;
+    color: #4F67A6;
+}
+
+.CurrentScamsPage{
     color: #4F67A6;
 }

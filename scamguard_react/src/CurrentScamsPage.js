@@ -49,6 +49,9 @@ const CurrentScamsPage = () => {
                     <PopularContactMethods />
                 </section>
             </main>
+            <p>
+                Data obtained from <a href="https://www.scamwatch.gov.au/" target="_blank" rel="noopener noreferrer" style={{  textDecoration: 'none' }}>Scamwatch</a> © <a href="https://au.creativecommons.net/" target="_blank" rel="noopener noreferrer" style={{  textDecoration: 'none' }}>Commonwealth of Australia</a>
+            </p>
         </div>
     );
 };

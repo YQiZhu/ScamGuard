@@ -57,7 +57,7 @@ const RiskAssessmentPage = () => {
     // Handle Demographic Risk form submission
     const handleSubmitDemographic = (e) => {
         e.preventDefault();
-        if (!gender || !location ) {
+        if (!gender || !location) {
             setDemographicError('Please fill in all demographic fields.');
             return;
         }
@@ -217,7 +217,9 @@ const RiskAssessmentPage = () => {
 
                 </section>
             </main>
-
+            <p>
+                Data obtained from <a href="https://www.scamwatch.gov.au/" target="_blank" rel="noopener noreferrer" style={{  textDecoration: 'none' }}>Scamwatch</a> © <a href="https://au.creativecommons.net/" target="_blank" rel="noopener noreferrer" style={{  textDecoration: 'none' }}>Commonwealth of Australia</a>
+            </p>
         </div>
     );
 };
