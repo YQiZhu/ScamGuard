@@ -139,7 +139,7 @@ const RiskAssessmentPage = () => {
                             </section>
                         ) : (
                             <div className="no-data-message">
-                                <p>No data found for the selected contact method.</p>
+                                <p>No higher scam exposure risks were identified for selected contact method.</p>
                             </div>
                         )
                     )}
@@ -210,7 +210,7 @@ const RiskAssessmentPage = () => {
                             </section>
                         ) : (
                             <div className="no-data-message">
-                                <p>No data found for the selected demographic criteria.</p>
+                                <p>No higher scam exposure risks were identified for selected demographic criteria.</p>
                             </div>
                         )
                     )}

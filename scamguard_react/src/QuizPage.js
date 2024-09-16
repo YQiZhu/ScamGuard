@@ -7,16 +7,30 @@ const QuizPage = () => {
 
     return (
         <div className="QuizPage">
-            {/* Introduction Section */}
             <header className="quiz-header">
                 <h1>Quiz Page</h1>
-                <p>Test your knowledge against scam</p>
+                <p>Test your knowledge against scams</p>
             </header>
 
-            {/* Main Content */}
             <main>
-                <button onClick={() => navigate('/text-scams-quiz')}>Get Started for text scams</button>
-                <button onClick={() => navigate('/email-scams-quiz')}>Get Started for email scams</button>
+                <h2>Click on belows cards to start testing your scam identified knowledge</h2>
+                <div className="quiz-cards">
+                    <div className="quiz-card" onClick={() => navigate('/text-scams-quiz')}>
+                        <img src={require('./images/text_scams_icon.png')} alt="Text Scams Icon" className="quiz-icon" />
+                        <div className="quiz-text-btn">
+                            <h2>Text Scams</h2>
+                            <button className="quiz-button">Get started for text scams quiz!</button>
+                        </div>
+                    </div>
+
+                    <div className="quiz-card" onClick={() => navigate('/email-scams-quiz')}>
+                        <img src={require('./images/email_scams_icon.png')} alt="Email Scams Icon" className="quiz-icon" />
+                        <div className="quiz-text-btn">
+                            <h2>Email Scams</h2>
+                            <button className="quiz-button">Get started for email scams quiz!</button>
+                        </div>
+                    </div>
+                </div>
             </main>
         </div>
     );

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './CheckEmails.css'; // Import the CSS file
 
-const CheckMessages = ({ onSubmit }) => {
+const CheckMessages = () => {
   const [messageBody, setMessageBody] = useState('');
   const [result, setResult] = useState(null); // State to store the result from the API
   const [error, setError] = useState(''); // State for error message
@@ -51,15 +51,13 @@ const CheckMessages = ({ onSubmit }) => {
     if (result.prediction === 1) {
       return (
         <div className="result-section">
-          <h1 style={{ color: 'red' }}>SCAM</h1>
-          <p>This message has a {probability}% chance of being a SCAM.</p>
+          <p>This message has a <strong>{probability}%</strong> chance of being a <strong style={{color: 'red'}}>SCAM.</strong></p>
         </div>
       );
     } else {
       return (
         <div className="result-section">
-          <h1 style={{ color: 'green' }}>NOT SCAM</h1>
-          <p>This message has a {probability}% chance of being legitimate.</p>
+          <p>This message has a <strong>{probability}%</strong> chance of being <strong style={{color: 'green'}}>legitimate</strong>.</p>
         </div>
       );
     }

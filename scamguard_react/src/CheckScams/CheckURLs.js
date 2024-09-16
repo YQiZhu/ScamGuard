@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './CheckEmails.css'; // Import the CSS file
 
-const CheckURLs = ({ onSubmit }) => {
+const CheckURLs = () => {
     const [urlBody, setURLBody] = useState('');
     const [result, setResult] = useState(null); // State to store the result from the API
     const [error, setError] = useState(''); // State for error URL
@@ -57,15 +57,13 @@ const CheckURLs = ({ onSubmit }) => {
         if (result.prediction === 1) {
             return (
                 <div className="result-section">
-                    <h1 style={{ color: 'red' }}>SCAM</h1>
-                    <p>This url has a {probability}% chance of being a SCAM.</p>
+                    <p>This url has a <strong>{probability}%</strong> chance of being a <strong style={{color: 'red'}}>SCAM.</strong></p>
                 </div>
             );
         } else {
             return (
                 <div className="result-section">
-                    <h1 style={{ color: 'green' }}>NOT SCAM</h1>
-                    <p>This url has a {probability}% chance of being legitimate.</p>
+                    <p>This url has a <strong>{probability}%</strong> chance of being <strong style={{color: 'green'}}>legitimate</strong>.</p>
                 </div>
             );
         }
@@ -76,7 +74,7 @@ const CheckURLs = ({ onSubmit }) => {
             <form className="check-emails-form" onSubmit={handleSubmit}>
 
                 <div className="check-emails-form-group">
-                    <label>Enter URL in below field (required)</label>
+                    <label>Enter URL with 'https://' or 'http://' header (required)</label>
                     <textarea
                         value={urlBody}
                         onChange={(e) => setURLBody(e.target.value)}

@@ -14,8 +14,8 @@ const EmailScamsQuiz = () => {
             areas: [
                 { title: 'Delete', top: '70px', left: '32px', width: '30px', height: '40px' },
                 { title: 'Close', top: '20px', right: '0px', width: '30px', height: '22px' },
-                { title: 'Link', top: '370px', right: '245px', width: '115px', height: '25px' },
-                { title: 'Link', top: '410px', left: '240px', width: '310px', height: '25px' },
+                { title: 'Link', top: '370px', right: '245px', width: '115px', height: '25px', link: 'http://post.deliverypackage.info' },
+                { title: 'Link', top: '410px', left: '240px', width: '310px', height: '25px', link: 'http://post.deliverypackage.info' },
             ] //done
         },
         {
@@ -58,6 +58,7 @@ const EmailScamsQuiz = () => {
     const [popupContent, setPopupContent] = useState();
     const [showPopup, setShowPopup] = useState(false);
     const [extraMessage, setExtraMessage] = useState('');
+    const [hoveredLink, setHoveredLink] = useState(null);
 
     // Function to change the image randomly
     const changeImage = () => {
@@ -85,6 +86,18 @@ const EmailScamsQuiz = () => {
         }
 
         setShowPopup(true);
+    };
+
+    // Function to handle mouse enter for the link area (hover event)
+    const handleMouseEnter = (area) => {
+        if (area.title === 'Link') {
+            setHoveredLink(area.link); // Display the link when hovered
+        }
+    };
+
+    // Function to handle mouse leave from the link area
+    const handleMouseLeave = () => {
+        setHoveredLink(null); // Hide the link when the mouse leaves
     };
 
     return (
@@ -132,9 +145,18 @@ const EmailScamsQuiz = () => {
                                 height: area.height,
                             }}
                             onClick={() => handleAreaClick(area)}
+                            onMouseEnter={() => handleMouseEnter(area)}
+                            onMouseLeave={handleMouseLeave}
                         // onClick={handleAreaClick}
                         ></div>
                     ))}
+
+                    {/* Display hovered link in a popup or tooltip */}
+                    {hoveredLink && (
+                        <div className="hovered-link-popup">
+                            <p>{hoveredLink}</p>
+                        </div>
+                    )}
                     {/* Clickable area over 'Messages' */}
                     {/* <div
                         className="clickable-area"

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './CheckEmails.css'; // Import the CSS file
 
-const CheckEmails = ({ onSubmit }) => {
+const CheckEmails = () => {
   const [senderName, setSenderName] = useState('');
   const [senderEmail, setSenderEmail] = useState('');
   const [emailSubject, setEmailSubject] = useState('');
@@ -58,15 +58,13 @@ const CheckEmails = ({ onSubmit }) => {
     if (result.prediction === 1) {
       return (
         <div className="result-section">
-          <h1 style={{ color: 'red' }}>SCAM</h1>
-          <p>This email has a {probability}% chance of being a SCAM.</p>
+          <p>This email has a <strong>{probability}%</strong> chance of being a <strong style={{color: 'red'}}>SCAM.</strong></p>
         </div>
       );
     } else {
       return (
         <div className="result-section">
-          <h1 style={{ color: 'green' }}>NOT SCAM</h1>
-          <p>This email has a {probability}% chance of being legitimate.</p>
+          <p>This email has a <strong>{probability}%</strong> chance of being <strong style={{color: 'green'}}>legitimate</strong>.</p>
         </div>
       );
     }
