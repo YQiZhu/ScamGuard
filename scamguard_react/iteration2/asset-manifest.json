@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/iteration2/static/css/main.3cdbe10a.css",
+    "main.js": "/iteration2/static/js/main.737f4cc2.js",
+    "static/js/210.81e3a53b.chunk.js": "/iteration2/static/js/210.81e3a53b.chunk.js",
+    "static/js/540.331e9481.chunk.js": "/iteration2/static/js/540.331e9481.chunk.js",
+    "static/js/453.2fa3f6c9.chunk.js": "/iteration2/static/js/453.2fa3f6c9.chunk.js",
+    "static/media/report_help.png": "/iteration2/static/media/report_help.c9b374db94ba4676fbe7.png",
+    "static/media/check_scam_risk.png": "/iteration2/static/media/check_scam_risk.2cbfa2dac3c6252ed5c8.png",
+    "static/media/verifying.png": "/iteration2/static/media/verifying.ec375ca01e0abd0b5e02.png",
+    "static/media/scam_detect.png": "/iteration2/static/media/scam_detect.a359a01c43cc9fa3197e.png",
+    "static/media/scam_alert_no_background.png": "/iteration2/static/media/scam_alert_no_background.8f841e5999b2006e8ab8.png",
+    "static/media/text_scams_icon.png": "/iteration2/static/media/text_scams_icon.7e2962e427a03b51c375.png",
+    "static/media/email_scams_icon.png": "/iteration2/static/media/email_scams_icon.5fc406e224e6f119a7b1.png",
+    "index.html": "/iteration2/index.html",
+    "main.3cdbe10a.css.map": "/iteration2/static/css/main.3cdbe10a.css.map",
+    "main.737f4cc2.js.map": "/iteration2/static/js/main.737f4cc2.js.map",
+    "210.81e3a53b.chunk.js.map": "/iteration2/static/js/210.81e3a53b.chunk.js.map",
+    "540.331e9481.chunk.js.map": "/iteration2/static/js/540.331e9481.chunk.js.map",
+    "453.2fa3f6c9.chunk.js.map": "/iteration2/static/js/453.2fa3f6c9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3cdbe10a.css",
+    "static/js/main.737f4cc2.js"
+  ]
+}
