@@ -10,12 +10,7 @@ import json
 
 
 # Create the dictionary for links based on 'Category_Level_2'
-links_dict = {
-    'Buying or selling': 'https://scamguard.live/product-and-service-scams',
-    'Dating and romance': 'https://scamguard.live/romance-scams',
-    'Investment scams': 'https://scamguard.live/investment-scams',
-    'Jobs and employment': 'https://scamguard.live/job-scams'
-}
+
 
 contact_mode_links = {
     'Email': 'https://scamguard.live/email-scams',
@@ -117,6 +112,13 @@ def get_ac51_view(request):
 
         ac51_selected = ac51_selected.copy()
 
+        links_dict = {
+            'Buying or selling': 'https://scamguard.live/product-and-service-scams',
+            'Dating and romance': 'https://scamguard.live/romance-scams',
+            'Investment scams': 'https://scamguard.live/investment-scams',
+            'Jobs and employment': 'https://scamguard.live/job-scams'
+        }
+        
         # Create the 'link' column
         ac51_selected['link'] = ac51_selected['category_level_2'].map(links_dict)
 
@@ -250,7 +252,13 @@ def get_ac52_view(request):
 
         ac52_selected = ac52_selected.copy()
 
-        
+        links_dict = {
+            'Attempts to gain your personal information' : 'https://scamguard.live/email-scams',
+            'Buying or selling': 'https://scamguard.live/product-and-service-scams',
+            'Dating and romance': 'https://scamguard.live/romance-scams',
+            'Investment scams': 'https://scamguard.live/investment-scams',
+            'Jobs and employment': 'https://scamguard.live/job-scams'
+        }
         
         # Create the 'link' column (assuming links_dict and contact_mode_links are defined elsewhere)
         ac52_selected['link'] = ac52_selected['category_level_2'].map(links_dict)
