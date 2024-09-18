@@ -57,7 +57,7 @@ const RiskAssessmentPage = () => {
     // Handle Demographic Risk form submission
     const handleSubmitDemographic = (e) => {
         e.preventDefault();
-        if (!gender || !location ) {
+        if (!gender || !location) {
             setDemographicError('Please fill in all demographic fields.');
             return;
         }
@@ -139,7 +139,7 @@ const RiskAssessmentPage = () => {
                             </section>
                         ) : (
                             <div className="no-data-message">
-                                <p>No data found for the selected contact method.</p>
+                                <p>No higher scam exposure risks were identified for selected contact method.</p>
                             </div>
                         )
                     )}
@@ -210,14 +210,16 @@ const RiskAssessmentPage = () => {
                             </section>
                         ) : (
                             <div className="no-data-message">
-                                <p>No data found for the selected demographic criteria.</p>
+                                <p>No higher scam exposure risks were identified for selected demographic criteria.</p>
                             </div>
                         )
                     )}
 
                 </section>
             </main>
-
+            <p>
+                Data obtained from <a href="https://www.scamwatch.gov.au/" target="_blank" rel="noopener noreferrer" style={{  textDecoration: 'none' }}>Scamwatch</a> © <a href="https://au.creativecommons.net/" target="_blank" rel="noopener noreferrer" style={{  textDecoration: 'none' }}>Commonwealth of Australia</a>
+            </p>
         </div>
     );
 };

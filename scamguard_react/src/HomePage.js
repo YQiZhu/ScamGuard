@@ -30,8 +30,13 @@ const HomePage = ({ scrollToTop }) => {
                     />
                 </ShaderGradientCanvas>
 
-                <h1>Staying safe from online scams</h1>
-                <p>Welcome to your go-to resource for staying safe from online scams.</p>
+                <div className='home-page-header-text'>
+                    <h1>Protecting seniors from scams</h1>
+                    <p>Welcome to your go-to resource for staying safe from online scams.</p>
+                </div>
+                <div class="home-page-image-container">
+                    <img src='/images/reallife_scenario/home_page1.jpg' alt="home page img" className='home-page-img' />
+                </div>
                 <div className="scroll-hint">
                     <span>Scroll Down ↓</span>
                 </div>

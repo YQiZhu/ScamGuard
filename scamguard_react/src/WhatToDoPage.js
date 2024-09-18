@@ -19,7 +19,7 @@ const WhatToDoPage = () => {
 
             <section className='what-to-do-step2'>
                 <h2>2. Report Scams</h2>
-                <p>Once you have contacted your financial institution, you need to take action to report the scam. This may help you recover the money you have lost and prevent others from being scammed. If you are not sure how to report a scam and what materials you need to provide, please <a href="/report-scam" target="_blank">click here</a> to jump to the "Report Scam" interface. We will guide you on how to report a scam and what materials you need to prepare.</p>
+                <p>Once you have contacted your financial institution, you need to take action to report the scam. This may help you recover the money you have lost and prevent others from being scammed. If you are not sure how to report a scam and what materials you need to provide, please <a href="/reportScam" target="_blank">click here</a> to jump to the "Report Scam" interface. We will guide you on how to report a scam and what materials you need to prepare.</p>
             </section>
 
             <section className='what-to-do-step3'>

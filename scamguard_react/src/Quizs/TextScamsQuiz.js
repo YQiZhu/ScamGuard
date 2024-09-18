@@ -123,7 +123,7 @@ const TextScamsQuiz = () => {
           Imagine you receive a text message with a link or phone number. What would you do next?
         </p>
         <ul>
-          <li>Would you delete the message right away?</li>
+          <li>Would you delete or ignore the message right away?</li>
           <li>Or would you click the link without checking if it's legitimate?</li>
         </ul>
         <p>
