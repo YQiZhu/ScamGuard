@@ -5,10 +5,21 @@ import './Header.css';
 const Header = () => {
   return (
     <nav>
-      <img src="/favicon.ico" alt="Logo" className="nav-icon" />
-      <p className="nav-text">ScamGuard</p>
+      <NavLink
+        to="/"
+        className="nav-icon-link"
+      >
+        <img src="/favicon.ico" alt="Logo" className="nav-icon" />
+      </NavLink>
+      <NavLink
+        to="/"
+        className="nav-icon-link"
+      >
+        <p className="nav-text">ScamGuard</p>
+      </NavLink>
+      {/* <p className="nav-text">ScamGuard</p> */}
       <ul>
-        <li>
+        {/* <li>
           <NavLink
             exact="true"
             to="/"
@@ -16,7 +27,7 @@ const Header = () => {
           >
             Home
           </NavLink>
-        </li>
+        </li> */}
         <li>
           <NavLink
             to="/currentScam"

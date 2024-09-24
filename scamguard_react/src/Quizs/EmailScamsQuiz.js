@@ -32,7 +32,7 @@ const EmailScamsQuiz = () => {
             areas: [
                 { title: 'Delete', top: '70px', left: '32px', width: '30px', height: '40px' },
                 { title: 'Close', top: '20px', right: '0px', width: '30px', height: '22px' },
-                { title: 'Link', top: '538px', left: '340px', width: '115px', height: '30px', link: 'http://paypal-account-secure-confirm.com' },
+                { title: 'Link', top: '544px', left: '342px', width: '115px', height: '25px', link: 'http://paypal-account-secure-confirm.com' },
                 { title: 'Link', top: '590px', right: '315px', width: '135px', height: '25px', link: 'http://paypal-purchase-details-review.com' },
             ] // done
         },
@@ -46,7 +46,7 @@ const EmailScamsQuiz = () => {
             areas: [
                 { title: 'Delete', top: '70px', left: '32px', width: '30px', height: '40px' },
                 { title: 'Close', top: '20px', right: '0px', width: '30px', height: '22px' },
-                { title: 'Link', top: '375px', left: '280px', width: '115px', height: '30px', link: 'https://www.amazon.com/' },
+                { title: 'Link', top: '379px', left: '291px', width: '100px', height: '26px', link: 'https://www.amazon.com/' },
             ] //done
         },
         {
@@ -60,7 +60,7 @@ const EmailScamsQuiz = () => {
             areas: [
                 { title: 'Delete', top: '70px', left: '32px', width: '30px', height: '40px' },
                 { title: 'Close', top: '20px', right: '0px', width: '30px', height: '22px' },
-                { title: 'Link', top: '565px', left: '340px', width: '115px', height: '30px', link: 'http://sharep0int-files-portal.com/open-docs' },
+                { title: 'Link', top: '570px', left: '340px', width: '115px', height: '25px', link: 'http://sharep0int-files-portal.com/open-docs' },
             ]
         }
     ];

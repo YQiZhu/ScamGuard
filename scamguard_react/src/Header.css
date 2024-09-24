@@ -61,3 +61,11 @@ nav ul li a.active-link {
     color: #e7782e;
     /* Keep the color for the active (clicked) state */
 }
+
+.nav-icon-link {
+    text-decoration: none;
+}
+
+.nav-icon-link p {
+    color: #ffffff;
+}
