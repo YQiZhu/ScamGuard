@@ -13,7 +13,8 @@ function JobScams() {
 
     // Function to go back to the previous page
     const goBack = () => {
-        navigate(-1); // This will navigate back to the previous page
+        // navigate(-1); // This will navigate back to the previous page
+        navigate('/identifyScam')
     };
 
     return (

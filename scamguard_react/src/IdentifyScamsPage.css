@@ -5,7 +5,6 @@
 
 .clickable-box p {
     margin: 0;
-    font-size: 18px;
 }
 
 .indentify-scams-header {
@@ -22,11 +21,6 @@
 
 .indentify-scams-header h1 {
     margin-bottom: 0%;
-}
-
-.indentify-scams-header p {
-    /* padding-top: 20px; */
-    font-size: 18px;
 }
 
 .scams-container {

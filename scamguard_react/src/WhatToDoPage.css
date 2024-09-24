@@ -15,7 +15,7 @@
 }
 
 .what-to-do-header p {
-    font-size: 18px;
+    /* font-size: 18px; */
     line-height: 1.5;
     /* padding: 20px; */
     max-width: 800px;
@@ -61,7 +61,7 @@
 
 .what-to-do-step1 p {
     /* margin-bottom: 10px; */
-    font-size: 18px;
+    /* font-size: 18px; */
     /* line-height: 1.5; */
     text-align: left;
 }
@@ -85,7 +85,7 @@
 
 .what-to-do-step2  p {
     /* font-size: 1rem; */
-    font-size: 18px;
+    /* font-size: 18px; */
     /* margin-bottom: 2px; */
     /* line-height: 1.5; */
     text-align: left;
@@ -121,7 +121,7 @@
 }
 
 .what-to-do-step3 p {
-    font-size: 18px;
+    /* font-size: 18px; */
     line-height: 1.5;
     text-align: left;
 }
@@ -148,7 +148,7 @@
 }
 
 .what-to-do-step4 p {
-    font-size: 18px;
+    /* font-size: 18px; */
     line-height: 1.5;
     padding-bottom: 20px;
     margin-bottom: 0;

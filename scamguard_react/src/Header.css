@@ -52,18 +52,12 @@ nav ul li a {
 nav ul li a:hover,
 nav ul li a:focus,
 nav ul li .active-link {
-    color: #000000;
+    color: #e7782e;
     /* This will apply the hover color when hovered or active */
 }
 
-/* Ensures the active link stays highlighted even if not hovered */
-nav ul li .active-link {
-    color: #000000;
-    /* The color to be applied when the link is active */
-}
-
-/* Optional: If you want the active link to have a slightly different hover effect */
-nav ul li .active-link:hover {
-    color: #000000;
-    /* Keeps the same color when hovering over the active link */
+/* Add this new rule to specifically target active links */
+nav ul li a.active-link {
+    color: #e7782e;
+    /* Keep the color for the active (clicked) state */
 }

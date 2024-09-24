@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './TextScamsQuiz.css'; // Assuming you want to use external CSS for styling
+import { useNavigate } from 'react-router-dom';
 
 const TextScamsQuiz = () => {
 
@@ -75,22 +76,34 @@ const TextScamsQuiz = () => {
     }
   ];
 
+  const scenarioRef = useRef(null); // Create a ref for the scenario section
+  const nextButtonRef = useRef(null); // Create a ref for the Next Scenario button
+
+  const navigate = useNavigate();
+
   // State to store the current image
-  const [currentImage, setCurrentImage] = useState(images[0]);
+  // const [currentImage, setCurrentImage] = useState(images[0]);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [popupContent, setPopupContent] = useState();
   const [showPopup, setShowPopup] = useState(false);
   const [extraMessage, setExtraMessage] = useState('');
 
+  const currentImage = images[currentIndex];
+
   // Function to change the image randomly
   const changeImage = () => {
-    let randomIndex;
-
-    // Ensure the new index is different from the current one
-    do {
-      randomIndex = Math.floor(Math.random() * images.length);
-    } while (images[randomIndex] === currentImage);
-    setCurrentImage(images[randomIndex]);
+    if (currentIndex < images.length - 1) {
+      setCurrentIndex(currentIndex + 1); // Move to the next scenario
+    } else {
+      // Optionally, reset or do something when the last scenario is reached
+      setCurrentIndex(0); // Loop back to the first scenario, or handle it differently
+    }
     setShowPopup(false);
+
+    // Scroll back to the scenario section
+    if (scenarioRef.current) {
+      scenarioRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   // Function to handle area click
@@ -101,7 +114,7 @@ const TextScamsQuiz = () => {
 
     // Set message based on whether the title is 'Link' or not
     if (area.title === 'Link') {
-      setExtraMessage(<span style={{ color: 'red'}}>SCAM!!!</span>);
+      setExtraMessage(<span style={{ color: 'red' }}>SCAM!!!</span>);
     } else {
       setExtraMessage(<span style={{ color: 'green' }}>Nice Work!</span>);
     }
@@ -109,10 +122,27 @@ const TextScamsQuiz = () => {
     setShowPopup(true);
   };
 
+  // Function to handle closing the popup and scroll to the Next Scenario button
+  const closePopup = () => {
+    setShowPopup(false);
+
+    // Scroll down to the Next Scenario button
+    if (nextButtonRef.current) {
+      nextButtonRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  // Function to go back to the previous page
+  const goBack = () => {
+    navigate(-1); // This will navigate back to the previous page
+    // navigate('/identifyScam')
+  };
+
   return (
     <div className="text-scams-quiz">
       {/* Header Section */}
       <header className="text-scams-quiz-header">
+        <button onClick={goBack}>Back to Pervious Page</button>
         <h1>Text Scam Awareness</h1>
         <p>Challenge yourself and see how much you know about identifying text scams!</p>
       </header>
@@ -132,7 +162,7 @@ const TextScamsQuiz = () => {
       </div>
 
       {/* Scenario Section */}
-      <div className="text-scams-quiz-scenario">
+      <div className="text-scams-quiz-scenario" ref={scenarioRef}>
         <h2>{currentImage.title}</h2>
         <div className='text-scams-image-container'>
           <img
@@ -154,7 +184,7 @@ const TextScamsQuiz = () => {
                 height: area.height,
               }}
               onClick={() => handleAreaClick(area)}
-              // onClick={handleAreaClick}
+            // onClick={handleAreaClick}
             ></div>
           ))}
           {/* Clickable area over 'Messages' */}
@@ -184,9 +214,19 @@ const TextScamsQuiz = () => {
           ></div> */}
 
         </div>
-        <button onClick={changeImage} className="change-image-button">
-          Next Scenario
-        </button>
+        <div className="scenario-btn-group">
+          {currentIndex < images.length - 1 ? (
+            <button ref={nextButtonRef} onClick={changeImage} className="change-image-button">
+              Next Scenario
+            </button>) : (
+            <p>
+              You have reached the end of quizzes
+              <button ref={nextButtonRef} onClick={changeImage} className="change-image-button">
+                Retake quizzes
+              </button>
+            </p>
+          )}
+        </div>
 
         {/* Popup Modal */}
         {showPopup && (
@@ -199,9 +239,36 @@ const TextScamsQuiz = () => {
                   <li key={index}>{point.trim()}</li> // Trim to remove extra spaces
                 ))}
               </ul>
-              <button onClick={() => setShowPopup(false)} className="close-popup-button">
-                Close
-              </button>
+              <div className="popup-content-btn">
+                {/* <button onClick={changeImage} className="change-image-button">
+                                    Next Scenario
+                                </button> */}
+
+                {currentIndex < images.length - 1 ? (
+                  <div className="scenario-btn-group">
+                    <button ref={nextButtonRef} onClick={changeImage} className="change-image-button">
+                      Next Scenario
+                    </button>
+                    <button onClick={closePopup} className="close-popup-button">
+                      Close
+                    </button>
+                  </div>
+                ) : (
+                  <div className="scenario-btn-group">
+                    <p>
+                      You have reached the end of quizzes
+                      <div >
+                        <button ref={nextButtonRef} onClick={changeImage} className="change-image-button">
+                          Retake quizzes
+                        </button>
+                        <button onClick={closePopup} className="close-popup-button">
+                          Close
+                        </button>
+                      </div>
+                    </p>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         )}

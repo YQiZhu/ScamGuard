@@ -9,28 +9,69 @@ const Header = () => {
       <p className="nav-text">ScamGuard</p>
       <ul>
         <li>
-          <NavLink exact to="/" activeClassName="active-link">Home</NavLink>
+          <NavLink
+            exact="true"
+            to="/"
+            className={({ isActive }) => (isActive ? 'active-link' : '')}
+          >
+            Home
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/currentScam" activeClassName="active-link">Current Scams</NavLink>
+          <NavLink
+            to="/currentScam"
+            className={({ isActive }) => (isActive ? 'active-link' : '')}
+          >
+            Current Scams
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/identifyScam" activeClassName="active-link">How to Identify Scams</NavLink>
+          <NavLink
+            to="/identifyScam"
+            className={({ isActive }) => (isActive ? 'active-link' : '')}
+          >
+            How to Identify Scams
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/reportScam" activeClassName="active-link">Report Scams</NavLink>
+          <NavLink
+            to="/reportScam"
+            className={({ isActive }) => (isActive ? 'active-link' : '')}
+          >
+            Report Scams
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/whatToDo" activeClassName="active-link">What To Do If Scammed</NavLink>
+          <NavLink
+            to="/whatToDo"
+            className={({ isActive }) => (isActive ? 'active-link' : '')}
+          >
+            What To Do If Scammed
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/checkScam" activeClassName="active-link">Scam Detector</NavLink>
+          <NavLink
+            to="/checkScam"
+            className={({ isActive }) => (isActive ? 'active-link' : '')}
+          >
+            Scam Detector
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/riskAssessment" activeClassName="active-link">Scam Risk Assessment</NavLink>
+          <NavLink
+            to="/riskAssessment"
+            className={({ isActive }) => (isActive ? 'active-link' : '')}
+          >
+            Scam Risk Assessment
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/quiz" activeClassName="active-link">Take Quiz</NavLink>
+          <NavLink
+            to="/quiz"
+            className={({ isActive }) => (isActive ? 'active-link' : '')}
+          >
+            Take Quiz
+          </NavLink>
         </li>
       </ul>
     </nav>
