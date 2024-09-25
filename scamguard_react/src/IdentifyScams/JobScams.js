@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import './TypeOfScams.css';
 import { useNavigate } from 'react-router-dom';
 
@@ -17,15 +17,41 @@ function JobScams() {
         navigate('/identifyScam')
     };
 
+    // Create a reference to the section
+    const scamIdentificationRef = useRef(null);
+    const protectYourselfRef = useRef(null);
+    const realLifeStoryRef = useRef(null);
+
+    // Function to scroll to the section
+    const scrollToSection = (ref) => {
+        if (ref.current) {
+            window.scrollTo({
+                top: ref.current.offsetTop - 60, // Adjust 80px above the element
+                behavior: 'smooth',
+            });
+        }
+    };
+
     return (
         <div className="Scams-Page">
+
+            {/* Side Menu */}
+            <nav className="Side-menu">
+                <ul>
+                    <h2>Page Menu</h2>
+                    <li><span onClick={() => scrollToSection(scamIdentificationRef)}>How to Identify a Job Scam</span></li>
+                    <li><span onClick={() => scrollToSection(protectYourselfRef)}>How to Protect Yourself</span></li>
+                    <li><span onClick={() => scrollToSection(realLifeStoryRef)}>Real Life Story</span></li>
+                </ul>
+            </nav>
+
             <header className="scams-header">
                 <button onClick={goBack}>Back to Pervious Page</button>
                 <h2>Job Scams</h2>
                 <p>Job or employment scams target job seekers with fake job listings or interviews, aiming to steal personal information or money. Scammers may post seemingly legitimate job ads and then ask applicants to pay fees for background checks, training, or equipment. They may also conduct fake interviews to make the scam seem more authentic. Red flags include requests for upfront payments, sharing of personal financial information before hiring, and job offers that seem too good to be true. It's important to verify the legitimacy of job offers and be cautious throughout the hiring process.</p>
             </header>
             {/* How to Identify a Scam Section */}
-            <section className="scam-identification">
+            <section className="scam-identification" ref={scamIdentificationRef}>
                 <h3>How to Identify a Job Scam</h3>
                 <p>
                     It is likely that you are encountering a job scam if:
@@ -54,7 +80,7 @@ function JobScams() {
             </section>
 
             {/* How to Protect Yourself Section */}
-            <section className="protect-yourself">
+            <section className="protect-yourself" ref={protectYourselfRef}>
                 <div className="protect-yourself-contain">
                     <h3>How to Protect Yourself</h3>
                     <p>
@@ -70,7 +96,7 @@ function JobScams() {
                 </div>
             </section>
             {/* Real-Life Story Section */}
-            <section className="real-life-story">
+            <section className="real-life-story" ref={realLifeStoryRef}>
                 <h3>Real-Life Story</h3>
                 <h4>Cybersecurity Expert Loses $150,000 to Sophisticated Job Scam</h4> {/* Story Title */}
                 <img src="images/Jobscamrealstory.jpeg" alt="Job scam real story" className="example-image" 

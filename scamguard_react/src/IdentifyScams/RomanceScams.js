@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './TypeOfScams.css';
 
@@ -16,15 +16,42 @@ function RomanceScams() {
         navigate('/identifyScam')
     };
 
+    // Create a reference to the section
+    const scamIdentificationRef = useRef(null);
+    const protectYourselfRef = useRef(null);
+    const realLifeStoryRef = useRef(null);
+
+    // Function to scroll to the section
+    const scrollToSection = (ref) => {
+        if (ref.current) {
+            window.scrollTo({
+                top: ref.current.offsetTop - 60, // Adjust 80px above the element
+                behavior: 'smooth',
+            });
+        }
+    };
+
+
     return (
         <div className="Scams-Page">
+
+            {/* Side Menu */}
+            <nav className="Side-menu">
+                <ul>
+                    <h2>Page Menu</h2>
+                    <li><span onClick={() => scrollToSection(scamIdentificationRef)}>How to Identify a Romance Scam</span></li>
+                    <li><span onClick={() => scrollToSection(protectYourselfRef)}>How to Protect Yourself</span></li>
+                    <li><span onClick={() => scrollToSection(realLifeStoryRef)}>Real Life Story</span></li>
+                </ul>
+            </nav>
+
             <header className="scams-header">
                 <button onClick={goBack}>Back to Pervious Page</button>
                 <h2>Romance Scams</h2>
                 <p>Romance scams occur when fraudsters create fake profiles on dating sites or social media to deceive victims emotionally and financially. These scammers often express love or emotional attachment early on to build trust, but they avoid meeting in person, citing reasons like being in the military or working overseas. Once trust is established, they ask for money, often for supposed emergencies. Victims should be wary of anyone who moves too quickly in a relationship and avoid sending money or personal information.</p>
             </header>
             {/* How to Identify a Scam Section */}
-            <section className="scam-identification">
+            <section className="scam-identification" ref={scamIdentificationRef}>
                 <h3>How to Identify a Romance Scam</h3>
                 <p>
                     It is likely that you are encountering a romance scam if:
@@ -55,7 +82,7 @@ function RomanceScams() {
             </section>
 
             {/* How to Protect Yourself Section */}
-            <section className="protect-yourself">
+            <section className="protect-yourself" ref={protectYourselfRef}>
                 <div className="protect-yourself-contain">
                     <h3>How to Protect Yourself</h3>
                     <p>
@@ -73,7 +100,7 @@ function RomanceScams() {
             </section>
 
             {/* Real-Life Story Section */}
-            <section className="real-life-story">
+            <section className="real-life-story" ref={realLifeStoryRef}>
                 <h3>Real-Life Story</h3>
                 <h4>Melbourne Woman Scammed by Online Romance</h4> {/* Story Title */}
                 <img src="/images/Romancescamrealstory.jpeg" alt="Romance scam real story" className="example-image" />

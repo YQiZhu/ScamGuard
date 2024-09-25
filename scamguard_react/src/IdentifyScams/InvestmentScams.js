@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './TypeOfScams.css';
 
@@ -16,15 +16,41 @@ function InvestmentScams() {
         navigate('/identifyScam')
     };
 
+    // Create a reference to the section
+    const scamIdentificationRef = useRef(null);
+    const protectYourselfRef = useRef(null);
+    const realLifeStoryRef = useRef(null);
+
+    // Function to scroll to the section
+    const scrollToSection = (ref) => {
+        if (ref.current) {
+            window.scrollTo({
+                top: ref.current.offsetTop - 60, // Adjust 80px above the element
+                behavior: 'smooth',
+            });
+        }
+    };
+
     return (
         <div className="Scams-Page">
+
+            {/* Side Menu */}
+            <nav className="Side-menu">
+                <ul>
+                    <h2>Page Menu</h2>
+                    <li><span onClick={() => scrollToSection(scamIdentificationRef)}>How to Identify an Investment Scam</span></li>
+                    <li><span onClick={() => scrollToSection(protectYourselfRef)}>How to Protect Yourself</span></li>
+                    <li><span onClick={() => scrollToSection(realLifeStoryRef)}>Real Life Story</span></li>
+                </ul>
+            </nav>
+
             <header className="scams-header">
                 <button onClick={goBack}>Back to Pervious Page</button>
                 <h2>Investment Scams</h2>
                 <p>Investment scams entice people with promises of high returns and low risk, often using persuasive tactics and fake credentials to appear legitimate. Scammers may reach out through phone calls, emails, or social media, pressuring victims to invest quickly. Common scams include Ponzi schemes, where new investors' money is used to pay earlier investors, creating the illusion of profitability. It's crucial to research thoroughly and be skeptical of any investment opportunity that seems too good to be true.</p>
             </header>
             {/* How to Identify a Scam Section */}
-            <section className="scam-identification">
+            <section className="scam-identification" ref={scamIdentificationRef}>
                 <h3>How to Identify an Investment Scam</h3>
                 <p>
                     It is likely that you are encountering an investment scam if:
@@ -63,7 +89,7 @@ function InvestmentScams() {
             </section>
 
             {/* How to Protect Yourself Section */}
-            <section className="protect-yourself">
+            <section className="protect-yourself" ref={protectYourselfRef}>
                 <div className="protect-yourself-contain">
                     <h3>How to Protect Yourself</h3>
                     <p>
@@ -88,7 +114,7 @@ function InvestmentScams() {
             </section>
 
             {/* Real-Life Story Section */}
-            <section className="real-life-story">
+            <section className="real-life-story" ref={realLifeStoryRef}>
                 <h3>Real-Life Story</h3>
                 <h4>Queensland Man Loses $500K in Retirement Savings to Sophisticated Investment Scam</h4> {/* Story Title */}
                 <img src="/images/Investmentrealstory.jpeg" alt="Investment real story" className="example-image" />

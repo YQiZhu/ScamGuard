@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './TypeOfScams.css'; // Optional: Add a CSS file for custom styling
 
@@ -16,15 +16,41 @@ function ImpersonationScams() {
         navigate('/identifyScam')
     };
 
+    // Create a reference to the section
+    const scamIdentificationRef = useRef(null);
+    const protectYourselfRef = useRef(null);
+    const realLifeStoryRef = useRef(null);
+
+    // Function to scroll to the section
+    const scrollToSection = (ref) => {
+        if (ref.current) {
+            window.scrollTo({
+                top: ref.current.offsetTop - 60, // Adjust 80px above the element
+                behavior: 'smooth',
+            });
+        }
+    };
+
     return (
         <div className="Scams-Page">
+
+            {/* Side Menu */}
+            <nav className="Side-menu">
+                <ul>
+                    <h2>Page Menu</h2>
+                    <li><span onClick={() => scrollToSection(scamIdentificationRef)}>How to Identify an Impersonation Scam</span></li>
+                    <li><span onClick={() => scrollToSection(protectYourselfRef)}>How to Protect Yourself</span></li>
+                    <li><span onClick={() => scrollToSection(realLifeStoryRef)}>Real Life Story</span></li>
+                </ul>
+            </nav>
+
             <header className="scams-header">
                 <button onClick={goBack}>Back to Pervious Page</button>
                 <h2>Impersonation Scams</h2>
                 <p>Impersonation scams involve scammers pretending to be someone trusted, such as a friend, company executive, or government official, to gain sensitive information or money. These scams can occur through phone calls, emails, social media, or even in person. Scammers create a sense of urgency or authority to pressure victims into complying with their demands, such as transferring funds or revealing confidential information. Verifying the identity of the person through official channels is essential to avoid being scammed.</p>
             </header>
             {/* How to Identify a Scam Section */}
-            <section className="scam-identification">
+            <section className="scam-identification" ref={scamIdentificationRef}>
                 <h3>How to Identify a Scam</h3>
                 <p>
                     It is likely that you are encountering an impersonation scam if:
@@ -84,7 +110,7 @@ function ImpersonationScams() {
             </section>
 
             {/* How to Protect Yourself Section */}
-            <section className="protect-yourself">
+            <section className="protect-yourself" ref={protectYourselfRef}>
                 <div className="protect-yourself-contain">
                     <h3>How to Protect Yourself</h3>
                     <p>
@@ -105,7 +131,7 @@ function ImpersonationScams() {
             </section>
 
             {/* Real-Life Story Section */}
-            <section className="real-life-story">
+            <section className="real-life-story" ref={realLifeStoryRef}>
                 <h3>Real-Life Story</h3>
                 <h4>ATO impersonation scam: mother-in-law lost $4000 over a fake tax debt</h4> {/* Story Title */}
                 <img src="/images/ImpersonationScamsrealstory.jpg" alt="Impersonation Scams real story" className="example-image" />

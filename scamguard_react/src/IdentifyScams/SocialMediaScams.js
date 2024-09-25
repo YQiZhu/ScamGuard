@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './TypeOfScams.css';
 
@@ -16,15 +16,41 @@ function SocialMediaScams() {
         navigate('/identifyScam')
     };
 
+    // Create a reference to the section
+    const scamIdentificationRef = useRef(null);
+    const protectYourselfRef = useRef(null);
+    const realLifeStoryRef = useRef(null);
+
+    // Function to scroll to the section
+    const scrollToSection = (ref) => {
+        if (ref.current) {
+            window.scrollTo({
+                top: ref.current.offsetTop - 60, // Adjust 80px above the element
+                behavior: 'smooth',
+            });
+        }
+    };
+
     return (
         <div className="Scams-Page">
+
+            {/* Side Menu */}
+            <nav className="Side-menu">
+                <ul>
+                    <h2>Page Menu</h2>
+                    <li><span onClick={() => scrollToSection(scamIdentificationRef)}>How to Identify a Social Media Scam</span></li>
+                    <li><span onClick={() => scrollToSection(protectYourselfRef)}>How to Protect Yourself</span></li>
+                    <li><span onClick={() => scrollToSection(realLifeStoryRef)}>Real Life Story</span></li>
+                </ul>
+            </nav>
+
             <header className="scams-header">
                 <button onClick={goBack}>Back to Pervious Page</button>
                 <h2>Social Media Scams</h2>
                 <p>Social media scams often involve impersonation and phishing tactics, where scammers create fake profiles to mislead users. They may send spam messages or harmful links while pretending to be someone familiar or a reputable organisation. These scams can take the form of deceptive romantic relationships, where trust is gradually built before soliciting money. They may also involve fake investment opportunities or fraudulent ads for non-existent products. By leveraging the personal and trusting aspects of social media, scammers manipulate victims into disclosing money or sensitive information.</p>
             </header>
             {/* How to Identify a Scam Section */}
-            <section className="scam-identification">
+            <section className="scam-identification" ref={scamIdentificationRef}>
                 <h3>How to Identify a Social Media Scam</h3>
                 <p>
                     It is likely that you are encountering a social media scam if:
@@ -63,7 +89,7 @@ function SocialMediaScams() {
             </section>
 
             {/* How to Protect Yourself Section */}
-            <section className="protect-yourself">
+            <section className="protect-yourself" ref={protectYourselfRef}>
                 <div className="protect-yourself-contain">
                     <h3>How to Protect Yourself</h3>
                     <p>
@@ -89,7 +115,7 @@ function SocialMediaScams() {
             </section>
 
             {/* Real-Life Story Section */}
-            <section className="real-life-story">
+            <section className="real-life-story" ref={realLifeStoryRef}>
                 <h3>Real-Life Story</h3>
                 <h4>Social Media Scam Devastates Australian Woman, Leading to $100,000 Loss</h4> {/* Story Title */}
                 <img src="/images/SocialMediascamrealstory.jpeg" alt="Social Media Scam Real Story" className="example-image"

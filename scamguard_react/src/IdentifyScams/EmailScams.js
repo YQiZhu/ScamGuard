@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './TypeOfScams.css';
 import { useNavigate } from 'react-router-dom';
 
@@ -15,15 +15,41 @@ function EmailScams() {
         // navigate(-1); // This will navigate back to the previous page
         navigate('/identifyScam')
     };
+
+    // Create a reference to the section
+    const scamIdentificationRef = useRef(null);
+    const protectYourselfRef = useRef(null);
+    const realLifeStoryRef = useRef(null);
+
+    // Function to scroll to the section
+    const scrollToSection = (ref) => {
+        if (ref.current) {
+            window.scrollTo({
+                top: ref.current.offsetTop - 60, // Adjust 80px above the element
+                behavior: 'smooth',
+            });
+        }
+    };
     return (
         <div className="Scams-Page">
+
+            {/* Side Menu */}
+            <nav className="Side-menu">
+                <ul>
+                    <h2>Page Menu</h2>
+                    <li><span onClick={() => scrollToSection(scamIdentificationRef)}>How to Identify an Email Scam</span></li>
+                    <li><span onClick={() => scrollToSection(protectYourselfRef)}>How to Protect Yourself</span></li>
+                    <li><span onClick={() => scrollToSection(realLifeStoryRef)}>Real Life Story</span></li>
+                </ul>
+            </nav>
+
             <header className="scams-header">
                 <button onClick={goBack}>Back to Pervious Page</button>
                 <h2>Email Scams</h2>
                 <p>Email scams, often disguised as legitimate communications, use urgent or alarming messages to trick recipients into clicking on links or opening attachments. These emails may mimic messages from reputable companies or government agencies and aim to steal personal information, such as login credentials or bank account details. Some scams also install malware on the victim's device, compromising their security. It's essential to be cautious with emails from unknown senders and use spam filters to minimise risk.</p>
             </header>
             {/* How to Identify a Scam Section */}
-            <section className="scam-identification">
+            <section className="scam-identification" ref={scamIdentificationRef}>
                 <h3>How to Identify an Email Scam</h3>
                 <p>
                     <ul>
@@ -88,7 +114,7 @@ function EmailScams() {
             </section>
 
             {/* How to Protect Yourself Section */}
-            <section className="protect-yourself">
+            <section className="protect-yourself" ref={protectYourselfRef}>
                 <div className="protect-yourself-contain">
                     <h3>How to Protect Yourself</h3>
                     <p>
@@ -110,7 +136,7 @@ function EmailScams() {
                 </div>
             </section>
             {/* Real-Life Story Section */}
-            <section className="real-life-story">
+            <section className="real-life-story" ref={realLifeStoryRef}>
                 <h3>Real-Life Story</h3>
                 <h4>A new scam alleges you have overpaid your Netflix bill</h4> {/* Story Title */}
                 <img src="/images/Emailscamrealstory.jpeg" alt="Email scam real story" className="example-image" />
