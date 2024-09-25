@@ -57,17 +57,24 @@ const CheckURLs = () => {
         if (result.prediction === 1) {
             return (
                 <div className="result-section">
-                    <p>This url has a <strong>{probability}%</strong> chance of being a <strong style={{color: 'red'}}>SCAM.</strong></p>
+                    <p>This url has a <strong>{probability}%</strong> chance of being a <strong style={{ color: 'red' }}>SCAM.</strong></p>
                 </div>
             );
         } else {
             return (
                 <div className="result-section">
-                    <p>This url has a <strong>{probability}%</strong> chance of being <strong style={{color: 'green'}}>LEGITIMATE</strong>.</p>
+                    <p>This url has a <strong>{probability}%</strong> chance of being <strong style={{ color: 'green' }}>LEGITIMATE</strong>.</p>
                 </div>
             );
         }
     };
+
+    const cleanInputField = (e) => {
+        e.preventDefault(); // Prevent form submission
+        setURLBody('');
+        setResult(null); // Clear the result
+        setError(''); // Clear the error message if any
+    }
 
     return (
         <div>
@@ -85,8 +92,10 @@ const CheckURLs = () => {
 
                 {/* Error url for missing email body */}
                 {error && <p className="check-scam-error-message">{error}</p>}
-
-                <button className="submit-button" type="submit">Check If Scam</button>
+                <div className='scam-detector-btn-group'>
+                    <button className="submit-button" type="submit">Check If Scam</button>
+                    <button className="clear-button" onClick={cleanInputField}>Clear Input</button>
+                </div>
             </form>
 
             {loading && <div className="check-scam-loading">Loading ...</div>}
