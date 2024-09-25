@@ -39,7 +39,12 @@ function RomanceScams() {
                     </ul>
                 </p>
                 <h4>Examples</h4>
-                <img src="/images/Romance_example.png" alt="Investment example" className="example-image" />
+                <div className="scam-example-img-container">
+                    <img src="/images/Romance_example.png" alt="Investment example" className="example-image"
+                        style={{
+                            maxWidth: '400px'
+                        }} />
+                </div>
                 <p>
                     Signs this is a romance scam:
                     <ul>
@@ -51,18 +56,20 @@ function RomanceScams() {
 
             {/* How to Protect Yourself Section */}
             <section className="protect-yourself">
-                <h3>How to Protect Yourself</h3>
-                <p>
-                    <ul>
-                        <li>Don’t send personal information or documents to someone you have only met online</li>
-                        <li>Never send money to someone you have only met online</li>
-                        <li>Don’t share personal images or videos especially sexually intimate photos or videos with people you don’t know</li>
-                        <li>Take things slowly and ask lots of questions to make sure everything about the person adds up</li>
-                        <li>Search for the person’s name along with the word ‘scam’ and look for any results about romance scams</li>
-                        <li>If they send you a photo do a reverse image search and see if someone else owns the photos you’ve been sent</li>
-                        <li>Speak to your family friends about your online relationships to get their perspective on if there are any red flags</li>
-                    </ul>
-                </p>
+                <div className="protect-yourself-contain">
+                    <h3>How to Protect Yourself</h3>
+                    <p>
+                        <ul>
+                            <li>Don’t send personal information or documents to someone you have only met online</li>
+                            <li>Never send money to someone you have only met online</li>
+                            <li>Don’t share personal images or videos especially sexually intimate photos or videos with people you don’t know</li>
+                            <li>Take things slowly and ask lots of questions to make sure everything about the person adds up</li>
+                            <li>Search for the person’s name along with the word ‘scam’ and look for any results about romance scams</li>
+                            <li>If they send you a photo do a reverse image search and see if someone else owns the photos you’ve been sent</li>
+                            <li>Speak to your family friends about your online relationships to get their perspective on if there are any red flags</li>
+                        </ul>
+                    </p>
+                </div>
             </section>
 
             {/* Real-Life Story Section */}

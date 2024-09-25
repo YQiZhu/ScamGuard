@@ -48,8 +48,10 @@ function TextScams() {
                     </ul>
                 </p>
                 <h4>Examples</h4>
-                <img src="/images/Text_example1.png" alt="Text example" className="text-example-image" />
-                <img src="/images/Text_example2.png" alt="Text example" className="text-example-image" />
+                <div className="text-scam-img-container">
+                    <img src="/images/Text_example1.png" alt="Text example" className="text-example-image" />
+                    <img src="/images/Text_example2.png" alt="Text example" className="text-example-image" />
+                </div>
                 <p>
                     Signs these texts are scams:
                     <ul>
@@ -61,28 +63,30 @@ function TextScams() {
 
             {/* How to Protect Yourself Section */}
             <section className="text-protect-yourself">
-                <h3>How to Protect Yourself</h3>
-                <p>
-                    <ul>
-                        <li>Never open links you are sent
-                            <ul>
-                                <li>Independently search for the website or use the organisation’s authenticated portal or app</li>
-                            </ul>
-                        </li>
-                        <li>Do your own check that the person contacting you is who they say they are
-                            <ul>
-                                <li>Don’t respond to the person using the phone number the sender has provided</li>
-                                <li>Call the organisation or person using a phone number you have found yourself, such as from their official website</li>
-                                <li>If they claim they are someone you know using a new phone number
-                                    <ul>
-                                        <li>Try to call them using the existing phone number you have</li>
-                                        <li>Ask them a question that only they would know the answer to</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </p>
+                <div className="text-protect-yourself-contain">
+                    <h3>How to Protect Yourself</h3>
+                    <p>
+                        <ul>
+                            <li>Never open links you are sent
+                                <ul>
+                                    <li>Independently search for the website or use the organisation’s authenticated portal or app</li>
+                                </ul>
+                            </li>
+                            <li>Do your own check that the person contacting you is who they say they are
+                                <ul>
+                                    <li>Don’t respond to the person using the phone number the sender has provided</li>
+                                    <li>Call the organisation or person using a phone number you have found yourself, such as from their official website</li>
+                                    <li>If they claim they are someone you know using a new phone number
+                                        <ul>
+                                            <li>Try to call them using the existing phone number you have</li>
+                                            <li>Ask them a question that only they would know the answer to</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </p>
+                </div>
             </section>
 
             {/* Real-Life Story Section */}

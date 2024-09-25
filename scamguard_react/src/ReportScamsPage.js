@@ -5,15 +5,46 @@ import './ReportScamsPage.css';
 const ReportScamsPage = () => {
     const navigate = useNavigate();
 
+    // Create a reference to the section
+    const stepsToReportRef = useRef(null);
+    const howToReportRef = useRef(null);
+    const whyReportRef = useRef(null);
+    const afterReportRef = useRef(null);
+
+    // Function to scroll to the section
+    const scrollToSection = (ref) => {
+        // if (ref.current) {
+        //     ref.current.scrollIntoView({ behavior: 'smooth' });
+        // }
+
+        if (ref.current) {
+            window.scrollTo({
+                top: ref.current.offsetTop - 80, // Adjust 80px above the element
+                behavior: 'smooth',
+            });
+        }
+    };
+
     return (
         <div className="Report-Page">
+
+            {/* Side Menu */}
+            <nav className="Side-menu">
+                <ul>
+                    <h2>Page Menu</h2>
+                    <li><span onClick={() => scrollToSection(stepsToReportRef)}>Steps to Reporting Scams</span></li>
+                    <li><span onClick={() => scrollToSection(howToReportRef)}>How to Report a Scam</span></li>
+                    <li><span onClick={() => scrollToSection(whyReportRef)}>Why Report a Scam</span></li>
+                    <li><span onClick={() => scrollToSection(afterReportRef)}>What Happens After You Report It</span></li>
+                </ul>
+            </nav>
 
             {/* Introduction Section */}
             <header className="report-scams-header">
                 <h1>Report Scam</h1>
             </header>
 
-            <section className='report-scam-step'>
+            <section className='report-scam-step' ref={stepsToReportRef}>
                 <h2>Steps to Reporting Scams</h2>
                 <p>
                     <strong>Identify scams:</strong> If you receive suspicious calls, text messages, emails, or see suspicious websites, pay attention to whether these behaviors match common scam characteristics.
@@ -26,7 +57,7 @@ const ReportScamsPage = () => {
                 </p>
             </section>
 
-            <section className='how-to-report-scam'>
+            <section className='how-to-report-scam' ref={howToReportRef} >
                 <h2>How to Report a Scam</h2>
                 <p>
                     <h3>You didn’t give them your personal information or property</h3>
@@ -70,7 +101,7 @@ const ReportScamsPage = () => {
                 </p>
             </section>
 
-            <section className='why-report-scam'>
+            <section className='why-report-scam' ref={whyReportRef}>
                 <h2>Why Report a Scam?</h2>
                 <p>
                     <strong>Opportunity to recover losses:</strong> Reporting a scam is not only for justice; it may also help you get your lost funds back. ReportCyber and some specialized organizations will use your report to track the flow of funds and take steps to recover your money. Every report is a chance to regain control of the situation and prevent your losses from being irreversible. Please don't pass up this opportunity; reporting may be the key step to turning the situation around.
@@ -83,7 +114,7 @@ const ReportScamsPage = () => {
                 </p>
             </section>
 
-            <section className='after-report-scam'>
+            <section className='after-report-scam' ref={afterReportRef}>
                 <h2>What Happens After You Report It?</h2>
                 <p>
                     Once you have submitted a report, we will immediately assess the situation and pass the relevant information to the appropriate law enforcement agencies or cybersecurity experts. We may contact you for more information or to provide further support.

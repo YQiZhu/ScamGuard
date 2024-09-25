@@ -39,8 +39,16 @@ function WebsiteScams() {
                     </ul>
                 </p>
                 <h4>Examples</h4>
-                <img src="/images/Website_example1.png" alt="Website example" className="example-image" />
-                <img src="/images/Website_example2.png" alt="Website example" className="example-image" />
+                <div className="scam-example-img-container">
+                    <img src="/images/Website_example1.png" alt="Website example" className="example-image"
+                        style={{
+                            maxWidth: '400px'
+                        }} />
+                    <img src="/images/Website_example2.png" alt="Website example" className="example-image"
+                        style={{
+                            maxWidth: '400px'
+                        }} />
+                </div>
                 <p>
                     Signs the URLs are fake:
                     <ul>
@@ -52,21 +60,23 @@ function WebsiteScams() {
 
             {/* How to Protect Yourself Section */}
             <section className="protect-yourself">
-                <h3>How to Protect Yourself</h3>
-                <p>
-                    <ul>
-                        <li>Research the organisation or person you’re in contact with before providing any personal information or giving money</li>
-                        <li>Do not rely on reviews written on the website, search for independent reviews on other sites </li>
-                        <li>If a pop-up appears on the screen do not click on it</li>
-                        <li>If there is a secure, authenticated way to reach the organisation such as an app or portal use this</li>
-                        <li>Look up the domain age using <a href="https://whois.domaintools.com/" target="_blank" rel="noopener noreferrer">Whois Lookup</a>
-                            <ul>
-                                <li>If a website has not been active for long it is more likely to be a fake website</li>
-                            </ul>
-                        </li>
-                        <li>Use a website checker such as the <a href="https://transparencyreport.google.com/safe-browsing/search?hl=en" target="_blank" rel="noopener noreferrer">Google Transparency Report</a> or <a href="https://www.urlvoid.com/" target="_blank" rel="noopener noreferrer">URLVoid</a> to check if a website is safe</li>
-                    </ul>
-                </p>
+                <div className="protect-yourself-contain">
+                    <h3>How to Protect Yourself</h3>
+                    <p>
+                        <ul>
+                            <li>Research the organisation or person you’re in contact with before providing any personal information or giving money</li>
+                            <li>Do not rely on reviews written on the website, search for independent reviews on other sites </li>
+                            <li>If a pop-up appears on the screen do not click on it</li>
+                            <li>If there is a secure, authenticated way to reach the organisation such as an app or portal use this</li>
+                            <li>Look up the domain age using <a href="https://whois.domaintools.com/" target="_blank" rel="noopener noreferrer">Whois Lookup</a>
+                                <ul>
+                                    <li>If a website has not been active for long it is more likely to be a fake website</li>
+                                </ul>
+                            </li>
+                            <li>Use a website checker such as the <a href="https://transparencyreport.google.com/safe-browsing/search?hl=en" target="_blank" rel="noopener noreferrer">Google Transparency Report</a> or <a href="https://www.urlvoid.com/" target="_blank" rel="noopener noreferrer">URLVoid</a> to check if a website is safe</li>
+                        </ul>
+                    </p>
+                </div>
             </section>
 
             {/* Real-Life Story Section */}

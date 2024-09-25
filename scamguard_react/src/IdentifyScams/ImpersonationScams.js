@@ -40,7 +40,10 @@ function ImpersonationScams() {
                     </ul>
                 </p>
                 <h4>Examples</h4>
-                <img src="/images/Impersonation_example1.png" alt="Impersonation example" className="example-image" />
+                <h5>Case 1</h5>
+                <div className="scam-example-img-container">
+                    <img src="/images/Impersonation_example1.png" alt="Impersonation example" className="example-image" />
+                </div>
                 <p>
                     Signs this is an impersonation scam:
                     <ul>
@@ -50,8 +53,11 @@ function ImpersonationScams() {
                         <li>The link does not look correct for MyGov</li>
                     </ul>
                 </p>
-                <img src="/images/Impersonation_example2.png" alt="Impersonation example" className="example-image" />
-                <img src="/images/Impersonation_example3.png" alt="Impersonation example" className="example-image" />
+                <h5>Case 2</h5>
+                <div className="scam-example-img-container">
+                    <img src="/images/Impersonation_example2.png" alt="Impersonation example" className="example-image" />
+                    <img src="/images/Impersonation_example3.png" alt="Impersonation example" className="example-image" />
+                </div>
                 <p>
                     Signs this is an impersonation scam:
                     <ul>
@@ -79,21 +85,23 @@ function ImpersonationScams() {
 
             {/* How to Protect Yourself Section */}
             <section className="protect-yourself">
-                <h3>How to Protect Yourself</h3>
-                <p>
-                    It is likely that you are encountering an impersonation scam if:
-                    <ul>
-                        <li>Verify that the messages are real by directly contacting the person or organisation using contact details you have found yourself from their official website or through their secure, authenticated portal or app</li>
-                        <li>Immediately cut contact with anyone who tries to threaten you</li>
-                        <li>Don’t open any links you are sent or download any attachments</li>
-                        <li>If they claim they are someone you know using a new phone number
-                            <ul>
-                                <li>Try to call them using the existing phone number you have</li>
-                                <li>Ask them a question that only they would know the answer to</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </p>
+                <div className="protect-yourself-contain">
+                    <h3>How to Protect Yourself</h3>
+                    <p>
+                        It is likely that you are encountering an impersonation scam if:
+                        <ul>
+                            <li>Verify that the messages are real by directly contacting the person or organisation using contact details you have found yourself from their official website or through their secure, authenticated portal or app</li>
+                            <li>Immediately cut contact with anyone who tries to threaten you</li>
+                            <li>Don’t open any links you are sent or download any attachments</li>
+                            <li>If they claim they are someone you know using a new phone number
+                                <ul>
+                                    <li>Try to call them using the existing phone number you have</li>
+                                    <li>Ask them a question that only they would know the answer to</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </p>
+                </div>
             </section>
 
             {/* Real-Life Story Section */}
@@ -102,7 +110,7 @@ function ImpersonationScams() {
                 <h4>ATO impersonation scam: mother-in-law lost $4000 over a fake tax debt</h4> {/* Story Title */}
                 <img src="/images/ImpersonationScamsrealstory.jpg" alt="Impersonation Scams real story" className="example-image" />
                 <p>
-                    A woman named Jane received a call from someone pretending to be from the Australian Taxation Office (ATO). The caller claimed she owed $4,000 in taxes and threatened her with arrest if she didn’t pay immediately. The scammer’s aggressive and intimidating behavior made Jane, who speaks English as a second language, extremely anxious. Fearing arrest, she complied with the scammer’s demands and transferred the money. It wasn’t until later that she realized she had been deceived. This incident underscores the importance of being cautious with unexpected calls or messages demanding money or personal details. It’s crucial  to verify the identity of the caller by reaching out to the organization directly using official contact information.
+                    A woman named Jane received a call from someone pretending to be from the Australian Taxation Office (ATO). The caller claimed she owed $4,000 in taxes and threatened her with arrest if she didn’t pay immediately. The scammer’s aggressive and intimidating behavior made Jane, who speaks English as a second language, extremely anxious. Fearing arrest, she complied with the scammer’s demands and transferred the money. It wasn’t until later that she realised she had been deceived. This incident underscores the importance of being cautious with unexpected calls or messages demanding money or personal details. It’s crucial  to verify the identity of the caller by reaching out to the organisation directly using official contact information.
                 </p>
                 {/* Clickable Box with URL Link */}
                 <button onClick={goToOtherPage}>Read the Full Story</button>

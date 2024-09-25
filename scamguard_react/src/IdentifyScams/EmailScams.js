@@ -20,7 +20,7 @@ function EmailScams() {
             <header className="scams-header">
                 <button onClick={goBack}>Back to Pervious Page</button>
                 <h2>Email Scams</h2>
-                <p>Email scams, often disguised as legitimate communications, use urgent or alarming messages to trick recipients into clicking on links or opening attachments. These emails may mimic messages from reputable companies or government agencies and aim to steal personal information, such as login credentials or bank account details. Some scams also install malware on the victim's device, compromising their security. It's essential to be cautious with emails from unknown senders and use spam filters to minimize risk.</p>
+                <p>Email scams, often disguised as legitimate communications, use urgent or alarming messages to trick recipients into clicking on links or opening attachments. These emails may mimic messages from reputable companies or government agencies and aim to steal personal information, such as login credentials or bank account details. Some scams also install malware on the victim's device, compromising their security. It's essential to be cautious with emails from unknown senders and use spam filters to minimise risk.</p>
             </header>
             {/* How to Identify a Scam Section */}
             <section className="scam-identification">
@@ -49,7 +49,13 @@ function EmailScams() {
                     </ul>
                 </p>
                 <h4>Examples</h4>
-                <img src="/images/Email_example2.png" alt="Email example" className="example-image" />
+                <h5>Case 1</h5>
+                <div className="scam-example-img-container">
+                    <img src="/images/Email_example2.png" alt="Email example" className="example-image"
+                        style={{
+                            maxWidth: '700px'
+                        }} />
+                </div>
                 <p>
                     Signs this email is a scam:
                     <ul>
@@ -59,8 +65,17 @@ function EmailScams() {
                         <li>Destination URL does not match the text shown</li>
                     </ul>
                 </p>
-                <img src="/images/Email_example3.png" alt="Email example" className="example-image" />
-                <img src="/images/Email_example4.png" alt="Email example" className="example-image" />
+                <h5>Case 2</h5>
+                <div className="scam-example-img-container">
+                    <img src="/images/Email_example3.png" alt="Email example" className="example-image"
+                        style={{
+                            maxWidth: '500px'
+                        }} />
+                    <img src="/images/Email_example4.png" alt="Email example" className="example-image"
+                        style={{
+                            maxWidth: '700px'
+                        }} />
+                </div>
                 <p>
                     Signs this email is a scam:
                     <ul>
@@ -74,23 +89,25 @@ function EmailScams() {
 
             {/* How to Protect Yourself Section */}
             <section className="protect-yourself">
-                <h3>How to Protect Yourself</h3>
-                <p>
-                    <ul>
-                        <li>Never open links you are sent
-                            <ul>
-                                <li>Independently search for the website or use the organisation’s authenticated portal or app</li>
-                            </ul>
-                        </li>
-                        <li>Independently find contact details for the person or organisation and use to verify if the email was real</li>
-                        <li>To protect your email account
-                            <ul>
-                                <li>Use unique passwords for your different accounts</li>
-                                <li>Use multi-factor authentication if it’s available to add an extra layer of security</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </p>
+                <div className="protect-yourself-contain">
+                    <h3>How to Protect Yourself</h3>
+                    <p>
+                        <ul>
+                            <li>Never open links you are sent
+                                <ul>
+                                    <li>Independently search for the website or use the organisation’s authenticated portal or app</li>
+                                </ul>
+                            </li>
+                            <li>Independently find contact details for the person or organisation and use to verify if the email was real</li>
+                            <li>To protect your email account
+                                <ul>
+                                    <li>Use unique passwords for your different accounts</li>
+                                    <li>Use multi-factor authentication if it’s available to add an extra layer of security</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </p>
+                </div>
             </section>
             {/* Real-Life Story Section */}
             <section className="real-life-story">

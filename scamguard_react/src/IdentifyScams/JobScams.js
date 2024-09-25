@@ -40,7 +40,10 @@ function JobScams() {
                     </ul>
                 </p>
                 <h4>Example</h4>
-                <img src="/images/Employment_example.png" alt="Employment example" className="example-image" />
+                <div className="scam-example-img-container">
+                    <img src="/images/Employment_example.png" alt="Employment example" className="example-image" 
+                    />
+                </div>
                 <p>
                     Signs this is a scam:
                     <ul>
@@ -52,25 +55,30 @@ function JobScams() {
 
             {/* How to Protect Yourself Section */}
             <section className="protect-yourself">
-                <h3>How to Protect Yourself</h3>
-                <p>
-                    <ul>
-                        <li>Don’t trust that a job ad is real just because it appears on a trusted platform</li>
-                        <li>Never send money or provide personal information to anyone you have only met online</li>
-                        <li>Never send identity documents unless you are certain the organisation is genuine</li>
-                        <li>Never accept payments or rewards to recruit other people</li>
-                        <li>Independently verify the identities of anyone who has reached out to you, checking for contact details from the organisation’s official website</li>
-                        <li>Search for reviews of the company</li>
-                    </ul>
-                </p>
+                <div className="protect-yourself-contain">
+                    <h3>How to Protect Yourself</h3>
+                    <p>
+                        <ul>
+                            <li>Don’t trust that a job ad is real just because it appears on a trusted platform</li>
+                            <li>Never send money or provide personal information to anyone you have only met online</li>
+                            <li>Never send identity documents unless you are certain the organisation is genuine</li>
+                            <li>Never accept payments or rewards to recruit other people</li>
+                            <li>Independently verify the identities of anyone who has reached out to you, checking for contact details from the organisation’s official website</li>
+                            <li>Search for reviews of the company</li>
+                        </ul>
+                    </p>
+                </div>
             </section>
             {/* Real-Life Story Section */}
             <section className="real-life-story">
                 <h3>Real-Life Story</h3>
                 <h4>Cybersecurity Expert Loses $150,000 to Sophisticated Job Scam</h4> {/* Story Title */}
-                <img src="images/Jobscamrealstory.jpeg" alt="Job scam real story" className="example-image" />
+                <img src="images/Jobscamrealstory.jpeg" alt="Job scam real story" className="example-image" 
+                style={{
+                    maxWidth: '450px'
+                }}/>
                 <p>
-                    A Sydney cybersecurity expert, "Josh" (name changed), lost $150,000 of his and his parents' savings to a job scam. Despite having a degree in cybersecurity, Josh was tricked by a fake job ad on Instagram that led him to a WhatsApp chat, where scammers convinced him to transfer money to receive commissions for online tasks. Over three days, Josh was manipulated into draining his savings and even his parents' accounts. He realized it was a scam only after losing everything. The experience left him diagnosed with depression, and he now calls for greater accountability from social media platforms in verifying job ads to prevent such scams.
+                    A Sydney cybersecurity expert, "Josh" (name changed), lost $150,000 of his and his parents' savings to a job scam. Despite having a degree in cybersecurity, Josh was tricked by a fake job ad on Instagram that led him to a WhatsApp chat, where scammers convinced him to transfer money to receive commissions for online tasks. Over three days, Josh was manipulated into draining his savings and even his parents' accounts. He realised it was a scam only after losing everything. The experience left him diagnosed with depression, and he now calls for greater accountability from social media platforms in verifying job ads to prevent such scams.
                 </p>
 
 

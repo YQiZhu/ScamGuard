@@ -59,24 +59,29 @@ function PhoneScams() {
 
             {/* How to Protect Yourself Section */}
             <section className="protect-yourself">
-                <h3>How to Protect Yourself</h3>
-                <p>
-                    <ul>
-                        <li>Let calls from unknown numbers go to voicemail</li>
-                        <li>Hang up if you don’t recognise the caller or you’re not sure who they are</li>
-                        <li>Hang up if the caller gets aggressive or threatening</li>
-                        <li>Call the organisation or person back on a number you have found yourself</li>
-                        <li>Never share personal information or financial details over the phone</li>
-                        <li>Never allow a caller to have remote access to your computer</li>
-                    </ul>
-                </p>
+                <div className="protect-yourself-contain">
+                    <h3>How to Protect Yourself</h3>
+                    <p>
+                        <ul>
+                            <li>Let calls from unknown numbers go to voicemail</li>
+                            <li>Hang up if you don’t recognise the caller or you’re not sure who they are</li>
+                            <li>Hang up if the caller gets aggressive or threatening</li>
+                            <li>Call the organisation or person back on a number you have found yourself</li>
+                            <li>Never share personal information or financial details over the phone</li>
+                            <li>Never allow a caller to have remote access to your computer</li>
+                        </ul>
+                    </p>
+                </div>
             </section>
 
             {/* Real-Life Story Section */}
             <section className="real-life-story">
                 <h3>Real-Life Story</h3>
                 <h4>Warning over 'dial 1' phone scam in Australia</h4> {/* Story Title */}
-                <img src="/images/Phonescamrealstory.jpg" alt="Phone scam real story" className="example-image" />
+                <img src="/images/Phonescamrealstory.jpg" alt="Phone scam real story" className="example-image"
+                    style={{
+                        maxWidth: '400px'
+                    }} />
                 <p>
                     A phone scam circulating in Australia involves automated calls that instruct recipients to "dial 1" to address a purported issue, such as the threat of arrest, NBN disconnection, or unpaid debts. Scamwatch has warned the public to hang up immediately, as these claims are false and designed to scare people into action. Individuals are encouraged to report such scams through the Scamwatch website.
 

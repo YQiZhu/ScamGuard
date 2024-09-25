@@ -12,7 +12,12 @@ const CurrentScamsPage = () => {
 
     // Function to scroll to the section
     const scrollToSection = (ref) => {
-        ref.current?.scrollIntoView({ behavior: 'smooth' });
+        if (ref.current) {
+            window.scrollTo({
+                top: ref.current.offsetTop - 60, // Adjust 80px above the element
+                behavior: 'smooth',
+            });
+        }
     };
 
     return (
@@ -21,9 +26,9 @@ const CurrentScamsPage = () => {
             <nav className="Side-menu">
                 <ul>
                     <h2>Page Menu</h2>
-                    <li><a href="#most-reported" onClick={() => scrollToSection(mostReportedRef)}>Current Most Reported Scams</a></li>
-                    <li><a href="#top-loss" onClick={() => scrollToSection(topLossRef)}>Current Top Scams By Loss</a></li>
-                    <li><a href="#popular-contact" onClick={() => scrollToSection(popularContactRef)}>Current Most Popular Contact Methods</a></li>
+                    <li><span onClick={() => scrollToSection(mostReportedRef)}>Current Most Reported Scams</span></li>
+                    <li><span onClick={() => scrollToSection(topLossRef)}>Current Top Scams By Loss</span></li>
+                    <li><span onClick={() => scrollToSection(popularContactRef)}>Current Most Popular Contact Methods</span></li>
                 </ul>
             </nav>
 
@@ -36,15 +41,15 @@ const CurrentScamsPage = () => {
             {/* Main Content */}
             <main>
                 {/* Chart Section */}
-                <section className="most-reported-section" ref={mostReportedRef} id="most-reported">
+                <section className="most-reported-section" ref={mostReportedRef}>
                     {/* <h2>Current Most Reported Scams</h2> */}
                     <MostReportedScam />
                 </section>
-                <section className="top-loss-section" ref={topLossRef} id="top-loss">
+                <section className="top-loss-section" ref={topLossRef}>
                     {/* <h2>Current Top Scams by Loss</h2> */}
                     <TopLossScam />
                 </section>
-                <section className="popular-contact-section" ref={popularContactRef} id="popular-contact">
+                <section className="popular-contact-section" ref={popularContactRef}>
                     {/* <h2>Current Most Popular Contact Methods</h2> */}
                     <PopularContactMethods />
                 </section>

@@ -47,7 +47,12 @@ function InvestmentScams() {
                     </ul>
                 </p>
                 <h4>Examples</h4>
-                <img src="/images/Investment_example.png" alt="Investment example" className="example-image" />
+                <div className="scam-example-img-container">
+                    <img src="/images/Investment_example.png" alt="Investment example" className="example-image"
+                        style={{
+                            maxWidth: '400px'
+                        }} />
+                </div>
                 <p>
                     Signs this is a scam:
                     <ul>
@@ -59,25 +64,27 @@ function InvestmentScams() {
 
             {/* How to Protect Yourself Section */}
             <section className="protect-yourself">
-                <h3>How to Protect Yourself</h3>
-                <p>
-                    <ul>
-                        <li>Do your due diligence
-                            <ul>
-                                <li>Search company on <a href="https://moneysmart.gov.au/check-and-report-scams/investor-alert-list" target="_blank" rel="noopener noreferrer">ASIC’s investor alert list</a></li>
-                                <li>Check that a person has an Australian financial services licence using the <a href="https://moneysmart.gov.au/financial-advice/financial-advisers-register" target="_blank" rel="noopener noreferrer">financial adviser’s register</a></li>
-                            </ul>
-                        </li>
-                        <li>Search for reviews about the investment on independent websites and search the investment name with the word ‘scam’</li>
-                        <li>Check that the person you are dealing with belongs to the organisation they claim to work for using contact details you have found yourself</li>
-                        <li>Get independent legal advice or financial advice from a financial advisor with an Australian financial services licence</li>
-                        <li>Look up the domain age using <a href="https://whois.domaintools.com/" target="_blank" rel="noopener noreferrer">Whois Lookup</a>
-                            <ul>
-                                <li>If a website has not been active for long it is more likely to be a fake website</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </p>
+                <div className="protect-yourself-contain">
+                    <h3>How to Protect Yourself</h3>
+                    <p>
+                        <ul>
+                            <li>Do your due diligence
+                                <ul>
+                                    <li>Search company on <a href="https://moneysmart.gov.au/check-and-report-scams/investor-alert-list" target="_blank" rel="noopener noreferrer">ASIC’s investor alert list</a></li>
+                                    <li>Check that a person has an Australian financial services licence using the <a href="https://moneysmart.gov.au/financial-advice/financial-advisers-register" target="_blank" rel="noopener noreferrer">financial adviser’s register</a></li>
+                                </ul>
+                            </li>
+                            <li>Search for reviews about the investment on independent websites and search the investment name with the word ‘scam’</li>
+                            <li>Check that the person you are dealing with belongs to the organisation they claim to work for using contact details you have found yourself</li>
+                            <li>Get independent legal advice or financial advice from a financial advisor with an Australian financial services licence</li>
+                            <li>Look up the domain age using <a href="https://whois.domaintools.com/" target="_blank" rel="noopener noreferrer">Whois Lookup</a>
+                                <ul>
+                                    <li>If a website has not been active for long it is more likely to be a fake website</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </p>
+                </div>
             </section>
 
             {/* Real-Life Story Section */}
