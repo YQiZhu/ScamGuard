@@ -1,3 +1,10 @@
+.ScamDetectorPage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .check-emails-form {
   display: flex;
   justify-content: center;

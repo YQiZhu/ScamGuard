@@ -84,6 +84,14 @@ const Header = () => {
             Take Quiz
           </NavLink>
         </li>
+        <li>
+          <NavLink
+            to="/posterGenerator"
+            className={({ isActive }) => (isActive ? 'active-link' : '')}
+          >
+            Poster Generator
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );

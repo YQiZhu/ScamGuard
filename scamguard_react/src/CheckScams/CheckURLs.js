@@ -77,7 +77,7 @@ const CheckURLs = () => {
     }
 
     return (
-        <div>
+        <div className="ScamDetectorPage"> 
             <form className="check-emails-form" onSubmit={handleSubmit}>
 
                 <div className="check-emails-form-group">

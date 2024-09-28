@@ -81,7 +81,7 @@ const CheckEmails = () => {
   }
 
   return (
-    <div>
+    <div className="ScamDetectorPage">
       <form className="check-emails-form" onSubmit={handleSubmit}>
         <div className="check-emails-form-group">
           <label>Enter Sender Name (optional)</label>
