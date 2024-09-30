@@ -25,6 +25,7 @@
     "recharts": "^2.12.7",
     "shadergradient": "^1.2.14",
     "three": "^0.168.0",
+    "use-image": "^1.1.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

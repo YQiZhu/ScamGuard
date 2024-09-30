@@ -11,11 +11,16 @@ const TemplateSelector = ({ selectedTemplate, setSelectedTemplate }) => {
     return (
         <div>
             <h2>Select a Poster Template</h2>
-            <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center'}}>
                 {templates.map(template => (
                     <div
                         key={template.id}
-                        onClick={() => setSelectedTemplate(template)}>
+                        onClick={() => setSelectedTemplate(template)}
+                        style={{
+                            border: selectedTemplate?.id === template.id ? '2px solid blue' : '1px solid gray',
+                            cursor: 'pointer',
+                            padding: '5px',
+                        }}>
                         <img
                             src={template.image}
                             alt={template.name}
@@ -27,7 +32,7 @@ const TemplateSelector = ({ selectedTemplate, setSelectedTemplate }) => {
                                 objectFit: 'cover',
                             }}
                         />
-                        <p>{template.name}</p>
+                        <p style={{ textAlign: 'center', margin:'5px', fontWeight: 'bold' }}>{template.name}</p>
                     </div>
                 ))}
             </div>

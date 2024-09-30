@@ -11,12 +11,37 @@ const PosterGeneratorPage = () => {
     const stageRef = useRef(null);
 
     return (
-        <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
-            <h1>Scam Awareness Poster Creator</h1>
-            <TemplateSelector selectedTemplate={selectedTemplate} setSelectedTemplate={setSelectedTemplate} />
-            <TextSelector selectedTexts={selectedTexts} setSelectedTexts={setSelectedTexts} />
-            <PosterPreview template={selectedTemplate} texts={selectedTexts} ref={stageRef} />
-            <DownloadButton stageRef={stageRef} />
+        <div className="PosterPage">
+            <header className="poster-header">
+                <h1>Scam Awareness Poster Creator</h1>
+            </header>
+
+            <main className="poster-main">
+                <section className="poster-template-selector">
+                    <TemplateSelector
+                        selectedTemplate={selectedTemplate}
+                        setSelectedTemplate={setSelectedTemplate}
+                    />
+                </section>
+                <div className="poster-setup">
+                    <section className="poster-text-selector">
+                        <TextSelector
+                            selectedTexts={selectedTexts}
+                            setSelectedTexts={setSelectedTexts}
+                        />
+                    </section>
+                    <section className="poster-preview">
+                        <PosterPreview
+                            template={selectedTemplate}
+                            texts={selectedTexts}
+                            ref={stageRef}
+                        />
+                    </section>
+                </div>
+                <section className="poster-download">
+                    <DownloadButton stageRef={stageRef} />
+                </section>
+            </main>
         </div>
     );
 };
