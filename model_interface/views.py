@@ -2,6 +2,8 @@ import os
 import re
 import string
 from gensim.parsing.preprocessing import remove_stopwords
+from lime.lime_text import LimeTextExplainer
+from sklearn.pipeline import make_pipeline
 import joblib
 from django.conf import settings
 from django.core.validators import URLValidator
@@ -78,6 +80,12 @@ def predict_value(request, model_type):
             prediction = model_email.predict(processed_input)[0]
             prob = model_email.predict_proba(processed_input)[0][prediction]
 
+            # Create explanation
+            explainer = LimeTextExplainer()
+            email_pipeline = make_pipeline(email_vectorizer, model_email)
+            explanation = explainer.explain_instance(clean_input, email_pipeline.predict_proba, num_features=5)
+            explanation = [word[0] for word in explanation]
+
         # For model_2: process only message_body
         elif model_type == 'model_message':
             message_body = data.get('body')
@@ -99,6 +107,12 @@ def predict_value(request, model_type):
             processed_input = text_vectorizer.transform([clean_input])
             prediction = model_message.predict(processed_input)[0]
             prob = model_message.predict_proba(processed_input)[0][prediction]
+
+            # Create explanation
+            explainer = LimeTextExplainer()
+            message_pipeline = make_pipeline(text_vectorizer, model_message)
+            explanation = explainer.explain_instance(clean_input, message_pipeline.predict_proba, num_features=5)
+            explanation = [word[0] for word in explanation]
 
         # For the URL model
         elif model_type == 'model_url':
