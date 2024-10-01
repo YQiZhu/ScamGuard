@@ -86,6 +86,13 @@ def predict_value(request, model_type):
             explanation = explainer.explain_instance(clean_input, email_pipeline.predict_proba, num_features=5)
             explanation = [word[0] for word in explanation]
 
+            # Return prediction results with explanation
+            return Response({
+                "prediction": int(prediction),
+                "probability": float(prob),
+                "explanation": explanation
+            }, status=status.HTTP_200_OK)
+
         # For model_2: process only message_body
         elif model_type == 'model_message':
             message_body = data.get('body')
@@ -114,6 +121,13 @@ def predict_value(request, model_type):
             explanation = explainer.explain_instance(clean_input, message_pipeline.predict_proba, num_features=5)
             explanation = [word[0] for word in explanation]
 
+            # Return prediction results with explanation
+            return Response({
+                "prediction": int(prediction),
+                "probability": float(prob),
+                "explanation": explanation
+            }, status=status.HTTP_200_OK)
+
         # For the URL model
         elif model_type == 'model_url':
             url_input = data.get('url')
@@ -140,11 +154,11 @@ def predict_value(request, model_type):
             prediction = model_url.predict(processed_input)[0]
             prob = model_url.predict_proba(processed_input)[0][prediction]
 
+            # Return prediction and probability results
+            return Response({"prediction": int(prediction), "probability": float(prob)}, status=status.HTTP_200_OK)
+
         else:
             return Response({"error": "Invalid model type."}, status=status.HTTP_400_BAD_REQUEST)
-
-        # Return prediction results
-        return Response({"prediction": int(prediction), "probability": float(prob)}, status=status.HTTP_200_OK)
 
     except Exception as e:
         # Return error information
