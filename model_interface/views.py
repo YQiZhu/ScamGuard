@@ -1,17 +1,17 @@
 import os
 import re
 import string
-from gensim.parsing.preprocessing import remove_stopwords
+import joblib
 from lime.lime_text import LimeTextExplainer
 from sklearn.pipeline import make_pipeline
-import joblib
+from rest_framework import status
+from rest_framework.response import Response
+from rest_framework.decorators import api_view
 from django.conf import settings
 from django.core.validators import URLValidator
 from django.core.exceptions import ValidationError
-from rest_framework.decorators import api_view
-from rest_framework.response import Response
-from rest_framework import status
 from django.views.decorators.csrf import csrf_exempt
+from gensim.parsing.preprocessing import remove_stopwords
 
 # Email verification regular expression
 EMAIL_REGEX = r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$'
