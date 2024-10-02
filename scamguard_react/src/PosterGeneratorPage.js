@@ -7,7 +7,8 @@ import './PosterGeneratorPage.css';
 
 const PosterGeneratorPage = () => {
     const [selectedTemplate, setSelectedTemplate] = useState(null);
-    const [selectedTexts, setSelectedTexts] = useState([]);
+    const [selectedTexts, setSelectedTexts] = useState({});
+    const [selectedScamType, setSelectedScamType] = useState('');
     const stageRef = useRef(null);
 
     return (
@@ -26,14 +27,18 @@ const PosterGeneratorPage = () => {
                 <div className="poster-setup">
                     <section className="poster-text-selector">
                         <TextSelector
+                            selectedTemplate={selectedTemplate}
                             selectedTexts={selectedTexts}
                             setSelectedTexts={setSelectedTexts}
+                            // selectedScamType={selectedScamType}
+                            setSelectedScamType={setSelectedScamType}
                         />
                     </section>
                     <section className="poster-preview">
                         <PosterPreview
                             template={selectedTemplate}
                             texts={selectedTexts}
+                            scamType={selectedScamType}
                             ref={stageRef}
                         />
                     </section>
