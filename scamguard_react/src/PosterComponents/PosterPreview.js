@@ -12,6 +12,18 @@ const PosterPreview = forwardRef(({ template, texts, scamType }, ref) => {
 
     const [image] = useImage(template?.image);
 
+    const [fontsLoaded, setFontsLoaded] = useState(false);
+
+    useEffect(() => {
+        document.fonts.ready.then(() => {
+            setFontsLoaded(true);
+        });
+    }, []);
+
+    if (!fontsLoaded) {
+        console.log("font didn't load")
+    }
+
     // Find the selected scam's label based on scamType ID
     const selectedScam = scamOptions.find(scam => scam.id === scamType);
     const headerText = selectedScam ? `${selectedScam.label}` : 'Stay Safe from Scams';
@@ -21,6 +33,8 @@ const PosterPreview = forwardRef(({ template, texts, scamType }, ref) => {
     const positionsForTemplate = textPositions[templateId]?.[scamType];
     let headerPosition = { x: WIDTH / 2, y: 50 }; // default position
     let sectionPositions = {}; // positions per section
+    let sectionFontFamily = textPositions[templateId]?.fontFamily || 'Roboto Condensed';
+    console.log(`processing key: "${sectionFontFamily}"`)
 
     if (positionsForTemplate) {
         headerPosition = positionsForTemplate.header || headerPosition;
@@ -48,6 +62,7 @@ const PosterPreview = forwardRef(({ template, texts, scamType }, ref) => {
                             y={headerPosition.y}
                             fontSize={38}
                             fontStyle="bold"
+                            fontFamily="'Roboto'"
                             fill="#000000"
                             align="center"
                             // To center the text, set width and align
@@ -63,6 +78,7 @@ const PosterPreview = forwardRef(({ template, texts, scamType }, ref) => {
                                     y={sectionPositions[section].y + index * 50} // Adjust spacing as needed
                                     fontSize={18}
                                     fill="#000000"
+                                    // fontFamily={sectionFontFamily}
                                     width={sectionPositions[section].width}
                                     align="left"
                                 />

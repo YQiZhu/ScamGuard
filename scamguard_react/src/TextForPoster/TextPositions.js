@@ -32,6 +32,7 @@ export const textPositions = {
         // Add other scam types as needed
     },
     3: { // Template 3
+        fontFamily: 'Helvetica Neue',
         phone_scams: {
             header: { x: 140, y: 75 },
             howItWorks: { x: 50, y: 260, width: 320 },
@@ -42,7 +43,7 @@ export const textPositions = {
         email_scams: {
             header: { x: 300, y: 55 },
             howItWorks: { x: 100, y: 145, width: 320 },
-            howToIdentify: { x: 100, y: 145, width: 320},
+            howToIdentify: { x: 100, y: 145, width: 320 },
             commonTactics: { x: 120, y: 145, width: 320 },
             protectYourself: { x: 100, y: 145, width: 320 },
         },

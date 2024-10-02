@@ -7,7 +7,6 @@ export const scamOptions = [
         sections: {
             howItWorks: [
                 'Scammers call pretending to be from a reputable organization.',
-                'They use high-pressure tactics to extract information.',
                 // Add more as needed
             ],
             howToIdentify: [
@@ -33,7 +32,6 @@ export const scamOptions = [
         sections: {
             howItWorks: [
                 'Phishing emails requesting sensitive information.',
-                'Emails with malicious attachments or links.',
                 // Add more as needed
             ],
             howToIdentify: [
@@ -59,8 +57,6 @@ export const scamOptions = [
         sections: {
             howItWorks: [
                 'Caller pretending to be from the Australian Taxation Office.',
-                'Unexpected prize wins requiring personal information.',
-                'Urgent calls demanding immediate payment.',
                 // Add more as needed
             ],
             howToIdentify: [
@@ -86,8 +82,6 @@ export const scamOptions = [
         sections: {
             howItWorks: [
                 'Caller pretending to be from the Australian Taxation Office.',
-                'Unexpected prize wins requiring personal information.',
-                'Urgent calls demanding immediate payment.',
                 // Add more as needed
             ],
             howToIdentify: [
@@ -113,8 +107,6 @@ export const scamOptions = [
         sections: {
             howItWorks: [
                 'Caller pretending to be from the Australian Taxation Office.',
-                'Unexpected prize wins requiring personal information.',
-                'Urgent calls demanding immediate payment.',
                 // Add more as needed
             ],
             howToIdentify: [
