@@ -7,7 +7,7 @@ const IdentifyScamsPage = () => {
 
     return (
         <div className="IdentifyScamsPage">
-            
+
             {/* Introduction Section */}
             <header className="indentify-scams-header">
                 <h1>How to Identify Scams</h1>
@@ -15,6 +15,16 @@ const IdentifyScamsPage = () => {
                     <strong>Click</strong> on Card to find out more information/example about how different Scams works and how to identify them.
                 </p>
             </header>
+
+            {/* WordCloud Redirect Button */}
+            <div style={{ textAlign: 'center', margin: '20px 0' }}>
+                <button
+                    onClick={() => navigate('/wordCloud')}
+                    className="wordcloud-button"
+                >
+                    View Scam Categories Word Cloud
+                </button>
+            </div>
 
             {/* Clickable Box Section */}
             {/* Text Scams */}

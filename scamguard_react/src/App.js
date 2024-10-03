@@ -10,6 +10,7 @@ import CheckScamsPage from './CheckScamsPage';
 import RiskAssessmentPage from './RiskAssessmentPage';
 import QuizPage from './QuizPage';
 import PosterGeneratorPage from './PosterGeneratorPage'
+import WordCloudPage from './WordCloudPage';
 import Header from './Header';
 import PhoneScams from './IdentifyScams/PhoneScams';
 import TextScams from './IdentifyScams/TextScams';
@@ -51,6 +52,7 @@ function App() {
           <Route path="/riskAssessment" element={<RiskAssessmentPage />} />
           <Route path="/quiz" element={<QuizPage />} />
           <Route path="/posterGenerator" element={<PosterGeneratorPage />} />
+          <Route path="/wordCloud" element={<WordCloudPage />} />
           <Route path="/phone-scams" element={<PhoneScams />} />
           <Route path="/text-scams" element={<TextScams />} />
           <Route path="/email-scams" element={<EmailScams />} />

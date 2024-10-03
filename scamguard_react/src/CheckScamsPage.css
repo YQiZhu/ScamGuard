@@ -39,6 +39,25 @@
     color: #4F67A6;
 }
 
+.scam-wordcloud{
+    padding-top: 20px;
+    /* margin-bottom: 40px; */
+    padding-bottom: 20px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    max-width: 80%;
+    color: #4F67A6;
+}
+
+/* .scam-wordcloud-segmented button{
+
+} */
+
 .scam-checker-selection {
     /* position: absolute; */
     left: 100px;

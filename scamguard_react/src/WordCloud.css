@@ -1,0 +1,8 @@
+.wordcloud-container {
+    width: 100%;
+    height: 500px; /* Adjust as needed */
+}
+
+.wordcloud-component{
+    color: #4F67A6;
+}

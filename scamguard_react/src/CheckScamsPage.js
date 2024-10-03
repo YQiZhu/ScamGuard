@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import './CheckScamsPage.css';
 import CheckEmails from './CheckScams/CheckEmails';
-import CheckMessages from './CheckScams/CheckMessages'; 
+import CheckMessages from './CheckScams/CheckMessages';
 import CheckURLs from './CheckScams/CheckURLs';
 
 const CheckScamsPage = () => {
 
     const [selectedType, setSelectedType] = useState('email');
-    
+
     return (
         <div className="CheckScamsPage">
             {/* Introduction Section */}
@@ -46,6 +46,16 @@ const CheckScamsPage = () => {
                         {selectedType === 'email' && <CheckEmails />}
                         {selectedType === 'message' && <CheckMessages />}
                         {selectedType === 'url' && <CheckURLs />}
+                    </div>
+                </div>
+                <div className="scam-wordcloud">
+                    <div className="scam-wordcloud-section">
+                        {/* <h3>Select the text type you want to check in below</h3> */}
+                        <div className="scam-wordcloud-segmented">
+                            <button onClick={() => setSelectedType('email')} >
+                                View common words in SCAM
+                            </button>
+                        </div>
                     </div>
                 </div>
             </main>
