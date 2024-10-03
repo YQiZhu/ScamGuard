@@ -32,13 +32,13 @@ const HomePage = ({ scrollToTop }) => {
 
                 <div className='home-page-header-text'>
                     <h1>Protecting seniors from scams</h1>
-                    <p>Welcome to your go-to resource for staying safe from online scams.</p>
+                    <p>Senior Australians are being increasingly targeted by scammers. We're here to help you protect yourself from scams.</p>
                 </div>
                 <div class="home-page-image-container">
                     <img src='/images/reallife_scenario/home_page1.jpg' alt="home page img" className='home-page-img' />
                 </div>
                 <div className="scroll-hint">
-                    <span>Scroll Down ↓</span>
+                    <span>Scroll Down For More Information ↓</span>
                 </div>
             </header>
 
