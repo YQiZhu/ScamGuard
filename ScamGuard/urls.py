@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('currentScams.urls')),
     path('', include('risk_assessment.urls')),
-    path('', include('model_interface.urls'))
+    path('', include('model_interface.urls')),
+    path('', include('word_cloud.urls'))
 ]

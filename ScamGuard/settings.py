@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'currentScams',
     'risk_assessment',
     'model_interface',
+    'word_cloud',
     'corsheaders',
 ]
 

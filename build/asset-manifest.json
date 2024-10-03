@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.e63a4725.css",
-    "main.js": "/static/js/main.393083be.js",
+    "main.css": "/static/css/main.37c1506e.css",
+    "main.js": "/static/js/main.b9f52c65.js",
     "static/js/210.81e3a53b.chunk.js": "/static/js/210.81e3a53b.chunk.js",
     "static/js/540.331e9481.chunk.js": "/static/js/540.331e9481.chunk.js",
     "static/js/453.2fa3f6c9.chunk.js": "/static/js/453.2fa3f6c9.chunk.js",
@@ -11,23 +11,24 @@
     "static/media/scam_detect.png": "/static/media/scam_detect.a359a01c43cc9fa3197e.png",
     "static/media/scam_alert_no_background.png": "/static/media/scam_alert_no_background.8f841e5999b2006e8ab8.png",
     "static/media/website_scams_icon.png": "/static/media/website_scams_icon.5e56907fa0f63656c078.png",
-    "static/media/investment_scam.png": "/static/media/investment_scam.94f4a69570568cd718c7.png",
-    "static/media/text_scams_icon.png": "/static/media/text_scams_icon.7e2962e427a03b51c375.png",
-    "static/media/product.png": "/static/media/product.d8f90e906899cd639f9d.png",
-    "static/media/social_media_scams_icon.png": "/static/media/social_media_scams_icon.f14b86427655e8ee3586.png",
+    "static/media/romance_scams_icon.png": "/static/media/romance_scams_icon.609dcf776e1e73cb634d.png",
+    "static/media/social_media_scams_icon.png": "/static/media/social_media_scams_icon.a378ebf8862be880d966.png",
     "static/media/email_scams_icon.png": "/static/media/email_scams_icon.5fc406e224e6f119a7b1.png",
-    "static/media/job_scam.jpg": "/static/media/job_scam.2510d38009cf9cbe2a6e.jpg",
-    "static/media/romance_scams_icon.png": "/static/media/romance_scams_icon.f26dfc16df14edc0622a.png",
-    "static/media/phone_scams_icon.png": "/static/media/phone_scams_icon.53e38c0397cf4baad0b5.png",
+    "static/media/job_scam.jpg": "/static/media/job_scam.6fb14d15f23b7bd9e7dd.jpg",
+    "static/media/text_scams_icon.png": "/static/media/text_scams_icon.d04a53cc03b2ee5d52a7.png",
+    "static/media/investment_scam.png": "/static/media/investment_scam.a857765aa91085ce9d91.png",
+    "static/media/phone_scams_icon.png": "/static/media/phone_scams_icon.5b0b906c1a21706263a4.png",
+    "static/media/impersonation_scams_icon.png": "/static/media/impersonation_scams_icon.1cf6f5c0df9d1821d6cb.png",
+    "static/media/product.png": "/static/media/product.8c65e4d54649dd512619.png",
     "index.html": "/index.html",
-    "main.e63a4725.css.map": "/static/css/main.e63a4725.css.map",
-    "main.393083be.js.map": "/static/js/main.393083be.js.map",
+    "main.37c1506e.css.map": "/static/css/main.37c1506e.css.map",
+    "main.b9f52c65.js.map": "/static/js/main.b9f52c65.js.map",
     "210.81e3a53b.chunk.js.map": "/static/js/210.81e3a53b.chunk.js.map",
     "540.331e9481.chunk.js.map": "/static/js/540.331e9481.chunk.js.map",
     "453.2fa3f6c9.chunk.js.map": "/static/js/453.2fa3f6c9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e63a4725.css",
-    "static/js/main.393083be.js"
+    "static/css/main.37c1506e.css",
+    "static/js/main.b9f52c65.js"
   ]
 }
