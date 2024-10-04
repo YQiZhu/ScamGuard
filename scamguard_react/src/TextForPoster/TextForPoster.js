@@ -74,7 +74,7 @@ export const scamOptions = [
                 'Spelling and grammar mistakes.',
                 'Poor spelling and grammer.',
                 'Requests for sensitive info.'
-                
+
                 // Add more as needed
             ],
             commonTactics: [
@@ -85,7 +85,7 @@ export const scamOptions = [
                 // Add more as needed
             ],
             protectYourself: [
-                'Don't click unknown links.',
+                "Don't click unknown links.",
                 'Use spam filters and antivirus software.',
                 'Verify the sender.',
                 'Never share personal info.'
@@ -217,10 +217,10 @@ export const scamOptions = [
             ],
             protectYourself: [
                 'Verify job ads independently.',
-                'Never send money or personal info to strangers online.'        
+                'Never send money or personal info to strangers online.'
             ],
         },
-    }, 
+    },
     {
         id: 'impersonation_scams',
         label: 'Impersonation Scams',
@@ -239,12 +239,12 @@ export const scamOptions = [
                 'Asking for personal or payment info.',
                 'Suspicious links or email addresses.',
                 'Requests for money from a new number.'
-        ],
             ],
+
             protectYourself: [
                 'Verify the organisation or the related person.',
                 'Cut contact if threatened.',
-                'Don’t open unknown links or attachments.',
+                "Don't open unknown links or attachments."
             ],
         },
     },// Add more as needed

@@ -84,7 +84,7 @@ def predict_value(request, model_type):
             explainer = LimeTextExplainer()
             email_pipeline = make_pipeline(email_vectorizer, model_email)
             explanation = explainer.explain_instance(clean_input, email_pipeline.predict_proba, num_features=5)
-            explanation = [word[0] for word in explanation]
+            explanation = [word[0] for word in explanation.as_list()]
 
             # Return prediction results with explanation
             return Response({
@@ -119,7 +119,7 @@ def predict_value(request, model_type):
             explainer = LimeTextExplainer()
             message_pipeline = make_pipeline(text_vectorizer, model_message)
             explanation = explainer.explain_instance(clean_input, message_pipeline.predict_proba, num_features=5)
-            explanation = [word[0] for word in explanation]
+            explanation = [word[0] for word in explanation.as_list()]
 
             # Return prediction results with explanation
             return Response({
