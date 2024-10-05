@@ -174,7 +174,7 @@ export const scamOptions = [
         label: 'Product and Service Scams',
         sections: {
             howItWorks: [
-                'Product and service scams involve scammers posing as buyers or sellers to trick victims into sending money or personal info. They use fake websites, profiles, or ads mimicking real businesses, often offering deals too good to be true.'
+                'Product and service scams involve scammers posing as buyers or sellers to trick victims into sending money or personal info. They use fake websites, profiles, or ads mimicking real businesses.'
                 // Add more as needed
             ],
             howToIdentify: [
