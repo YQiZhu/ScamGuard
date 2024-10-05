@@ -23,6 +23,7 @@ const PosterPreview = forwardRef(({ template, texts, scamType }, ref) => {
     let sectionPositions = {}; // positions per section
     let sectionFontFamily = textPositions[templateId]?.fontFamily || "'Roboto'";
     let fillColour = textPositions[templateId]?.fillColour || "#000000";
+    let textHeight = textPositions[templateId]?.fontSize ||18;
     // let charPerLine = textPositions[templateId]?.charPerLine || 25;
     // let charPerLineProtect = textPositions[templateId]?.charPerLineProtect || 40;
     console.log(`Font Family: "${sectionFontFamily}"`)
@@ -69,10 +70,10 @@ const PosterPreview = forwardRef(({ template, texts, scamType }, ref) => {
                                 const bulletText = isBulletPointSection ? `• ${text}` : text; // Add bullet point
 
                                 // Calculate text height
-                                const textHeight = 18; // Set a fixed font size
+                                // const textHeight = 18; // Set a fixed font size
                                 // const isprotectYourselfSection = section === 'protectYourself';
                                 const textLines = Math.ceil(bulletText.length / sectionPositions[section].charPerLine); // Assuming x characters per line 
-                                const renderedHeight = textHeight * textLines + 15; // Add some padding
+                                const renderedHeight = textHeight * textLines + 10; // Add some padding
 
                                 const textNode = (
                                     <Text
