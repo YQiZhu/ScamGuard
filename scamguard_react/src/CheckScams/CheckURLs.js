@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './CheckEmails.css'; // Import the CSS file
+import './CheckScams.css'; // Import the CSS file
 
 const CheckURLs = () => {
     const [urlBody, setURLBody] = useState('');
@@ -78,9 +78,9 @@ const CheckURLs = () => {
 
     return (
         <div className="ScamDetectorPage"> 
-            <form className="check-emails-form" onSubmit={handleSubmit}>
+            <form className="check-scams-form" onSubmit={handleSubmit}>
 
-                <div className="check-emails-form-group">
+                <div className="check-scams-form-group">
                     <label>Enter URL with 'https://' or 'http://' header (required)</label>
                     <textarea
                         value={urlBody}
@@ -90,7 +90,7 @@ const CheckURLs = () => {
                     ></textarea>
                 </div>
 
-                {/* Error url for missing email body */}
+                {/* Error url for missing urls body */}
                 {error && <p className="check-scam-error-message">{error}</p>}
                 <div className='scam-detector-btn-group'>
                     <button className="submit-button" type="submit">Check If Scam</button>

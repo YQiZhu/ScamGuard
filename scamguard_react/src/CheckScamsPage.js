@@ -48,16 +48,6 @@ const CheckScamsPage = () => {
                         {selectedType === 'url' && <CheckURLs />}
                     </div>
                 </div>
-                <div className="scam-wordcloud">
-                    <div className="scam-wordcloud-section">
-                        {/* <h3>Select the text type you want to check in below</h3> */}
-                        <div className="scam-wordcloud-segmented">
-                            <button onClick={() => setSelectedType('email')} >
-                                View common words in SCAM
-                            </button>
-                        </div>
-                    </div>
-                </div>
             </main>
         </div>
     );
