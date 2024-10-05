@@ -2,8 +2,8 @@
 import React from 'react';
 
 const templates = [
-    { id: 1, name: 'Template 1', image: '/templates/template1.png' },
-    { id: 2, name: 'Template 2', image: '/templates/template2.png' },
+    { id: 1, name: 'Template 1', image: '/templates/TP2_Blank.png' },
+    { id: 2, name: 'Template 2', image: '/templates/TP3_Blank.png' },
     { id: 3, name: 'Template 3', image: '/templates/TP1_Blank.png' },
     //TP1_Blank.png
     // Add more templates as needed
