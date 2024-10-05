@@ -1,8 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { NavLink } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
+  const [isCurrentScamsOpen, setCurrentScamsOpen] = useState(false);
+  const [isHowToOpen, setHowToOpen] = useState(false);
+  const [isReportOpen, setReportOpen] = useState(false);
   return (
     <nav>
       <NavLink
@@ -18,79 +21,67 @@ const Header = () => {
         <p className="nav-text">ScamGuard</p>
       </NavLink>
       {/* <p className="nav-text">ScamGuard</p> */}
-      <ul>
-        {/* <li>
-          <NavLink
-            exact="true"
-            to="/"
-            className={({ isActive }) => (isActive ? 'active-link' : '')}
-          >
-            Home
-          </NavLink>
-        </li> */}
-        <li>
-          <NavLink
-            to="/currentScam"
-            className={({ isActive }) => (isActive ? 'active-link' : '')}
-          >
-            Current Scams
-          </NavLink>
+      <ul className='header-nav-ul'>
+        <li onMouseEnter={() => setCurrentScamsOpen(true)} onMouseLeave={() => setCurrentScamsOpen(false)}>
+          <span>Current Scams</span>
+          {isCurrentScamsOpen && (
+            <ul className="dropdown">
+              <li>
+                <NavLink to="/currentScam" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+                  Current Scams
+                </NavLink>
+              </li>
+            </ul>
+          )}
         </li>
-        <li>
-          <NavLink
-            to="/identifyScam"
-            className={({ isActive }) => (isActive ? 'active-link' : '')}
-          >
-            How to Identify Scams
-          </NavLink>
+        <li onMouseEnter={() => setHowToOpen(true)} onMouseLeave={() => setHowToOpen(false)}>
+          <span>How to Identify Scams</span>
+          {isHowToOpen && (
+            <ul className="dropdown">
+              <li>
+                <NavLink to="/identifyScam" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+                  How to Identify Scams
+                </NavLink>
+              </li>
+            </ul>
+          )}
         </li>
-        <li>
-          <NavLink
-            to="/reportScam"
-            className={({ isActive }) => (isActive ? 'active-link' : '')}
-          >
-            Report Scams
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/whatToDo"
-            className={({ isActive }) => (isActive ? 'active-link' : '')}
-          >
-            What To Do If Scammed
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/checkScam"
-            className={({ isActive }) => (isActive ? 'active-link' : '')}
-          >
-            Scam Detector
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/riskAssessment"
-            className={({ isActive }) => (isActive ? 'active-link' : '')}
-          >
-            Scam Risk Assessment
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/quiz"
-            className={({ isActive }) => (isActive ? 'active-link' : '')}
-          >
-            Take Quiz
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/posterGenerator"
-            className={({ isActive }) => (isActive ? 'active-link' : '')}
-          >
-            Poster Generator
-          </NavLink>
+        <li onMouseEnter={() => setReportOpen(true)} onMouseLeave={() => setReportOpen(false)}>
+          <span>Report Scams</span>
+          {isReportOpen && (
+            <ul className="dropdown">
+              <li>
+                <NavLink to="/reportScam" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+                  Report Scams
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/whatToDo" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+                  What To Do If Scammed
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/checkScam" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+                  Scam Detector
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/riskAssessment" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+                  Scam Risk Assessment
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/quiz" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+                  Take Quiz
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/posterGenerator" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+                  Poster Generator
+                </NavLink>
+              </li>
+            </ul>
+          )}
         </li>
       </ul>
     </nav>
