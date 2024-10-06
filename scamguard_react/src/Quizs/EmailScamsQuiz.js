@@ -74,9 +74,9 @@ const EmailScamsQuiz = () => {
                 "To stay safe, avoid clicking the link, and if you're unsure about the file, contact the sender directly or verify through official channels like your company's SharePoint system."
             ],
             areas: [
-                { title: 'Delete', top: '70px', left: '32px', width: '30px', height: '40px' },
-                { title: 'Close', top: '20px', right: '0px', width: '30px', height: '22px' },
-                { title: 'Link', top: '570px', left: '340px', width: '115px', height: '25px', link: 'http://sharep0int-files-portal.com/open-docs' },
+                { title: 'Link', top: '435px', left: '390px', width: '130px', height: '25px', link: 'https://www.dropbox.com/business' },
+                { title: 'Link', top: '340px', left: '312px', width: '95px', height: '22px', link: 'https://www.dropbox.com/login' },
+                { title: 'Link', top: '290px', left: '335px', width: '130px', height: '30px', link: 'https://help.dropbox.com/storage-space/get-more-space' },
             ]
         },
         {
@@ -89,9 +89,9 @@ const EmailScamsQuiz = () => {
                 "To stay safe, avoid clicking the link, and if you're unsure about the file, contact the sender directly or verify through official channels like your company's SharePoint system."
             ],
             areas: [
-                { title: 'Delete', top: '70px', left: '32px', width: '30px', height: '40px' },
-                { title: 'Close', top: '20px', right: '0px', width: '30px', height: '22px' },
-                { title: 'Link', top: '570px', left: '340px', width: '115px', height: '25px', link: 'http://sharep0int-files-portal.com/open-docs' },
+                { title: 'Delete', top: '70px', right: '32px', width: '25px', height: '20px' },
+                { title: 'Close', top: '70px', right: '68px', width: '25px', height: '20px' },
+                { title: 'Link', top: '490px', left: '340px', width: '130px', height: '25px', link: 'https://rcpmag.com/Home.aspx' },
             ]
         },
         {
@@ -104,9 +104,10 @@ const EmailScamsQuiz = () => {
                 "To stay safe, avoid clicking the link, and if you're unsure about the file, contact the sender directly or verify through official channels like your company's SharePoint system."
             ],
             areas: [
-                { title: 'Delete', top: '70px', left: '32px', width: '30px', height: '40px' },
-                { title: 'Close', top: '20px', right: '0px', width: '30px', height: '22px' },
-                { title: 'Link', top: '570px', left: '340px', width: '115px', height: '25px', link: 'http://sharep0int-files-portal.com/open-docs' },
+                { title: 'Delete', top: '70px', right: '32px', width: '25px', height: '20px' },
+                { title: 'Close', top: '70px', right: '68px', width: '25px', height: '20px' },
+                { title: 'Link', top: '180px', left: '190px', width: '105px', height: '25px', link: 'https://www.electricalcontractor.com.au/' },
+                { title: 'Link', top: '355px', left: '190px', width: '325px', height: '15px', link: 'https://in.xero.com/oY8zP3TUYDgSwb296zotAwydQXhdxKmDVEzM.' },
             ]
         },
     ];
@@ -152,7 +153,7 @@ const EmailScamsQuiz = () => {
         let isLegitimate = currentImage.isLegitimate || false
 
         // Set message based on whether the title is 'Link' or not
-        if (area.title === 'Link'  && isLegitimate == false) {
+        if (area.title === 'Link' && isLegitimate == false) {
             setExtraMessage(<span style={{ color: 'red' }}>SCAM!!!</span>);
         } else {
             setExtraMessage(<span style={{ color: 'green' }}>Nice Work!</span>);
