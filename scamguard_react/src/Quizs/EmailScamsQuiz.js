@@ -38,6 +38,7 @@ const EmailScamsQuiz = () => {
         },
         {
             title: 'Scenario 3', img: '/images/reallife_scenario/email_scams/Scam-email3.png',
+            isLegitimate: true,
             feedback: [
                 "Unexpected Order: If you didn't place a $209.12 order, it's suspicious.",
                 "Generic Details: It only says 'Ship to: John,' withoud any address or other information which is vague and typical of phishing emails.",
@@ -47,7 +48,7 @@ const EmailScamsQuiz = () => {
                 { title: 'Delete', top: '70px', left: '32px', width: '30px', height: '40px' },
                 { title: 'Close', top: '20px', right: '0px', width: '30px', height: '22px' },
                 { title: 'Link', top: '379px', left: '291px', width: '100px', height: '26px', link: 'https://www.amazon.com/' },
-            ] //done
+            ] //legitmate
         },
         {
             title: 'Scenario 4', img: '/images/reallife_scenario/email_scams/Scam-email4.png',
@@ -62,7 +63,52 @@ const EmailScamsQuiz = () => {
                 { title: 'Close', top: '20px', right: '0px', width: '30px', height: '22px' },
                 { title: 'Link', top: '570px', left: '340px', width: '115px', height: '25px', link: 'http://sharep0int-files-portal.com/open-docs' },
             ]
-        }
+        },
+        {
+            title: 'Scenario 5', img: '/images/reallife_scenario/email_scams/normal_email_1.png',
+            isLegitimate: true,
+            feedback: [
+                "Suspicious Sender: It uses 'sharep0int@sharep0int.com' with a zero, mimicking the real SharePoint domain.",
+                "File Access: 'Employee Bonuses' should be personalized, yet the email states, 'This link will work for anyone,' which is suspicious.",
+                "Fake Branding: The 'Minisoft' logo instead of Microsoft is suspicious.",
+                "To stay safe, avoid clicking the link, and if you're unsure about the file, contact the sender directly or verify through official channels like your company's SharePoint system."
+            ],
+            areas: [
+                { title: 'Delete', top: '70px', left: '32px', width: '30px', height: '40px' },
+                { title: 'Close', top: '20px', right: '0px', width: '30px', height: '22px' },
+                { title: 'Link', top: '570px', left: '340px', width: '115px', height: '25px', link: 'http://sharep0int-files-portal.com/open-docs' },
+            ]
+        },
+        {
+            title: 'Scenario 6', img: '/images/reallife_scenario/email_scams/normal_email_2.png',
+            isLegitimate: true,
+            feedback: [
+                "Suspicious Sender: It uses 'sharep0int@sharep0int.com' with a zero, mimicking the real SharePoint domain.",
+                "File Access: 'Employee Bonuses' should be personalized, yet the email states, 'This link will work for anyone,' which is suspicious.",
+                "Fake Branding: The 'Minisoft' logo instead of Microsoft is suspicious.",
+                "To stay safe, avoid clicking the link, and if you're unsure about the file, contact the sender directly or verify through official channels like your company's SharePoint system."
+            ],
+            areas: [
+                { title: 'Delete', top: '70px', left: '32px', width: '30px', height: '40px' },
+                { title: 'Close', top: '20px', right: '0px', width: '30px', height: '22px' },
+                { title: 'Link', top: '570px', left: '340px', width: '115px', height: '25px', link: 'http://sharep0int-files-portal.com/open-docs' },
+            ]
+        },
+        {
+            title: 'Scenario 7', img: '/images/reallife_scenario/email_scams/normal_email_3.png',
+            isLegitimate: true,
+            feedback: [
+                "Suspicious Sender: It uses 'sharep0int@sharep0int.com' with a zero, mimicking the real SharePoint domain.",
+                "File Access: 'Employee Bonuses' should be personalized, yet the email states, 'This link will work for anyone,' which is suspicious.",
+                "Fake Branding: The 'Minisoft' logo instead of Microsoft is suspicious.",
+                "To stay safe, avoid clicking the link, and if you're unsure about the file, contact the sender directly or verify through official channels like your company's SharePoint system."
+            ],
+            areas: [
+                { title: 'Delete', top: '70px', left: '32px', width: '30px', height: '40px' },
+                { title: 'Close', top: '20px', right: '0px', width: '30px', height: '22px' },
+                { title: 'Link', top: '570px', left: '340px', width: '115px', height: '25px', link: 'http://sharep0int-files-portal.com/open-docs' },
+            ]
+        },
     ];
 
     const scenarioRef = useRef(null); // Create a ref for the scenario section
@@ -103,8 +149,10 @@ const EmailScamsQuiz = () => {
         const feedbackPoints = currentImage.feedback; // Split by period and remove empty elements
         setPopupContent(feedbackPoints);
 
+        let isLegitimate = currentImage.isLegitimate || false
+
         // Set message based on whether the title is 'Link' or not
-        if (area.title === 'Link') {
+        if (area.title === 'Link'  && isLegitimate == false) {
             setExtraMessage(<span style={{ color: 'red' }}>SCAM!!!</span>);
         } else {
             setExtraMessage(<span style={{ color: 'green' }}>Nice Work!</span>);
