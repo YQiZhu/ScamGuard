@@ -74,7 +74,7 @@ const CheckMessages = () => {
         <div className="result-section">
           <p>This message has a <strong>{probability}%</strong> chance of being a <strong style={{ color: 'red' }}>SCAM.</strong></p>
           <p style={{fontSize: '18px'}}>Highlighted words: {highlightText(messageBody, explanationWords)}</p>
-          <p>Disclaimer: The model used is not 100% and may return incorrect results. If you are unsure do not interact with the message. Please refer to <a href="/identifyScam" target="_blank">How to Identify Scams</a> to learn how to verify if a message or URL is a scam.</p>
+          <p>Disclaimer: The model used is not 100% accurate and may return incorrect results. If you are unsure do not interact with the message. Please refer to <a href="/identifyScam" target="_blank">How to Identify Scams</a> to learn how to verify if a message or URL is a scam.</p>
         </div>
       );
     } else {
@@ -82,7 +82,7 @@ const CheckMessages = () => {
         <div className="result-section">
           <p>This message has a <strong>{probability}%</strong> chance of being <strong style={{ color: 'green' }}>LEGITIMATE</strong>.</p>
           <p style={{fontSize: '18px'}}>Highlighted words: {highlightText(messageBody, explanationWords)}</p>
-          <p>Disclaimer: The model used is not 100% and may return incorrect results. If you are unsure do not interact with the message. Please refer to <a href="/identifyScam" target="_blank">How to Identify Scams</a> to learn how to verify if a message or URL is a scam.</p>
+          <p>Disclaimer: The model used is not 100% accurate and may return incorrect results. If you are unsure do not interact with the message. Please refer to <a href="/identifyScam" target="_blank">How to Identify Scams</a> to learn how to verify if a message or URL is a scam.</p>
         </div>
       );
     }
