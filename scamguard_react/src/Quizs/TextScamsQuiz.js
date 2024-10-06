@@ -8,9 +8,9 @@ const TextScamsQuiz = () => {
     {
       title: 'Scenario 1', img: '/images/reallife_scenario/text_scams/Text Scenario 1.png',
       feedback: [
-        "Unfamiliar Link: The URL (post.deliverypackage.info) is unfamiliar and not from a legitimate delivery service.",
-        "Urgent Language: Scammers use pressure tactics like “immediate action.” ",
-        "Unexpected Message: If you weren’t expecting a package, it’s likely fake. If you're concerned about a real delivery, contact the company directly via their official website or customer service."
+        "The URL (post.deliverypackage.info) is unfamiliar and not from a legitimate delivery service.",
+        "Scammers use pressure tactics like “immediate action.” ",
+        "If you weren’t expecting a package, it’s likely fake. If you're concerned about a real delivery, contact the company directly via their official website or customer service."
       ],
       areas: [
         { title: 'Delete', top: '40px', right: '37px', width: '83px', height: '35px' },
@@ -21,7 +21,10 @@ const TextScamsQuiz = () => {
     },
     {
       title: 'Scenario 2', img: '/images/reallife_scenario/text_scams/Text Scenario 2.png',
-      feedback: ["The .buzz domain is not typically used for legitimate business websites, especially for toll companies, which usually use .com, .com.au, or .gov.au. The domain (collections-service-au.buzz) doesn’t match LINKT’s official domain, which would be something like linkt.com.au. You can log in to the official website to check for any overdue payments or tolls without the risk of being directed to a fraudulent site."
+      feedback: [
+        "The .buzz domain is not typically used for legitimate business websites, especially for toll companies, which usually use .com, .com.au, or .gov.au.",
+        "The domain (collections-service-au.buzz) doesn’t match LINKT’s official domain, which would be something like linkt.com.au.",
+        "You can log in to the official website to check for any overdue payments or tolls without the risk of being directed to a fraudulent site."
       ],
       areas: [
         { title: 'Delete', top: '40px', right: '37px', width: '83px', height: '35px' },
@@ -32,7 +35,9 @@ const TextScamsQuiz = () => {
     {
       title: 'Scenario 3', img: '/images/reallife_scenario/text_scams/Text Scenario 3.png',
       feedback: [
-        "The URL uses 'Medicaid' instead of 'Medicare,' which is a common tactic scammers use to confuse recipients. Government-related websites in Australia typically end in '.gov.au' instead of '.com.' Legitimate Medicare communication would use a secure, official domain."
+        "The URL uses 'Medicaid' instead of 'Medicare,' which is a common tactic scammers use to confuse recipients.",
+        "Government-related websites in Australia typically end in '.gov.au' instead of '.com'.",
+        "Legitimate Medicare communication would use a secure, official domain."
       ],
       areas: [
         { title: 'Delete', top: '40px', right: '37px', width: '83px', height: '35px' },
@@ -43,7 +48,9 @@ const TextScamsQuiz = () => {
     {
       title: 'Scenario 4', img: '/images/reallife_scenario/text_scams/Text Scenario 4.png',
       feedback: [
-        "The fake link appears legitimate, but the domain is slightly altered (e.g., 'verify-link.co' instead of a real Auspost domain). It creates a sense of urgency by telling her that her package won't be delivered without immediate action. Scammers often use  this tactic to trick people into revealing personal information."
+        "The fake link appears legitimate, but the domain is slightly altered (e.g., 'verify-link.co' instead of a real Auspost domain).",
+        "It creates a sense of urgency by telling her that her package won't be delivered without immediate action.",
+        "Scammers often use  this tactic to trick people into revealing personal information."
       ],
       areas: [
         { title: 'Delete', top: '40px', right: '37px', width: '83px', height: '35px' },
@@ -56,7 +63,9 @@ const TextScamsQuiz = () => {
       title: 'Scenario 5', img: '/images/reallife_scenario/text_scams/Text Scenario 5.png',
       isLegitimate: true,
       feedback: [
-        "If you haven't entered a lottery, it's highly suspicious. The link contains unusual elements (e.g., 'Qlty') that aren't typical for legitimate websites. The message contains poor phrasing ('redeem the price'), which is unprofessional for a legitimate lottery organisation."
+        "If you haven't entered a lottery, it's highly suspicious.",
+        "The link contains unusual elements (e.g., 'Qlty') that aren't typical for legitimate websites.",
+        "The message contains poor phrasing ('redeem the price'), which is unprofessional for a legitimate lottery organisation."
       ],
       areas: [
         { title: 'Delete', top: '40px', right: '37px', width: '83px', height: '35px' },
@@ -67,7 +76,10 @@ const TextScamsQuiz = () => {
     {
       title: 'Scenario 6', img: '/images/reallife_scenario/text_scams/Text Scenario 6.png',
       feedback: [
-        "It pressures you to act quickly, a common scam tactic. Claims a new number is needed because the old phone died, a typical scammer excuse. It suggests moving the conversation to WhatsApp, isolating you on a less monitored platform. The message doesn’t include specific details about you or the sender, typical of mass scam messages."
+        "It pressures you to act quickly, a common scam tactic.",
+        "Claims a new number is needed because the old phone died, a typical scammer excuse.",
+        "It suggests moving the conversation to WhatsApp, isolating you on a less monitored platform.",
+        "The message doesn’t include specific details about you or the sender, typical of mass scam messages."
       ],
       areas: [
         { title: 'Delete', top: '40px', right: '37px', width: '83px', height: '35px' },
@@ -79,7 +91,9 @@ const TextScamsQuiz = () => {
       title: 'Scenario 7', img: '/images/reallife_scenario/text_scams/Text Scenario 7.png',
       isLegitimate: true,
       feedback: [
-        "It pressures you to act quickly, a common scam tactic. Claims a new number is needed because the old phone died, a typical scammer excuse. It suggests moving the conversation to WhatsApp, isolating you on a less monitored platform. The message doesn’t include specific details about you or the sender, typical of mass scam messages."
+        "Includes a clear date, time, and location for the medical appointment.",
+        "Bupa is a well-known healthcare provider, and the link points to their official site 'bupamvs.com.au'.",
+        "Standard requirement to bring a passport."   
       ],
       areas: [
         { title: 'Delete', top: '40px', right: '37px', width: '83px', height: '35px' },
@@ -91,7 +105,8 @@ const TextScamsQuiz = () => {
       title: 'Scenario 8', img: '/images/reallife_scenario/text_scams/Text Scenario 8.png',
       isLegitimate: true,
       feedback: [
-        "It pressures you to act quickly, a common scam tactic. Claims a new number is needed because the old phone died, a typical scammer excuse. It suggests moving the conversation to WhatsApp, isolating you on a less monitored platform. The message doesn’t include specific details about you or the sender, typical of mass scam messages."
+        " It informs the user to ignore the message if it wasn’t expected, a typical feature of legitimate messages.",
+        "The URL points to 'app.optus.com.au', which is Optus's official domain."
       ],
       areas: [
         { title: 'Delete', top: '40px', right: '37px', width: '83px', height: '35px' },
