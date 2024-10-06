@@ -40,9 +40,9 @@ const EmailScamsQuiz = () => {
             title: 'Scenario 3', img: '/images/reallife_scenario/email_scams/Scam-email3.png',
             isLegitimate: true,
             feedback: [
-                "Unexpected Order: If you didn't place a $209.12 order, it's suspicious.",
-                "Generic Details: It only says 'Ship to: John,' withoud any address or other information which is vague and typical of phishing emails.",
-                "If you suspect a fake order, always go directly to the Amazon website by typing the URL into your browser instead of clicking links in an email."
+                "The email is from 'no-reply@amazon.com', which matches Amazon's official domain.",
+                "includes specific order details, and has standard Amazon features like a 'View or manage order' button.",
+                "There's no request for personal info or payment."
             ],
             areas: [
                 { title: 'Delete', top: '70px', left: '32px', width: '30px', height: '40px' },
@@ -68,10 +68,10 @@ const EmailScamsQuiz = () => {
             title: 'Scenario 5', img: '/images/reallife_scenario/email_scams/normal_email_1.png',
             isLegitimate: true,
             feedback: [
-                "Suspicious Sender: It uses 'sharep0int@sharep0int.com' with a zero, mimicking the real SharePoint domain.",
-                "File Access: 'Employee Bonuses' should be personalized, yet the email states, 'This link will work for anyone,' which is suspicious.",
-                "Fake Branding: The 'Minisoft' logo instead of Microsoft is suspicious.",
-                "To stay safe, avoid clicking the link, and if you're unsure about the file, contact the sender directly or verify through official channels like your company's SharePoint system."
+                "From no-reply@dropboxmail.com which is the official domain",
+                "Contains standard Dropbox storage limit info.",
+                "Includes Dropbox logo and familiar branding elements.",
+                "Simply informs about storage limits and offers standard options for upgrading."
             ],
             areas: [
                 { title: 'Link', top: '435px', left: '390px', width: '130px', height: '25px', link: 'https://www.dropbox.com/business' },
@@ -83,10 +83,9 @@ const EmailScamsQuiz = () => {
             title: 'Scenario 6', img: '/images/reallife_scenario/email_scams/normal_email_2.png',
             isLegitimate: true,
             feedback: [
-                "Suspicious Sender: It uses 'sharep0int@sharep0int.com' with a zero, mimicking the real SharePoint domain.",
-                "File Access: 'Employee Bonuses' should be personalized, yet the email states, 'This link will work for anyone,' which is suspicious.",
-                "Fake Branding: The 'Minisoft' logo instead of Microsoft is suspicious.",
-                "To stay safe, avoid clicking the link, and if you're unsure about the file, contact the sender directly or verify through official channels like your company's SharePoint system."
+                "Sender address matches Redmond Channel Partner’s domain.",
+                "The email uses clear, professional branding and includes a clear call to action (webinar registration).",
+                "The links lead to familiar actions, such as webinar registration, with no urgency or strange requests."
             ],
             areas: [
                 { title: 'Delete', top: '70px', right: '32px', width: '25px', height: '20px' },
@@ -98,10 +97,10 @@ const EmailScamsQuiz = () => {
             title: 'Scenario 7', img: '/images/reallife_scenario/email_scams/normal_email_3.png',
             isLegitimate: true,
             feedback: [
-                "Suspicious Sender: It uses 'sharep0int@sharep0int.com' with a zero, mimicking the real SharePoint domain.",
-                "File Access: 'Employee Bonuses' should be personalized, yet the email states, 'This link will work for anyone,' which is suspicious.",
-                "Fake Branding: The 'Minisoft' logo instead of Microsoft is suspicious.",
-                "To stay safe, avoid clicking the link, and if you're unsure about the file, contact the sender directly or verify through official channels like your company's SharePoint system."
+                "The email is from invoicereminders@post.xero.com, which matches Xero's invoicing system domain.",
+                "It includes an invoice number, amount, and due date, which are typical in billing reminders.",
+                "The email provides a direct link to view the invoice and payment options.",
+                "The message is courteous and professional, without urgent or suspicious requests."
             ],
             areas: [
                 { title: 'Delete', top: '70px', right: '32px', width: '25px', height: '20px' },
