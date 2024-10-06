@@ -33,6 +33,7 @@ const HomePage = ({ scrollToTop }) => {
                 <div className='home-page-header-text'>
                     <h1>Protecting seniors from scams</h1>
                     <p>Senior Australians are being increasingly targeted by scammers. We're here to help you protect yourself from scams.</p>
+                    <button onClick={() => navigate('/checkScam')}>Check if message is a scam</button>
                 </div>
                 <div class="home-page-image-container">
                     <img src='/images/reallife_scenario/home_page1.jpg' alt="home page img" className='home-page-img' />
@@ -123,7 +124,7 @@ const HomePage = ({ scrollToTop }) => {
                                         style={{
                                             width: '180px',
                                             height: '120px',
-                                            // marginBottom: '10px' 
+                                            // paddingBottom: '10px' 
                                         }}
                                     />
                                 </div>
@@ -159,7 +160,7 @@ const HomePage = ({ scrollToTop }) => {
                             </div>
                         </div>
 
-                        {/* <div className="hover-card">
+                        <div className="hover-card">
                             <div className="hover-card-content">
                                 <div className="hover-card-main">
                                     <h3>Create Scam Awareness Posters</h3>
@@ -167,9 +168,9 @@ const HomePage = ({ scrollToTop }) => {
                                         src={require('./images/create_poster.png')}
                                         alt="Create Scam Posters"
                                         style={{
-                                            width: '160px',
-                                            height: '120px',
-                                            // marginBottom: '10px' 
+                                            width: '180px',
+                                            height: '100px',
+                                            // paddingBottom: '10px' 
                                         }}
                                     />
                                 </div>
@@ -180,7 +181,7 @@ const HomePage = ({ scrollToTop }) => {
                                     <button>Get Started</button>
                                 </div>
                             </div>
-                        </div> */}
+                        </div>
                     </div>
                 </section>
             </main>
