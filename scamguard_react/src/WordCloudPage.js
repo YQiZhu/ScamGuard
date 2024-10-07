@@ -20,6 +20,18 @@ const WordCloudPage = () => {
             <div className='wordCloud-session'>
                 <WordCloudComponent />
             </div>
+            <footer className='wordCloud-footer-container'>
+                <div className='wordCloud-footer'>
+                    <h2>What's Next?</h2>
+                    <div className='wordCloud-footer-btn-group'>
+                        <button
+                            onClick={() => navigate('/identifyScam')}
+                        >
+                            Learn more about scams
+                        </button>
+                    </div>
+                </div>
+            </footer>
         </div>
     );
 };

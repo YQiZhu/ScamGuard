@@ -105,3 +105,34 @@
     margin-top: 30px;
     max-width: 50%;
 }
+
+
+.check-scams-footer{
+    /* margin: 40px 0px; */
+    padding: 40px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.check-scams-footer-container {
+    background-color: #203F9D;
+    color: rgb(255, 255, 255);
+}
+
+.check-scams-footer-btn-group {
+    display: flex;
+    gap: 60px;
+}
+
+.check-scams-footer-btn-group button {
+    background-color: #EDF5FF;
+    color: #000;
+    padding: 12px 15px;
+}
+
+.check-scams-footer-btn-group button:hover {
+    background-color: #BADDF1;
+    /* Slightly darker on hover */
+}

@@ -26,7 +26,7 @@ function JobScams() {
     const scrollToSection = (ref) => {
         if (ref.current) {
             window.scrollTo({
-                top: ref.current.offsetTop - 60, // Adjust 80px above the element
+                top: ref.current.offsetTop - 60, // Adjust above the element
                 behavior: 'smooth',
             });
         }
@@ -67,7 +67,7 @@ function JobScams() {
                 </p>
                 <h4>Example</h4>
                 <div className="scam-example-img-container">
-                    <img src="/images/Employment_example.png" alt="Employment example" className="example-image" 
+                    <img src="/images/Employment_example.png" alt="Employment example" className="example-image"
                     />
                 </div>
                 <p>
@@ -99,10 +99,10 @@ function JobScams() {
             <section className="real-life-story" ref={realLifeStoryRef}>
                 <h3>Real-Life Story</h3>
                 <h4>Cybersecurity Expert Loses $150,000 to Sophisticated Job Scam</h4> {/* Story Title */}
-                <img src="images/Jobscamrealstory.jpeg" alt="Job scam real story" className="example-image" 
-                style={{
-                    maxWidth: '450px'
-                }}/>
+                <img src="images/Jobscamrealstory.jpeg" alt="Job scam real story" className="example-image"
+                    style={{
+                        maxWidth: '450px'
+                    }} />
                 <p>
                     A Sydney cybersecurity expert, "Josh" (name changed), lost $150,000 of his and his parents' savings to a job scam. Despite having a degree in cybersecurity, Josh was tricked by a fake job ad on Instagram that led him to a WhatsApp chat, where scammers convinced him to transfer money to receive commissions for online tasks. Over three days, Josh was manipulated into draining his savings and even his parents' accounts. He realised it was a scam only after losing everything. The experience left him diagnosed with depression, and he now calls for greater accountability from social media platforms in verifying job ads to prevent such scams.
                 </p>
@@ -111,6 +111,29 @@ function JobScams() {
                 {/* Clickable Box with URL Link */}
                 <button onClick={goToOtherPage}>Read the Full Story</button>
             </section>
+
+            <footer className='identify-scams-footer-container'>
+                <div className='identify-scams-footer'>
+                    <h2>What's Next?</h2>
+                    <div className='identify-scams-footer-btn-group'>
+                        <button
+                            onClick={() => navigate('/identifyScam')}
+                        >
+                            Learn more about scams
+                        </button>
+                        <button
+                            onClick={() => navigate('/quiz')}
+                        >
+                            Test you knowledge
+                        </button>
+                        <button
+                            onClick={() => navigate('/posterGenerator')}
+                        >
+                            Generate a poster
+                        </button>
+                    </div>
+                </div>
+            </footer>
         </div>
     );
 }

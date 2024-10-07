@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './CheckEmails.css'; // Import the CSS file
+import './CheckScams.css'; // Import the CSS file
 
 const CheckURLs = () => {
     const [urlBody, setURLBody] = useState('');
@@ -57,13 +57,15 @@ const CheckURLs = () => {
         if (result.prediction === 1) {
             return (
                 <div className="result-section">
-                    <p>This url has a <strong>{probability}%</strong> chance of being a <strong style={{ color: 'red' }}>SCAM.</strong></p>
+                    <p className='result-section-p'>This url has a <strong>{probability}%</strong> chance of being a <strong style={{ color: 'red' }}>SCAM.</strong></p>
+                    <p className='result-section-p'>Disclaimer: The model used is not 100% accurate and may return incorrect results. If you are unsure do not interact with the message. Please refer to <a href="/identifyScam" target="_blank">How to Identify Scams</a> to learn how to verify if a message or URL is a scam.</p>
                 </div>
             );
         } else {
             return (
                 <div className="result-section">
-                    <p>This url has a <strong>{probability}%</strong> chance of being <strong style={{ color: 'green' }}>LEGITIMATE</strong>.</p>
+                    <p className='result-section-p'>This url has a <strong>{probability}%</strong> chance of being <strong style={{ color: 'green' }}>LEGITIMATE</strong>.</p>
+                    <p className='result-section-p'>Disclaimer: The model used is not 100% accurate and may return incorrect results. If you are unsure do not interact with the message. Please refer to <a href="/identifyScam" target="_blank">How to Identify Scams</a> to learn how to verify if a message or URL is a scam.</p>
                 </div>
             );
         }
@@ -78,9 +80,9 @@ const CheckURLs = () => {
 
     return (
         <div className="ScamDetectorPage"> 
-            <form className="check-emails-form" onSubmit={handleSubmit}>
+            <form className="check-scams-form" onSubmit={handleSubmit}>
 
-                <div className="check-emails-form-group">
+                <div className="check-scams-form-group">
                     <label>Enter URL with 'https://' or 'http://' header (required)</label>
                     <textarea
                         value={urlBody}
@@ -90,7 +92,7 @@ const CheckURLs = () => {
                     ></textarea>
                 </div>
 
-                {/* Error url for missing email body */}
+                {/* Error url for missing urls body */}
                 {error && <p className="check-scam-error-message">{error}</p>}
                 <div className='scam-detector-btn-group'>
                     <button className="submit-button" type="submit">Check If Scam</button>

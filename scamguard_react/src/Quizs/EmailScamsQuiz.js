@@ -38,16 +38,17 @@ const EmailScamsQuiz = () => {
         },
         {
             title: 'Scenario 3', img: '/images/reallife_scenario/email_scams/Scam-email3.png',
+            isLegitimate: true,
             feedback: [
-                "Unexpected Order: If you didn't place a $209.12 order, it's suspicious.",
-                "Generic Details: It only says 'Ship to: John,' withoud any address or other information which is vague and typical of phishing emails.",
-                "If you suspect a fake order, always go directly to the Amazon website by typing the URL into your browser instead of clicking links in an email."
+                "The email is from 'no-reply@amazon.com', which matches Amazon's official domain.",
+                "includes specific order details, and has standard Amazon features like a 'View or manage order' button.",
+                "There's no request for personal info or payment."
             ],
             areas: [
                 { title: 'Delete', top: '70px', left: '32px', width: '30px', height: '40px' },
                 { title: 'Close', top: '20px', right: '0px', width: '30px', height: '22px' },
                 { title: 'Link', top: '379px', left: '291px', width: '100px', height: '26px', link: 'https://www.amazon.com/' },
-            ] //done
+            ] //legitmate
         },
         {
             title: 'Scenario 4', img: '/images/reallife_scenario/email_scams/Scam-email4.png',
@@ -62,7 +63,52 @@ const EmailScamsQuiz = () => {
                 { title: 'Close', top: '20px', right: '0px', width: '30px', height: '22px' },
                 { title: 'Link', top: '570px', left: '340px', width: '115px', height: '25px', link: 'http://sharep0int-files-portal.com/open-docs' },
             ]
-        }
+        },
+        {
+            title: 'Scenario 5', img: '/images/reallife_scenario/email_scams/normal_email_1.png',
+            isLegitimate: true,
+            feedback: [
+                "From no-reply@dropboxmail.com which is the official domain",
+                "Contains standard Dropbox storage limit info.",
+                "Includes Dropbox logo and familiar branding elements.",
+                "Simply informs about storage limits and offers standard options for upgrading."
+            ],
+            areas: [
+                { title: 'Link', top: '435px', left: '390px', width: '130px', height: '25px', link: 'https://www.dropbox.com/business' },
+                { title: 'Link', top: '340px', left: '312px', width: '95px', height: '22px', link: 'https://www.dropbox.com/login' },
+                { title: 'Link', top: '290px', left: '335px', width: '130px', height: '30px', link: 'https://help.dropbox.com/storage-space/get-more-space' },
+            ]
+        },
+        {
+            title: 'Scenario 6', img: '/images/reallife_scenario/email_scams/normal_email_2.png',
+            isLegitimate: true,
+            feedback: [
+                "Sender address matches Redmond Channel Partner’s domain.",
+                "The email uses clear, professional branding and includes a clear call to action (webinar registration).",
+                "The links lead to familiar actions, such as webinar registration, with no urgency or strange requests."
+            ],
+            areas: [
+                { title: 'Delete', top: '70px', right: '32px', width: '25px', height: '20px' },
+                { title: 'Close', top: '70px', right: '68px', width: '25px', height: '20px' },
+                { title: 'Link', top: '490px', left: '340px', width: '130px', height: '25px', link: 'https://rcpmag.com/Home.aspx' },
+            ]
+        },
+        {
+            title: 'Scenario 7', img: '/images/reallife_scenario/email_scams/normal_email_3.png',
+            isLegitimate: true,
+            feedback: [
+                "The email is from invoicereminders@post.xero.com, which matches Xero's invoicing system domain.",
+                "It includes an invoice number, amount, and due date, which are typical in billing reminders.",
+                "The email provides a direct link to view the invoice and payment options.",
+                "The message is courteous and professional, without urgent or suspicious requests."
+            ],
+            areas: [
+                { title: 'Delete', top: '70px', right: '32px', width: '25px', height: '20px' },
+                { title: 'Close', top: '70px', right: '68px', width: '25px', height: '20px' },
+                { title: 'Link', top: '180px', left: '190px', width: '105px', height: '25px', link: 'https://www.electricalcontractor.com.au/' },
+                { title: 'Link', top: '355px', left: '190px', width: '325px', height: '15px', link: 'https://in.xero.com/oY8zP3TUYDgSwb296zotAwydQXhdxKmDVEzM.' },
+            ]
+        },
     ];
 
     const scenarioRef = useRef(null); // Create a ref for the scenario section
@@ -103,8 +149,10 @@ const EmailScamsQuiz = () => {
         const feedbackPoints = currentImage.feedback; // Split by period and remove empty elements
         setPopupContent(feedbackPoints);
 
+        let isLegitimate = currentImage.isLegitimate || false
+
         // Set message based on whether the title is 'Link' or not
-        if (area.title === 'Link') {
+        if (area.title === 'Link' && isLegitimate == false) {
             setExtraMessage(<span style={{ color: 'red' }}>SCAM!!!</span>);
         } else {
             setExtraMessage(<span style={{ color: 'green' }}>Nice Work!</span>);
@@ -285,6 +333,23 @@ const EmailScamsQuiz = () => {
                     </div>
                 )}
             </div>
+            <footer className='quiz-footer-container'>
+                <div className='quiz-footer'>
+                    <h2>What's Next?</h2>
+                    <div className='quiz-footer-btn-group'>
+                        <button
+                            onClick={() => navigate('/identifyScam')}
+                        >
+                            Learn more about scams
+                        </button>
+                        <button
+                            onClick={() => navigate('/posterGenerator')}
+                        >
+                            Generate a poster
+                        </button>
+                    </div>
+                </div>
+            </footer>
         </div>
     );
 };

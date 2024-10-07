@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import TemplateSelector from './PosterComponents/TemplateSelector';
 import TextSelector from './PosterComponents/TextSelector';
 import PosterPreview from './PosterComponents/PosterPreview';
@@ -10,6 +11,7 @@ const PosterGeneratorPage = () => {
     const [selectedTexts, setSelectedTexts] = useState({});
     const [selectedScamType, setSelectedScamType] = useState('');
     const stageRef = useRef(null);
+    const navigate = useNavigate();
 
     return (
         <div className="PosterPage">
@@ -47,6 +49,19 @@ const PosterGeneratorPage = () => {
                     <DownloadButton stageRef={stageRef} />
                 </section>
             </main>
+
+            <footer className='poster-footer-container'>
+                <div className='poster-footer'>
+                    <h2>What's Next?</h2>
+                    <div className='poster-footer-btn-group'>
+                        <button
+                            onClick={() => navigate('/')}
+                        >
+                            Back to home page
+                        </button>
+                    </div>
+                </div>
+            </footer>
         </div>
     );
 };

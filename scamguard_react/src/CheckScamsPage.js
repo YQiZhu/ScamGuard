@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './CheckScamsPage.css';
 import CheckEmails from './CheckScams/CheckEmails';
 import CheckMessages from './CheckScams/CheckMessages';
@@ -7,6 +8,8 @@ import CheckURLs from './CheckScams/CheckURLs';
 const CheckScamsPage = () => {
 
     const [selectedType, setSelectedType] = useState('email');
+
+    const navigate = useNavigate();
 
     return (
         <div className="CheckScamsPage">
@@ -48,17 +51,30 @@ const CheckScamsPage = () => {
                         {selectedType === 'url' && <CheckURLs />}
                     </div>
                 </div>
-                <div className="scam-wordcloud">
-                    <div className="scam-wordcloud-section">
-                        {/* <h3>Select the text type you want to check in below</h3> */}
-                        <div className="scam-wordcloud-segmented">
-                            <button onClick={() => setSelectedType('email')} >
-                                View common words in SCAM
-                            </button>
-                        </div>
+            </main>
+
+            <footer className='check-scams-footer-container'>
+                <div className='check-scams-footer'>
+                    <h2>What's Next?</h2>
+                    <div className='check-scams-footer-btn-group'>
+                        <button
+                            onClick={() => navigate('/reportScam')}
+                        >
+                            Report scams
+                        </button>
+                        <button
+                            onClick={() => navigate('/identifyScam')}
+                        >
+                            Learn more about scams
+                        </button>
+                        <button
+                            onClick={() => navigate('/wordCloud')}
+                        >
+                            Learn more about scam language
+                        </button>
                     </div>
                 </div>
-            </main>
+            </footer>
         </div>
     );
 };

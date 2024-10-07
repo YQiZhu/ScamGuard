@@ -80,6 +80,24 @@ const WhatToDoPage = () => {
                 <p>If you need emotional support, you can contact Beyond Blue at 1300 22 4636 (24 hours a day, 7 days a week) or visit their <a href="https://www.beyondblue.org.au/get-support/talk-to-a-counsellor/chat" target="_blank">website</a> for online chat support.</p>
                 <p>You can also reach Lifeline at 13 11 14 (24 hours a day, 7 days a week) or visit their <a href="https://www.lifeline.org.au/crisis-chat/" target="_blank">website</a> for online chat support.</p>
             </section>
+
+            <footer className='what-to-do-footer-container'>
+                <div className='what-to-do-footer'>
+                    <h2>What's Next?</h2>
+                    <div className='what-to-do-footer-btn-group'>
+                        <button
+                            onClick={() => navigate('/identifyScam')}
+                        >
+                            Learn more about scams
+                        </button>
+                        <button
+                            onClick={() => navigate('/riskAssessment')}
+                        >
+                            Check your risk assessment
+                        </button>
+                    </div>
+                </div>
+            </footer>
         </div>
     );
 };

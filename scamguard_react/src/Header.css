@@ -1,8 +1,9 @@
 nav {
     background-color: #203F9D;
-    padding: 1rem;
+    padding: 10px 1rem;
     color: #fff;
     top: 0;
+    font-weight: bold;
     display: flex;
     position: fixed;
     /* Makes the header fixed at the top */
@@ -36,9 +37,49 @@ nav ul {
     /* Centers the navigation links */
 }
 
+.header-nav-ul{
+    justify-content: right;
+    margin-right: 50px;
+}
+
 nav ul li {
     margin: 0 1rem;
     /* Adds spacing between the navigation links */
+    position: relative;
+    /* Allow positioning of the dropdown */
+}
+
+nav ul li span {
+    cursor: pointer;
+    /* Change cursor on hover */
+}
+
+.dropdown {
+    position: absolute;
+    background-color: #4F67A6;
+    top: 100%;
+    /* Positions below the main item */
+    left: 0;
+    display: none;
+    /* Hidden by default */
+    flex-direction: column;
+    /* Stack dropdown items vertically */
+    margin-top: 1px;
+    padding: 0.6rem;
+    /* Add some padding */
+    border-radius: 5px;
+    /* Optional: round corners */
+}
+
+.dropdown li {
+    margin: 0.5rem 0; /* Add vertical spacing between dropdown items */
+    /* min-width: 100px; */
+    /* padding: 0px 10px; */
+}
+
+nav ul li:hover .dropdown {
+    display: flex;
+    /* Show dropdown on hover */
 }
 
 nav ul li a {

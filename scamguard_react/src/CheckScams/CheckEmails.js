@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './CheckEmails.css'; // Import the CSS file
+import './CheckScams.css'; // Import the CSS file
 
 const CheckEmails = () => {
   const [senderName, setSenderName] = useState('');
@@ -50,21 +50,50 @@ const CheckEmails = () => {
       });
   };
 
+  // Helper function to highlight the explanation words in the email body
+  const highlightText = (text, explanationWords) => {
+    if (!explanationWords || explanationWords.length === 0) {
+      return text;
+    }
+
+    const words = text.split(' '); // Split email body by space
+    return words.map((word, index) => {
+      // Check if the word matches any explanation words
+      const cleanWord = word.replace(/[^a-zA-Z]/g, '').toLowerCase(); // Remove punctuation and make lowercase
+      if (explanationWords.includes(cleanWord)) {
+        return (
+          <span key={index} className="check-scams-highlight">{word} </span> // Highlight the word
+        );
+      }
+      return <span key={index}>{word} </span>; // Non-highlighted word
+    });
+  };
+
   // Format the message based on prediction
   const renderResultMessage = () => {
     if (!result) return null;
 
     const probability = (result.probability * 100).toFixed(2); // Convert to percentage and round to 2 decimal places
+    const explanationWords = result.explanation.map(word => word.toLowerCase()); // Convert explanation words to lowercase
+
     if (result.prediction === 1) {
       return (
         <div className="result-section">
-          <p>This email has a <strong>{probability}%</strong> chance of being a <strong style={{ color: 'red' }}>SCAM.</strong></p>
+          <p className='result-section-p'>This email has a <strong>{probability}%</strong> chance of being a <strong style={{ color: 'red' }}>SCAM.</strong></p>
+          <div className="result-section-highlight">
+            <p>Highlighted words: {highlightText(emailBody, explanationWords)}</p>
+          </div>
+          <p className='result-section-p'>Disclaimer: The model used is not 100% accurate and may return incorrect results. If you are unsure do not interact with the message. Please refer to <a href="/identifyScam" target="_blank">How to Identify Scams</a> to learn how to verify if a message or URL is a scam.</p>
         </div>
       );
     } else {
       return (
         <div className="result-section">
-          <p>This email has a <strong>{probability}%</strong> chance of being <strong style={{ color: 'green' }}>LEGITIMATE</strong>.</p>
+          <p className='result-section-p'>This email has a <strong>{probability}%</strong> chance of being <strong style={{ color: 'green' }}>LEGITIMATE</strong>.</p>
+          <div className="result-section-highlight">
+            <p>Highlighted words: {highlightText(emailBody, explanationWords)}</p>
+          </div>
+          <p className='result-section-p'>Disclaimer: The model used is not 100% accurate and may return incorrect results. If you are unsure do not interact with the message. Please refer to <a href="/identifyScam" target="_blank">How to Identify Scams</a> to learn how to verify if a message or URL is a scam.</p>
         </div>
       );
     }
@@ -82,8 +111,8 @@ const CheckEmails = () => {
 
   return (
     <div className="ScamDetectorPage">
-      <form className="check-emails-form" onSubmit={handleSubmit}>
-        <div className="check-emails-form-group">
+      <form className="check-scams-form" onSubmit={handleSubmit}>
+        <div className="check-scams-form-group">
           <label>Enter Sender Name (optional)</label>
           <input
             type="text"
@@ -94,7 +123,7 @@ const CheckEmails = () => {
           />
         </div>
 
-        <div className="check-emails-form-group">
+        <div className="check-scams-form-group">
           <label>Enter Sender Email Address (optional)</label>
           <input
             type="email"
@@ -105,7 +134,7 @@ const CheckEmails = () => {
           />
         </div>
 
-        <div className="check-emails-form-group">
+        <div className="check-scams-form-group">
           <label>Enter Email Subject (optional)</label>
           <input
             type="text"
@@ -116,7 +145,7 @@ const CheckEmails = () => {
           />
         </div>
 
-        <div className="check-emails-form-group">
+        <div className="check-scams-form-group">
           <label>Enter Email Body (required)</label>
           <textarea
             value={emailBody}
@@ -128,6 +157,7 @@ const CheckEmails = () => {
 
         {/* Error message for missing email body */}
         {error && <p className="check-scam-error-message">{error}</p>}
+
         <div className='scam-detector-btn-group'>
           <button className="submit-button" type="submit">Check If Scam</button>
           <button className="clear-button" onClick={cleanInputField}>Clear Input</button>

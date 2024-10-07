@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import MostReportedScam from './CurrentScams/MostReportedScam';
 import TopLossScam from './CurrentScams/TopLossScam';
 import PopularContactMethods from './CurrentScams/PopularContactMethods';
@@ -9,6 +10,8 @@ const CurrentScamsPage = () => {
     const mostReportedRef = useRef(null);
     const topLossRef = useRef(null);
     const popularContactRef = useRef(null);
+
+    const navigate = useNavigate();
 
     // Function to scroll to the section
     const scrollToSection = (ref) => {
@@ -55,8 +58,26 @@ const CurrentScamsPage = () => {
                 </section>
             </main>
             <p>
-                Data obtained from <a href="https://www.scamwatch.gov.au/" target="_blank" rel="noopener noreferrer" style={{  textDecoration: 'none' }}>Scamwatch</a> © <a href="https://au.creativecommons.net/" target="_blank" rel="noopener noreferrer" style={{  textDecoration: 'none' }}>Commonwealth of Australia</a>
+                Data obtained from <a href="https://www.scamwatch.gov.au/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>Scamwatch</a> © <a href="https://au.creativecommons.net/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>Commonwealth of Australia</a>
             </p>
+            <footer className='current-scams-footer-container'>
+                <div className='current-scams-footer'>
+                    <h2>What's Next?</h2>
+                    <div className='current-scams-footer-btn-group'>
+                        <button
+                            onClick={() => navigate('/identifyScam')}
+                        >
+                            Learn more about scams
+                        </button>
+                        <button
+                            onClick={() => navigate('/riskAssessment')}
+                        >
+                            Check your risk assessment
+                        </button>
+                    </div>
+                </div>
+            </footer>
+
         </div>
     );
 };

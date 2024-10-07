@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './RiskAssessmentPage.css';
 import ContactMethodResultsChart from './RiskAssessment/ContactMethodResultsChart';  // Import chart component
@@ -27,6 +28,8 @@ const RiskAssessmentPage = () => {
     const genders = ['Female', 'Male'];
     const locations = ['Australian Capital Territory', 'New South Wales', 'Northern Territory', 'Queensland', 'South Australia', 'Tasmania', 'Victoria', 'Western Australia'];
 
+    const navigate = useNavigate();
+    
     // Handle Contact Method form submission
     const handleSubmitContactMethod = (e) => {
         e.preventDefault();
@@ -218,8 +221,26 @@ const RiskAssessmentPage = () => {
                 </section>
             </main>
             <p>
-                Data obtained from <a href="https://www.scamwatch.gov.au/" target="_blank" rel="noopener noreferrer" style={{  textDecoration: 'none' }}>Scamwatch</a> © <a href="https://au.creativecommons.net/" target="_blank" rel="noopener noreferrer" style={{  textDecoration: 'none' }}>Commonwealth of Australia</a>
+                Data obtained from <a href="https://www.scamwatch.gov.au/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>Scamwatch</a> © <a href="https://au.creativecommons.net/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>Commonwealth of Australia</a>
             </p>
+
+            <footer className='risk-assessment-footer-container'>
+                <div className='risk-assessment-footer'>
+                    <h2>What's Next?</h2>
+                    <div className='risk-assessment-footer-btn-group'>
+                        <button
+                            onClick={() => navigate('/identifyScam')}
+                        >
+                            Learn more about scams
+                        </button>
+                        <button
+                            onClick={() => navigate('/quiz')}
+                        >
+                            Test you knowledge
+                        </button>
+                    </div>
+                </div>
+            </footer>
         </div>
     );
 };

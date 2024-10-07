@@ -102,3 +102,33 @@
 .CurrentScamsPage{
     color: #4F67A6;
 }
+
+.current-scams-footer{
+    /* margin: 40px 0px; */
+    padding: 40px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.current-scams-footer-container {
+    background-color: #203F9D;
+    color: rgb(255, 255, 255);
+}
+
+.current-scams-footer-btn-group {
+    display: flex;
+    gap: 60px;
+}
+
+.current-scams-footer-btn-group button {
+    background-color: #EDF5FF;
+    color: #000;
+    padding: 12px 15px;
+}
+
+.current-scams-footer-btn-group button:hover {
+    background-color: #BADDF1;
+    /* Slightly darker on hover */
+}

@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './TypeOfScams.css';
 
@@ -25,7 +25,7 @@ function ProductAndServiceScams() {
     const scrollToSection = (ref) => {
         if (ref.current) {
             window.scrollTo({
-                top: ref.current.offsetTop - 60, // Adjust 80px above the element
+                top: ref.current.offsetTop - 60, // Adjust above the element
                 behavior: 'smooth',
             });
         }
@@ -115,6 +115,29 @@ function ProductAndServiceScams() {
                 {/* Clickable Box with URL Link */}
                 <button onClick={goToOtherPage}>Read the Full Story</button>
             </section>
+
+            <footer className='identify-scams-footer-container'>
+                <div className='identify-scams-footer'>
+                    <h2>What's Next?</h2>
+                    <div className='identify-scams-footer-btn-group'>
+                        <button
+                            onClick={() => navigate('/identifyScam')}
+                        >
+                            Learn more about scams
+                        </button>
+                        <button
+                            onClick={() => navigate('/quiz')}
+                        >
+                            Test you knowledge
+                        </button>
+                        <button
+                            onClick={() => navigate('/posterGenerator')}
+                        >
+                            Generate a poster
+                        </button>
+                    </div>
+                </div>
+            </footer>
         </div>
     );
 }

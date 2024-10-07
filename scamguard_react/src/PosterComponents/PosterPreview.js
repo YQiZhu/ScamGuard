@@ -12,29 +12,21 @@ const PosterPreview = forwardRef(({ template, texts, scamType }, ref) => {
 
     const [image] = useImage(template?.image);
 
-    const [fontsLoaded, setFontsLoaded] = useState(false);
-
-    useEffect(() => {
-        document.fonts.ready.then(() => {
-            setFontsLoaded(true);
-        });
-    }, []);
-
-    if (!fontsLoaded) {
-        console.log("font didn't load")
-    }
-
     // Find the selected scam's label based on scamType ID
     const selectedScam = scamOptions.find(scam => scam.id === scamType);
-    const headerText = selectedScam ? `${selectedScam.label}` : 'Stay Safe from Scams';
+    const headerText = selectedScam ? `${selectedScam.label}` : '';
 
     // Retrieve text positions based on template ID and scam type
     const templateId = template?.id;
     const positionsForTemplate = textPositions[templateId]?.[scamType];
     let headerPosition = { x: WIDTH / 2, y: 50 }; // default position
     let sectionPositions = {}; // positions per section
-    let sectionFontFamily = textPositions[templateId]?.fontFamily || 'Roboto Condensed';
-    console.log(`processing key: "${sectionFontFamily}"`)
+    let sectionFontFamily = textPositions[templateId]?.fontFamily || "'Roboto'";
+    let fillColour = textPositions[templateId]?.fillColour || "#000000";
+    let textHeight = textPositions[templateId]?.fontSize ||18;
+    // let charPerLine = textPositions[templateId]?.charPerLine || 25;
+    // let charPerLineProtect = textPositions[templateId]?.charPerLineProtect || 40;
+    console.log(`Font Family: "${sectionFontFamily}"`)
 
     if (positionsForTemplate) {
         headerPosition = positionsForTemplate.header || headerPosition;
@@ -62,38 +54,47 @@ const PosterPreview = forwardRef(({ template, texts, scamType }, ref) => {
                             y={headerPosition.y}
                             fontSize={38}
                             fontStyle="bold"
-                            fontFamily="'Roboto'"
-                            fill="#000000"
+                            fontFamily={sectionFontFamily}
+                            fill='#000000'
                             align="center"
                             // To center the text, set width and align
-                            width={300}
+                            width={350}
                         />
                         {/* Sections Text */}
-                        {Object.keys(sectionPositions).map(section => (
-                            texts[section]?.map((text, index) => (
-                                <Text
-                                    key={`${section}-${index}`}
-                                    text={text}
-                                    x={sectionPositions[section].x}
-                                    y={sectionPositions[section].y + index * 50} // Adjust spacing as needed
-                                    fontSize={18}
-                                    fill="#000000"
-                                    // fontFamily={sectionFontFamily}
-                                    width={sectionPositions[section].width}
-                                    align="left"
-                                />
-                            ))
-                        ))}
-                        {/* Footer Text (Optional) */}
-                        {/* <Text
-                            text="For more information, contact us at [Your Contact Info]"
-                            x={WIDTH / 2}
-                            y={HEIGHT - 100}
-                            fontSize={20}
-                            fill="#000000"
-                            align="center"
-                            width={200}
-                        /> */}
+                        {Object.keys(sectionPositions).map(section => {
+                            let currentY = sectionPositions[section].y; // Start y position for the section
+
+                            return texts[section]?.map((text, index) => {
+                                // Determine if the section is howToIdentify or commonTactics
+                                const isBulletPointSection = section === 'howToIdentify' || section === 'commonTactics' || section === 'protectYourself';
+                                const bulletText = isBulletPointSection ? `• ${text}` : text; // Add bullet point
+
+                                // Calculate text height
+                                // const textHeight = 18; // Set a fixed font size
+                                // const isprotectYourselfSection = section === 'protectYourself';
+                                const textLines = Math.ceil(bulletText.length / sectionPositions[section].charPerLine); // Assuming x characters per line 
+                                const renderedHeight = textHeight * textLines + 10; // Add some padding
+
+                                const textNode = (
+                                    <Text
+                                        key={`${section}-${index}`}
+                                        text={bulletText}
+                                        x={sectionPositions[section].x}
+                                        y={currentY} // Use the currentY for positioning
+                                        fontSize={textHeight}
+                                        fill={fillColour}
+                                        fontFamily={sectionFontFamily}
+                                        width={sectionPositions[section].width}
+                                        align="left"
+                                    />
+                                );
+
+                                // Update currentY for the next text
+                                currentY += renderedHeight; // Move the y position down
+
+                                return textNode; // Return the rendered text node
+                            });
+                        })}
                     </Layer>
                 </Stage>
             ) : (
