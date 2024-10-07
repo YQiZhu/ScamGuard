@@ -10,7 +10,7 @@ export const scamOptions = [
                 // Add more as needed
             ],
             howToIdentify: [
-                'Asks yo to open a link.',
+                'Asks you to open a link.',
                 'Demands immediate action.',
                 'Asks for sensitive info.',
                 'Poor pelling and grammar.'
