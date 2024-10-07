@@ -97,7 +97,7 @@ const HomePage = ({ scrollToTop }) => {
                                     <h3>Practice Scam Detection</h3>
                                     <img
                                         src={require('./images/scam_detect.png')}
-                                        alt="Practice Scam Detection"
+                                        alt="Take Quizs to Detect Scams"
                                         style={{
                                             width: '100px',
                                             height: '120px',
@@ -107,7 +107,7 @@ const HomePage = ({ scrollToTop }) => {
                                 </div>
                                 <div className="hover-card-description">
                                     <p>
-                                        🧠 Test your scam-spotting skills with interactive exercises designed to boost your confidence in staying scam-free.
+                                        🧠 Test your scam-spotting skills with interactive quizs designed to boost your confidence in staying scam-free.
                                     </p>
                                     <button onClick={() => navigate('/quiz')}>Get Started</button>
                                 </div>
