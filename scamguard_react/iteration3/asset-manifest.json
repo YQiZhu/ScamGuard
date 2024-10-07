@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/iteration3/static/css/main.23138e94.css",
-    "main.js": "/iteration3/static/js/main.4ac272ad.js",
+    "main.css": "/iteration3/static/css/main.78fa70a7.css",
+    "main.js": "/iteration3/static/js/main.84a95dfa.js",
     "static/js/210.81e3a53b.chunk.js": "/iteration3/static/js/210.81e3a53b.chunk.js",
     "static/js/540.331e9481.chunk.js": "/iteration3/static/js/540.331e9481.chunk.js",
     "static/js/239.d35c527e.chunk.js": "/iteration3/static/js/239.d35c527e.chunk.js",
@@ -14,19 +14,9 @@
     "static/media/verifying.png": "/iteration3/static/media/verifying.ec375ca01e0abd0b5e02.png",
     "static/media/scam_detect.png": "/iteration3/static/media/scam_detect.a359a01c43cc9fa3197e.png",
     "static/media/scam_alert_no_background.png": "/iteration3/static/media/scam_alert_no_background.8f841e5999b2006e8ab8.png",
-    "static/media/website_scams_icon.png": "/iteration3/static/media/website_scams_icon.5e56907fa0f63656c078.png",
-    "static/media/romance_scams_icon.png": "/iteration3/static/media/romance_scams_icon.609dcf776e1e73cb634d.png",
-    "static/media/social_media_scams_icon.png": "/iteration3/static/media/social_media_scams_icon.a378ebf8862be880d966.png",
-    "static/media/email_scams_icon.png": "/iteration3/static/media/email_scams_icon.5fc406e224e6f119a7b1.png",
-    "static/media/job_scam.jpg": "/iteration3/static/media/job_scam.6fb14d15f23b7bd9e7dd.jpg",
-    "static/media/text_scams_icon.png": "/iteration3/static/media/text_scams_icon.d04a53cc03b2ee5d52a7.png",
-    "static/media/investment_scam.png": "/iteration3/static/media/investment_scam.a857765aa91085ce9d91.png",
-    "static/media/phone_scams_icon.png": "/iteration3/static/media/phone_scams_icon.5b0b906c1a21706263a4.png",
-    "static/media/impersonation_scams_icon.png": "/iteration3/static/media/impersonation_scams_icon.1cf6f5c0df9d1821d6cb.png",
-    "static/media/product.png": "/iteration3/static/media/product.8c65e4d54649dd512619.png",
     "index.html": "/iteration3/index.html",
-    "main.23138e94.css.map": "/iteration3/static/css/main.23138e94.css.map",
-    "main.4ac272ad.js.map": "/iteration3/static/js/main.4ac272ad.js.map",
+    "main.78fa70a7.css.map": "/iteration3/static/css/main.78fa70a7.css.map",
+    "main.84a95dfa.js.map": "/iteration3/static/js/main.84a95dfa.js.map",
     "210.81e3a53b.chunk.js.map": "/iteration3/static/js/210.81e3a53b.chunk.js.map",
     "540.331e9481.chunk.js.map": "/iteration3/static/js/540.331e9481.chunk.js.map",
     "239.d35c527e.chunk.js.map": "/iteration3/static/js/239.d35c527e.chunk.js.map",
@@ -35,7 +25,7 @@
     "453.2fa3f6c9.chunk.js.map": "/iteration3/static/js/453.2fa3f6c9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.23138e94.css",
-    "static/js/main.4ac272ad.js"
+    "static/css/main.78fa70a7.css",
+    "static/js/main.84a95dfa.js"
   ]
 }

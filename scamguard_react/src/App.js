@@ -37,7 +37,7 @@ function App() {
   };
 
   return (
-    <Router basename="/iteration3">
+    <Router>
       <ScrollToTop />
       <div className="App">
         <Header />
