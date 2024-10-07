@@ -145,12 +145,12 @@
     color: #ffffff;
 }
 
-.how-to-report-scam  h3 {
+.how-to-report-scam h3 {
     /* font-size: 1.5rem; */
     margin-bottom: 10px;
 }
 
-.how-to-report-scam  p {
+.how-to-report-scam p {
     /* font-size: 1rem; */
     /* font-size: 18px; */
     /* margin-bottom: 2px; */
@@ -230,4 +230,34 @@
     font-size: 18px;
     max-width: 200px;
     margin: 15px;
+}
+
+.report-footer {
+    /* margin: 40px 0px; */
+    padding: 40px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.report-footer-container {
+    background-color: #203F9D;
+    color: rgb(255, 255, 255);
+}
+
+.report-footer-btn-group {
+    display: flex;
+    gap: 60px;
+}
+
+.report-footer-btn-group button {
+    background-color: #EDF5FF;
+    color: #000;
+    padding: 12px 15px;
+}
+
+.report-footer-btn-group button:hover {
+    background-color: #BADDF1;
+    /* Slightly darker on hover */
 }

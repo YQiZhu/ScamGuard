@@ -333,6 +333,23 @@ const EmailScamsQuiz = () => {
                     </div>
                 )}
             </div>
+            <footer className='quiz-footer-container'>
+                <div className='quiz-footer'>
+                    <h2>What's Next?</h2>
+                    <div className='quiz-footer-btn-group'>
+                        <button
+                            onClick={() => navigate('/identifyScam')}
+                        >
+                            Learn more about scams
+                        </button>
+                        <button
+                            onClick={() => navigate('/posterGenerator')}
+                        >
+                            Generate a poster
+                        </button>
+                    </div>
+                </div>
+            </footer>
         </div>
     );
 };

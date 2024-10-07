@@ -120,6 +120,24 @@ const ReportScamsPage = () => {
                     Once you have submitted a report, we will immediately assess the situation and pass the relevant information to the appropriate law enforcement agencies or cybersecurity experts. We may contact you for more information or to provide further support.
                 </p>
             </section>
+
+            <footer className='report-footer-container'>
+                <div className='report-footer'>
+                    <h2>What's Next?</h2>
+                    <div className='report-footer-btn-group'>
+                        <button
+                            onClick={() => navigate('/identifyScam')}
+                        >
+                            Learn more about scams
+                        </button>
+                        <button
+                            onClick={() => navigate('/riskAssessment')}
+                        >
+                            Check your risk assessment
+                        </button>
+                    </div>
+                </div>
+            </footer>
         </div>
     );
 };

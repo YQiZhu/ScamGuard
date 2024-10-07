@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Header.css';
 
@@ -23,7 +23,7 @@ const Header = () => {
       {/* <p className="nav-text">ScamGuard</p> */}
       <ul className='header-nav-ul'>
         <li onMouseEnter={() => setCurrentScamsOpen(true)} onMouseLeave={() => setCurrentScamsOpen(false)}>
-          <span>Current Scams</span>
+          <span>Learn About Scams</span>
           {isCurrentScamsOpen && (
             <ul className="dropdown">
               <li>
@@ -31,16 +31,14 @@ const Header = () => {
                   Current Scams
                 </NavLink>
               </li>
-            </ul>
-          )}
-        </li>
-        <li onMouseEnter={() => setHowToOpen(true)} onMouseLeave={() => setHowToOpen(false)}>
-          <span>How to Identify Scams</span>
-          {isHowToOpen && (
-            <ul className="dropdown">
               <li>
                 <NavLink to="/identifyScam" className={({ isActive }) => (isActive ? 'active-link' : '')}>
                   How to Identify Scams
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/quiz" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+                  Take Quiz
                 </NavLink>
               </li>
             </ul>
@@ -60,6 +58,13 @@ const Header = () => {
                   What To Do If Scammed
                 </NavLink>
               </li>
+            </ul>
+          )}
+        </li>
+        <li onMouseEnter={() => setHowToOpen(true)} onMouseLeave={() => setHowToOpen(false)}>
+          <span>Stay Alert</span>
+          {isHowToOpen && (
+            <ul className="dropdown">
               <li>
                 <NavLink to="/checkScam" className={({ isActive }) => (isActive ? 'active-link' : '')}>
                   Scam Detector
@@ -68,11 +73,6 @@ const Header = () => {
               <li>
                 <NavLink to="/riskAssessment" className={({ isActive }) => (isActive ? 'active-link' : '')}>
                   Scam Risk Assessment
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/quiz" className={({ isActive }) => (isActive ? 'active-link' : '')}>
-                  Take Quiz
                 </NavLink>
               </li>
               <li>

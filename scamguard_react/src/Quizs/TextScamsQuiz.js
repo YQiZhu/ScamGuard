@@ -93,7 +93,7 @@ const TextScamsQuiz = () => {
       feedback: [
         "Includes a clear date, time, and location for the medical appointment.",
         "Bupa is a well-known healthcare provider, and the link points to their official site 'bupamvs.com.au'.",
-        "Standard requirement to bring a passport."   
+        "Standard requirement to bring a passport."
       ],
       areas: [
         { title: 'Delete', top: '40px', right: '37px', width: '83px', height: '35px' },
@@ -317,6 +317,23 @@ const TextScamsQuiz = () => {
           </div>
         )}
       </div>
+      <footer className='quiz-footer-container'>
+        <div className='quiz-footer'>
+          <h2>What's Next?</h2>
+          <div className='quiz-footer-btn-group'>
+            <button
+              onClick={() => navigate('/identifyScam')}
+            >
+              Learn more about scams
+            </button>
+            <button
+              onClick={() => navigate('/posterGenerator')}
+            >
+              Generate a poster
+            </button>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
