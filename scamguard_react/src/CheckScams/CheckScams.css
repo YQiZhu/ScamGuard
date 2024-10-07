@@ -15,10 +15,6 @@
 }
 
 .result-section-highlight {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   /* width: auto; */
   margin-bottom: 20px;
   background-color: #f0f7ff;
@@ -92,6 +88,10 @@
 }
 
 .result-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   margin-top: 30px;
   /* font-size: 2rem; */
   /* background-color: #2569d1; */
@@ -100,11 +100,13 @@
   margin-bottom: 20px;
 }
 
-.result-section p {
+.result-section-p {
   margin-top: 20px;
   margin-bottom: 10px;
   font-size: 2rem;
 }
+
+
 
 .check-scam-loading {
   font-size: 1.5rem;
