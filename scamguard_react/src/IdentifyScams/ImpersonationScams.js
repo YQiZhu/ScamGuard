@@ -25,7 +25,7 @@ function ImpersonationScams() {
     const scrollToSection = (ref) => {
         if (ref.current) {
             window.scrollTo({
-                top: ref.current.offsetTop - 60, // Adjust 80px above the element
+                top: ref.current.offsetTop - 60, // Adjust 60px above the element
                 behavior: 'smooth',
             });
         }

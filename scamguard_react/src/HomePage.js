@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import { ShaderGradientCanvas, ShaderGradient } from 'shadergradient';
 import { useNavigate } from 'react-router-dom';
 import * as reactSpring from '@react-spring/three';
@@ -6,8 +6,20 @@ import * as drei from '@react-three/drei';
 import * as fiber from '@react-three/fiber';
 import './HomePage.css';
 
-const HomePage = ({ scrollToTop }) => {
+const HomePage = () => {
     const navigate = useNavigate();
+
+    const scrollToCardsRef = useRef(null);
+
+    // Function to scroll to the section
+    const scrollToSection = (ref) => {
+        if (ref.current) {
+            window.scrollTo({
+                top: ref.current.offsetTop - 60, // Adjust 80px above the element
+                behavior: 'smooth',
+            });
+        }
+    };
 
     return (
         <>
@@ -39,14 +51,36 @@ const HomePage = ({ scrollToTop }) => {
                     <img src='/images/reallife_scenario/home_page1.jpg' alt="home page img" className='home-page-img' />
                 </div>
                 <div className="scroll-hint">
-                    <span>Scroll Down For More Information ↓</span>
+                    <span onClick={() => scrollToSection(scrollToCardsRef)}>Scroll Down For More Information ↓</span>
                 </div>
             </header>
 
             <main>
                 <section className="Desc-section">
                     {/* <h2>What is on this website?</h2> */}
-                    <div className="hover-card-container">
+                    <div className="hover-card-container" ref={scrollToCardsRef}>
+                        <div className="hover-card">
+                            <div className="hover-card-content">
+                                <div className="hover-card-main">
+                                    <h3>Beware of Current Scams</h3>
+                                    <img
+                                        src={require('./images/create_poster.png')}
+                                        alt="Create Scam Posters"
+                                        style={{
+                                            width: '180px',
+                                            height: '100px',
+                                            // paddingBottom: '10px' 
+                                        }}
+                                    />
+                                </div>
+                                <div className="hover-card-description">
+                                    <p>
+                                        🔍 Stay informed about the latest scams targeting your community. Visit the Current Scams page to learn more details!
+                                    </p>
+                                    <button>Get Started</button>
+                                </div>
+                            </div>
+                        </div>
                         <div className="hover-card">
                             <div className="hover-card-content">
                                 <div className="hover-card-main">
@@ -182,6 +216,7 @@ const HomePage = ({ scrollToTop }) => {
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </section>
             </main>

@@ -26,7 +26,7 @@ function JobScams() {
     const scrollToSection = (ref) => {
         if (ref.current) {
             window.scrollTo({
-                top: ref.current.offsetTop - 60, // Adjust 80px above the element
+                top: ref.current.offsetTop - 60, // Adjust above the element
                 behavior: 'smooth',
             });
         }
