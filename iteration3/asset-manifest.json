@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/iteration3/static/css/main.78fa70a7.css",
+    "main.js": "/iteration3/static/js/main.84a95dfa.js",
+    "static/js/210.81e3a53b.chunk.js": "/iteration3/static/js/210.81e3a53b.chunk.js",
+    "static/js/540.331e9481.chunk.js": "/iteration3/static/js/540.331e9481.chunk.js",
+    "static/js/239.d35c527e.chunk.js": "/iteration3/static/js/239.d35c527e.chunk.js",
+    "static/js/213.c21cc43a.chunk.js": "/iteration3/static/js/213.c21cc43a.chunk.js",
+    "static/js/732.c4675e6c.chunk.js": "/iteration3/static/js/732.c4675e6c.chunk.js",
+    "static/js/453.2fa3f6c9.chunk.js": "/iteration3/static/js/453.2fa3f6c9.chunk.js",
+    "static/media/create_poster.png": "/iteration3/static/media/create_poster.c049cf9c467743a84ceb.png",
+    "static/media/report_help.png": "/iteration3/static/media/report_help.c9b374db94ba4676fbe7.png",
+    "static/media/check_scam_risk.png": "/iteration3/static/media/check_scam_risk.2cbfa2dac3c6252ed5c8.png",
+    "static/media/verifying.png": "/iteration3/static/media/verifying.ec375ca01e0abd0b5e02.png",
+    "static/media/scam_detect.png": "/iteration3/static/media/scam_detect.a359a01c43cc9fa3197e.png",
+    "static/media/scam_alert_no_background.png": "/iteration3/static/media/scam_alert_no_background.8f841e5999b2006e8ab8.png",
+    "index.html": "/iteration3/index.html",
+    "main.78fa70a7.css.map": "/iteration3/static/css/main.78fa70a7.css.map",
+    "main.84a95dfa.js.map": "/iteration3/static/js/main.84a95dfa.js.map",
+    "210.81e3a53b.chunk.js.map": "/iteration3/static/js/210.81e3a53b.chunk.js.map",
+    "540.331e9481.chunk.js.map": "/iteration3/static/js/540.331e9481.chunk.js.map",
+    "239.d35c527e.chunk.js.map": "/iteration3/static/js/239.d35c527e.chunk.js.map",
+    "213.c21cc43a.chunk.js.map": "/iteration3/static/js/213.c21cc43a.chunk.js.map",
+    "732.c4675e6c.chunk.js.map": "/iteration3/static/js/732.c4675e6c.chunk.js.map",
+    "453.2fa3f6c9.chunk.js.map": "/iteration3/static/js/453.2fa3f6c9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.78fa70a7.css",
+    "static/js/main.84a95dfa.js"
+  ]
+}
