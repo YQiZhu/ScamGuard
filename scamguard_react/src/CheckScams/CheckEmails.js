@@ -83,7 +83,7 @@ const CheckEmails = () => {
           <div className="result-section-highlight">
             <p>Highlighted words: {highlightText(emailBody, explanationWords)}</p>
           </div>
-          <p className='result-section-p'>Disclaimer: The model used is not 100% accurate and may return incorrect results. If you are unsure do not interact with the message. Please refer to <a href="/identifyScam" target="_blank">How to Identify Scams</a> to learn how to verify if a message or URL is a scam.</p>
+          <p>Disclaimer: The model used is not 100% accurate and may return incorrect results. If you are unsure do not interact with the message. Please refer to <a href="/identifyScam" target="_blank">How to Identify Scams</a> to learn how to verify if a message or URL is a scam.</p>
         </div>
       );
     } else {
@@ -93,7 +93,7 @@ const CheckEmails = () => {
           <div className="result-section-highlight">
             <p>Highlighted words: {highlightText(emailBody, explanationWords)}</p>
           </div>
-          <p className='result-section-p'>Disclaimer: The model used is not 100% accurate and may return incorrect results. If you are unsure do not interact with the message. Please refer to <a href="/identifyScam" target="_blank">How to Identify Scams</a> to learn how to verify if a message or URL is a scam.</p>
+          <p>Disclaimer: The model used is not 100% accurate and may return incorrect results. If you are unsure do not interact with the message. Please refer to <a href="/identifyScam" target="_blank">How to Identify Scams</a> to learn how to verify if a message or URL is a scam.</p>
         </div>
       );
     }
