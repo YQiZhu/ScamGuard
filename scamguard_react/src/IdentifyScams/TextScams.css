@@ -38,7 +38,7 @@
     color: rgb(0, 0, 0);
     position: absolute;
     /* Position it relative to the page */
-    top: 100px;
+    top: 95px;
     /* Distance from the top of the page */
     left: 80px;
     /* Distance from the left side of the page */
@@ -53,17 +53,17 @@
 .text-scams-header button:hover {
     background-color: #BADDF1;
     color: rgb(0, 0, 0);
-    position: absolute;
+    /* position: absolute; */
     /* Position it relative to the page */
-    top: 110px;
+    /* top: 110px; */
     /* Distance from the top of the page */
-    left: 80px;
+    /* left: 80px; */
     /* Distance from the left side of the page */
-    padding: 10px 20px;
+    /* padding: 10px 20px;
     border: none;
     cursor: pointer;
     font-size: 18px;
-    z-index: 1;
+    z-index: 1; */
     /* Ensure it's above other elements */
 }
 
