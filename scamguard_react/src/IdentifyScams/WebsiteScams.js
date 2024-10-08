@@ -45,7 +45,7 @@ function WebsiteScams() {
             </nav>
 
             <header className="scams-header">
-                <button onClick={goBack}>Back to Pervious Page</button>
+                <button onClick={goBack}>Back to Previous Page</button>
                 <h2>Website Scams</h2>
                 {/* <p>Website scams are fraudulent sites designed to steal personal information, financial details, or money from unsuspecting users. These sites often mimic legitimate ones, like banks or online stores, to appear credible. Common types of website scams include phishing sites that steal login credentials, fake e-commerce sites that take payments without delivering goods, and investment scams promising high returns. Users should always verify a website's authenticity before entering sensitive information to avoid falling victim.</p> */}
             </header>

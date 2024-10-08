@@ -14,7 +14,7 @@ const WordCloudPage = () => {
     return (
         <div className='WordCloudPage'>
             <header className='wordCloud-header'>
-                <button onClick={goBack}>Back to Pervious Page</button>
+                <button onClick={goBack}>Back to Previous Page</button>
                 <h1>Scam Categories Word Cloud</h1>
             </header>
             <div className='wordCloud-session'>

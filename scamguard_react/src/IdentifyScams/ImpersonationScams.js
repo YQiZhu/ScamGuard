@@ -45,7 +45,7 @@ function ImpersonationScams() {
             </nav>
 
             <header className="scams-header">
-                <button onClick={goBack}>Back to Pervious Page</button>
+                <button onClick={goBack}>Back to Previous Page</button>
                 <h2>Impersonation Scams</h2>
                 {/* <p>Impersonation scams involve scammers pretending to be someone trusted, such as a friend, company executive, or government official, to gain sensitive information or money. These scams can occur through phone calls, emails, social media, or even in person. Scammers create a sense of urgency or authority to pressure victims into complying with their demands, such as transferring funds or revealing confidential information. Verifying the identity of the person through official channels is essential to avoid being scammed.</p> */}
             </header>

@@ -45,7 +45,7 @@ function SocialMediaScams() {
             </nav>
 
             <header className="scams-header">
-                <button onClick={goBack}>Back to Pervious Page</button>
+                <button onClick={goBack}>Back to Previous Page</button>
                 <h2>Social Media Scams</h2>
                 {/* <p>Social media scams often involve impersonation and phishing tactics, where scammers create fake profiles to mislead users. They may send spam messages or harmful links while pretending to be someone familiar or a reputable organisation. These scams can take the form of deceptive romantic relationships, where trust is gradually built before soliciting money. They may also involve fake investment opportunities or fraudulent ads for non-existent products. By leveraging the personal and trusting aspects of social media, scammers manipulate victims into disclosing money or sensitive information.</p> */}
             </header>

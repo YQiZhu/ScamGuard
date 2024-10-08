@@ -12,10 +12,11 @@
     /* padding-top: 100px; */
     /* padding: 20px; */
     /* max-width: 800px; */
-    color: #FAFF00;
+    color: #d36a07;
+    font-weight: bold;
 }
 
-.Side-menu {
+.Report-Side-menu {
     position: fixed;
     top: 50%;
     /* Vertically center the menu */
@@ -38,17 +39,17 @@
     text-align: center;
 }
 
-.Side-menu h2 {
+.Report-Side-menu h2 {
     font-size: 21px;
 }
 
 @media screen and (max-width: 1200px) {
-    .Side-menu {
+    .Report-Side-menu {
         display: none;
     }
 }
 
-.Side-menu ul {
+.Report-Side-menu ul {
     list-style: none;
     width: 100%;
     display: block;
@@ -56,27 +57,27 @@
     /* Center the content inside the ul */
 }
 
-.Side-menu li {
+.Report-Side-menu li {
     /* width: 100%; */
-    margin-bottom: 7px;
+    /* margin-bottom: 7px; */
     display: block;
     text-align: center;
 }
 
-.Side-menu span {
+.Report-Side-menu span {
     color: #4F67A6;
     text-decoration: underline;
     font-size: 15px;
     display: block;
     margin-bottom: 10px;
-    padding: 5px 0px;
+    padding: 3px 0px;
     /* border-radius: 5px; */
     transition: background-color 0.3s;
     cursor: pointer;
     font-weight: bold;
 }
 
-.Side-menu span:hover {
+.Report-Side-menu span:hover {
     background-color: #c0c0c0;
     color: rgb(65, 123, 218);
 }
@@ -105,6 +106,18 @@
     margin-bottom: 0%;
 }
 
+.report-scam-step summary{
+    font-size: 20px;
+    line-height: 3;
+    box-shadow: 2px 0 10px 5px rgba(0, 0, 0, 0.1);
+    /* margin-bottom: 20px; */
+    text-align: center;
+    cursor: pointer;
+    /* width: 800px; */
+    background-color: #E3F6FF;
+    border-radius: 15px;
+}
+
 .report-scam-step {
     padding-top: 20px;
     /* margin-bottom: 40px; */
@@ -114,16 +127,17 @@
     flex-direction: column;
     margin: auto;
     text-align: left;
-    /* align-items: center; */
+    align-items: center;
     justify-content: center;
     max-width: 800px;
     color: #4F67A6;
 }
 
-.report-scam-step h2 {
-    /* font-size: 1.5rem; */
-    margin-bottom: 15px;
-    text-align: center;
+.report-scam-step section {
+    box-shadow: 2px 0 10px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px 40px;
+    margin: 2px 30px;
+    border-radius: 15px;
 }
 
 .report-scam-step p {
@@ -131,105 +145,22 @@
     /* font-size: 18px; */
     /* line-height: 1.5; */
     text-align: left;
+    /* padding: 0px 40px; */
 }
 
-.how-to-report-scam {
-    /* margin-bottom: 40px; */
+.what-to-do-header {
     background-color: #203F9D;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 30px;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
     justify-content: center;
-    color: #ffffff;
-}
-
-.how-to-report-scam h3 {
-    /* font-size: 1.5rem; */
-    margin-bottom: 10px;
-}
-
-.how-to-report-scam p {
-    /* font-size: 1rem; */
-    /* font-size: 18px; */
-    /* margin-bottom: 2px; */
-    /* line-height: 1.5; */
-    text-align: left;
-    max-width: 800px;
-    /* margin-bottom: 10px; */
-}
-
-.how-to-report-scam li {
-    /* width: 100%; */
-    margin-bottom: 7px;
-    /* display: block; */
-    /* text-align: center; */
-}
-
-.why-report-scam {
-    padding-top: 20px;
-    /* margin-bottom: 40px; */
-    padding-bottom: 20px;
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
+    font-size: calc(10px + 2vmin);
+    color: rgb(255, 255, 255);
     margin: auto;
-    text-align: left;
-    align-items: center;
-    justify-content: center;
-    max-width: 800px;
-    color: #4F67A6;
-}
-
-.why-report-scam h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-}
-
-.why-report-scam p {
-    /* font-size: 18px; */
-    line-height: 1.5;
-    text-align: left;
-}
-
-.why-report-scam button {
-    font-size: 18px;
-    max-width: 200px;
-    margin: 15px;
-}
-
-.after-report-scam {
-    padding-top: 20px;
-    /* margin-bottom: 40px; */
-    padding-bottom: 20px;
-    background-color: #203F9D;
-    color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    text-align: left;
-    align-items: center;
-    justify-content: center;
-    /* max-width: 800px; */
-}
-
-.after-report-scam h3 {
-    /* font-size: 1.5rem; */
-    margin-bottom: 15px;
-}
-
-.after-report-scam p {
-    /* font-size: 18px; */
-    line-height: 1.5;
-    text-align: left;
-    max-width: 800px;
-}
-
-.after-report-scam button {
-    font-size: 18px;
-    max-width: 200px;
-    margin: 15px;
+    margin-top: 30px;
+    max-width: 65%;
+    border-radius: 15px;
 }
 
 .report-footer {

@@ -46,7 +46,7 @@ function JobScams() {
             </nav>
 
             <header className="scams-header">
-                <button onClick={goBack}>Back to Pervious Page</button>
+                <button onClick={goBack}>Back to Previous Page</button>
                 <h2>Job Scams</h2>
                 {/* <p>Job or employment scams target job seekers with fake job listings or interviews, aiming to steal personal information or money. Scammers may post seemingly legitimate job ads and then ask applicants to pay fees for background checks, training, or equipment. They may also conduct fake interviews to make the scam seem more authentic. Red flags include requests for upfront payments, sharing of personal financial information before hiring, and job offers that seem too good to be true. It's important to verify the legitimacy of job offers and be cautious throughout the hiring process.</p> */}
             </header>

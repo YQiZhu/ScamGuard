@@ -45,7 +45,7 @@ function InvestmentScams() {
             </nav>
 
             <header className="scams-header">
-                <button onClick={goBack}>Back to Pervious Page</button>
+                <button onClick={goBack}>Back to Previous Page</button>
                 <h2>Investment Scams</h2>
                 {/* <p>Investment scams entice people with promises of high returns and low risk, often using persuasive tactics and fake credentials to appear legitimate. Scammers may reach out through phone calls, emails, or social media, pressuring victims to invest quickly. Common scams include Ponzi schemes, where new investors' money is used to pay earlier investors, creating the illusion of profitability. It's crucial to research thoroughly and be skeptical of any investment opportunity that seems too good to be true.</p> */}
             </header>
