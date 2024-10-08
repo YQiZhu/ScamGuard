@@ -48,7 +48,7 @@ function RomanceScams() {
             <header className="scams-header">
                 <button onClick={goBack}>Back to Pervious Page</button>
                 <h2>Romance Scams</h2>
-                <p>Romance scams occur when fraudsters create fake profiles on dating sites or social media to deceive victims emotionally and financially. These scammers often express love or emotional attachment early on to build trust, but they avoid meeting in person, citing reasons like being in the military or working overseas. Once trust is established, they ask for money, often for supposed emergencies. Victims should be wary of anyone who moves too quickly in a relationship and avoid sending money or personal information.</p>
+                {/* <p>Romance scams occur when fraudsters create fake profiles on dating sites or social media to deceive victims emotionally and financially. These scammers often express love or emotional attachment early on to build trust, but they avoid meeting in person, citing reasons like being in the military or working overseas. Once trust is established, they ask for money, often for supposed emergencies. Victims should be wary of anyone who moves too quickly in a relationship and avoid sending money or personal information.</p> */}
             </header>
             {/* How to Identify a Scam Section */}
             <section className="scam-identification" ref={scamIdentificationRef}>

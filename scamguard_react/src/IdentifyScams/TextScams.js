@@ -47,7 +47,7 @@ function TextScams() {
             <header className="text-scams-header">
                 <button onClick={goBack}>Back to Pervious Page</button>
                 <h2>Text Scams</h2>
-                <p>Text scams involve deceptive text messages that trick individuals into revealing personal information or clicking on harmful links. These messages often appear to come from legitimate sources, like banks or government agencies, and may warn of suspicious activity or urgent problems. Scammers also use fake prize notifications and delivery alerts to lure victims into providing sensitive details or downloading malicious software. These scams exploit the trust people place in text messages to achieve their goals.</p>
+                {/* <p>Text scams involve deceptive text messages that trick individuals into revealing personal information or clicking on harmful links. These messages often appear to come from legitimate sources, like banks or government agencies, and may warn of suspicious activity or urgent problems. Scammers also use fake prize notifications and delivery alerts to lure victims into providing sensitive details or downloading malicious software. These scams exploit the trust people place in text messages to achieve their goals.</p> */}
                 {/* Back Button */}
             </header>
 

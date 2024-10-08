@@ -46,7 +46,7 @@ function PhoneScams() {
             <header className="scams-header">
                 <button onClick={goBack}>Back to Pervious Page</button>
                 <h2>Phone Scams</h2>
-                <p>Phone scams aim to deceive individuals into giving away personal information, money, or access to financial accounts. These scams often involve impersonating legitimate organisations, such as banks, government agencies, or tech support, to create a sense of urgency or fear. Common tactics include threatening legal action, claiming a problem with a service (like your internet or taxes), or offering fake prizes or deals. The goal is to trick the victim into making payments, sharing sensitive information, or allowing access to their devices or accounts.</p>
+                {/* <p>Phone scams aim to deceive individuals into giving away personal information, money, or access to financial accounts. These scams often involve impersonating legitimate organisations, such as banks, government agencies, or tech support, to create a sense of urgency or fear. Common tactics include threatening legal action, claiming a problem with a service (like your internet or taxes), or offering fake prizes or deals. The goal is to trick the victim into making payments, sharing sensitive information, or allowing access to their devices or accounts.</p> */}
             </header>
             {/* How to Identify a Scam Section */}
             <section className="scam-identification" ref={scamIdentificationRef}>

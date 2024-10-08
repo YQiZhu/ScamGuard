@@ -144,7 +144,11 @@ const TextScamsQuiz = () => {
 
     // Scroll back to the scenario section
     if (scenarioRef.current) {
-      scenarioRef.current.scrollIntoView({ behavior: 'smooth' });
+      window.scrollTo({
+        top: scenarioRef.current.offsetTop - 60, // Adjust above the element
+        behavior: 'smooth',
+      });
+      // scenarioRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -172,7 +176,11 @@ const TextScamsQuiz = () => {
 
     // Scroll down to the Next Scenario button
     if (nextButtonRef.current) {
-      nextButtonRef.current.scrollIntoView({ behavior: 'smooth' });
+      window.scrollTo({
+        top: nextButtonRef.current.offsetTop - 60, // Adjust above the element
+        behavior: 'smooth',
+      });
+      // nextButtonRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
