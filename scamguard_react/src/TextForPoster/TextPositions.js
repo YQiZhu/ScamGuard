@@ -4,6 +4,7 @@ export const textPositions = {
     1: { // Template 1
         // fontFamily: "'Montserrat'",
         fillColour: '#ffffff',
+        headerColour: '#ffffff',
         fontSize: 16,
         text_scams: {
             header: { x: 130, y: 40 },
@@ -199,6 +200,7 @@ export const textPositions = {
     2: { // Template 2
         // fontFamily: "'Montserrat'",
         fillColour: '#000000',
+        headerColour: '#000000',
         text_scams: {
             header: { x: 130, y: 40 },
             howItWorks: {
@@ -393,6 +395,7 @@ export const textPositions = {
     3: { // Template 3
         fontFamily: "'Montserrat'",
         fillColour: '#ffffff',
+        headerColour: '#000000',
         text_scams: {
             header: { x: 125, y: 75 },
             howItWorks: {
@@ -496,7 +499,7 @@ export const textPositions = {
             },
         },
         investment_scams: {
-            header: { x: 125, y: 75 },
+            header: { x: 125, y: 55 },
             howItWorks: {
                 x: 50, y: 260, width: 320,
                 charPerLine: 23

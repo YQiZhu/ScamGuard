@@ -23,6 +23,7 @@ const PosterPreview = forwardRef(({ template, texts, scamType }, ref) => {
     let sectionPositions = {}; // positions per section
     let sectionFontFamily = textPositions[templateId]?.fontFamily || "'Roboto'";
     let fillColour = textPositions[templateId]?.fillColour || "#000000";
+    let headerColour = textPositions[templateId]?.headerColour || "#000000";
     let textHeight = textPositions[templateId]?.fontSize ||18;
     // let charPerLine = textPositions[templateId]?.charPerLine || 25;
     // let charPerLineProtect = textPositions[templateId]?.charPerLineProtect || 40;
@@ -55,7 +56,7 @@ const PosterPreview = forwardRef(({ template, texts, scamType }, ref) => {
                             fontSize={38}
                             fontStyle="bold"
                             fontFamily={sectionFontFamily}
-                            fill='#000000'
+                            fill={headerColour}
                             align="center"
                             // To center the text, set width and align
                             width={350}

@@ -16,16 +16,6 @@ const IdentifyScamsPage = () => {
                 </p>
             </header>
 
-            {/* WordCloud Redirect Button */}
-            <div style={{ textAlign: 'center', margin: '20px 0' }}>
-                <button
-                    onClick={() => navigate('/wordCloud')}
-                    className="wordcloud-button"
-                >
-                    View Scam Categories Word Cloud
-                </button>
-            </div>
-
             {/* Clickable Box Section */}
             {/* Text Scams */}
             <div className="scams-container">
