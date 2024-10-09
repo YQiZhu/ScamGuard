@@ -120,7 +120,7 @@ const HomePage = () => {
                                     <p>
                                         🚨 Fallen victim to a scam or suspect one? Use our tools to report it and get immediate guidance on what to do next.
                                     </p>
-                                    <button onClick={() => navigate('/whatToDo')}>Get Started</button>
+                                    <button onClick={() => navigate('/reportScam')}>Get Started</button>
                                 </div>
                             </div>
                         </div>

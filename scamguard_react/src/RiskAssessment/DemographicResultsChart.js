@@ -48,7 +48,9 @@ const DemographicResultsChart = ({ data }) => {
             <div className="risk-assessment-chart-wrapper">
                 {/* Exposure Risk Chart */}
                 <ResponsiveContainer width="100%" height={400}>
-                    <BarChart data={processedData}>
+                    <BarChart data={processedData}
+                        margin={{ top: 20, right: 30, left: 20, bottom: 50 }}
+                    >
                         <CartesianGrid strokeDasharray="3 3" />
                         <XAxis dataKey="Scam Type"
                             label={{
@@ -86,7 +88,9 @@ const DemographicResultsChart = ({ data }) => {
             <div className="risk-assessment-chart-wrapper">
                 {/* Average Loss for Seniors Chart */}
                 <ResponsiveContainer width="100%" height={400}>
-                    <BarChart data={processedData}>
+                    <BarChart data={processedData}
+                        margin={{ top: 20, right: 30, left: 20, bottom: 50 }}
+                    >
                         <CartesianGrid strokeDasharray="3 3" />
                         <XAxis dataKey="Scam Type"
                             label={{

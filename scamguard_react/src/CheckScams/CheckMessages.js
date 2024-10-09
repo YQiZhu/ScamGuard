@@ -8,6 +8,11 @@ const CheckMessages = () => {
   const [error, setError] = useState(''); // State for error message
   const [loading, setLoading] = useState(false); // State for loading indicator
 
+  const handleInputChange = (setter) => (e) => {
+    setter(e.target.value);
+    setResult(null); // Clear the result whenever input changes
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -101,14 +106,14 @@ const CheckMessages = () => {
 
   return (
     <div className="ScamDetectorPage">
-      <div className="check-scams-section">
+      <div className="check-scams-input-section">
         <form className="check-scams-form" onSubmit={handleSubmit}>
 
           <div className="check-scams-form-group">
             <label>Enter Message Body (required)</label>
             <textarea
               value={messageBody}
-              onChange={(e) => setMessageBody(e.target.value)}
+              onChange={handleInputChange(setMessageBody)}
               placeholder="Click and type the message's body here..."
               className="textarea-field"
             ></textarea>
@@ -123,7 +128,8 @@ const CheckMessages = () => {
           </div>
         </form>
       </div>
-      <div className="check-scams-section">
+      <div className="check-scams-result-section">
+        <h3>Result</h3>
         {loading && <div className="check-scam-loading">Loading ...</div>}
         {/* Display the result from the API */}
         {!loading && renderResultMessage()}

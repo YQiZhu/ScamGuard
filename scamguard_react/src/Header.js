@@ -53,11 +53,6 @@ const Header = () => {
                   Report Scams
                 </NavLink>
               </li>
-              <li>
-                <NavLink to="/whatToDo" className={({ isActive }) => (isActive ? 'active-link' : '')}>
-                  What To Do If Scammed
-                </NavLink>
-              </li>
             </ul>
           )}
         </li>

@@ -11,6 +11,11 @@ const CheckEmails = () => {
   const [error, setError] = useState(''); // State for error message
   const [loading, setLoading] = useState(false); // State for loading indicator
 
+  const handleInputChange = (setter) => (e) => {
+    setter(e.target.value);
+    setResult(null); // Clear the result whenever input changes
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -118,7 +123,7 @@ const CheckEmails = () => {
             <input
               type="text"
               value={senderName}
-              onChange={(e) => setSenderName(e.target.value)}
+              onChange={handleInputChange(setSenderName)}
               placeholder="Click and type the Sender's name here..."
               className="input-field"
             />
@@ -129,7 +134,7 @@ const CheckEmails = () => {
             <input
               type="email"
               value={senderEmail}
-              onChange={(e) => setSenderEmail(e.target.value)}
+              onChange={handleInputChange(setSenderEmail)}
               placeholder="Click and type the Sender's email address here..."
               className="input-field"
             />
@@ -140,7 +145,7 @@ const CheckEmails = () => {
             <input
               type="text"
               value={emailSubject}
-              onChange={(e) => setEmailSubject(e.target.value)}
+              onChange={handleInputChange(setEmailSubject)}
               placeholder="Click and type the email's subject here..."
               className="input-field"
             />
@@ -150,7 +155,7 @@ const CheckEmails = () => {
             <label>Enter Email Body (required)</label>
             <textarea
               value={emailBody}
-              onChange={(e) => setEmailBody(e.target.value)}
+              onChange={handleInputChange(setEmailBody)}
               placeholder="Click and type the email's body here..."
               className="textarea-field"
             ></textarea>
@@ -172,7 +177,6 @@ const CheckEmails = () => {
         {!loading && renderResultMessage()}
       </div>
     </div>
-
   );
 };
 
