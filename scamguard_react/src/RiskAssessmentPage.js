@@ -100,7 +100,7 @@ const RiskAssessmentPage = () => {
             <main className="main-session-assessment">
                 <section className="scam-risk-analysis-form">
                     {/* Contact Method Risk Form */}
-                    <h2>Contact Method Risk</h2>
+                    <h2>Choose your contact method to assess scam risks.</h2>
                     <form onSubmit={handleSubmitContactMethod} className="contact-risk-form">
                         <div className="scam-risk-form-group">
                             <label>Contact Methods</label>
@@ -151,7 +151,7 @@ const RiskAssessmentPage = () => {
 
                 <section className="scam-risk-analysis-form">
                     {/* Demographic Risk Form */}
-                    <h2>Demographic Risk for Age 65 and over</h2>
+                    <h2>Risk assessment for individuals aged 65 and over.</h2>
                     <form onSubmit={handleSubmitDemographic} className="demographic-risk-form">
                         {/* <div className="scam-risk-form-group">
                             <label>Age Group</label>
