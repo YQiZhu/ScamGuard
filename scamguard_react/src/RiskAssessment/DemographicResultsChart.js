@@ -54,13 +54,16 @@ const DemographicResultsChart = ({ data }) => {
                             label={{
                                 value: 'Scam Type',
                                 position: 'insideBottom',
-                                offset: -10,
+                                offset: -30,
                                 style: {
                                     textAnchor: 'middle',
                                     fontSize: 18, // Increase font size of the label
                                     fontWeight: 'bold',
                                 }
-                            }} />
+                            }}
+                            tick={{ angle: -25, textAnchor: 'end' }} // Rotate labels by -45 degrees and align them to the end
+                            interval={0} // Show all labels, no skipping
+                        />
                         <YAxis label={{
                             value: 'Exposure Risk',
                             angle: -90,
@@ -73,7 +76,7 @@ const DemographicResultsChart = ({ data }) => {
                             }
                         }} />
                         <Tooltip content={<CustomTooltipExposure />} />
-                        <Legend formatter={(value) => "Exposure Risk"} wrapperStyle={{ display: 'flex', justifyContent: 'center', paddingTop: '25px' }} />
+                        <Legend formatter={(value) => "Exposure Risk"} wrapperStyle={{ display: 'flex', justifyContent: 'center', paddingTop: '35px' }} />
                         {/* Ensure the data keys are correct */}
                         <Bar dataKey="exposure_risk" fill="#8884d8" radius={[30, 30, 30, 30]} />
                     </BarChart>
@@ -89,13 +92,16 @@ const DemographicResultsChart = ({ data }) => {
                             label={{
                                 value: 'Scam Type',
                                 position: 'insideBottom',
-                                offset: -10,
+                                offset: -30,
                                 style: {
                                     textAnchor: 'middle',
                                     fontSize: 18, // Increase font size of the label
                                     fontWeight: 'bold',
                                 }
-                            }} />
+                            }}
+                            tick={{ angle: -25, textAnchor: 'end' }} // Rotate labels by -45 degrees and align them to the end
+                            interval={0} // Show all labels, no skipping
+                        />
                         <YAxis label={{
                             value: 'Average Loss ($AUD)',
                             angle: -90,
@@ -108,7 +114,7 @@ const DemographicResultsChart = ({ data }) => {
                             }
                         }} />
                         <Tooltip content={<CustomTooltipLoss />} />
-                        <Legend wrapperStyle={{ display: 'flex', justifyContent: 'center', paddingTop: '25px' }} />
+                        <Legend wrapperStyle={{ display: 'flex', justifyContent: 'center', paddingTop: '35px' }} />
                         <Bar dataKey="Average Loss for Seniors" fill="#82ca9d" radius={[30, 30, 30, 30]} />
                     </BarChart>
                 </ResponsiveContainer>

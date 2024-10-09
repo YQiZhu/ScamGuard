@@ -6,10 +6,12 @@
 }
 
 .main-session-assessment {
-    max-width: 800px;
+    max-width: 80%;
     margin: auto;
-    align-items: center;
+    display: flex;
+    align-items: flex-start;
     justify-content: center;
+    gap: 30px;
 }
 
 .scam-risk-header {
@@ -37,6 +39,11 @@
     margin-top: 20px;
     padding-bottom: 30px;
     color: #4F67A6;
+    width: 50%;
+}
+
+.scam-risk-analysis-form h2{
+    max-width: 80%;
 }
 
 .scam-risk-loading {
@@ -135,11 +142,10 @@
     background-color: #f0f7ff;
     border: 1px solid #ddd;
     border-radius: 30px;
-    width: 260px;
+    /* width: 260px; */
     margin: 15px 20px;
     padding: 20px;
-    width: 260px;
-    min-height: 280px;
+    /* min-height: 280px; */
     /* Ensures 3 cards in a row with space between */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

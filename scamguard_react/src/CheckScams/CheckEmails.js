@@ -111,62 +111,66 @@ const CheckEmails = () => {
 
   return (
     <div className="ScamDetectorPage">
-      <form className="check-scams-form" onSubmit={handleSubmit}>
-        <div className="check-scams-form-group">
-          <label>Enter Sender Name (optional)</label>
-          <input
-            type="text"
-            value={senderName}
-            onChange={(e) => setSenderName(e.target.value)}
-            placeholder="Click and type the Sender's name here..."
-            className="input-field"
-          />
-        </div>
+      <div className="check-scams-input-section">
+        <form className="check-scams-form" onSubmit={handleSubmit}>
+          <div className="check-scams-form-group">
+            <label>Enter Sender Name (optional)</label>
+            <input
+              type="text"
+              value={senderName}
+              onChange={(e) => setSenderName(e.target.value)}
+              placeholder="Click and type the Sender's name here..."
+              className="input-field"
+            />
+          </div>
 
-        <div className="check-scams-form-group">
-          <label>Enter Sender Email Address (optional)</label>
-          <input
-            type="email"
-            value={senderEmail}
-            onChange={(e) => setSenderEmail(e.target.value)}
-            placeholder="Click and type the Sender's email address here..."
-            className="input-field"
-          />
-        </div>
+          <div className="check-scams-form-group">
+            <label>Enter Sender Email Address (optional)</label>
+            <input
+              type="email"
+              value={senderEmail}
+              onChange={(e) => setSenderEmail(e.target.value)}
+              placeholder="Click and type the Sender's email address here..."
+              className="input-field"
+            />
+          </div>
 
-        <div className="check-scams-form-group">
-          <label>Enter Email Subject (optional)</label>
-          <input
-            type="text"
-            value={emailSubject}
-            onChange={(e) => setEmailSubject(e.target.value)}
-            placeholder="Click and type the email's subject here..."
-            className="input-field"
-          />
-        </div>
+          <div className="check-scams-form-group">
+            <label>Enter Email Subject (optional)</label>
+            <input
+              type="text"
+              value={emailSubject}
+              onChange={(e) => setEmailSubject(e.target.value)}
+              placeholder="Click and type the email's subject here..."
+              className="input-field"
+            />
+          </div>
 
-        <div className="check-scams-form-group">
-          <label>Enter Email Body (required)</label>
-          <textarea
-            value={emailBody}
-            onChange={(e) => setEmailBody(e.target.value)}
-            placeholder="Click and type the email's body here..."
-            className="textarea-field"
-          ></textarea>
-        </div>
+          <div className="check-scams-form-group">
+            <label>Enter Email Body (required)</label>
+            <textarea
+              value={emailBody}
+              onChange={(e) => setEmailBody(e.target.value)}
+              placeholder="Click and type the email's body here..."
+              className="textarea-field"
+            ></textarea>
+          </div>
 
-        {/* Error message for missing email body */}
-        {error && <p className="check-scam-error-message">{error}</p>}
+          {/* Error message for missing email body */}
+          {error && <p className="check-scam-error-message">{error}</p>}
 
-        <div className='scam-detector-btn-group'>
-          <button className="submit-button" type="submit">Check If Scam</button>
-          <button className="clear-button" onClick={cleanInputField}>Clear Input</button>
-        </div>
-      </form>
-
-      {loading && <div className="check-scam-loading">Loading ...</div>}
-      {/* Display the result from the API */}
-      {!loading && renderResultMessage()}
+          <div className='scam-detector-btn-group'>
+            <button className="submit-button" type="submit">Check If Scam</button>
+            <button className="clear-button" onClick={cleanInputField}>Clear Input</button>
+          </div>
+        </form>
+      </div>
+      <div className="check-scams-result-section">
+        <h3>Result</h3>
+        {loading && <div className="check-scam-loading">Loading ...</div>}
+        {/* Display the result from the API */}
+        {!loading && renderResultMessage()}
+      </div>
     </div>
 
   );

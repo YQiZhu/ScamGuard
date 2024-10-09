@@ -79,32 +79,34 @@ const CheckURLs = () => {
     }
 
     return (
-        <div className="ScamDetectorPage"> 
-            <form className="check-scams-form" onSubmit={handleSubmit}>
+        <div className="ScamDetectorPage">
+            <div className="check-scams-section">
+                <form className="check-scams-form" onSubmit={handleSubmit}>
 
-                <div className="check-scams-form-group">
-                    <label>Enter URL with 'https://' or 'http://' header (required)</label>
-                    <textarea
-                        value={urlBody}
-                        onChange={(e) => setURLBody(e.target.value)}
-                        placeholder="Click and type the url body here..."
-                        className="textarea-field"
-                    ></textarea>
-                </div>
+                    <div className="check-scams-form-group">
+                        <label>Enter URL with 'https://' or 'http://' header (required)</label>
+                        <textarea
+                            value={urlBody}
+                            onChange={(e) => setURLBody(e.target.value)}
+                            placeholder="Click and type the url body here..."
+                            className="textarea-field"
+                        ></textarea>
+                    </div>
 
-                {/* Error url for missing urls body */}
-                {error && <p className="check-scam-error-message">{error}</p>}
-                <div className='scam-detector-btn-group'>
-                    <button className="submit-button" type="submit">Check If Scam</button>
-                    <button className="clear-button" onClick={cleanInputField}>Clear Input</button>
-                </div>
-            </form>
-
-            {loading && <div className="check-scam-loading">Loading ...</div>}
-            {/* Display the result from the API */}
-            {!loading && renderResultURL()}
+                    {/* Error url for missing urls body */}
+                    {error && <p className="check-scam-error-message">{error}</p>}
+                    <div className='scam-detector-btn-group'>
+                        <button className="submit-button" type="submit">Check If Scam</button>
+                        <button className="clear-button" onClick={cleanInputField}>Clear Input</button>
+                    </div>
+                </form>
+            </div>
+            <div className="check-scams-section">
+                {loading && <div className="check-scam-loading">Loading ...</div>}
+                {/* Display the result from the API */}
+                {!loading && renderResultURL()}
+            </div>
         </div>
-
     );
 };
 
