@@ -9,11 +9,11 @@ const QuizPage = () => {
         <div className="QuizPage">
             <header className="quiz-header">
                 <h1>Quiz Page</h1>
-                <p>Test your knowledge against scams</p>
+                <p>How Well Can You Spot a Scam?</p>
             </header>
 
             <main>
-                <h2>Click on belows cards to start testing your scam identified knowledge</h2>
+                <h2>Click on the cards below to start testing your scam identification skills.</h2>
                 <div className="quiz-cards">
                     <div className="quiz-card" onClick={() => navigate('/text-scams-quiz')}>
                         <img src={require('./images/text_scams_icon.png')} alt="Text Scams Icon" className="quiz-icon" />
