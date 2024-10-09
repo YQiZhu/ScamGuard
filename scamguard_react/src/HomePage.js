@@ -62,7 +62,7 @@ const HomePage = () => {
                         <div className="hover-card">
                             <div className="hover-card-content">
                                 <div className="hover-card-main">
-                                    <h3>Beware of Current Scams</h3>
+                                    <h3>Current Scams</h3>
                                     <img
                                         src={require('./images/create_poster.png')}
                                         alt="Create Scam Posters"
@@ -84,7 +84,7 @@ const HomePage = () => {
                         <div className="hover-card">
                             <div className="hover-card-content">
                                 <div className="hover-card-main">
-                                    <h3>Spot Scams Easily</h3>
+                                    <h3>How to Identify Scams</h3>
                                     <img
                                         src={require('./images/scam_alert_no_background.png')}
                                         alt="Spot Scams"
@@ -128,7 +128,7 @@ const HomePage = () => {
                         <div className="hover-card">
                             <div className="hover-card-content">
                                 <div className="hover-card-main">
-                                    <h3>Practice Scam Detection</h3>
+                                    <h3>Take Scam Quizs</h3>
                                     <img
                                         src={require('./images/scam_detect.png')}
                                         alt="Take Quizs to Detect Scams"
@@ -151,7 +151,7 @@ const HomePage = () => {
                         <div className="hover-card">
                             <div className="hover-card-content">
                                 <div className="hover-card-main">
-                                    <h3>Check Your Scam Risk</h3>
+                                    <h3>Scams Risk Assessment</h3>
                                     <img
                                         src={require('./images/check_scam_risk.png')}
                                         alt="Check Your Scam Risk"
@@ -174,7 +174,7 @@ const HomePage = () => {
                         <div className="hover-card">
                             <div className="hover-card-content">
                                 <div className="hover-card-main">
-                                    <h3>Verify Suspicious Messages</h3>
+                                    <h3>Scams Detector</h3>
                                     <img
                                         src={require('./images/verifying.png')}
                                         alt="Verify Suspicious Messages"
@@ -197,7 +197,7 @@ const HomePage = () => {
                         <div className="hover-card">
                             <div className="hover-card-content">
                                 <div className="hover-card-main">
-                                    <h3>Create Scam Awareness Posters</h3>
+                                    <h3>Scam Awareness Posters Generator</h3>
                                     <img
                                         src={require('./images/create_poster.png')}
                                         alt="Create Scam Posters"
