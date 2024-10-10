@@ -209,14 +209,14 @@ const EmailScamsQuiz = () => {
             {/* Instruction Section */}
             <div className="text-scams-quiz-instructions">
                 <p>
-                    Imagine you receive an email with a link or clickable button. What would you do next?
+                    You receive a text or email with a link or phone number. What will you do next?
                 </p>
                 <ul>
-                    <li>Would you delete or ignore the email right away?</li>
-                    <li>Or would you click the link or the button without checking if it's legitimate?</li>
+                    <li>Delete or ignore the message?</li>
+                    <li>Click the link without checking if it's safe?</li>
                 </ul>
                 <p>
-                    Click on the image below as if you're making the choice in real life. Choose wisely—what's the safest action. Make your choice in this quiz!
+                    Click the red highlighted area below to make your choice, just like you would in real life. Choose wisely — test your scam awareness!
                 </p>
             </div>
 
