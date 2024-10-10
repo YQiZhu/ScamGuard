@@ -80,6 +80,7 @@ const CheckMessages = () => {
           <p className='result-section-p'>This message has a <strong>{probability}%</strong> chance of being a <strong style={{ color: 'red' }}>SCAM.</strong></p>
           <div className='result-section-highlight'>
             <p>Highlighted words: {highlightText(messageBody, explanationWords)}</p>
+            <p>Words highlighted in yellow were the key words used by the model for the prediction</p>
           </div>
           <p>Disclaimer: The model used is not 100% accurate and may return incorrect results. If you are unsure do not interact with the message. Please refer to <a href="/identifyScam" target="_blank">How to Identify Scams</a> to learn how to verify if a message or URL is a scam.</p>
         </div>
@@ -90,6 +91,7 @@ const CheckMessages = () => {
           <p className='result-section-p'>This message has a <strong>{probability}%</strong> chance of being <strong style={{ color: 'green' }}>LEGITIMATE</strong>.</p>
           <div className='result-section-highlight'>
             <p>Highlighted words: {highlightText(messageBody, explanationWords)}</p>
+            <p>Words highlighted in yellow were the key words used by the model for the prediction</p>
           </div>
           <p>Disclaimer: The model used is not 100% accurate and may return incorrect results. If you are unsure do not interact with the message. Please refer to <a href="/identifyScam" target="_blank">How to Identify Scams</a> to learn how to verify if a message or URL is a scam.</p>
         </div>
