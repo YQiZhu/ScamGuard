@@ -201,7 +201,7 @@ const EmailScamsQuiz = () => {
         <div className="text-scams-quiz">
             {/* Header Section */}
             <header className="text-scams-quiz-header">
-                <button onClick={goBack}>Back to Pervious Page</button>
+                <button onClick={goBack}>Back to Previous Page</button>
                 <h1>Email Scam Awareness</h1>
                 <p>Challenge yourself and see how much you know about identifying text scams!</p>
             </header>
