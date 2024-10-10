@@ -106,7 +106,34 @@
     margin-bottom: 0%;
 }
 
-.report-scam-step summary{
+.emergency-calls-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 20px 0;
+}
+
+.emergency-call-box {
+    background-color: #f04242d2;
+    border: 1px solid #cc0000;
+    color: #ffffff;
+    width: 25%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.emergency-call-box h3 {
+    margin-bottom: 10px;
+}
+
+.emergency-call-box p {
+    font-size: 1em;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.report-scam-step summary {
     font-size: 20px;
     line-height: 3;
     box-shadow: 2px 0 10px 5px rgba(0, 0, 0, 0.1);

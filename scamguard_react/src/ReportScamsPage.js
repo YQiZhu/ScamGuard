@@ -52,6 +52,23 @@ const ReportScamsPage = () => {
             <header className="report-scams-header">
                 <h1>Report Scam</h1>
             </header>
+
+            {/* Emergency Calls Boxes */}
+            <div className="emergency-calls-container">
+                <div className="emergency-call-box">
+                    <h3>Emergency Contact 1</h3>
+                    <p>National Anti-Scam Centre Hotline:</p>
+                    <h3>1300 292 371</h3>
+                    <p>This line is open 24/7 for immediate scam reports and support.</p>
+                </div>
+                <div className="emergency-call-box">
+                    <h3>Emergency Contact 2</h3>
+                    <p>IDCARE Hotline:</p>
+                    <h3>1800 595 160</h3>
+                    <p>For identity theft and cyber support. Open Monday to Friday 8am–5pm.</p>
+                </div>
+            </div>
+
             <div ref={stepsToReportRef}>
                 <details className='report-scam-step'>
                     <summary>Steps To Do Before Reporting</summary>

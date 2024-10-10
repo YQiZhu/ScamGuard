@@ -52,6 +52,7 @@ const WordCloudComponent = () => {
         rotations: 2,
         rotationAngles: [0, 90],
         fontSizes: [20, 60],
+        enableTooltip: false,
         // Add more customization options as needed
     };
 
@@ -65,7 +66,7 @@ const WordCloudComponent = () => {
 
     return (
         <div className='wordcloud-component'>
-            <div>
+            <div className='wordcloud-form-group'>
                 <label htmlFor="category-select">Select Category: </label>
                 <select id="category-select" onChange={handleCategoryChange} value={selectedCategory || ''}>
                     {Object.keys(scamCategories).map(category => (

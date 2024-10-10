@@ -12,7 +12,21 @@ const TextSelector = ({ selectedTemplate, selectedTexts, setSelectedTexts, setSe
         setLocalSelectedScamType(scamType);
         setSelectedScamType(scamType);
         // Reset selectedTexts when scam type changes
-        setSelectedTexts([]);
+        // setSelectedTexts([]);
+
+        // Automatically select all texts for the chosen scam type
+        const templateId = selectedTemplate?.id;
+        const positionsForTemplate = textPositions[templateId]?.[scamType];
+
+        if (positionsForTemplate) {
+            const newSelectedTexts = {};
+            Object.keys(positionsForTemplate).forEach(section => {
+                // Get all texts in the section related to the selected scam
+                const allTextsInSection = scamOptions.find(scam => scam.id === scamType)?.sections[section] || [];
+                newSelectedTexts[section] = allTextsInSection;
+            });
+            setSelectedTexts(newSelectedTexts);
+        }
     };
 
     // Handle related text selection (checkboxes)
@@ -54,19 +68,19 @@ const TextSelector = ({ selectedTemplate, selectedTexts, setSelectedTexts, setSe
         return result.charAt(0).toUpperCase() + result.slice(1);
     };
 
-    // Effect to reset selectedTexts if requiredSections change (e.g., when template changes)
-    useEffect(() => {
-        if (selectedTemplate && localSelectedScamType) {
-            const newSelectedTexts = {};
-            requiredSections.forEach(section => {
-                if (selectedTexts[section]) {
-                    newSelectedTexts[section] = selectedTexts[section];
-                }
-            });
-            setSelectedTexts(newSelectedTexts);
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [selectedTemplate, localSelectedScamType]);
+    // // Effect to reset selectedTexts if requiredSections change (e.g., when template changes)
+    // useEffect(() => {
+    //     if (selectedTemplate && localSelectedScamType) {
+    //         const newSelectedTexts = {};
+    //         requiredSections.forEach(section => {
+    //             if (selectedTexts[section]) {
+    //                 newSelectedTexts[section] = selectedTexts[section];
+    //             }
+    //         });
+    //         setSelectedTexts(newSelectedTexts);
+    //     }
+    //     // eslint-disable-next-line react-hooks/exhaustive-deps
+    // }, [selectedTemplate, localSelectedScamType]);
 
     return (
         <div>
