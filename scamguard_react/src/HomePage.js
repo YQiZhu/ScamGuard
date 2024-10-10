@@ -45,7 +45,7 @@ const HomePage = () => {
                 <div className='home-page-header-text'>
                     <h1>Protecting seniors from scams</h1>
                     <p>Senior Australians are being increasingly targeted by scammers. We're here to help you protect yourself from scams.</p>
-                    <button onClick={() => navigate('/checkScam')}>Check if message is a scam</button>
+                    <button onClick={() => navigate('/checkScam')}>Scams Detector</button>
                 </div>
                 <div class="home-page-image-container">
                     <img src='/images/reallife_scenario/home_page1.jpg' alt="home page img" className='home-page-img' />
