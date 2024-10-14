@@ -64,11 +64,11 @@ const HomePage = () => {
                                 <div className="hover-card-main">
                                     <h3>Current Scams</h3>
                                     <img
-                                        src={require('./images/create_poster.png')}
+                                        src={require('./images/crime.png')}
                                         alt="Create Scam Posters"
                                         style={{
-                                            width: '180px',
-                                            height: '100px',
+                                            width: '150px',
+                                            height: '140px',
                                             // paddingBottom: '10px' 
                                         }}
                                     />
@@ -77,7 +77,7 @@ const HomePage = () => {
                                     <p>
                                         🔍 Stay informed about the latest scams targeting your community. Visit the Current Scams page to learn more details!
                                     </p>
-                                    <button>Get Started</button>
+                                    <button onClick={() => navigate('/currentScam')}>Get Started</button>
                                 </div>
                             </div>
                         </div>
@@ -212,7 +212,7 @@ const HomePage = () => {
                                     <p>
                                         📌 Design and print personalized scam-awareness posters to remind yourself—and your community—how to stay safe.
                                     </p>
-                                    <button>Get Started</button>
+                                    <button onClick={() => navigate('/posterGenerator')}>Get Started</button>
                                 </div>
                             </div>
                         </div>
