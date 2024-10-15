@@ -114,8 +114,12 @@ def predict_value(request, model_type):
             processed_input = text_vectorizer.transform([clean_input])
             print(f"Processed Input Shape: {processed_input.shape}")
             print(f"Processed Input Type: {type(processed_input)}")
-            prediction = model_message.predict(processed_input)[0]
-            prob = model_message.predict_proba(processed_input)[0][prediction]
+            try:
+                prediction = model_message.predict(processed_input)[0]
+                prob = model_message.predict_proba(processed_input)[0][prediction]
+            except Exception as e:
+                print(f"Error during model prediction: {e}")
+                return Response({"error": f"Error during model prediction: {str(e)}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
             # Create explanation
             explainer = LimeTextExplainer()
