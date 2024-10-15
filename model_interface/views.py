@@ -116,6 +116,8 @@ def predict_value(request, model_type):
             processed_input = text_vectorizer.transform([clean_input])
             print(f"Processed Input Shape: {processed_input.shape}")
             print(f"Processed Input Type: {type(processed_input)}")
+            if len(processed_input.shape) != 2:
+                return Response({"error": "Invalid input shape for the model."}, status=status.HTTP_400_BAD_REQUEST)
             # Ensure processed_input is a dense array
             if isinstance(processed_input, csr_matrix):
                 processed_input = processed_input.toarray()  # Convert to dense array
