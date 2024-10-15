@@ -12,6 +12,8 @@ from django.core.validators import URLValidator
 from django.core.exceptions import ValidationError
 from django.views.decorators.csrf import csrf_exempt
 from gensim.parsing.preprocessing import remove_stopwords
+from scipy.sparse import csr_matrix
+
 
 # Email verification regular expression
 EMAIL_REGEX = r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$'
