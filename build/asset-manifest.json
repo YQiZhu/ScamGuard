@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.23138e94.css",
-    "main.js": "/static/js/main.df1eac91.js",
+    "main.css": "/static/css/main.e8e4d760.css",
+    "main.js": "/static/js/main.ab52be1e.js",
     "static/js/210.81e3a53b.chunk.js": "/static/js/210.81e3a53b.chunk.js",
     "static/js/540.331e9481.chunk.js": "/static/js/540.331e9481.chunk.js",
     "static/js/239.d35c527e.chunk.js": "/static/js/239.d35c527e.chunk.js",
@@ -16,6 +16,7 @@
     "static/media/scam_alert_no_background.png": "/static/media/scam_alert_no_background.8f841e5999b2006e8ab8.png",
     "static/media/website_scams_icon.png": "/static/media/website_scams_icon.5e56907fa0f63656c078.png",
     "static/media/romance_scams_icon.png": "/static/media/romance_scams_icon.609dcf776e1e73cb634d.png",
+    "static/media/crime.png": "/static/media/crime.71af9fb81fbaefd9d2dd.png",
     "static/media/social_media_scams_icon.png": "/static/media/social_media_scams_icon.a378ebf8862be880d966.png",
     "static/media/email_scams_icon.png": "/static/media/email_scams_icon.5fc406e224e6f119a7b1.png",
     "static/media/job_scam.jpg": "/static/media/job_scam.6fb14d15f23b7bd9e7dd.jpg",
@@ -25,8 +26,8 @@
     "static/media/impersonation_scams_icon.png": "/static/media/impersonation_scams_icon.1cf6f5c0df9d1821d6cb.png",
     "static/media/product.png": "/static/media/product.8c65e4d54649dd512619.png",
     "index.html": "/index.html",
-    "main.23138e94.css.map": "/static/css/main.23138e94.css.map",
-    "main.df1eac91.js.map": "/static/js/main.df1eac91.js.map",
+    "main.e8e4d760.css.map": "/static/css/main.e8e4d760.css.map",
+    "main.ab52be1e.js.map": "/static/js/main.ab52be1e.js.map",
     "210.81e3a53b.chunk.js.map": "/static/js/210.81e3a53b.chunk.js.map",
     "540.331e9481.chunk.js.map": "/static/js/540.331e9481.chunk.js.map",
     "239.d35c527e.chunk.js.map": "/static/js/239.d35c527e.chunk.js.map",
@@ -35,7 +36,7 @@
     "453.2fa3f6c9.chunk.js.map": "/static/js/453.2fa3f6c9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.23138e94.css",
-    "static/js/main.df1eac91.js"
+    "static/css/main.e8e4d760.css",
+    "static/js/main.ab52be1e.js"
   ]
 }

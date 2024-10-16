@@ -79,6 +79,9 @@ def predict_value(request, model_type):
 
             # Transform input and make predictions
             processed_input = email_vectorizer.transform([clean_input])
+	    # Transform input and make predictions
+            print(f"Processed Input Shape: {processed_input.shape}")
+            print(f"Processed Input Type: {type(processed_input)}")
             prediction = model_email.predict(processed_input)[0]
             prob = model_email.predict_proba(processed_input)[0][prediction]
 
@@ -101,8 +104,8 @@ def predict_value(request, model_type):
 
             if not message_body:
                 return Response({"error": "Message body is required for model_2"}, status=status.HTTP_400_BAD_REQUEST)
-
             # Preprocess text
+            print(f"body messages: {message_body}")
             message_body_low = message_body.lower()
             regex = re.compile('[%s]' % re.escape(string.punctuation))
             clean_input = regex.sub('', message_body_low)
