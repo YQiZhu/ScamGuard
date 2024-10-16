@@ -114,20 +114,8 @@ def predict_value(request, model_type):
 
             # Transform input and make predictions
             processed_input = text_vectorizer.transform([clean_input])
-            print(f"Processed Input Shape: {processed_input.shape}")
-            print(f"Processed Input Type: {type(processed_input)}")
-            if len(processed_input.shape) != 2:
-                return Response({"error": "Invalid input shape for the model."}, status=status.HTTP_400_BAD_REQUEST)
-            # Ensure processed_input is a dense array
-            if isinstance(processed_input, csr_matrix):
-                processed_input = processed_input.toarray()  # Convert to dense array
-            # Make predictions
-            try:
-                prediction = model_message.predict(processed_input)[0]
-                prob = model_message.predict_proba(processed_input)[0][prediction]
-            except Exception as e:
-                print(f"Error during model prediction: {e}")
-                return Response({"error": f"Error during model prediction: {str(e)}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+            prediction = model_message.predict(processed_input)[0]
+            prob = model_message.predict_proba(processed_input)[0][prediction]
 
             # Create explanation
             explainer = LimeTextExplainer()
